@@ -1,0 +1,30 @@
+# Dependencias
+node_modules/
+.pnpm-debug.log*
+
+# Entorno y Secretos
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# IDEs y Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporales de compilación o caché
+.cache/
+.npm/
+dist/
+build/
