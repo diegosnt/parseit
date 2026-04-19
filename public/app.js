@@ -46,7 +46,7 @@ function initTheme() {
 function renderMetadata(data) {
     const metaContainer = document.getElementById('examen-metadatos');
     const items = [
-         { label: 'Mínimo para aprobar', value: data.preguntas_para_aprobar },
+         { label: 'Mínimo', value: data.preguntas_para_aprobar },
         { label: 'Fecha', value: data.fecha },
         { label: 'Versión', value: data.version }
     ];
