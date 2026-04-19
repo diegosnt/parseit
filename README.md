@@ -4,34 +4,27 @@
 
 ## 🚀 Características Destacadas
 
-- **Optimizado para Cloudflare Pages**: Arquitectura basada en **Cloudflare Functions**, lista para escalar globalmente en el edge.
+- **Optimizado para Cloudflare Pages**: Arquitectura basada en **Cloudflare Functions**, lista para escalar globalmente en el edge sin necesidad de un servidor tradicional.
 - **Modo Estudio (Corrección Inmediata)**: Un switch dinámico en el header que, al activarse, revela la respuesta correcta e incorrecta al instante después de cada selección.
-- **Header Inteligente y Responsivo**: Un centro de control ultra-compacto en móviles que agrupa metadatos, progreso en tiempo real (`15 / 20`) y temporizador dinámico.
+- **Header Inteligente y Responsivo Extreme**: Centro de control ultra-compacto diseñado específicamente para móviles, con fuentes optimizadas, botones alineados y metadatos legibles en cualquier resolución.
 - **Experiencia Inmersiva (Dual Feedback)**:
   - **Celebración**: Ráfagas de confeti dinámicas (`canvas-confetti`) al aprobar.
-  - **Impacto Negativo**: Efecto de sacudida de pantalla (*Screen Shake*) y viñeta roja periférica al reprobar.
-- **Validación Estricta**: El botón de finalizar se bloquea visual y funcionalmente hasta que se responden todas las preguntas.
-- **Modo Oscuro Orgánico**: Paleta de colores basada en tonos crema y marrones profundos, con un toggle de tema elíptico.
-- **Seguridad Blindada**: Protección nativa contra Path Traversal (sanitización de IDs), prevención de XSS y headers de seguridad vía `Helmet` (emulado en Functions).
+  - **Impacto Negativo**: Efecto de sacudida de pantalla (*Screen Shake*) y viñeta roja periférica al reprobar para un feedback sensorial inmediato.
+- **Validación Estricta**: El botón de finalizar se bloquea visual y funcionalmente (sin efectos de hover) hasta que se responden todas las preguntas, evitando entregas accidentales.
+- **Modo Oscuro Orgánico**: Paleta de colores premium basada en tonos crema y marrones profundos, con un toggle de tema elíptico que muestra sol y luna simultáneamente.
 
-## 🛡️ Infraestructura y Seguridad
+## 🛡️ Seguridad y Robustez
 
-- **Autonomía Total**: Todas las librerías externas (`Choices.js`, `Confetti`) se sirven localmente desde `public/vendor/`, eliminando la dependencia de CDNs externos.
-- **Edge Computing**: Lógica de barajado (Fisher-Yates) ejecutada en Cloudflare Workers para garantizar aleatoriedad segura en cada carga.
-- **Sanitización de Datos**: Limpieza rigurosa de parámetros y escape de HTML en el renderizado de preguntas.
+- **Protección contra Path Traversal**: El servidor sanitiza rigurosamente los parámetros de entrada, bloqueando cualquier intento de acceso no autorizado a archivos.
+- **Prevención de XSS**: Implementación de funciones de escape de HTML en el frontend para asegurar un renderizado seguro de contenidos externos.
+- **Autonomía Total (No CDNs)**: Todas las librerías externas (`Choices.js`, `Confetti`) se sirven localmente desde `public/vendor/`, garantizando funcionamiento offline parcial y máxima privacidad.
 
 ## 🛠️ Stack Tecnológico
 
-- **Frontend**: HTML5, CSS3 (Variables, Media Queries Avanzadas), Vanilla JS (ES6+).
-- **Backend**: Cloudflare Pages Functions (Serverless).
+- **Frontend**: HTML5, CSS3 (Variables, Media Queries avanzadas), Vanilla JS (ES6+).
+- **Backend**: Cloudflare Pages Functions (Serverless / Node.js Runtime).
 - **Herramientas**: `pnpm`, `wrangler` (Cloudflare CLI).
 - **Librerías**: Choices.js, Canvas-Confetti.
-
-## 📋 Requisitos Previos
-
-- [Node.js](https://nodejs.org/) (v18+)
-- [pnpm](https://pnpm.io/)
-- [Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/) (instalado automáticamente vía dependencias).
 
 ## 🔧 Instalación y Desarrollo Local
 
@@ -44,7 +37,7 @@
    ```bash
    pnpm start
    ```
-   *Esto iniciará el emulador de Cloudflare Pages en `http://localhost:8788`.*
+   *Esto iniciará el emulador de Cloudflare en `http://localhost:8788`.*
 
 3. **Generar Manifiesto**:
    Si agregas nuevos JSONs en `public/data/`, ejecutá:
@@ -57,36 +50,41 @@
 ```text
 /
 ├── functions/          # Backend Serverless (API)
-│   └── api/            # Endpoints de exámenes y listado
+│   └── api/            # Endpoints dinámicos de exámenes
 ├── public/             # Assets estáticos y datos
-│   ├── data/           # JSONs de exámenes y manifest.json
-│   ├── vendor/         # Librerías externas locales
-│   ├── app.js          # Lógica de progreso, timer y modo estudio
-│   └── styles.css      # Estilos orgánicos y responsivos
-├── package.json        # Scripts de Cloudflare y dependencias
+│   ├── data/           # JSONs de exámenes y manifiesto automático
+│   ├── vendor/         # Librerías externas servidas localmente
+│   ├── app.js          # Lógica de progreso, timer, confeti y modo estudio
+│   ├── styles.css      # Estilos orgánicos con optimización móvil extrema
+│   └── favicon.svg     # Icono de marca basado en el logo del header
+├── package.json        # Scripts de automatización y despliegue
 └── README.md
 ```
 
 ## 📂 Formato de Examen (JSON)
 
-Los exámenes deben residir en `public/data/`. Ejemplo de formato recomendado:
+Ubicación: `public/data/*.json`. Soporta metadatos completos o arrays simples.
 
 ```json
 {
-  "materia": "CIENCIAS",
-  "titulo": "El Sistema Solar",
-  "duracion": 10,
-  "preguntas_para_aprobar": 4,
+  "materia": "HISTORIA",
+  "titulo": "Revolución de Mayo",
+  "duracion": 15,
+  "preguntas_para_aprobar": 8,
   "preguntas": [
     {
       "id": 1,
-      "pregunta": "¿Cuál es el planeta más grande?",
-      "opciones": ["Marte", "Júpiter", "Tierra", "Saturno"],
-      "respuesta_correcta": 1
+      "pregunta": "¿En qué año fue la Revolución de Mayo?",
+      "opciones": ["1810", "1816", "1820", "1789"],
+      "respuesta_correcta": 0
     }
   ]
 }
 ```
 
 ---
-Desarrollado con ❤️ para transformar la educación en una experiencia segura, rápida y divertida.
+## 👨‍💻 Autor
+
+Desarrollado con ❤️ por **Diego** (Gentle AI Team).
+
+*Transformando la educación en una experiencia segura, rápida e inmersiva.*
