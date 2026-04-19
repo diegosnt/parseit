@@ -420,6 +420,36 @@ document.getElementById('examen-form').addEventListener('submit', handleExamenSu
 document.getElementById('examen-form').addEventListener('change', (e) => {
     if (e.target.type === 'radio') {
         updateProgress();
+
+        // Lógica de corrección inmediata (Modo Estudio)
+        const checkEstudio = document.getElementById('check-estudio');
+        if (checkEstudio && checkEstudio.checked) {
+            const radio = e.target;
+            const nameParts = radio.name.split('-');
+            const preguntaId = parseInt(nameParts[1]);
+            const selectedOptId = parseInt(radio.value);
+            
+            // Encontrar la pregunta en los datos
+            const pregunta = examData.preguntas.find(p => p.id === preguntaId);
+            if (pregunta) {
+                const correctOptId = pregunta.respuesta_correcta;
+                const container = radio.closest('.opciones-group');
+                
+                // Limpiar clases previas de esta pregunta
+                container.querySelectorAll('.opcion-label').forEach(label => {
+                    label.classList.remove('correcta', 'incorrecta', 'esperada');
+                });
+
+                // Marcar la correcta (esperada)
+                const labelCorrecta = document.getElementById(`label-${preguntaId}-${correctOptId}`);
+                if (labelCorrecta) labelCorrecta.classList.add('correcta');
+
+                // Si se equivocó, marcar la incorrecta
+                if (selectedOptId !== correctOptId) {
+                    radio.parentElement.classList.add('incorrecta');
+                }
+            }
+        }
     }
 });
 

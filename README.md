@@ -1,111 +1,92 @@
 # 📝 ParseIt - Sistema de Exámenes Interactivos Dinámicos
 
-**ParseIt** es una aplicación web moderna, robusta y pulida diseñada para evaluaciones de opción múltiple. El sistema destaca por su enfoque en la experiencia de usuario (UX) inmersiva y su arquitectura centrada en la seguridad y el rendimiento.
+**ParseIt** es una aplicación web moderna, robusta y optimizada para Cloudflare Pages, diseñada para ofrecer una experiencia de evaluación y estudio inigualable. El sistema destaca por su enfoque en la UX inmersiva, feedback sensorial y herramientas de aprendizaje en tiempo real.
 
 ## 🚀 Características Destacadas
 
-- **Header Inteligente**: Un centro de control compacto que muestra metadatos, progreso en tiempo real (`15 / 20`) y un temporizador dinámico.
-- **Feedback Visual Inmediato**: Al finalizar, el sistema muestra una burbuja de estado con iconos de pulgar (👍/👎) y el contador final de aciertos vs. errores directamente en la parte superior.
+- **Optimizado para Cloudflare Pages**: Arquitectura basada en **Cloudflare Functions**, lista para escalar globalmente en el edge.
+- **Modo Estudio (Corrección Inmediata)**: Un switch dinámico en el header que, al activarse, revela la respuesta correcta e incorrecta al instante después de cada selección.
+- **Header Inteligente y Responsivo**: Un centro de control ultra-compacto en móviles que agrupa metadatos, progreso en tiempo real (`15 / 20`) y temporizador dinámico.
 - **Experiencia Inmersiva (Dual Feedback)**:
   - **Celebración**: Ráfagas de confeti dinámicas (`canvas-confetti`) al aprobar.
-  - **Impacto Negativo**: Efecto de sacudida de pantalla (*Screen Shake*) y viñeta roja periférica al reprobar, proporcionando un feedback sensorial claro y directo.
-- **Validación Estricta**: El botón de finalizar se bloquea visual y funcionalmente hasta que se responden todas las preguntas, evitando entregas incompletas.
-- **Modo Oscuro Orgánico**: Paleta de colores basada en tonos crema y marrones profundos, con un toggle de tema que permite ver el sol y la luna simultáneamente en un diseño elíptico.
-- **Dinamismo Total**: Algoritmo de barajado (Fisher-Yates) en el backend para preguntas y opciones, asegurando que cada intento sea único.
-- **Carga Automática**: Detecta y carga archivos `.json` de la carpeta `data/` al vuelo, sin necesidad de configuraciones manuales.
+  - **Impacto Negativo**: Efecto de sacudida de pantalla (*Screen Shake*) y viñeta roja periférica al reprobar.
+- **Validación Estricta**: El botón de finalizar se bloquea visual y funcionalmente hasta que se responden todas las preguntas.
+- **Modo Oscuro Orgánico**: Paleta de colores basada en tonos crema y marrones profundos, con un toggle de tema elíptico.
+- **Seguridad Blindada**: Protección nativa contra Path Traversal (sanitización de IDs), prevención de XSS y headers de seguridad vía `Helmet` (emulado en Functions).
 
-## 🛡️ Seguridad y Robustez
+## 🛡️ Infraestructura y Seguridad
 
-- **Protección contra Path Traversal**: El servidor sanitiza rigurosamente los parámetros de entrada, evitando que se puedan leer archivos fuera de la carpeta de datos permitida.
-- **Prevención de XSS**: Implementación de funciones de escape de HTML en el frontend para asegurar que el contenido de los exámenes se renderice de forma segura.
-- **Headers de Seguridad**: Integración con `Helmet` para inyectar cabeceras HTTP que protegen contra ataques comunes (Clickjacking, MIME Sniffing, etc.).
-- **Autonomía Total (No CDNs)**: Todas las librerías externas se sirven de forma local desde la carpeta `vendor/`, garantizando que la aplicación funcione sin depender de conexiones externas y mejorando la privacidad.
+- **Autonomía Total**: Todas las librerías externas (`Choices.js`, `Confetti`) se sirven localmente desde `public/vendor/`, eliminando la dependencia de CDNs externos.
+- **Edge Computing**: Lógica de barajado (Fisher-Yates) ejecutada en Cloudflare Workers para garantizar aleatoriedad segura en cada carga.
+- **Sanitización de Datos**: Limpieza rigurosa de parámetros y escape de HTML en el renderizado de preguntas.
 
 ## 🛠️ Stack Tecnológico
 
-- **Frontend**: HTML5, CSS3 (Variables, Animaciones, Flexbox), Vanilla JavaScript (ES6+).
-- **Backend**: Node.js, Express.js.
-- **Librerías Locales**: 
-  - [Choices.js](https://choices-js.github.io/Choices/) para selectores elegantes.
-  - [Canvas-Confetti](https://www.npmjs.com/package/canvas-confetti) para efectos visuales.
-- **Seguridad**: Helmet.js.
+- **Frontend**: HTML5, CSS3 (Variables, Media Queries Avanzadas), Vanilla JS (ES6+).
+- **Backend**: Cloudflare Pages Functions (Serverless).
+- **Herramientas**: `pnpm`, `wrangler` (Cloudflare CLI).
+- **Librerías**: Choices.js, Canvas-Confetti.
 
 ## 📋 Requisitos Previos
 
-- [Node.js](https://nodejs.org/) (v16+)
-- [pnpm](https://pnpm.io/) (recomendado) o npm.
+- [Node.js](https://nodejs.org/) (v18+)
+- [pnpm](https://pnpm.io/)
+- [Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/) (instalado automáticamente vía dependencias).
 
-## 🔧 Instalación y Ejecución
+## 🔧 Instalación y Desarrollo Local
 
 1. **Instalar dependencias**:
    ```bash
    pnpm install
    ```
 
-2. **Ejecutar**:
+2. **Ejecutar localmente**:
    ```bash
    pnpm start
    ```
+   *Esto iniciará el emulador de Cloudflare Pages en `http://localhost:8788`.*
 
-Abre [http://localhost:3000](http://localhost:3000) y ¡listo!
+3. **Generar Manifiesto**:
+   Si agregas nuevos JSONs en `public/data/`, ejecutá:
+   ```bash
+   pnpm build
+   ```
 
-## 📂 Estructura del Proyecto
+## 📄 Estructura del Proyecto
 
 ```text
 /
-├── data/               # Carpeta con exámenes en formato JSON
-├── public/             
-│   ├── vendor/         # Librerías externas servidas localmente
-│   ├── index.html      # Estructura con header reactivo
-│   ├── styles.css      # Paleta orgánica, animaciones y efectos sensoriales
-│   └── app.js          # Lógica de progreso, timer, confeti y sanitización
-├── server.js           # API REST con lógica de shuffle y seguridad
-└── package.json        # Scripts y dependencias
+├── functions/          # Backend Serverless (API)
+│   └── api/            # Endpoints de exámenes y listado
+├── public/             # Assets estáticos y datos
+│   ├── data/           # JSONs de exámenes y manifest.json
+│   ├── vendor/         # Librerías externas locales
+│   ├── app.js          # Lógica de progreso, timer y modo estudio
+│   └── styles.css      # Estilos orgánicos y responsivos
+├── package.json        # Scripts de Cloudflare y dependencias
+└── README.md
 ```
 
-## 📄 Estructura del Archivo JSON (Exámenes)
+## 📂 Formato de Examen (JSON)
 
-Los archivos deben guardarse en la carpeta `data/` con extensión `.json`. El sistema soporta dos formatos:
-
-### 1. Formato Completo (Recomendado)
-Permite definir metadatos específicos del examen.
+Los exámenes deben residir en `public/data/`. Ejemplo de formato recomendado:
 
 ```json
 {
-  "materia": "HISTORIA",
-  "titulo": "Revolución de Mayo",
-  "duracion": 15,
-  "preguntas_para_aprobar": 8,
-  "fecha": "2026-04-18",
-  "version": "1.2",
+  "materia": "CIENCIAS",
+  "titulo": "El Sistema Solar",
+  "duracion": 10,
+  "preguntas_para_aprobar": 4,
   "preguntas": [
     {
       "id": 1,
-      "pregunta": "¿En qué año fue la Revolución de Mayo?",
-      "opciones": ["1810", "1816", "1820", "1789"],
-      "respuesta_correcta": 0
+      "pregunta": "¿Cuál es el planeta más grande?",
+      "opciones": ["Marte", "Júpiter", "Tierra", "Saturno"],
+      "respuesta_correcta": 1
     }
   ]
 }
 ```
 
-### 2. Formato Simple (Array)
-Si solo se proporciona un array de preguntas, el sistema asignará metadatos genéricos automáticamente.
-
-```json
-[
-  {
-    "id": 1,
-    "pregunta": "¿Capital de Francia?",
-    "opciones": ["Londres", "París", "Madrid", "Roma"],
-    "respuesta_correcta": 1
-  }
-]
-```
-
-### 💡 Notas sobre el formato:
-- **`duracion`**: Tiempo en minutos (0 para sin tiempo).
-- **`respuesta_correcta`**: Es el **índice** (empezando en 0) del array de `opciones` que contiene la respuesta válida. El sistema se encarga de barajar las opciones manteniendo la integridad de este índice.
-
 ---
-Desarrollado con ❤️ para transformar la forma en que evaluamos y aprendemos de manera segura, eficiente e inmersiva.
+Desarrollado con ❤️ para transformar la educación en una experiencia segura, rápida y divertida.
