@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "start": "pnpm dev",
-    "dev": "wrangler pages dev public",
+    "dev": "pnpm gen-manifest && wrangler pages dev public",
     "build": "pnpm gen-manifest",
-    "gen-manifest": "ls -1 public/data/*.json | xargs -n1 basename | sed 's/\\.json//' | jq -R . | jq -s . > public/data/manifest.json",
+    "gen-manifest": "mkdir -p public/data && rm -f public/data/*.json && cp data/*.json public/data/ && ls -1 data/*.json | xargs -n1 basename | sed 's/\\.json//' | jq -R . | jq -s . > public/data/manifest.json",
     "deploy": "pnpm build && wrangler pages deploy public"
   },
   "devDependencies": {

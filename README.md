@@ -37,10 +37,10 @@
    ```bash
    pnpm start
    ```
-   *Esto iniciará el emulador de Cloudflare en `http://localhost:8788`.*
+   *Esto sincroniza automáticamente los exámenes de `data/` a `public/data/`, genera el manifiesto e inicia el emulador de Cloudflare en `http://localhost:8788`.*
 
-3. **Generar Manifiesto**:
-   Si agregas nuevos JSONs en `public/data/`, ejecutá:
+3. **Generar Manifiesto y Sincronizar**:
+   Si agregas o modificas JSONs en la carpeta raíz `data/`, ejecutá:
    ```bash
    pnpm build
    ```
@@ -49,21 +49,22 @@
 
 ```text
 /
+├── data/               # FUENTE DE VERDAD: JSONs de exámenes (editá acá)
 ├── functions/          # Backend Serverless (API)
 │   └── api/            # Endpoints dinámicos de exámenes
-├── public/             # Assets estáticos y datos
-│   ├── data/           # JSONs de exámenes y manifiesto automático
+├── public/             # Assets estáticos (generados o estáticos)
+│   ├── data/           # Copia automática de exámenes y manifest (no editar)
 │   ├── vendor/         # Librerías externas servidas localmente
 │   ├── app.js          # Lógica de progreso, timer, confeti y modo estudio
 │   ├── styles.css      # Estilos orgánicos con optimización móvil extrema
-│   └── favicon.svg     # Icono de marca basado en el logo del header
-├── package.json        # Scripts de automatización y despliegue
+│   └── index.html      # Estructura principal de la SPA
+├── package.json        # Scripts de automatización (gen-manifest, dev, deploy)
 └── README.md
 ```
 
 ## 📂 Formato de Examen (JSON)
 
-Ubicación: `public/data/*.json`. Soporta metadatos completos o arrays simples.
+Ubicación: `data/*.json`. El sistema detecta automáticamente cualquier archivo `.json` en esta carpeta y lo incluye en el selector de la aplicación.
 
 ```json
 {
@@ -71,6 +72,8 @@ Ubicación: `public/data/*.json`. Soporta metadatos completos o arrays simples.
   "titulo": "Revolución de Mayo",
   "duracion": 15,
   "preguntas_para_aprobar": 8,
+  "fecha": "2026-04-18",
+  "version": "1.2",
   "preguntas": [
     {
       "id": 1,
@@ -85,6 +88,6 @@ Ubicación: `public/data/*.json`. Soporta metadatos completos o arrays simples.
 ---
 ## 👨‍💻 Autor
 
-Desarrollado con ❤️ por **Diego** (Gentle AI Team).
+Desarrollado con ❤️ por **Diego**.
 
 *Transformando la educación en una experiencia segura, rápida e inmersiva.*
