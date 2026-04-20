@@ -1,0 +1,17 @@
+{
+  "name": "ParseIt - Exámenes Interactivos",
+  "short_name": "ParseIt",
+  "description": "Sistema de exámenes dinámicos y estudio interactivo.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fdfaf6",
+  "theme_color": "#8b5e3c",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

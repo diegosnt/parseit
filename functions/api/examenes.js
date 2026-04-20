@@ -2,27 +2,17 @@
  * functions/api/examenes.js - Listar exámenes en Cloudflare Pages
  */
 export async function onRequestGet(context) {
-    const { request, env } = context;
+    const { request } = context;
     const url = new URL(request.url);
-    const manifestUrl = `${url.origin}/data/manifest.json`;
+    const catalogUrl = `${url.origin}/data/catalog.json`;
 
     try {
-        const response = await fetch(manifestUrl);
-        const examIds = await response.json();
+        const response = await fetch(catalogUrl);
+        if (!response.ok) throw new Error('Catálogo no encontrado');
+        
+        const catalog = await response.json();
 
-        const examenes = await Promise.all(
-            examIds.map(async (id) => {
-                const examResponse = await fetch(`${url.origin}/data/${id}.json`);
-                const json = await examResponse.json();
-                return {
-                    id,
-                    materia: json.materia || "Sin materia",
-                    titulo: json.titulo || id
-                };
-            })
-        );
-
-        return new Response(JSON.stringify(examenes), {
+        return new Response(JSON.stringify(catalog), {
             headers: { 'Content-Type': 'application/json' }
         });
     } catch (error) {

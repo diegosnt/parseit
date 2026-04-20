@@ -5,26 +5,26 @@
 ## 🚀 Características Destacadas
 
 - **Optimizado para Cloudflare Pages**: Arquitectura basada en **Cloudflare Functions**, lista para escalar globalmente en el edge sin necesidad de un servidor tradicional.
-- **Modo Estudio (Corrección Inmediata)**: Un switch dinámico en el header que, al activarse, revela la respuesta correcta e incorrecta al instante después de cada selección.
-- **Header Inteligente y Responsivo Extreme**: Centro de control ultra-compacto diseñado específicamente para móviles, con fuentes optimizadas, botones alineados y metadatos legibles en cualquier resolución.
+- **Vite-Powered**: Entorno de desarrollo ultra-rápido con Hot Module Replacement (HMR) y builds de producción optimizados.
+- **PWA (Progressive Web App)**: Instalable en dispositivos móviles y con funcionamiento **Offline-First**. Estudia sin conexión a internet.
+- **Validación Estricta (Zod)**: Todo examen cargado es validado en tiempo de build, garantizando que no existan errores de formato o lógica de respuestas.
 - **Experiencia Inmersiva (Dual Feedback)**:
   - **Celebración**: Ráfagas de confeti dinámicas (`canvas-confetti`) al aprobar.
   - **Impacto Negativo**: Efecto de sacudida de pantalla (*Screen Shake*) y viñeta roja periférica al reprobar para un feedback sensorial inmediato.
-- **Validación Estricta**: El botón de finalizar se bloquea visual y funcionalmente (sin efectos de hover) hasta que se responden todas las preguntas, evitando entregas accidentales.
-- **Modo Oscuro Orgánico**: Paleta de colores premium basada en tonos crema y marrones profundos, con un toggle de tema elíptico que muestra sol y luna simultáneamente.
+- **Modo Oscuro Orgánico**: Paleta de colores premium con toggle de tema elíptico.
 
 ## 🛡️ Seguridad y Robustez
 
-- **Protección contra Path Traversal**: El servidor sanitiza rigurosamente los parámetros de entrada, bloqueando cualquier intento de acceso no autorizado a archivos.
-- **Prevención de XSS**: Implementación de funciones de escape de HTML en el frontend para asegurar un renderizado seguro de contenidos externos.
-- **Autonomía Total (No CDNs)**: Todas las librerías externas (`Choices.js`, `Confetti`) se sirven localmente desde `public/vendor/`, garantizando funcionamiento offline parcial y máxima privacidad.
+- **Validación Shift-Left**: Los errores en los JSONs se detectan antes del despliegue mediante esquemas de **Zod**. Si un examen está roto, el build falla y el despliegue se detiene.
+- **Arquitectura Modular (ES Modules)**: Separación estricta de responsabilidades en módulos dedicados (`api.js`, `ui.js`, `state.js`, `theme.js`, `utils.js`).
+- **Autonomía Total (No CDNs)**: Todas las librerías externas se sirven localmente, garantizando funcionamiento sin internet y máxima privacidad.
 
 ## 🛠️ Stack Tecnológico
 
-- **Frontend**: HTML5, CSS3 (Variables, Media Queries avanzadas), Vanilla JS (ES6+).
-- **Backend**: Cloudflare Pages Functions (Serverless / Node.js Runtime).
-- **Herramientas**: `pnpm`, `wrangler` (Cloudflare CLI).
-- **Librerías**: Choices.js, Canvas-Confetti.
+- **Frontend**: HTML5, CSS3, Vanilla JS (ES6+ Modules / Vite).
+- **Backend**: Cloudflare Pages Functions (Serverless).
+- **Validación**: Zod (Schema Validation).
+- **Herramientas**: `pnpm`, `vite`, `wrangler`, `concurrently`.
 
 ## 🔧 Instalación y Desarrollo Local
 
@@ -33,38 +33,56 @@
    pnpm install
    ```
 
-2. **Ejecutar localmente**:
+2. **Ejecutar en modo desarrollo (Full Stack)**:
    ```bash
-   pnpm start
+   pnpm dev
    ```
-   *Esto sincroniza automáticamente los exámenes de `data/` a `public/data/`, genera el manifiesto e inicia el emulador de Cloudflare en `http://localhost:8788`.*
+   *Esto inicia el frontend en `http://localhost:5173` y el backend en `http://localhost:8788` de forma simultánea.*
 
-3. **Generar Manifiesto y Sincronizar**:
-   Si agregas o modificas JSONs en la carpeta raíz `data/`, ejecutá:
+3. **Build para Producción**:
    ```bash
    pnpm build
+   ```
+   *Genera la carpeta `dist/` con todos los activos optimizados y validados.*
+
+4. **Probar Build localmente (con funciones)**:
+   ```bash
+   pnpm start
    ```
 
 ## 📄 Estructura del Proyecto
 
 ```text
 /
-├── data/               # FUENTE DE VERDAD: JSONs de exámenes (editá acá)
-├── functions/          # Backend Serverless (API)
+├── dist/               # Carpeta de build final (generada)
+├── functions/          # Backend Serverless (Cloudflare Functions)
 │   └── api/            # Endpoints dinámicos de exámenes
-├── public/             # Assets estáticos (generados o estáticos)
-│   ├── data/           # Copia automática de exámenes y manifest (no editar)
-│   ├── vendor/         # Librerías externas servidas localmente
-│   ├── app.js          # Lógica de progreso, timer, confeti y modo estudio
-│   ├── styles.css      # Estilos orgánicos con optimización móvil extrema
-│   └── index.html      # Estructura principal de la SPA
-├── package.json        # Scripts de automatización (gen-manifest, dev, deploy)
+├── public/             # Archivos estáticos puros (No procesados por Vite)
+│   ├── data/           # JSONs de exámenes y catalog.json (Validado)
+│   ├── vendor/         # Librerías de terceros (Choices.js, Confetti)
+│   ├── sw.js           # Service Worker (Caché Offline)
+│   └── manifest.webmanifest # Configuración PWA
+├── src/                # Código fuente de la aplicación
+│   ├── js/             # Módulos de lógica (api, ui, state, theme, utils)
+│   ├── app.js          # Orquestador principal
+│   └── styles.css      # Estilos premium
+├── scripts/            # Scripts de automatización en Node.js
+│   └── generate-catalog.js # Generador y Validador (Zod)
+├── index.html          # Punto de entrada de la aplicación
+├── vite.config.js      # Configuración de Vite
+├── package.json        # Configuración de scripts y dependencias
 └── README.md
 ```
 
-## 📂 Formato de Examen (JSON)
+## 📂 Gestión de Exámenes (JSON)
 
-Ubicación: `data/*.json`. El sistema detecta automáticamente cualquier archivo `.json` en esta carpeta y lo incluye en el selector de la aplicación.
+Ubicación: `public/data/*.json`. El sistema detecta y valida automáticamente cualquier archivo `.json` en esta carpeta.
+
+### Cómo agregar un nuevo examen:
+
+1.  **Crear el archivo**: Crea un archivo `.json` dentro de `public/data/`.
+2.  **Seguir el formato**: Asegúrate de incluir todos los campos obligatorios (`materia`, `titulo`, `duracion`, `preguntas_para_aprobar`, `fecha`, `version`, `preguntas`).
+### Ejemplo de formato JSON:
 
 ```json
 {
@@ -87,15 +105,13 @@ Ubicación: `data/*.json`. El sistema detecta automáticamente cualquier archivo
 
 ---
 
-## 📈 Próximas Mejoras (Roadmap Técnico)
+## 📈 Roadmap Técnico (Completado)
 
-Para llevar **ParseIt** al siguiente nivel de escalabilidad y robustez, se proponen las siguientes evoluciones:
-
-1.  **Optimización de API (Catálogo Estático)**: Migrar el sistema de descubrimiento de exámenes de un manifiesto simple a un `catalog.json` generado en tiempo de build. Esto elimina el problema de latencia **N+1** en el backend, permitiendo que la lista de exámenes se cargue con un solo request independientemente de la cantidad de archivos.
-2.  **Arquitectura de Frontend Modular**: Refactorizar la lógica central de `app.js` hacia **ES Modules**. Separar las responsabilidades en módulos dedicados (`api.js`, `ui.js`, `state.js`, `theme.js`) para mejorar la mantenibilidad y facilitar el testing unitario.
-3.  **Validación Estricta de Datos (Shift-Left)**: Implementar un paso de validación mediante **JSON Schema** o **Zod** durante el proceso de build. Esto garantiza que cualquier error de formato en los archivos de `data/` sea detectado antes del despliegue, protegiendo la experiencia del usuario final.
-4.  **Capacidades PWA (Offline-First)**: Integrar un **Service Worker** y un `manifest.webmanifest` para cachear activos y exámenes. El objetivo es permitir que los estudiantes puedan realizar evaluaciones incluso en condiciones de nula o baja conectividad.
-5.  **Modernización del Tooling**: Reemplazar los scripts de automatización basados en shell (`jq`, `sed`) por scripts de Node.js multiplataforma. Evaluar la migración a **Vite** para obtener Hot Module Replacement (HMR) y una optimización de assets superior.
+1.  ✅ **Optimización de API (Catálogo Estático)**: Eliminación de latencia N+1 mediante `catalog.json`.
+2.  ✅ **Arquitectura de Frontend Modular**: Refactorizado a **ES Modules** con separación de responsabilidades.
+3.  ✅ **Validación Estricta de Datos (Zod)**: Implementado control de calidad en tiempo de build.
+4.  ✅ **Capacidades PWA (Offline-First)**: Funcionamiento offline absoluto mediante Service Worker.
+5.  ✅ **Modernización del Tooling (Vite)**: Migración a un entorno de desarrollo de clase mundial.
 
 ---
 ## 👨‍💻 Autor

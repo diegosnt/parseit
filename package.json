@@ -5,18 +5,21 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "pnpm dev",
-    "dev": "pnpm gen-manifest && wrangler pages dev public",
-    "build": "pnpm gen-manifest",
-    "gen-manifest": "mkdir -p public/data && rm -f public/data/*.json && cp data/*.json public/data/ && ls -1 data/*.json | xargs -n1 basename | sed 's/\\.json//' | jq -R . | jq -s . > public/data/manifest.json",
-    "deploy": "pnpm build && wrangler pages deploy public"
+    "dev": "pnpm gen-manifest && concurrently \"vite\" \"wrangler pages dev public --port 8788 --compatibility-date=2024-04-03\"",
+    "build": "pnpm gen-manifest && vite build",
+    "preview": "vite preview",
+    "start": "pnpm build && wrangler pages dev dist",
+    "gen-manifest": "node scripts/generate-catalog.js",
+    "deploy": "pnpm build && wrangler pages deploy dist"
   },
   "devDependencies": {
-    "wrangler": "^3.0.0"
+    "concurrently": "^9.2.1",
+    "vite": "^8.0.9",
+    "wrangler": "^3.0.0",
+    "zod": "^4.3.6"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.33.0",
-  "dependencies": {}
+  "packageManager": "pnpm@10.33.0"
 }

@@ -3,7 +3,7 @@
   "titulo": "Unidades 1, 2 y 3",
   "duracion": 60,
   "preguntas_para_aprobar": 25,
-  "fecha": "2026/04/17",
+  "fecha": "2026-04-17",
   "version": 1,
   "preguntas": [
     {
@@ -128,7 +128,7 @@
     },
     {
       "id": 13,
-      "pregunta": "¿Qué indica una restricción de participación total en una relación?",
+      "pregunta": "¿Qué indica una relación de participación total en una relación?",
       "opciones": [
         "Que no todos los elementos de una entidad tienen que estar involucrados en la relación.",
         "Que la relación admite cardinalidad de Muchos a Muchos (M:N).",
