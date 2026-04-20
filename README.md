@@ -86,6 +86,18 @@ Ubicación: `data/*.json`. El sistema detecta automáticamente cualquier archivo
 ```
 
 ---
+
+## 📈 Próximas Mejoras (Roadmap Técnico)
+
+Para llevar **ParseIt** al siguiente nivel de escalabilidad y robustez, se proponen las siguientes evoluciones:
+
+1.  **Optimización de API (Catálogo Estático)**: Migrar el sistema de descubrimiento de exámenes de un manifiesto simple a un `catalog.json` generado en tiempo de build. Esto elimina el problema de latencia **N+1** en el backend, permitiendo que la lista de exámenes se cargue con un solo request independientemente de la cantidad de archivos.
+2.  **Arquitectura de Frontend Modular**: Refactorizar la lógica central de `app.js` hacia **ES Modules**. Separar las responsabilidades en módulos dedicados (`api.js`, `ui.js`, `state.js`, `theme.js`) para mejorar la mantenibilidad y facilitar el testing unitario.
+3.  **Validación Estricta de Datos (Shift-Left)**: Implementar un paso de validación mediante **JSON Schema** o **Zod** durante el proceso de build. Esto garantiza que cualquier error de formato en los archivos de `data/` sea detectado antes del despliegue, protegiendo la experiencia del usuario final.
+4.  **Capacidades PWA (Offline-First)**: Integrar un **Service Worker** y un `manifest.webmanifest` para cachear activos y exámenes. El objetivo es permitir que los estudiantes puedan realizar evaluaciones incluso en condiciones de nula o baja conectividad.
+5.  **Modernización del Tooling**: Reemplazar los scripts de automatización basados en shell (`jq`, `sed`) por scripts de Node.js multiplataforma. Evaluar la migración a **Vite** para obtener Hot Module Replacement (HMR) y una optimización de assets superior.
+
+---
 ## 👨‍💻 Autor
 
 Desarrollado con ❤️ por **Diego**.
