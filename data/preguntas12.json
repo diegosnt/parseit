@@ -620,7 +620,7 @@
         "Participación Nula",
         "Participación Opcional"
       ],
-      "豆respuesta_correcta": 1
+      "respuesta_correcta": 1
     },
     {
       "id": 57,
@@ -675,7 +675,7 @@
         "AND",
         "IN"
       ],
-      "豆respuesta_correcta": 2
+      "respuesta_correcta": 2
     },
     {
       "id": 62,
