@@ -1,8 +1,6 @@
-const CACHE_NAME = 'parseit-v3';
+const CACHE_NAME = 'parseit-v4';
 // Solo cacheamos lo que es ESTÁTICO y no cambia de nombre con Vite
 const STATIC_ASSETS = [
-  '/',
-  '/index.html',
   '/manifest.webmanifest',
   '/favicon.svg',
   '/vendor/choices.min.js',
@@ -11,8 +9,9 @@ const STATIC_ASSETS = [
   '/data/catalog.json'
 ];
 
-// Instalación: Cachear archivos básicos que no cambian de nombre
+// Instalación: Cachear archivos básicos y forzar activación
 self.addEventListener('install', (event) => {
+  self.skipWaiting(); // <--- IMPORTANTE: No esperar a que se cierren pestañas
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       console.log('📦 PWA: Cacheando activos estáticos...');
@@ -21,14 +20,17 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Activación: Limpieza
+// Activación: Limpieza y toma de control inmediata
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((keys) => {
-      return Promise.all(
-        keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))
-      );
-    })
+    Promise.all([
+      self.clients.claim(), // <--- IMPORTANTE: Tomar control de las pestañas actuales
+      caches.keys().then((keys) => {
+        return Promise.all(
+          keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))
+        );
+      })
+    ])
   );
 });
 
