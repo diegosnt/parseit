@@ -1,4 +1,4 @@
-const CACHE_NAME = 'parseit-v2';
+const CACHE_NAME = 'parseit-v3';
 // Solo cacheamos lo que es ESTÁTICO y no cambia de nombre con Vite
 const STATIC_ASSETS = [
   '/',
