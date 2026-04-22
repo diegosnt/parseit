@@ -1,4 +1,4 @@
-const CACHE_NAME = 'parseit-v5'; // Subimos a v5 para limpiar los 404 cacheados
+const CACHE_NAME = 'parseit-v6'; // Subimos a v6 para forzar actualización de catálogo
 const STATIC_ASSETS = [
   '/',
   '/index.html',
