@@ -7,14 +7,15 @@ import { fetchWithRetry } from './utils.js';
  * Obtiene el catálogo completo de exámenes.
  */
 export async function getExamenes() {
-    // Apuntamos directamente al archivo estático para aprovechar el caché del SW
-    return fetchWithRetry('/data/catalog.json');
+    // Agregamos un timestamp para saltar el cache de Cloudflare Edge y Service Worker
+    const v = new Date().getTime();
+    return fetchWithRetry(`/data/catalog.json?v=${v}`);
 }
 
 /**
  * Obtiene los datos de un examen específico por ID.
  */
 export async function getExamen(id) {
-    // Apuntamos directamente al archivo estático
+    // Los exámenes individuales también podrían cambiar, mejor asegurar
     return fetchWithRetry(`/data/${id}.json`);
 }

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'parseit-v7'; // Incrementamos para limpiar cache viejo
+const CACHE_NAME = 'parseit-v8'; // BOMBA ATÓMICA: v8 para limpiar todo
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -7,7 +7,6 @@ const STATIC_ASSETS = [
   '/vendor/choices.min.js',
   '/vendor/choices.min.css',
   '/vendor/confetti.browser.min.js'
-  // El catalog.json se maneja con Network-First fuera de acá
 ];
 
 // Instalación: Cachear activos básicos
@@ -21,39 +20,49 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Activación: Limpieza de versiones viejas
+// Activación: Limpieza agresiva de caches viejos
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     Promise.all([
       self.clients.claim(),
       caches.keys().then((keys) => {
         return Promise.all(
-          keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))
+          keys.map((key) => {
+            if (key !== CACHE_NAME) {
+              console.log('🗑️ PWA: Borrando cache antiguo:', key);
+              return caches.delete(key);
+            }
+          })
         );
       })
     ])
   );
 });
 
-// Mensajes: Permitir forzar activación desde la app
+// Mensajes
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
   }
 });
 
-// Fetch: Estrategia inteligente
+// Fetch: Estrategia Network-First con Cache Busting
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
 
-  // 1. Estrategia Network-First para el Catálogo y la API de exámenes
-  // Esto asegura que si hay internet, bajamos lo más nuevo.
+  // 1. SI TIENE QUERY PARAMETERS (Cache Busting), NO USAR CACHE DEL SW
+  // Esto obliga a ir a la red (Cloudflare)
+  if (url.search.includes('v=')) {
+    event.respondWith(fetch(request));
+    return;
+  }
+
+  // 2. Catálogo y API (Network-First)
   if (url.pathname.includes('/catalog.json') || url.pathname.startsWith('/api/')) {
     event.respondWith(
       fetch(request)
         .then((response) => {
-          // Solo cachear si la respuesta es exitosa
           if (response.ok) {
             const copy = response.clone();
             caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
@@ -65,12 +74,12 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // 2. No cachear otros dominios
+  // 3. Solo cachear nuestro dominio
   if (url.origin !== self.location.origin) {
     return;
   }
 
-  // 3. Para el index.html (raíz), usar Network-First
+  // 4. Index.html (Network-First)
   if (url.pathname === '/' || url.pathname === '/index.html') {
     event.respondWith(
       fetch(request)
@@ -86,7 +95,7 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // 4. Cache-First para el resto (assets, vendors, etc.)
+  // 5. Assets estáticos (Cache-First)
   event.respondWith(
     caches.match(request).then((cachedResponse) => {
       if (cachedResponse) return cachedResponse;
