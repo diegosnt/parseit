@@ -31,7 +31,8 @@ export async function onRequestGet(context) {
     }
 
     const url = new URL(request.url);
-    const jsonUrl = `${url.origin}/data/${sanitizedId}.json`;
+    // Agregamos timestamp para saltar el cache interno de Cloudflare
+    const jsonUrl = `${url.origin}/data/${sanitizedId}.json?v=${new Date().getTime()}`;
 
     try {
         const response = await fetch(jsonUrl);

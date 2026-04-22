@@ -4,7 +4,8 @@
 export async function onRequestGet(context) {
     const { request } = context;
     const url = new URL(request.url);
-    const catalogUrl = `${url.origin}/data/catalog.json`;
+    // Agregamos cache busting interno para que Cloudflare no nos de un catalog.json viejo
+    const catalogUrl = `${url.origin}/data/catalog.json?v=${new Date().getTime()}`;
 
     try {
         const response = await fetch(catalogUrl);
