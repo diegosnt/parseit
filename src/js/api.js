@@ -1,5 +1,5 @@
 /**
- * api.js - Llamadas a la API de Cloudflare Functions
+ * api.js - Acceso a los datos de exámenes
  */
 import { fetchWithRetry } from './utils.js';
 
@@ -7,12 +7,14 @@ import { fetchWithRetry } from './utils.js';
  * Obtiene el catálogo completo de exámenes.
  */
 export async function getExamenes() {
-    return fetchWithRetry('/api/examenes');
+    // Apuntamos directamente al archivo estático para aprovechar el caché del SW
+    return fetchWithRetry('/data/catalog.json');
 }
 
 /**
  * Obtiene los datos de un examen específico por ID.
  */
 export async function getExamen(id) {
-    return fetchWithRetry(`/api/examen/${id}`);
+    // Apuntamos directamente al archivo estático
+    return fetchWithRetry(`/data/${id}.json`);
 }

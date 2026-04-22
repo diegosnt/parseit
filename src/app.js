@@ -4,6 +4,7 @@
 import { initTheme } from './js/theme.js';
 import { getExamenes, getExamen } from './js/api.js';
 import { state, startTimer, stopTimer } from './js/state.js';
+import { shuffle } from './js/utils.js';
 import * as ui from './js/ui.js';
 
 let choicesInstance = null;
@@ -32,29 +33,51 @@ async function loadExamen(examId) {
             statusBubble.classList.remove('aprobado', 'reprobado');
         }
         
-        const fullExamData = await getExamen(examId);
+        const rawData = await getExamen(examId);
         
-        // --- Lógica de Porcentaje y Barajado ---
-        // Clonamos para no modificar los datos originales si el usuario cambia el porcentaje después
-        const examData = JSON.parse(JSON.stringify(fullExamData));
+        // --- Normalización (Soporte para JSONs que son solo un Array) ---
+        let examData = Array.isArray(rawData) ? {
+            materia: "Examen Genérico",
+            titulo: examId,
+            duracion: 0,
+            preguntas_para_aprobar: Math.ceil(rawData.length * 0.6),
+            fecha: new Date().toISOString().split('T')[0],
+            version: 1,
+            preguntas: rawData
+        } : JSON.parse(JSON.stringify(rawData));
         
-        // Barajamos todas las preguntas
-        const preguntasMezcladas = [...examData.preguntas].sort(() => Math.random() - 0.5);
+        // --- Mezclado de Preguntas ---
+        const preguntasMezcladas = shuffle([...examData.preguntas]);
         
         // Calculamos cuántas preguntas mostrar según el porcentaje
         const cantidadAMostrar = Math.max(1, Math.floor(preguntasMezcladas.length * percentage));
-        examData.preguntas = preguntasMezcladas.slice(0, cantidadAMostrar);
+        const preguntasSeleccionadas = preguntasMezcladas.slice(0, cantidadAMostrar);
+        
+        // --- Mezclado de Opciones ---
+        // IMPORTANTE: Debemos mantener el ID original de la respuesta correcta
+        examData.preguntas = preguntasSeleccionadas.map(p => {
+            const opcionesConId = p.opciones.map((texto, index) => ({
+                texto,
+                id: index
+            }));
+            
+            return {
+                ...p,
+                opciones: shuffle(opcionesConId)
+            };
+        });
         
         // Escalamos el tiempo y las preguntas necesarias para aprobar proporcionalmente
         if (examData.duracion > 0) {
             examData.duracion = Math.max(1, Math.round(examData.duracion * percentage));
         }
         
-        // Ajustamos la meta para aprobar (mínimo 1 pregunta si hay preguntas)
-        examData.preguntas_para_aprobar = Math.max(1, Math.round(fullExamData.preguntas_para_aprobar * (cantidadAMostrar / fullExamData.preguntas.length)));
+        // Ajustamos la meta para aprobar (proporcional al recorte del examen)
+        const totalOriginal = Array.isArray(rawData) ? rawData.length : rawData.preguntas.length;
+        const metaOriginal = examData.preguntas_para_aprobar;
+        examData.preguntas_para_aprobar = Math.max(1, Math.round(metaOriginal * (cantidadAMostrar / totalOriginal)));
         
         state.examData = examData;
-        // --- Fin Lógica de Porcentaje ---
 
         ui.renderMetadata(state.examData);
         ui.renderPreguntas(state.examData.preguntas);
