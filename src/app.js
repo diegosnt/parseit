@@ -7,6 +7,7 @@ import { state, startTimer, stopTimer } from './js/state.js';
 import * as ui from './js/ui.js';
 
 let choicesInstance = null;
+let percentChoicesInstance = null;
 
 /**
  * Carga un examen específico.
@@ -17,6 +18,7 @@ async function loadExamen(examId) {
     const statusBubble = document.getElementById('examen-status');
     const timerContainer = document.getElementById('timer-container');
     const timerDisplay = document.getElementById('timer-display');
+    const percentage = parseFloat(document.getElementById('percent-select').value) || 1;
     
     stopTimer();
     
@@ -30,7 +32,30 @@ async function loadExamen(examId) {
             statusBubble.classList.remove('aprobado', 'reprobado');
         }
         
-        state.examData = await getExamen(examId);
+        const fullExamData = await getExamen(examId);
+        
+        // --- Lógica de Porcentaje y Barajado ---
+        // Clonamos para no modificar los datos originales si el usuario cambia el porcentaje después
+        const examData = JSON.parse(JSON.stringify(fullExamData));
+        
+        // Barajamos todas las preguntas
+        const preguntasMezcladas = [...examData.preguntas].sort(() => Math.random() - 0.5);
+        
+        // Calculamos cuántas preguntas mostrar según el porcentaje
+        const cantidadAMostrar = Math.max(1, Math.floor(preguntasMezcladas.length * percentage));
+        examData.preguntas = preguntasMezcladas.slice(0, cantidadAMostrar);
+        
+        // Escalamos el tiempo y las preguntas necesarias para aprobar proporcionalmente
+        if (examData.duracion > 0) {
+            examData.duracion = Math.max(1, Math.round(examData.duracion * percentage));
+        }
+        
+        // Ajustamos la meta para aprobar (mínimo 1 pregunta si hay preguntas)
+        examData.preguntas_para_aprobar = Math.max(1, Math.round(fullExamData.preguntas_para_aprobar * (cantidadAMostrar / fullExamData.preguntas.length)));
+        
+        state.examData = examData;
+        // --- Fin Lógica de Porcentaje ---
+
         ui.renderMetadata(state.examData);
         ui.renderPreguntas(state.examData.preguntas);
         
@@ -166,6 +191,38 @@ async function initExamenSelector() {
         });
         
         selector.addEventListener('change', (e) => loadExamen(e.target.value));
+
+        // Inicializamos el selector de porcentaje
+        const percentSelector = document.getElementById('percent-select');
+        percentChoicesInstance = new Choices(percentSelector, {
+            searchEnabled: false,
+            itemSelectText: '',
+            shouldSort: false,
+            placeholder: false,
+            callbackOnCreateTemplates: function(template) {
+                return {
+                    choice: (classNames, data) => {
+                        return template(`
+                            <div class="${classNames.item} ${classNames.itemChoice} ${classNames.itemSelectable}" data-select-text="${this.config.itemSelectText}" data-choice data-id="${data.id}" data-value="${data.value}" data-choice-selectable>
+                                <span class="choice-percent">${data.label}</span>
+                            </div>
+                        `);
+                    },
+                    item: (classNames, data) => {
+                        return template(`
+                            <div class="${classNames.item} ${data.highlighted ? classNames.highlightedState : classNames.itemSelectable}" data-item data-id="${data.id}" data-value="${data.value}" ${data.active ? 'aria-selected="true"' : ''} ${data.disabled ? 'aria-disabled="true"' : ''}>
+                                <span class="choice-percent">${data.label}</span>
+                            </div>
+                        `);
+                    },
+                };
+            },
+        });
+
+        percentSelector.addEventListener('change', () => {
+            const currentExamId = selector.value;
+            if (currentExamId) loadExamen(currentExamId);
+        });
 
         if (examenes.length > 0) {
             choicesInstance.setChoiceByValue(examenes[0].id);

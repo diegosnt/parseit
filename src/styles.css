@@ -277,7 +277,11 @@ body {
 
     .choices__inner {
         min-height: 38px !important;
-        padding: 0.05rem 0.2rem !important;
+        padding: 0.1rem 0.6rem !important; /* Un poco más de aire horizontal */
+    }
+
+    .choices__list--single {
+        padding-right: 1rem !important;
     }
 
     /* Reducir fuentes del combo al mínimo */
@@ -488,42 +492,87 @@ body {
 }
 
 .header-selector {
-    flex: 1;
-    min-width: 0; /* Permite que el flex-item se achique si es necesario */
+    flex: 2; /* El de exámenes tiene más peso */
+    min-width: 0;
 }
 
-/* Choices.js Custom Styling */
+.percentage-selector {
+    flex: 0 0 100px; /* Ancho fijo para el porcentaje */
+    min-width: 80px;
+}
+
+/* Choices.js Reset Agresivo - Alineación a la izquierda y evitar cortes */
 .choices {
     margin-bottom: 0;
     width: 100%;
     max-width: 600px;
+    position: relative;
+    text-align: left !important; /* Forzar alineación a la izquierda global */
 }
 
 .choices__inner {
     background-color: var(--bg) !important;
     border: 2px solid var(--color-4) !important;
     border-radius: var(--radius) !important;
-    padding: 0.2rem 0.4rem !important;
-    min-height: 54px !important;
-    display: flex;
-    align-items: center;
+    padding: 0 12px !important; /* Reducido de 24 a 12 para que no esté tan separado cuando está cerrado */
+    min-height: 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    overflow: visible !important;
 }
 
 .choices__list--single {
     padding: 0 !important;
-    width: 100%;
+    margin: 0 !important;
+    width: 100% !important;
+    text-align: left !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
 }
 
+.choices__list--single .choices__item {
+    padding: 0 !important;
+    margin: 0 !important;
+    opacity: 1 !important;
+    display: block !important;
+    width: 100% !important;
+    text-align: left !important;
+    position: static !important;
+}
+
+/* El texto del contenido con un ajuste de padding-left más sutil */
+.choice-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    text-align: left !important;
+    padding-left: 4px; 
+}
+
+@media (min-width: 768px) {
+    .choice-content {
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem; /* Más separación entre materia y título */
+    }
+}
+
+/* Ajuste del Dropdown (lista desplegable) */
 .choices__list--dropdown {
     background-color: var(--bg) !important;
     border: 2px solid var(--color-4) !important;
     border-radius: var(--radius) !important;
     box-shadow: var(--shadow) !important;
+    z-index: 1001 !important;
+    text-align: left !important;
 }
 
-.choices__list--dropdown .choices__item--selectable.is-highlighted {
-    background-color: var(--color-4) !important;
-    color: white !important;
+.choices__list--dropdown .choices__item {
+    padding: 14px 24px !important; /* Más aire en el desplegable también */
+    text-align: left !important;
+    display: block !important;
 }
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted .choice-materia {
@@ -548,12 +597,13 @@ body {
     }
 }
 
-.choice-materia {
+.choice-materia, .choice-percent {
     font-size: 1.1rem;
     color: var(--color-1);
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 0.05rem;
+    padding-left: 4px; /* Aire para que la primera letra respire */
 }
 
 .choice-titulo {

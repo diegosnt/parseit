@@ -1,0 +1,1110 @@
+{
+  "materia": "GEST. DE SIST. DE INFORMACIÓN",
+  "titulo": "Unidades 1 y 2",
+  "duracion": 60,
+  "preguntas_para_aprobar": 95,
+  "fecha": "2026-04-21",
+  "version": "1.0",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué es un sistema de información desde el concepto técnico?",
+      "opciones": [
+        "Un conjunto de computadoras conectadas a internet",
+        "Componentes interrelacionados que colaboran para reunir, procesar, almacenar y distribuir información",
+        "Un software exclusivo para la facturación y contabilidad",
+        "Una base de datos de clientes y proveedores"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Cuáles son las tres actividades básicas de un sistema de información que producen información necesaria?",
+      "opciones": [
+        "Hardware, software y redes",
+        "Personas, lugares y cosas",
+        "Entrada, procesamiento y salida",
+        "Planificación, organización y control"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Qué es la retroalimentación en un sistema de información?",
+      "opciones": [
+        "La entrada de datos al sistema",
+        "La salida que se devuelve para evaluar y refinar la entrada",
+        "El proceso de borrar datos obsoletos",
+        "La comunicación entre empleados"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Cuál es la diferencia entre dato e información?",
+      "opciones": [
+        "No hay diferencia, son sinónimos",
+        "Los datos son hechos en bruto; la información son datos con forma útil y sentido",
+        "La información es la entrada y el dato es la salida",
+        "El dato es digital y la información es analógica"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Qué dimensiones deben comprenderse para usar los sistemas de información eficazmente?",
+      "opciones": [
+        "Internet, redes y servidores",
+        "Organizaciones, administración y tecnología de la información",
+        "Ventas, marketing y finanzas",
+        "Programadores, analistas y gerentes"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 6,
+      "pregunta": "¿Qué nivel gerencial se encarga de realizar planes de acción y resolver problemas organizacionales?",
+      "opciones": [
+        "Gerencia operacional",
+        "Trabajadores de datos",
+        "Administración / Gerencia",
+        "Trabajadores de servicio"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 7,
+      "pregunta": "¿Cuál es la función del hardware de computadora?",
+      "opciones": [
+        "Instrucciones detalladas que controlan el sistema",
+        "Gobernar la organización de los datos",
+        "Equipo físico utilizado para entrada, procesamiento y salida",
+        "Conectar diversas piezas de hardware"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 8,
+      "pregunta": "¿Qué es el software como servicio (SaaS)?",
+      "opciones": [
+        "Instalar programas localmente en cada PC",
+        "Servicios para ofrecer acceso al software de manera remota basado en Web",
+        "Venta de licencias perpetuas de programas",
+        "Software diseñado solo para servidores"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 9,
+      "pregunta": "¿En qué generación de los SI surgieron los sistemas basados en la nube y la Web (CRM/SCM)?",
+      "opciones": [
+        "Tercera generación (1970-1980)",
+        "Segunda generación (1960-1970)",
+        "Cuarta generación (1980-2000)",
+        "Quinta generación (2000-actualidad)"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 10,
+      "pregunta": "¿Qué describe la herramienta FODA?",
+      "opciones": [
+        "Finanzas, Operaciones, Datos y Administración",
+        "Fortalezas, Oportunidades, Debilidades y Amenazas",
+        "Fases de Operación de Datos Automatizados",
+        "Funciones Organizacionales De Almacenamiento"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 11,
+      "pregunta": "¿Cuál de las siguientes es una fuerza del modelo de Porter?",
+      "opciones": [
+        "Sistemas de información",
+        "Productos sustitutos",
+        "Presupuesto de capital",
+        "Cultura organizacional"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 12,
+      "pregunta": "¿Qué estrategia competitiva busca producir productos a un precio más bajo que los competidores?",
+      "opciones": [
+        "Diferenciación de productos",
+        "Enfoque en nichos de mercado",
+        "Liderazgo de bajo costo",
+        "Intimidad con clientes"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 13,
+      "pregunta": "¿Qué es el Capex?",
+      "opciones": [
+        "Gastos operativos diarios",
+        "Gastos de capital para adquirir bienes físicos de larga duración",
+        "Costos recurrentes de licencias",
+        "Salarios de empleados"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 14,
+      "pregunta": "¿Qué es el Opex?",
+      "opciones": [
+        "Inversión en edificios",
+        "Compra de maquinaria",
+        "Gastos operativos recurrentes para el funcionamiento diario",
+        "Activos tangibles a largo plazo"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 15,
+      "pregunta": "¿Cuál es la función principal del CIO (Chief Information Officer)?",
+      "opciones": [
+        "Responsable de la seguridad física",
+        "Director financiero",
+        "Responsable de toda la tecnología de la información de la organización",
+        "Encargado de las ventas y marketing"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 16,
+      "pregunta": "¿Qué define el término 'Gobierno de TI'?",
+      "opciones": [
+        "El mantenimiento del hardware",
+        "Conjunto de prácticas y estructuras para asegurar que la TI cumpla los objetivos de la organización",
+        "La compra de computadoras nuevas",
+        "El control de asistencia de los programadores"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 17,
+      "pregunta": "¿Qué significa que un objetivo sea SMART?",
+      "opciones": [
+        "Simple, Medible, Amplio, Rápido y Tecnológico",
+        "Específico, Medible, Alcanzable, Relevante y con Plazo",
+        "Seguro, Manejable, Automático, Real y Total",
+        "Sistema, Modelo, Análisis, Recolección y Tiempo"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 18,
+      "pregunta": "¿Qué es el análisis de sistemas?",
+      "opciones": [
+        "Escribir código de programación",
+        "El análisis de un problema que una empresa trata de resolver mediante un SI",
+        "Instalar servidores en el centro de datos",
+        "Capacitar a los usuarios finales"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 19,
+      "pregunta": "¿Qué etapa del desarrollo de sistemas traduce las especificaciones en código de software?",
+      "opciones": [
+        "Diseño",
+        "Análisis de requisitos",
+        "Programación",
+        "Prueba"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 20,
+      "pregunta": "¿Qué tipo de prueba consiste en probar cada programa por separado?",
+      "opciones": [
+        "Prueba de sistema",
+        "Prueba de unidad",
+        "Prueba de aceptación",
+        "Prueba beta"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 21,
+      "pregunta": "¿Qué estrategia de conversión implica operar el sistema anterior y el nuevo en conjunto?",
+      "opciones": [
+        "Reemplazo directo",
+        "Metodología en fases",
+        "Estrategia paralela",
+        "Estudio piloto"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 22,
+      "pregunta": "¿Qué porcentaje del mantenimiento se dedica generalmente a realizar mejoras para los usuarios?",
+      "opciones": [
+        "20%",
+        "10%",
+        "60%",
+        "40%"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 23,
+      "pregunta": "¿Qué caracteriza a la metodología de 'cascada' (Waterfall)?",
+      "opciones": [
+        "Las etapas se completan antes de empezar la siguiente",
+        "Es altamente flexible y sin documentación",
+        "No requiere análisis de requisitos",
+        "Es la más moderna para inteligencia artificial"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 24,
+      "pregunta": "¿Qué es el prototipado?",
+      "opciones": [
+        "Un manual de usuario detallado",
+        "Crear un sistema experimental con rapidez para que los usuarios lo evalúen",
+        "La etapa final de mantenimiento",
+        "Un tipo de contrato de outsourcing"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 25,
+      "pregunta": "¿Cuál es una ventaja del Desarrollo del Usuario Final?",
+      "opciones": [
+        "Permite procesar grandes transacciones",
+        "Reduce el tiempo y pasos para producir una aplicación simple",
+        "Garantiza un control estricto de la seguridad",
+        "Sustituye por completo al departamento de sistemas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 26,
+      "pregunta": "¿Qué es el Outsourcing de SI?",
+      "opciones": [
+        "Comprar hardware de última generación",
+        "Subcontratar el trabajo de sistemas a una organización externa",
+        "Contratar solo gerentes internos",
+        "Vender software propio a otras empresas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 27,
+      "pregunta": "¿Cuál es el objetivo principal del Desarrollo Ágil de Software?",
+      "opciones": [
+        "Seguir un plan rígido sin cambios",
+        "Ofrecer pequeños fragmentos de software funcional en corto tiempo",
+        "Eliminar la necesidad de programadores",
+        "Reducir la comunicación con el cliente"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 28,
+      "pregunta": "¿Qué framework ágil se basa en Sprints y reuniones diarias?",
+      "opciones": [
+        "Waterfall",
+        "Kanban",
+        "Scrum",
+        "ISO 9001"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 29,
+      "pregunta": "¿Qué significa Kanban en japonés?",
+      "opciones": [
+        "Mejora continua",
+        "Tarjeta visual",
+        "Código rápido",
+        "Equipo unido"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 30,
+      "pregunta": "¿Cuál es una práctica técnica principal de Extreme Programming (XP)?",
+      "opciones": [
+        "Documentación extensa",
+        "Pair Programming (Programación en parejas)",
+        "Contratos de precio fijo",
+        "Reuniones de 4 horas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 31,
+      "pregunta": "¿Qué es un RFI (Request for Information)?",
+      "opciones": [
+        "Un contrato de compra final",
+        "Documento para educar al cliente y entender posibles soluciones de proveedores",
+        "Un desglose detallado de costos",
+        "Una factura de servicios"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 32,
+      "pregunta": "¿Qué es un RFP (Request for Proposal)?",
+      "opciones": [
+        "Una solicitud de presupuesto final",
+        "Documento formal para buscar propuestas y comparar valores de proveedores",
+        "Un manual técnico de hardware",
+        "Una evaluación de desempeño de empleados"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 33,
+      "pregunta": "¿Qué es un RFQ (Request for Quotation)?",
+      "opciones": [
+        "Una investigación de mercado",
+        "Un documento que detalla los costes para cumplir requisitos específicos",
+        "Un manual de estilo de programación",
+        "Una solicitud de información general"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 34,
+      "pregunta": "¿Qué es un KPI (Key Performance Indicator)?",
+      "opciones": [
+        "Un tipo de base de datos",
+        "Métrica cuantificable para evaluar el rendimiento en función de objetivos",
+        "Un lenguaje de programación",
+        "Un componente físico del servidor"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 35,
+      "pregunta": "¿Qué es un SLA (Service Level Agreement)?",
+      "opciones": [
+        "Un tipo de licencia de software",
+        "Contrato que determina responsabilidades y niveles de servicio entre partes",
+        "Un protocolo de red",
+        "Un algoritmo de inteligencia artificial"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 36,
+      "pregunta": "¿Qué actor ambiental interactúa con la organización y sus sistemas de información?",
+      "opciones": [
+        "Solo los empleados",
+        "Clientes, proveedores, competidores y agencias regulatorias",
+        "Solo los accionistas",
+        "Únicamente el departamento de TI"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 37,
+      "pregunta": "¿Qué nivel de empresa incluye a científicos y trabajadores del conocimiento?",
+      "opciones": [
+        "Gerencia operacional",
+        "Gerencia de nivel medio",
+        "Gerencia de nivel superior",
+        "Trabajadores de producción"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 38,
+      "pregunta": "¿Qué tecnología conecta hardware y transfiere datos de una ubicación a otra?",
+      "opciones": [
+        "Software de aplicación",
+        "Tecnología de redes y telecomunicaciones",
+        "Administración de datos",
+        "Hardware de procesamiento"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 39,
+      "pregunta": "¿Cuál es un beneficio de la transformación digital?",
+      "opciones": [
+        "Aumento de procesos manuales",
+        "Mejora de la eficiencia y la innovación mediante nuevas tecnologías",
+        "Eliminación de la necesidad de clientes",
+        "Reducción total de la seguridad"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 40,
+      "pregunta": "¿Desde qué perspectiva los SI se ven como una serie de actividades que agregan valor?",
+      "opciones": [
+        "Perspectiva técnica",
+        "Perspectiva de negocios (Cadena de valor)",
+        "Perspectiva de programación",
+        "Perspectiva de hardware"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 41,
+      "pregunta": "¿Qué activos se requieren para optimizar rendimientos de TI además de la tecnología?",
+      "opciones": [
+        "Solo más computadoras",
+        "Activos complementarios sociales, gerenciales y organizacionales",
+        "Únicamente software libre",
+        "Solo cables de red"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 42,
+      "pregunta": "¿Cuál es el rol del CISO (Chief Information Security Officer)?",
+      "opciones": [
+        "Director de marketing",
+        "Responsable de la seguridad de la información",
+        "Responsable de las operaciones diarias",
+        "Director financiero"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 43,
+      "pregunta": "¿Qué es la tercerización de tipo 'Body Shopping'?",
+      "opciones": [
+        "Compra de servidores",
+        "Subcontratación de personal externo para trabajar bajo supervisión del cliente",
+        "Desarrollo de un producto llave en mano",
+        "Soporte de infraestructura en la nube"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 44,
+      "pregunta": "¿Qué es un 'Plan de Sistemas de Información'?",
+      "opciones": [
+        "Un código de programación",
+        "Documento que describe objetivos, sistemas actuales y nuevos desarrollos de TI",
+        "Una factura de internet",
+        "Un organigrama de la empresa"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 45,
+      "pregunta": "¿Qué técnica de retroalimentación (feedback) es esencial para desarrollar personas?",
+      "opciones": [
+        "Criticar errores en público",
+        "Información específica, oportuna y basada en hechos",
+        "Ignorar el desempeño",
+        "Dar feedback una vez cada 5 años"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 46,
+      "pregunta": "¿Qué sistemas apoyan la toma de decisiones de los gerentes?",
+      "opciones": [
+        "Solo procesadores de texto",
+        "MIS, BI, Data Warehouse y DSS",
+        "Solo el correo electrónico",
+        "Únicamente hojas de cálculo"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 47,
+      "pregunta": "¿De dónde obtienen sus datos los Sistemas de Información Gerencial (MIS)?",
+      "opciones": [
+        "De los periódicos",
+        "De los Sistemas de Procesamiento de Transacciones (TPS)",
+        "Solo de fuentes externas",
+        "De la memoria de los empleados"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 48,
+      "pregunta": "¿Qué es la 'Conversión' en el ciclo de vida de un sistema?",
+      "opciones": [
+        "Pasar de datos analógicos a digitales",
+        "Proceso de cambiar del sistema anterior al sistema nuevo",
+        "Cambiar el hardware por uno más pequeño",
+        "Traducir el código a otro lenguaje"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 49,
+      "pregunta": "¿Qué es la 'Prueba de Aceptación'?",
+      "opciones": [
+        "La primera prueba que hace el programador",
+        "Certificación final por parte de usuarios y gerencia para producción",
+        "Prueba de velocidad de internet",
+        "Prueba de resistencia física del hardware"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 50,
+      "pregunta": "¿Qué desventaja tiene el prototipado rápido?",
+      "opciones": [
+        "Es muy lento",
+        "Puede pasar por alto etapas esenciales de documentación y prueba",
+        "Es muy costoso inicialmente",
+        "No permite la participación del usuario"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 51,
+      "pregunta": "¿Qué es un 'Lenguaje de Consulta' (Query Language)?",
+      "opciones": [
+        "Un idioma extranjero",
+        "Herramienta que da respuestas inmediatas a preguntas no predefinidas",
+        "Un compilador de Java",
+        "Un manual de instrucciones"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 52,
+      "pregunta": "¿Cuál es un criterio importante para evaluar un paquete de software de aplicación?",
+      "opciones": [
+        "El color de la caja",
+        "Funciones, flexibilidad, costo y calidad del distribuidor",
+        "Si tiene un nombre corto",
+        "La edad del vendedor"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 53,
+      "pregunta": "¿Qué riesgo tiene el Outsourcing?",
+      "opciones": [
+        "Tener demasiada tecnología",
+        "Subestimar costos de evaluación y pérdida de ventaja competitiva",
+        "Contratar a los mejores expertos",
+        "Mejorar los procesos internos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 54,
+      "pregunta": "¿Qué es la 'Agilidad' en el desarrollo de software?",
+      "opciones": [
+        "Correr rápido por la oficina",
+        "Capacidad de adaptarse al cambio",
+        "Escribir código sin pensar",
+        "No hacer pruebas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 55,
+      "pregunta": "¿Qué es el 'Backlog' en metodologías ágiles?",
+      "opciones": [
+        "Una copia de seguridad",
+        "Lista priorizada de requerimientos o tareas",
+        "Un error de programación",
+        "El historial del navegador"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 56,
+      "pregunta": "¿Quién es el responsable de traducir objetivos de empresa en 'User Stories' en Scrum?",
+      "opciones": [
+        "Scrum Master",
+        "Product Owner",
+        "Development Team",
+        "CEO"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 57,
+      "pregunta": "¿Qué principio de Kanban recomienda 'Visualizar'?",
+      "opciones": [
+        "Mirar fijamente al monitor",
+        "Tener un tablero visual con el estado de las tareas",
+        "Imaginar el éxito",
+        "Ver videos de capacitación"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 58,
+      "pregunta": "¿Qué es el TDD (Test Driven Development) en XP?",
+      "opciones": [
+        "Tiempo De Desarrollo",
+        "Desarrollo dirigido por pruebas",
+        "Total De Datos",
+        "Técnica De Diseño"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 59,
+      "pregunta": "¿Cuál es la diferencia principal entre Metodología y Framework?",
+      "opciones": [
+        "No hay diferencia",
+        "Metodología es más amplia y prescriptiva; Framework es una estructura flexible",
+        "Framework es solo para hardware",
+        "Metodología es solo para Waterfall"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 60,
+      "pregunta": "¿Qué es el 'Business Intelligence' (BI)?",
+      "opciones": [
+        "Inteligencia humana normal",
+        "Infraestructura y herramientas para análisis de datos y soporte de decisiones",
+        "Un departamento de espionaje",
+        "Un tipo de memoria RAM"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 61,
+      "pregunta": "¿Qué es la 'Cultura Organizacional' en relación a los SI?",
+      "opciones": [
+        "Los cuadros en las paredes",
+        "Conjunto de valores y formas de hacer las cosas aceptados por los miembros",
+        "El idioma oficial de la empresa",
+        "La velocidad del internet"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 62,
+      "pregunta": "¿Cuál es la misión típica de un CIO?",
+      "opciones": [
+        "Vender productos",
+        "Garantizar disponibilidad, seguridad y eficiencia de sistemas de TI",
+        "Limpiar los servidores",
+        "Contratar personal de ventas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 63,
+      "pregunta": "¿Qué es la 'Intimidad con clientes y proveedores' como estrategia?",
+      "opciones": [
+        "Vivir con ellos",
+        "Usar SI para desarrollar lazos sólidos y lealtad",
+        "Saber sus secretos personales",
+        "Enviarles correos todos los días"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 64,
+      "pregunta": "¿Qué es la 'Subcontratación de personal' (Outsourcing de personal)?",
+      "opciones": [
+        "Despedir a todos",
+        "Contratación de personal por medio de una empresa externa",
+        "Trabajar horas extras",
+        "Automatizar todas las tareas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 65,
+      "pregunta": "¿Qué es la 'Evaluación de Desempeño'?",
+      "opciones": [
+        "Un examen médico",
+        "Medir y mejorar el rendimiento de personas en relación a objetivos",
+        "Contar cuántas horas trabaja alguien",
+        "Revisar el estado de las computadoras"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 66,
+      "pregunta": "¿Qué es el 'Data Warehouse'?",
+      "opciones": [
+        "Un depósito físico de discos duros",
+        "Almacén de datos para consolidar información de diversas fuentes",
+        "Una tienda de computación",
+        "Un software de diseño gráfico"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 67,
+      "pregunta": "¿Qué es el 'Análisis de Big Data'?",
+      "opciones": [
+        "Analizar archivos muy grandes en Excel",
+        "Analizar grandes volúmenes de datos complejos para encontrar patrones",
+        "Comprar un disco duro de 100TB",
+        "Contar cuántos datos tiene la empresa"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 68,
+      "pregunta": "¿Qué es la 'Estrategia de estudio piloto'?",
+      "opciones": [
+        "Entrenar a pilotos de avión",
+        "Introducir el sistema solo a un área limitada antes de toda la organización",
+        "Hacer una encuesta por internet",
+        "Usar el sistema solo un día"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 69,
+      "pregunta": "¿Qué es el 'Mantenimiento preventivo'?",
+      "opciones": [
+        "Arreglar algo que ya se rompió",
+        "Cambios para corregir errores o mejorar eficiencia en producción",
+        "Comprar seguros para el hardware",
+        "Apagar las máquinas por la noche"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 70,
+      "pregunta": "¿Qué es la 'Iteración' en el desarrollo de sistemas?",
+      "opciones": [
+        "Un error de cálculo",
+        "Repetición de pasos para refinar y mejorar el sistema",
+        "Una reunión larga",
+        "Escribir código en latín"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 71,
+      "pregunta": "¿Qué es una 'User Story'?",
+      "opciones": [
+        "Un cuento para dormir",
+        "Descripción simple de un requerimiento desde la perspectiva del usuario",
+        "La biografía del cliente",
+        "Un comentario en redes sociales"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 72,
+      "pregunta": "¿Cuál es un principio del Manifiesto Ágil?",
+      "opciones": [
+        "Documentación exhaustiva sobre software funcionando",
+        "Software funcionando como medida principal de progreso",
+        "Seguir el plan a toda costa",
+        "Procesos y herramientas sobre individuos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 73,
+      "pregunta": "¿Qué es el 'Pair Programming'?",
+      "opciones": [
+        "Programar dos sistemas a la vez",
+        "Dos programadores trabajando juntos en una misma computadora",
+        "Tener dos teclados conectados",
+        "Programar en dos lenguajes distintos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 74,
+      "pregunta": "¿Qué es el 'Scrum Master'?",
+      "opciones": [
+        "El jefe de todos los programadores",
+        "Facilitador que ayuda al equipo a aplicar Scrum y elimina obstáculos",
+        "El que escribe todo el código",
+        "El cliente final"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 75,
+      "pregunta": "¿Qué es un 'Dashboard' (Tablero de control)?",
+      "opciones": [
+        "Un teclado moderno",
+        "Interfaz visual que muestra KPIs y métricas clave en tiempo real",
+        "Una mesa de dibujo",
+        "Un manual de procedimientos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 76,
+      "pregunta": "¿Qué es la 'Escalabilidad' de un sistema?",
+      "opciones": [
+        "Que sea fácil de limpiar",
+        "Capacidad de manejar un aumento en la carga de trabajo",
+        "Que se pueda subir por una escalera",
+        "Que tenga muchos colores"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 77,
+      "pregunta": "¿Qué es un 'Stakeholder'?",
+      "opciones": [
+        "Un error de sistema",
+        "Cualquier persona o grupo interesado o afectado por el sistema",
+        "Un tipo de cable de red",
+        "El dueño de la empresa de hosting"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 78,
+      "pregunta": "¿Qué es el 'Ciclo de Vida Tradicional' (Cascada)?",
+      "opciones": [
+        "Un ciclo sin fin de errores",
+        "Metodología basada en fases secuenciales y formales",
+        "Una forma de reciclar hardware",
+        "Un programa de entrenamiento físico"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 79,
+      "pregunta": "¿Qué es el 'Refactoring' en XP?",
+      "opciones": [
+        "Pintar las oficinas",
+        "Mejorar el diseño del código existente sin cambiar su comportamiento",
+        "Cambiar de lenguaje de programación",
+        "Borrar todo el código"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 80,
+      "pregunta": "¿Qué es el 'Daily Scrum'?",
+      "opciones": [
+        "Un periódico técnico",
+        "Reunión diaria corta para sincronizar actividades del equipo",
+        "Una merienda grupal",
+        "Un informe de ventas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 81,
+      "pregunta": "¿Qué es el 'Product Owner'?",
+      "opciones": [
+        "El dueño de la fábrica",
+        "Persona responsable de maximizar el valor del producto y gestionar el backlog",
+        "El que empaqueta el software",
+        "El repartidor"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 82,
+      "pregunta": "¿Qué es una 'Retrospectiva' en Scrum?",
+      "opciones": [
+        "Mirar fotos antiguas",
+        "Reunión para reflexionar sobre el sprint pasado y mejorar procesos",
+        "Un plan para el próximo año",
+        "Una crítica destructiva"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 83,
+      "pregunta": "¿Qué es el 'WIP' (Work in Progress) en Kanban?",
+      "opciones": [
+        "Trabajo Muy Importante",
+        "Límite de tareas que pueden estar en curso simultáneamente",
+        "Un virus informático",
+        "Una contraseña segura"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 84,
+      "pregunta": "¿Qué es el 'Time-bound' en un objetivo SMART?",
+      "opciones": [
+        "Que sea divertido",
+        "Que tenga un plazo o fecha límite definida",
+        "Que use mucha tecnología",
+        "Que sea eterno"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 85,
+      "pregunta": "¿Qué es un 'Benchmark'?",
+      "opciones": [
+        "Un banco de plaza",
+        "Referencia o estándar para comparar el rendimiento propio",
+        "Una marca de computadoras",
+        "Un tipo de servidor"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 86,
+      "pregunta": "¿Qué es el 'Cloud Computing'?",
+      "opciones": [
+        "Computar el clima",
+        "Uso de servidores remotos en internet para almacenar y procesar datos",
+        "Dibujar nubes en la computadora",
+        "Una red local sin cables"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 87,
+      "pregunta": "¿Qué es la 'Ciberseguridad'?",
+      "opciones": [
+        "Tener guardias en la puerta",
+        "Protección de sistemas y datos contra ataques digitales",
+        "Usar cámaras de video",
+        "No usar internet"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 88,
+      "pregunta": "¿Qué es un 'Algoritmo'?",
+      "opciones": [
+        "Una nota musical",
+        "Conjunto de pasos o reglas para resolver un problema",
+        "Un tipo de monitor",
+        "Un lenguaje de señas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 89,
+      "pregunta": "¿Qué es la 'Interfaz de Usuario' (UI)?",
+      "opciones": [
+        "La parte interna del servidor",
+        "Punto de interacción entre el usuario y la computadora",
+        "Un cable de conexión",
+        "El manual impreso"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 90,
+      "pregunta": "¿Qué es el 'ERP' (Enterprise Resource Planning)?",
+      "opciones": [
+        "Plan Rápido de Emergencia",
+        "Sistema integrado para gestionar procesos de negocio de toda la empresa",
+        "Un tipo de procesador",
+        "Una red social corporativa"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 91,
+      "pregunta": "¿Qué es el 'CRM' (Customer Relationship Management)?",
+      "opciones": [
+        "Control Real de Máquinas",
+        "Sistema para gestionar relaciones y datos de los clientes",
+        "Un método de limpieza",
+        "Un certificado de calidad"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 92,
+      "pregunta": "¿Qué es la 'Inteligencia Artificial' (IA)?",
+      "opciones": [
+        "Un robot que limpia",
+        "Sistemas que simulan procesos de inteligencia humana",
+        "Un programa de ajedrez",
+        "Cualquier computadora rápida"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 93,
+      "pregunta": "¿Qué es el 'Internet de las Cosas' (IoT)?",
+      "opciones": [
+        "Comprar cosas por internet",
+        "Red de objetos físicos conectados que recolectan y comparten datos",
+        "Tener muchas pestañas abiertas",
+        "Un buscador de objetos perdidos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 94,
+      "pregunta": "¿Qué es el 'Big Data'?",
+      "opciones": [
+        "Un disco duro muy grande",
+        "Conjuntos de datos masivos que superan la capacidad del software tradicional",
+        "Muchos archivos en una carpeta",
+        "La base de datos de Facebook"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 95,
+      "pregunta": "¿Qué es un 'Servidor'?",
+      "opciones": [
+        "El que atiende en el bar",
+        "Computadora que provee servicios y datos a otras computadoras (clientes)",
+        "Un mouse inalámbrico",
+        "Un cable de alimentación"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 96,
+      "pregunta": "¿Qué es la 'Banda Ancha'?",
+      "opciones": [
+        "Una banda de música numerosa",
+        "Conexión de alta velocidad a internet",
+        "Un cable muy grueso",
+        "Tener muchos monitores"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 97,
+      "pregunta": "¿Qué es un 'Firewall'?",
+      "opciones": [
+        "Una pared resistente al fuego",
+        "Sistema de seguridad que controla el tráfico de red",
+        "Un extintor de incendios",
+        "Un programa para borrar virus"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 98,
+      "pregunta": "¿Qué es el 'Open Source' (Código Abierto)?",
+      "opciones": [
+        "Software que es gratis siempre",
+        "Software cuyo código fuente es accesible para ser modificado por cualquiera",
+        "Un programa sin contraseña",
+        "Un sistema operativo de puertas abiertas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 99,
+      "pregunta": "¿Qué es la 'Virtualización'?",
+      "opciones": [
+        "Vivir en un videojuego",
+        "Crear versiones virtuales de recursos tecnológicos como servidores",
+        "Usar lentes de realidad virtual",
+        "Imaginar que la computadora funciona"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 100,
+      "pregunta": "¿Qué es el 'Backup'?",
+      "opciones": [
+        "Volver atrás",
+        "Copia de seguridad de los datos para prevenir pérdidas",
+        "Un soporte para el monitor",
+        "Una pieza de repuesto"
+      ],
+      "respuesta_correcta": 1
+    }
+  ]
+}
