@@ -181,12 +181,41 @@ async function init() {
     initTheme();
     await initExamenSelector();
 
-    // 🚀 Registro de Service Worker para capacidades PWA (Mejora 4)
+    // 🚀 Registro de Service Worker para capacidades PWA
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
             navigator.serviceWorker.register('/sw.js')
-                .then(reg => console.log('✅ Service Worker registrado para Offline-First.'))
+                .then(reg => {
+                    console.log('✅ Service Worker registrado.');
+                    
+                    // Si hay un SW esperando, forzar el skipWaiting
+                    if (reg.waiting) {
+                        reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+                    }
+
+                    // Escuchar por actualizaciones
+                    reg.onupdatefound = () => {
+                        const installingWorker = reg.installing;
+                        installingWorker.onstatechange = () => {
+                            if (installingWorker.state === 'installed') {
+                                if (navigator.serviceWorker.controller) {
+                                    console.log('🔄 Nueva versión disponible, recargando...');
+                                    window.location.reload();
+                                }
+                            }
+                        };
+                    };
+                })
                 .catch(err => console.warn('❌ Error al registrar Service Worker:', err));
+        });
+
+        // Asegurarnos de recargar solo una vez cuando el nuevo SW tome el control
+        let refreshing = false;
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+            if (!refreshing) {
+                refreshing = true;
+                window.location.reload();
+            }
         });
     }
 }

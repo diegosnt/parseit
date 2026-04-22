@@ -26,7 +26,7 @@
 - **Validación**: Zod (Schema Validation).
 - **Herramientas**: `pnpm`, `vite`, `wrangler`, `concurrently`.
 
-## 🔧 Instalación y Desarrollo Local
+## 🚀 Instalación y Despliegue
 
 1. **Instalar dependencias**:
    ```bash
@@ -37,18 +37,38 @@
    ```bash
    pnpm dev
    ```
-   *Esto inicia el frontend en `http://localhost:5173` y el backend en `http://localhost:8788` de forma simultánea.*
+   *Frontend en `http://localhost:5173` y backend en `http://localhost:8788`.*
 
 3. **Build para Producción**:
    ```bash
    pnpm build
    ```
-   *Genera la carpeta `dist/` con todos los activos optimizados y validados.*
+   *Genera la carpeta `dist/` con activos validados.*
 
-4. **Probar Build localmente (con funciones)**:
+4. **Desplegar a Cloudflare Pages**:
    ```bash
-   pnpm start
+   pnpm run deploy
    ```
+   *Nota: Se debe usar `run` para evitar conflictos con el comando interno de `pnpm deploy` en entornos con workspaces.*
+
+## ⚙️ Configuración en Cloudflare Pages
+
+Si configuras el despliegue automático desde GitHub, utiliza estos valores:
+- **Framework Preset**: `None`
+- **Build Command**: `pnpm build`
+- **Build Output Directory**: `dist`
+- **Root Directory**: `/` (Raíz del proyecto)
+
+## 📦 Mantenimiento de PWA (Offline-First)
+
+El sistema utiliza un **Service Worker** (`public/sw.js`) para cachear archivos y permitir el funcionamiento offline.
+
+**⚠️ Importante:** Si realizas cambios estructurales en el CSS, JS o el `index.html`, debes **incrementar la versión del caché** en `public/sw.js` para forzar a los navegadores a descargar la nueva versión:
+
+```javascript
+// public/sw.js
+const CACHE_NAME = 'parseit-v4'; // Incrementar este valor (v3 -> v4, etc.)
+```
 
 ## 📄 Estructura del Proyecto
 
