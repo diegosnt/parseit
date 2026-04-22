@@ -1,4 +1,4 @@
-const CACHE_NAME = 'parseit-v8'; // BOMBA ATÓMICA: v8 para limpiar todo
+const CACHE_NAME = 'parseit-v9'; // Subimos a v9 para asegurar limpieza total
 const STATIC_ASSETS = [
   '/',
   '/index.html',

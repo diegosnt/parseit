@@ -1,25 +1,45 @@
 /**
- * functions/api/examenes.js - Listar exámenes en Cloudflare Pages
+ * functions/api/examenes.js - Listar exámenes
  */
 export async function onRequestGet(context) {
     const { request } = context;
     const url = new URL(request.url);
-    // Agregamos cache busting interno para que Cloudflare no nos de un catalog.json viejo
-    const catalogUrl = `${url.origin}/data/catalog.json?v=${new Date().getTime()}`;
+    
+    // Intentamos varias rutas por si el deploy es desde root o desde dist
+    const possiblePaths = [
+        `${url.origin}/data/catalog.json`,
+        `${url.origin}/public/data/catalog.json`
+    ];
 
-    try {
-        const response = await fetch(catalogUrl);
-        if (!response.ok) throw new Error('Catálogo no encontrado');
-        
-        const catalog = await response.json();
+    let lastError = null;
 
-        return new Response(JSON.stringify(catalog), {
-            headers: { 'Content-Type': 'application/json' }
-        });
-    } catch (error) {
-        return new Response(JSON.stringify({ error: 'No se pudieron listar los exámenes.' }), {
-            status: 500,
-            headers: { 'Content-Type': 'application/json' }
-        });
+    for (const path of possiblePaths) {
+        try {
+            // Agregamos cache busting
+            const finalUrl = `${path}?v=${new Date().getTime()}`;
+            const response = await fetch(finalUrl);
+            
+            if (response.ok) {
+                const catalog = await response.json();
+                return new Response(JSON.stringify(catalog), {
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Cache-Control': 'no-store, no-cache, must-revalidate'
+                    }
+                });
+            }
+            lastError = `Status ${response.status} en ${path}`;
+        } catch (e) {
+            lastError = e.message;
+        }
     }
+
+    return new Response(JSON.stringify({ 
+        error: 'No se pudo cargar el catálogo.',
+        details: lastError,
+        tried: possiblePaths
+    }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' }
+    });
 }

@@ -54,12 +54,14 @@ async function loadExamen(examId) {
         const preguntasSeleccionadas = preguntasMezcladas.slice(0, cantidadAMostrar);
         
         // --- Mezclado de Opciones ---
-        // IMPORTANTE: Debemos mantener el ID original de la respuesta correcta
+        // IMPORTANTE: Solo normalizamos si las opciones son strings (JSON crudo)
+        // Si ya vienen como objetos (desde la API de Cloudflare), solo las barajamos.
         examData.preguntas = preguntasSeleccionadas.map(p => {
-            const opcionesConId = p.opciones.map((texto, index) => ({
-                texto,
-                id: index
-            }));
+            const opcionesNecesitanNormalizacion = p.opciones.length > 0 && typeof p.opciones[0] === 'string';
+            
+            const opcionesConId = opcionesNecesitanNormalizacion 
+                ? p.opciones.map((texto, index) => ({ texto, id: index }))
+                : p.opciones;
             
             return {
                 ...p,
