@@ -322,6 +322,9 @@ body {
 .opcion-label.correcta { background-color: #d8f3dc; border-color: var(--success); }
 .opcion-label.incorrecta { background-color: #fce8e6; border-color: var(--color-3); }
 
+[data-theme="dark"] .opcion-label.correcta { background-color: #1a3d2b; border-color: var(--success); }
+[data-theme="dark"] .opcion-label.incorrecta { background-color: #3d1a1a; border-color: var(--color-3); }
+
 /* Choices.js Customization */
 .choices__inner {
     background-color: var(--bg) !important;
