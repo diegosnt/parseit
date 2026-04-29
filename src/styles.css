@@ -317,6 +317,36 @@ body {
     background-color: var(--bg) !important;
     border: 2px solid var(--color-4) !important;
     border-radius: var(--radius) !important;
+    color: var(--text) !important;
+}
+
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
+    background-color: var(--card-bg) !important;
+    border: 1px solid var(--border) !important;
+    color: var(--text) !important;
+}
+
+.choices__list--dropdown .choices__item,
+.choices__list[aria-expanded] .choices__item {
+    color: var(--text) !important;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted,
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+    background-color: var(--primary) !important;
+    color: white !important;
+}
+
+/* Select nativo (porcentaje si no usa Choices) */
+select.form-select {
+    background-color: var(--bg);
+    color: var(--text);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.4rem 0.5rem;
+    width: 100%;
+    color-scheme: light dark;
 }
 
 .choice-materia { 
