@@ -1,141 +1,56 @@
 # 📝 ParseIt - Sistema de Exámenes Interactivos Dinámicos
 
-**ParseIt** es una aplicación web moderna, robusta y optimizada para Cloudflare Pages, diseñada para ofrecer una experiencia de evaluación y estudio inigualable. El sistema destaca por su enfoque en la UX inmersiva, feedback sensorial y herramientas de aprendizaje en tiempo real.
+**ParseIt** es una aplicación web moderna, robusta y optimizada para Cloudflare Pages. Diseñada para ofrecer una experiencia de evaluación y estudio inigualable, con un enfoque en la UX inmersiva, funcionamiento offline y validación estricta de datos.
 
-## 🚀 Características Destacadas
+## 🚀 Cómo agregar nuevos exámenes (Paso a Paso)
 
-- **Optimizado para Cloudflare Pages**: Arquitectura basada en **Cloudflare Functions**, lista para escalar globalmente en el edge sin necesidad de un servidor tradicional.
-- **Vite-Powered**: Entorno de desarrollo ultra-rápido con Hot Module Replacement (HMR) y builds de producción optimizados.
-- **PWA (Progressive Web App)**: Instalable en dispositivos móviles y con funcionamiento **Offline-First**. Estudia sin conexión a internet.
-- **Validación Estricta (Zod)**: Todo examen cargado es validado en tiempo de build, garantizando que no existan errores de formato o lógica de respuestas.
-- **Experiencia Inmersiva (Dual Feedback)**:
-  - **Celebración**: Ráfagas de confeti dinámicas (`canvas-confetti`) al aprobar.
-  - **Impacto Negativo**: Efecto de sacudida de pantalla (*Screen Shake*) y viñeta roja periférica al reprobar para un feedback sensorial inmediato.
-- **Modo Oscuro Orgánico**: Paleta de colores premium con toggle de tema elíptico.
+El sistema automatiza la detección y validación de exámenes. Para subir contenido nuevo:
 
-## 🛡️ Seguridad y Robustez
-
-- **Validación Shift-Left**: Los errores en los JSONs se detectan antes del despliegue mediante esquemas de **Zod**. Si un examen está roto, el build falla y el despliegue se detiene.
-- **Arquitectura Modular (ES Modules)**: Separación estricta de responsabilidades en módulos dedicados (`api.js`, `ui.js`, `state.js`, `theme.js`, `utils.js`).
-- **Autonomía Total (No CDNs)**: Todas las librerías externas se sirven localmente, garantizando funcionamiento sin internet y máxima privacidad.
-
-## 🛠️ Stack Tecnológico
-
-- **Frontend**: HTML5, CSS3, Vanilla JS (ES6+ Modules / Vite).
-- **Backend**: Cloudflare Pages Functions (Serverless).
-- **Validación**: Zod (Schema Validation).
-- **Herramientas**: `pnpm`, `vite`, `wrangler`, `concurrently`.
-
-## 🚀 Instalación y Despliegue
-
-1. **Instalar dependencias**:
-   ```bash
-   pnpm install
-   ```
-
-2. **Ejecutar en modo desarrollo (Full Stack)**:
-   ```bash
-   pnpm dev
-   ```
-   *Frontend en `http://localhost:5173` y backend en `http://localhost:8788`.*
-
-3. **Build para Producción**:
-   ```bash
-   pnpm build
-   ```
-   *Genera la carpeta `dist/` con activos validados.*
-
-4. **Desplegar a Cloudflare Pages**:
-   ```bash
-   pnpm run deploy
-   ```
-   *Nota: Se debe usar `run` para evitar conflictos con el comando interno de `pnpm deploy` en entornos con workspaces.*
-
-## ⚙️ Configuración en Cloudflare Pages
-
-Si configuras el despliegue automático desde GitHub, utiliza estos valores:
-- **Framework Preset**: `None`
-- **Build Command**: `pnpm build`
-- **Build Output Directory**: `dist`
-- **Root Directory**: `/` (Raíz del proyecto)
-
-## 📦 Mantenimiento de PWA (Offline-First)
-
-El sistema utiliza un **Service Worker** (`public/sw.js`) para cachear archivos y permitir el funcionamiento offline.
-
-**⚠️ Importante:** Si realizas cambios estructurales en el CSS, JS o el `index.html`, debes **incrementar la versión del caché** en `public/sw.js` para forzar a los navegadores a descargar la nueva versión:
-
-```javascript
-// public/sw.js
-const CACHE_NAME = 'parseit-v4'; // Incrementar este valor (v3 -> v4, etc.)
-```
-
-## 📄 Estructura del Proyecto
-
-```text
-/
-├── dist/               # Carpeta de build final (generada)
-├── functions/          # Backend Serverless (Cloudflare Functions)
-│   └── api/            # Endpoints dinámicos de exámenes
-├── public/             # Archivos estáticos puros (No procesados por Vite)
-│   ├── data/           # JSONs de exámenes y catalog.json (Validado)
-│   ├── vendor/         # Librerías de terceros (Choices.js, Confetti)
-│   ├── sw.js           # Service Worker (Caché Offline)
-│   └── manifest.webmanifest # Configuración PWA
-├── src/                # Código fuente de la aplicación
-│   ├── js/             # Módulos de lógica (api, ui, state, theme, utils)
-│   ├── app.js          # Orquestador principal
-│   └── styles.css      # Estilos premium
-├── scripts/            # Scripts de automatización en Node.js
-│   └── generate-catalog.js # Generador y Validador (Zod)
-├── index.html          # Punto de entrada de la aplicación
-├── vite.config.js      # Configuración de Vite
-├── package.json        # Configuración de scripts y dependencias
-└── README.md
-```
-
-## 📂 Gestión de Exámenes (JSON)
-
-Ubicación: `public/data/*.json`. El sistema detecta y valida automáticamente cualquier archivo `.json` en esta carpeta.
-
-### Cómo agregar un nuevo examen:
-
-1.  **Crear el archivo**: Crea un archivo `.json` dentro de `public/data/`.
-2.  **Seguir el formato**: Asegúrate de incluir todos los campos obligatorios (`materia`, `titulo`, `duracion`, `preguntas_para_aprobar`, `fecha`, `version`, `preguntas`).
-### Ejemplo de formato JSON:
-
-```json
-{
-  "materia": "HISTORIA",
-  "titulo": "Revolución de Mayo",
-  "duracion": 15,
-  "preguntas_para_aprobar": 8,
-  "fecha": "2026-04-18",
-  "version": "1.2",
-  "preguntas": [
+1.  **Crear el JSON**: Crea un archivo `.json` en `public/data/` (ej: `preguntas0003.json`).
+2.  **Formato Obligatorio**: Asegúrate de que el archivo cumpla con este esquema:
+    ```json
     {
-      "id": 1,
-      "pregunta": "¿En qué año fue la Revolución de Mayo?",
-      "opciones": ["1810", "1816", "1820", "1789"],
-      "respuesta_correcta": 0
+      "materia": "NOMBRE DE LA MATERIA",
+      "titulo": "Unidades X e Y",
+      "duracion": 60,
+      "preguntas_para_aprobar": 10,
+      "fecha": "2026-04-22",
+      "version": "1.0",
+      "preguntas": [
+        {
+          "id": 1,
+          "pregunta": "¿Cuál es la respuesta?",
+          "opciones": ["Opción A", "Opción B", "Opción C"],
+          "respuesta_correcta": 0
+        }
+      ]
     }
-  ]
-}
-```
+    ```
+3.  **Generar Catálogo**: El sistema necesita actualizar el `catalog.json`.
+    - En desarrollo: Se actualiza solo al ejecutar `pnpm dev`.
+    - Manualmente: `pnpm gen-manifest`.
+4.  **Desplegar**: Al ejecutar `pnpm run deploy`, el sistema valida automáticamente todos los JSONs. Si alguno tiene un error de formato, el build fallará para proteger la producción.
+
+## 🛡️ Arquitectura Anti-Cache (v9)
+
+Hemos implementado una estrategia de guerra contra el cache para asegurar que los usuarios siempre vean los exámenes más nuevos:
+- **Cache Busting**: Todas las peticiones al catálogo y exámenes incluyen un timestamp (`?v=...`) para saltar el cache de Cloudflare Edge.
+- **Service Worker Inteligente**: Utiliza una estrategia **Network-First** para los datos. Prioriza siempre la descarga fresca de internet y usa el cache solo como respaldo (Offline-Mode).
+- **Indicador de Versión**: En el footer de la página verás la versión actual (ej: **v9**). Si no ves la última versión, fuerza una recarga (Ctrl+F5).
+
+## 🛠️ Stack y Características
+
+- **Validación con Zod**: Los exámenes se validan en tiempo de build. No más errores 404 o campos faltantes en producción.
+- **Normalización en Cliente**: La app es capaz de procesar JSONs crudos (arrays de preguntas) o exámenes completos con metadatos, normalizando todo en el navegador.
+- **Offline-First**: Gracias al Service Worker, una vez que cargaste un examen, podés hacerlo sin conexión a internet.
+- **Feedback Sensorial**: Confeti al aprobar y efecto de sacudida (*Screen Shake*) al reprobar.
+
+## ⚙️ Comandos Útiles
+
+- `pnpm dev`: Inicia el entorno de desarrollo con proxy a Cloudflare Functions.
+- `pnpm gen-manifest`: Valida los JSONs y regenera el catálogo de exámenes.
+- `pnpm build`: Prepara los archivos para producción.
+- `pnpm run deploy`: Sube los cambios a Cloudflare Pages.
 
 ---
-
-## 📈 Roadmap Técnico (Completado)
-
-1.  ✅ **Optimización de API (Catálogo Estático)**: Eliminación de latencia N+1 mediante `catalog.json`.
-2.  ✅ **Arquitectura de Frontend Modular**: Refactorizado a **ES Modules** con separación de responsabilidades.
-3.  ✅ **Validación Estricta de Datos (Zod)**: Implementado control de calidad en tiempo de build.
-4.  ✅ **Capacidades PWA (Offline-First)**: Funcionamiento offline absoluto mediante Service Worker.
-5.  ✅ **Modernización del Tooling (Vite)**: Migración a un entorno de desarrollo de clase mundial.
-
----
-## 👨‍💻 Autor
-
-Desarrollado con ❤️ por **Diego**.
-
-*Transformando la educación en una experiencia segura, rápida e inmersiva.*
+Desarrollado con ❤️ por **Diego**. (v9)

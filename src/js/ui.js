@@ -81,7 +81,8 @@ export function dispararEfectoNegativo() {
  * Lanza confeti dinámico usando canvas-confetti.
  */
 export function lanzarConfeti() {
-    if (typeof confetti !== 'function') return;
+    const confettiFunc = window.confetti || (typeof confetti === 'function' ? confetti : null);
+    if (!confettiFunc) return;
     
     const duration = 3 * 1000;
     const animationEnd = Date.now() + duration;
@@ -94,11 +95,11 @@ export function lanzarConfeti() {
         if (timeLeft <= 0) return clearInterval(interval);
 
         const particleCount = 50 * (timeLeft / duration);
-        confetti(Object.assign({}, defaults, { 
+        confettiFunc(Object.assign({}, defaults, { 
             particleCount, 
             origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } 
         }));
-        confetti(Object.assign({}, defaults, { 
+        confettiFunc(Object.assign({}, defaults, { 
             particleCount, 
             origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } 
         }));

@@ -181,7 +181,8 @@ async function initExamenSelector() {
             selector.appendChild(option);
         });
 
-        choicesInstance = new Choices(selector, {
+        const ChoicesClass = window.Choices || Choices;
+        choicesInstance = new ChoicesClass(selector, {
             searchEnabled: false,
             itemSelectText: '',
             shouldSort: false,
@@ -219,7 +220,8 @@ async function initExamenSelector() {
 
         // Inicializamos el selector de porcentaje
         const percentSelector = document.getElementById('percent-select');
-        percentChoicesInstance = new Choices(percentSelector, {
+        const PercentChoicesClass = window.Choices || Choices;
+        percentChoicesInstance = new PercentChoicesClass(percentSelector, {
             searchEnabled: false,
             itemSelectText: '',
             shouldSort: false,
