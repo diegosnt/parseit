@@ -380,7 +380,7 @@ body {
 
     /* Fila 3: timer, progreso, resultado */
     .header-status-group {
-        width: 100%;
+        flex: 0 0 100%;
         flex-wrap: wrap;
     }
 
