@@ -362,13 +362,13 @@ body {
 
     .header-selector {
         order: 1;
-        flex: 1;
+        flex: 1 1 100%;
         min-width: 0;
     }
 
     .percentage-selector {
         order: 2;
-        flex: 0 0 70px;
+        flex: 1;
         min-width: 0;
     }
 
