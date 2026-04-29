@@ -424,6 +424,31 @@ select.form-select {
         height: 20px;
     }
 
+    /* Footer */
+    .main-footer {
+        padding: 0.75rem 0;
+        margin-top: 1.5rem;
+    }
+
+    .meta-container-footer {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 0.4rem;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.25rem;
+    }
+
+    .meta-item {
+        flex-shrink: 0;
+        padding: 0.25rem 0.6rem;
+        font-size: 0.65rem;
+    }
+
+    .main-footer p {
+        font-size: 0.65rem;
+    }
+
     /* Fila 3: timer, progreso, resultado */
     .header-status-group {
         flex: 0 0 100%;
