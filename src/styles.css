@@ -360,23 +360,28 @@ body {
         display: none; /* Quitamos el logo en mobile */
     }
 
-    .header-selector { 
-        order: 1; 
-        flex: 1; /* El combo de examen ocupa el espacio restante */
+    .header-selector {
+        order: 1;
+        flex: 1;
         min-width: 0;
     }
 
-    .btn-icon { 
-        order: 2; 
-        margin-left: 0; 
-        padding: 0.4rem 0.8rem !important;
+    .percentage-selector {
+        order: 2;
+        flex: 0 0 70px;
+        min-width: 0;
+    }
+
+    .btn-icon {
+        order: 3;
+        margin-left: 0;
+        padding: 0.4rem !important;
         flex-shrink: 0;
     }
 
-    .percentage-selector { 
-        order: 3; 
-        flex: 1 1 100%; /* El porcentaje baja a su propia fila */
-        margin-top: -0.2rem;
+    .btn-icon svg {
+        width: 20px;
+        height: 20px;
     }
 
     .progress-bubble, .timer-container, .status-bubble { 
