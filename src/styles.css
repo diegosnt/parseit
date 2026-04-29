@@ -177,23 +177,6 @@ body {
     flex: 1; /* Ocupa el espacio restante para poder empujar el resultado */
 }
 
-.status-bubble {
-    margin-left: auto; /* ¡LA MAGIA! Empuja esta burbuja sola a la derecha */
-    display: none;
-    align-items: center;
-    justify-content: center;
-    gap: 0.8rem;
-    padding: 0.85rem 1.6rem;
-    background-color: var(--bg);
-    border: 2px solid var(--color-1);
-    border-radius: 50%;
-    box-shadow: var(--shadow);
-    font-weight: 800;
-    font-size: 1.15rem;
-    white-space: nowrap;
-    user-select: none;
-    animation: fadeInSlide 0.4s ease-out;
-}
 .main-footer {
     padding: 3rem 0;
     text-align: center;
@@ -228,8 +211,10 @@ body {
     margin-right: 0.3rem;
 }
 
+.hidden { display: none !important; }
+
 /* Bubbles */
-.status-bubble, .progress-bubble, .timer-container {
+.progress-bubble, .timer-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -242,6 +227,22 @@ body {
     font-weight: 800;
     font-size: 1.15rem;
     transition: all 0.3s ease;
+}
+
+.status-bubble.aprobado, .status-bubble.reprobado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 0.85rem 1.6rem;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+    font-weight: 800;
+    font-size: 1.15rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    user-select: none;
+    animation: fadeInSlide 0.4s ease-out;
 }
 
 .status-bubble.aprobado { background-color: var(--success); border-color: var(--success); color: white; }
