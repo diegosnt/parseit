@@ -252,6 +252,7 @@ body {
     white-space: nowrap;
     user-select: none;
     animation: fadeInSlide 0.4s ease-out;
+    margin-left: auto;
 }
 
 .status-bubble.aprobado { background-color: var(--success); border-color: var(--success); color: white; }
