@@ -88,8 +88,14 @@ body {
 }
 
 .percentage-selector {
-    flex: 0 0 100px;
-    min-width: 80px;
+    flex: 0 0 80px;
+    min-width: 0;
+}
+
+.header-controls-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
 .btn-icon {
@@ -361,19 +367,11 @@ body {
     }
 
     .header-selector {
-        order: 1;
         flex: 1 1 100%;
         min-width: 0;
     }
 
-    .percentage-selector {
-        order: 2;
-        flex: 1;
-        min-width: 0;
-    }
-
     .btn-icon {
-        order: 3;
         margin-left: 0;
         padding: 0.4rem !important;
         flex-shrink: 0;
