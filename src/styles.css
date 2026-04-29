@@ -99,12 +99,11 @@ body {
 }
 
 .btn-icon {
-    margin-left: auto;
     background: var(--bg);
     border: 2px solid var(--color-1);
     color: var(--color-1);
     cursor: pointer;
-    padding: 0.7rem 1.4rem;
+    padding: 0.7rem;
     border-radius: 50%;
     transition: all 0.3s ease;
     display: flex;
@@ -120,10 +119,10 @@ body {
 
 .header-info-row {
     display: flex;
-    justify-content: flex-start; /* Todo hacia la izquierda */
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1.5rem; /* Separación consistente entre grupos */
+    gap: 1rem;
 }
 
 /* Switch de Modo Estudio */
@@ -354,26 +353,23 @@ body {
 
 @media (max-width: 768px) {
     .main-header { padding: 0.5rem 0; }
-    
-    .header-content { 
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem; 
-        align-items: center;
-    }
 
-    .logo-icon { 
-        display: none; /* Quitamos el logo en mobile */
-    }
+    .logo-icon { display: none; }
 
-    .header-selector {
-        flex: 1 1 100%;
-        min-width: 0;
-    }
+    /* Fila 1: solo el selector de examen */
+    .header-content { margin-bottom: 0.5rem; }
+
+    .header-selector { width: 100%; }
+
+    /* Fila 2: porcentaje + switch + dark mode */
+    .header-info-row { gap: 0.5rem; }
+
+    .header-controls-left { gap: 0.6rem; }
+
+    .percentage-selector { flex: 0 0 75px; }
 
     .btn-icon {
-        margin-left: 0;
-        padding: 0.4rem !important;
+        padding: 0.35rem !important;
         flex-shrink: 0;
     }
 
@@ -382,8 +378,14 @@ body {
         height: 20px;
     }
 
-    .progress-bubble, .timer-container, .status-bubble { 
-        padding: 0.4rem 0.8rem; 
-        font-size: 0.85rem; 
+    /* Fila 3: timer, progreso, resultado */
+    .header-status-group {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .progress-bubble, .timer-container, .status-bubble {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
     }
 }
