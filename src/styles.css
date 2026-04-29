@@ -365,7 +365,9 @@ body {
     /* Fila 2: porcentaje + switch + dark mode */
     .header-info-row { gap: 0.5rem; }
 
-    .header-controls-left { gap: 0.6rem; }
+    .header-controls-left { gap: 0.6rem; width: 100%; }
+
+    .header-controls-left .btn-icon { margin-left: auto; }
 
     .percentage-selector { flex: 0 0 75px; }
 
