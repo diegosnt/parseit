@@ -1,0 +1,1101 @@
+{
+  "materia": "1.Gest. de Sist. de Información",
+  "titulo": "Uni. 1 y 2",
+  "duracion": 90,
+  "preguntas_para_aprobar": 60,
+  "fecha": "2026-05-04",
+  "version": "1.3",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "De las siguientes fases, ¿cuál NO corresponde a una metodología Scrum?",
+      "opciones": [
+        "Identificación de los requerimientos",
+        "Retroalimentación",
+        "Planear el backlog",
+        "Programación en parejas"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 2,
+      "pregunta": "En el análisis FODA:",
+      "opciones": [
+        "Las O y A refieren al ámbito interno.",
+        "Las F y D refieren al ámbito interno."
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Cuál NO forma parte del contexto actual de los sistemas de información en las empresas?",
+      "opciones": [
+        "Transformación Digital",
+        "Colaboración y movilidad",
+        "Análisis de datos",
+        "Procesamiento de datos centralizados",
+        "Seguridad y privacidad"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 4,
+      "pregunta": "CAPEX refiere a:",
+      "opciones": [
+        "Gastos administrativos para el desarrollo de software que proporcionan beneficios a corto plazo",
+        "Gastos de capital para adquirir, mejorar o mantener bienes físicos de larga duración que proporcionan beneficios a lo largo del tiempo",
+        "Gastos administrativos para el desarrollo de software que proporcionan beneficios a mediano/largo plazo",
+        "Gastos operativos recurrentes necesarios para el funcionamiento diario de una empresa"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Cuál de estos conceptos NO es una utilidad de un SI?",
+      "opciones": [
+        "Procesamiento de datos.",
+        "Sistema de apoyo a la toma de decisiones.",
+        "Definición del presupuesto.",
+        "Comunicación y colaboración."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 6,
+      "pregunta": "¿Qué es el Gobierno de las TI?",
+      "opciones": [
+        "Conjunto de prácticas, procesos y estructuras para planificar, diseñar, implementar, operar y controlar las TI para cumplir los objetivos de la organización.",
+        "Conjunto de prácticas para planificar y controlar las TI y los Recursos Humanos para cumplir los objetivos de la organización."
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 7,
+      "pregunta": "¿Cuál de las afirmaciones NO es correcta sobre los roles directivos?",
+      "opciones": [
+        "El CSO es el responsable de la gestión diaria de las tecnologías de la información",
+        "El CEO es el director ejecutivo de la empresa",
+        "El CIO es el responsable de toda la tecnología de la información de la empresa",
+        "Todas son correctas",
+        "El CISO garantiza la seguridad de la información de la empresa"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 8,
+      "pregunta": "¿Cuál de los siguientes NO es un aspecto clave de un KPI?",
+      "opciones": [
+        "Periodo de medición",
+        "Relevancia",
+        "Variedad de áreas de negocio",
+        "Variedad de datos"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 9,
+      "pregunta": "¿Cuál de las siguientes NO es una etapa de prueba?",
+      "opciones": [
+        "Prueba de aceptación",
+        "Prueba de sistema",
+        "Prueba unitaria",
+        "Prueba de validación"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 10,
+      "pregunta": "¿Cuál es un ejemplo de CAPEX?",
+      "opciones": [
+        "Gastos de marketing",
+        "Salarios",
+        "Compra de equipos",
+        "Todos son CAPEX"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 11,
+      "pregunta": "OPEX refiere a:",
+      "opciones": [
+        "Costos recurrentes y necesarios para el funcionamiento diario que se deducen en el mismo año en que se incurren",
+        "Gastos administrativos para el desarrollo de software que proporcionan beneficios a corto plazo",
+        "Desembolsos para adquirir bienes físicos de larga duración y tangibles",
+        "Gastos de desarrollo que proporcionan beneficios a largo plazo"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 12,
+      "pregunta": "Dentro de un análisis FODA, si por falta de presupuesto nuestro sitio web no recibe visualizaciones, es una:",
+      "opciones": [
+        "Fortaleza",
+        "Oportunidad",
+        "Amenaza",
+        "Debilidad"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 13,
+      "pregunta": "Cuando hablamos de agilidad nos referimos a:",
+      "opciones": [
+        "Todas son correctas",
+        "La velocidad de desarrollar requerimientos",
+        "La flexibilidad de dar respuesta a los usuarios",
+        "La capacidad de adaptación"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 14,
+      "pregunta": "¿Cuál de las siguientes afirmaciones NO es correcta sobre datos e información?",
+      "opciones": [
+        "Datos es un término que se refiere a hechos, eventos o transacciones registrados",
+        "Dato es la entrada sin procesar de la cual se produce la información",
+        "Información es siempre un dato procesado",
+        "Ninguna de las anteriores"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 15,
+      "pregunta": "El SLA con enfoque en servicio:",
+      "opciones": [
+        "Se dirige específicamente al propio servicio y puede aplicarse a diferentes negociaciones sin cambios",
+        "Se refiere a las demandas específicas del cliente en cuanto a la contratación del servicio"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 16,
+      "pregunta": "¿A qué estrategia de implementación corresponde la definición: 'tanto el sistema anterior como el nuevo operan en conjunto durante un tiempo'?",
+      "opciones": [
+        "Estrategia de metodología de fases",
+        "Estrategia de reemplazo directo",
+        "Estrategia paralela",
+        "Estrategia de estudio piloto"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 17,
+      "pregunta": "¿Cuál de las siguientes NO es una metodología AGILE?",
+      "opciones": [
+        "Todas son metodologías ágiles",
+        "Kanban",
+        "Cascada",
+        "Scrum",
+        "Programación extrema"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 18,
+      "pregunta": "¿Cuál NO es una ventaja de la Gestión Ágil de Proyectos?",
+      "opciones": [
+        "Mayor satisfacción del cliente",
+        "Mejora de la calidad del producto",
+        "Uso de métricas más relevantes",
+        "Permite al equipo de desarrollo trabajar en forma autónoma",
+        "Mayor control y reducción de costos"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 19,
+      "pregunta": "¿Cuál NO es un tipo de tercerización?",
+      "opciones": [
+        "Desarrollo llave en mano",
+        "Compra o implementación de un paquete",
+        "Body Shopping",
+        "Global o Estratégico"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 20,
+      "pregunta": "En una presentación a un comité directivo, ¿cuál de estos conceptos NO aplica?",
+      "opciones": [
+        "Ser concretos en la presentación",
+        "Dejar claras las expectativas",
+        "Mostrar los detalles técnicos minuciosos del proyecto",
+        "Centrarse en el tema principal"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 21,
+      "pregunta": "¿Cuál NO es una responsabilidad de un CIO?",
+      "opciones": [
+        "Gestionar el presupuesto de IT",
+        "Definir la estrategia general de la empresa",
+        "Gestionar los recursos humanos del área de sistemas",
+        "Liderar la innovación tecnológica"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 22,
+      "pregunta": "¿Cuál es una desventaja de trabajar con el modelo de Outsourcing?",
+      "opciones": [
+        "La contratación tercerizada tiene procesos estandarizados",
+        "Permite destinar mayor presupuesto a productividad",
+        "Si la empresa externa no cumple leyes laborales, el cliente asume la responsabilidad",
+        "Facilita la contratación de personal extranjero"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 23,
+      "pregunta": "¿Qué es un KPI?",
+      "opciones": [
+        "Métricas para evaluar rendimiento que no sirven para tomar decisiones",
+        "Métricas cuantificables para evaluar el rendimiento de una organización, proceso o proyecto y tomar decisiones informadas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 24,
+      "pregunta": "Dentro de un análisis FODA, ser líder de un sector es una:",
+      "opciones": [
+        "Debilidad",
+        "Fortaleza",
+        "Oportunidad",
+        "Amenaza"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 25,
+      "pregunta": "Indique cuál NO es una de las principales responsabilidades de los gobiernos de IT:",
+      "opciones": [
+        "Mejorar continuamente los SI para garantizar requisitos de la organización",
+        "Controlar y supervisar la información resultante de los sistemas",
+        "Planificar y establecer estrategias para el uso de las TI",
+        "Diseñar y desarrollar sistemas que cumplan requisitos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 26,
+      "pregunta": "En el modelo de fuerzas de Porter, ¿cuál de estos conceptos NO aplica?",
+      "opciones": [
+        "Productos sustitutos",
+        "Clientes",
+        "Participantes anteriores",
+        "Proveedores"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 27,
+      "pregunta": "¿Cuál es un ejemplo de OPEX?",
+      "opciones": [
+        "Computadoras",
+        "Edificios",
+        "Servicios públicos",
+        "Ninguno es OPEX"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 28,
+      "pregunta": "¿Cuál de las siguientes etapas NO forma parte del ciclo de vida tradicional (cascada)?",
+      "opciones": [
+        "Conversión",
+        "Diseño de sistemas",
+        "Programación",
+        "Análisis de datos"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 29,
+      "pregunta": "¿Qué es un sistema de información según el concepto técnico?",
+      "opciones": [
+        "Componentes que operan independientemente para reunir datos sin considerar el entorno",
+        "Componentes interrelacionados que colaboran para reunir, procesar, almacenar y distribuir información para la toma de decisiones y control"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 30,
+      "pregunta": "¿Cuál NO es un componente básico de un SI según el esquema de actividades?",
+      "opciones": [
+        "Entrada",
+        "Procesamiento",
+        "Salida",
+        "Entorno"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 31,
+      "pregunta": "El RFI (Request for Information):",
+      "opciones": [
+        "Compara valores de proveedores",
+        "Educa al cliente ayudándole a entender las posibles soluciones",
+        "Detalla costes para cumplir requisitos",
+        "Es un contrato vinculante"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 32,
+      "pregunta": "Los sistemas de información para la toma de decisiones:",
+      "opciones": [
+        "Ayudan a los líderes a tener una visión clara y actualizada para decisiones informadas",
+        "Son sistemas básicos para el nivel operacional",
+        "Solo sirven para controlar el flujo de archivos"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 33,
+      "pregunta": "¿Cuál NO es un paso para implementar Kanban?",
+      "opciones": [
+        "Escribe las tareas de cada fase",
+        "Divide el proyecto en fases de ejecución",
+        "Identifica roles rígidos dentro del equipo",
+        "Lleva el control del proyecto"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 34,
+      "pregunta": "Una de las ventajas del prototipado es que:",
+      "opciones": [
+        "Ayuda a pasar por alto etapas esenciales",
+        "Excluye al usuario final para ser más veloz",
+        "Es más útil cuando hay incertidumbre sobre los requerimientos"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 35,
+      "pregunta": "¿Cuál es un factor que acelera la tendencia a tercerizar (Outsourcing)?",
+      "opciones": [
+        "Falta total de conocimiento del tema",
+        "Incapacidad absoluta de administrarlo",
+        "Utilización parcial o subutilización de recursos especializados"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 36,
+      "pregunta": "Cuando hablamos de la quinta generación de SI, decimos que:",
+      "opciones": [
+        "Se adoptan tecnologías emergentes como IA e IoT para mejorar la eficiencia",
+        "Se usan sistemas de procesamiento centralizados para contabilidad básica",
+        "Se usan sistemas mainframe para gestión de inventarios"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 37,
+      "pregunta": "La información es:",
+      "opciones": [
+        "Datos a los que se les ha dado una forma que tiene sentido y es útil para los humanos",
+        "Flujo de hechos en bruto antes de ser organizados"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 38,
+      "pregunta": "¿Cuál de las siguientes NO es una de las 5 etapas de la metodología de análisis y diseño tradicional?",
+      "opciones": [
+        "Mantenimiento",
+        "Desarrollo",
+        "Implementación",
+        "Diseño",
+        "Análisis",
+        "Testing"
+      ],
+      "respuesta_correcta": 5
+    },
+    {
+      "id": 39,
+      "pregunta": "Indique qué sistemas forman parte de los SI para la toma de decisiones:",
+      "opciones": [
+        "Sistemas de información de mercado y ventas",
+        "Sistemas de información financiera",
+        "Sistemas de información de recursos humanos",
+        "Todos los anteriores"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 40,
+      "pregunta": "¿A qué estrategia de implementación corresponde introducir el sistema solo a un departamento antes de instalarlo en el resto?",
+      "opciones": [
+        "Estrategia de metodología de fases",
+        "Estrategia de reemplazo directo",
+        "Estrategia paralela",
+        "Estrategia de estudio piloto"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 41,
+      "pregunta": "En Scrum, ¿quién es el responsable de asegurar que el producto se entregue a tiempo y eliminar impedimentos?",
+      "opciones": [
+        "Product Owner",
+        "Scrum Master",
+        "Development Team",
+        "Project Manager"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 42,
+      "pregunta": "¿Qué es la 'retroalimentación' en un sistema de información?",
+      "opciones": [
+        "La entrada de datos al servidor",
+        "La salida que se devuelve para evaluar y refinar la entrada",
+        "El proceso de backup mensual",
+        "La comunicación entre gerentes"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 43,
+      "pregunta": "En el análisis FODA, una 'Oportunidad' se caracteriza por ser:",
+      "opciones": [
+        "Un factor interno positivo",
+        "Un factor externo que la empresa puede explotar para obtener ventaja",
+        "Un obstáculo externo que impide el crecimiento",
+        "Una característica interna que da desventaja"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 44,
+      "pregunta": "La 'Estrategia de metodología en fases' consiste en:",
+      "opciones": [
+        "Sustituir todo el sistema en un solo día",
+        "Introducir el sistema nuevo en etapas, ya sea por funciones o unidades",
+        "Operar ambos sistemas al mismo tiempo",
+        "Probar el sistema solo en un departamento"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 45,
+      "pregunta": "¿Qué porcentaje del mantenimiento se estima que se dedica a realizar mejoras para los usuarios?",
+      "opciones": [
+        "20%",
+        "10%",
+        "60%",
+        "40%"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 46,
+      "pregunta": "En la jerarquía organizacional, ¿quiénes suelen trabajar con la gerencia de nivel medio?",
+      "opciones": [
+        "Trabajadores de producción",
+        "Científicos y trabajadores del conocimiento",
+        "Gerencia operacional",
+        "Director Ejecutivo (CEO)"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 47,
+      "pregunta": "¿Cuál es la función del hardware en un SI?",
+      "opciones": [
+        "Instrucciones preprogramadas que coordinan componentes",
+        "Equipo físico para actividades de entrada, procesamiento y salida",
+        "Gobernar la organización de los datos",
+        "Transferir datos de una ubicación a otra"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 48,
+      "pregunta": "Un objetivo SMART debe ser 'Measurable', lo que significa:",
+      "opciones": [
+        "Que sea importante",
+        "Que se pueda cuantificar o medir",
+        "Que sea fácil de lograr",
+        "Que tenga una fecha límite"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 49,
+      "pregunta": "En Extreme Programming (XP), ¿qué es la 'Codificación a dos manos'?",
+      "opciones": [
+        "Programar con ambas manos en el teclado",
+        "Programación en parejas frente al mismo ordenador",
+        "Programar dos módulos al mismo tiempo",
+        "Uso de dos lenguajes de programación diferentes"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 50,
+      "pregunta": "¿Qué herramienta se usa para identificar barreras, oportunidades e iniciativas innovadoras?",
+      "opciones": [
+        "Rol del CIO",
+        "FODA",
+        "Modelo de Porter",
+        "SLA"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 51,
+      "pregunta": "¿Qué es un 'Framework' en el contexto de gestión?",
+      "opciones": [
+        "Un conjunto de principios y valores rígidos",
+        "Estructura flexible que define cómo organizar el trabajo dejando espacio para prácticas específicas",
+        "Un lenguaje de programación avanzado",
+        "Un tipo de servidor de base de datos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 52,
+      "pregunta": "El 'Desarrollo del Usuario Final' permite:",
+      "opciones": [
+        "Que el usuario final cree aplicaciones simples con poca ayuda de especialistas",
+        "Que el usuario final reemplace al CIO",
+        "Que el sistema se desarrolle sin requerimientos",
+        "Que la seguridad sea absoluta"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 53,
+      "pregunta": "En el modelo de Porter, el poder de los clientes aumenta si:",
+      "opciones": [
+        "No hay productos sustitutos",
+        "Pueden cambiar con facilidad a los productos de un competidor",
+        "Los proveedores tienen el control de precios",
+        "Hay barreras de entrada muy altas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 54,
+      "pregunta": "¿Cuál es la medida principal de progreso en los procesos ágiles?",
+      "opciones": [
+        "La cantidad de documentos generados",
+        "El software funcionando",
+        "Las horas trabajadas por el equipo",
+        "El presupuesto gastado"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 55,
+      "pregunta": "El RFP (Request for Proposal) se utiliza principalmente para:",
+      "opciones": [
+        "Investigar tendencias de mercado",
+        "Elegir un proveedor comparando valores y propuestas en la fase de decisión",
+        "Pedir un presupuesto rápido sin detalles",
+        "Evaluar el desempeño interno de TI"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 56,
+      "pregunta": "En la cuarta generación de SI (1980-2000), las empresas comenzaron a usar:",
+      "opciones": [
+        "Sistemas basados en la nube y la web",
+        "Mainframes para facturación",
+        "Procesamiento centralizado para contabilidad",
+        "Inteligencia Artificial"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 57,
+      "pregunta": "La 'Tecnología de administración de datos' consiste en:",
+      "opciones": [
+        "El hardware de almacenamiento",
+        "Software que gobierna la organización de los datos en medios físicos",
+        "Cables de red",
+        "Cámaras de seguridad"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 58,
+      "pregunta": "¿Qué es el 'Product Backlog'?",
+      "opciones": [
+        "Un error de sistema crítico",
+        "Lista priorizada de todo lo que podría ser necesario en el producto",
+        "La oficina del Product Owner",
+        "El historial de versiones del software"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 59,
+      "pregunta": "Un beneficio del Outsourcing es:",
+      "opciones": [
+        "Aumento de la rotación de personal",
+        "Tener la mejor tecnología sin invertir en capacitación del personal propio",
+        "Pérdida de control del negocio",
+        "Mayor responsabilidad legal"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 60,
+      "pregunta": "¿Qué es la 'Prueba de Sistema'?",
+      "opciones": [
+        "Probar un programa por separado",
+        "Evaluar el funcionamiento del sistema de información como un todo",
+        "Cargar datos por primera vez",
+        "Entrevistar a los usuarios finales"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 61,
+      "pregunta": "En Kanban, el principio de 'Calidad Garantizada' implica:",
+      "opciones": [
+        "No avanzar tareas que tengan errores o fallos",
+        "Hacer las tareas lo más rápido posible",
+        "Usar solo hardware caro",
+        "Contratar más gente"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 62,
+      "pregunta": "¿Qué es un 'SLA con enfoque en el cliente'?",
+      "opciones": [
+        "Un modelo sencillo aplicable a cualquier servicio",
+        "Un documento que se refiere a las demandas específicas y complejas de un cliente",
+        "Un contrato de compra de hardware",
+        "Un manual de instalación"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 63,
+      "pregunta": "La 'Inteligencia de Negocios' (BI) ayuda a los líderes a:",
+      "opciones": [
+        "Programar mejores algoritmos",
+        "Tener una visión clara y actualizada para tomar decisiones informadas",
+        "Reducir la cantidad de empleados",
+        "Elegir el mejor hardware"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 64,
+      "pregunta": "En la metodología XP, la fase de 'Diseño' busca:",
+      "opciones": [
+        "Hacer el sistema lo más complejo posible",
+        "Hacer el código sencillo, lo mínimo imprescindible para que funcione",
+        "Escribir manuales de 500 páginas",
+        "Diseñar la interfaz con muchos colores"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 65,
+      "pregunta": "¿Qué es el 'Dato' desde la perspectiva de sistemas?",
+      "opciones": [
+        "Información útil para gerentes",
+        "Flujo de hechos en bruto que representan sucesos",
+        "Un reporte de ventas anual",
+        "Una decisión tomada por el CEO"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 66,
+      "pregunta": "¿Cuál es un activo organizacional complementario?",
+      "opciones": [
+        "Incentivos para la innovación gerencial",
+        "Cultura organizacional de apoyo que aprecia eficiencia y eficacia",
+        "Infraestructura de telecomunicaciones",
+        "Programas educativos de TI"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 67,
+      "pregunta": "El 'Análisis de Requisitos' consiste en:",
+      "opciones": [
+        "Codificar el sistema",
+        "Recopilar y analizar información sobre objetivos, procesos y datos necesarios",
+        "Comprar el software",
+        "Instalar el servidor"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 68,
+      "pregunta": "En Scrum, el 'Daily' sirve para:",
+      "opciones": [
+        "Planificar el mes",
+        "Sincronizar actividades y crear un plan para las próximas 24 horas",
+        "Castigar a quien no terminó su tarea",
+        "Presentar el producto al cliente"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 69,
+      "pregunta": "¿Qué es el 'RFO' (Request for Offer)?",
+      "opciones": [
+        "Una investigación de mercado inicial",
+        "Garantizar una evaluación de precios justa entre proveedores",
+        "Un manual de usuario",
+        "Un organigrama de IT"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 70,
+      "pregunta": "¿Qué es la 'Transformación Digital'?",
+      "opciones": [
+        "Usar computadoras en lugar de máquinas de escribir",
+        "Digitalización de negocios adoptando nube, IoT e IA para eficiencia e innovación",
+        "Escanear todos los papeles de la empresa",
+        "Tener una página de Facebook"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 71,
+      "pregunta": "En Porter, los 'Nuevos participantes' tienen la ventaja de:",
+      "opciones": [
+        "Tener marcas viejas y conocidas",
+        "No estar encerrados en viejas plantas y equipo",
+        "Poseer mucha experiencia en el mercado",
+        "Tener financiamiento interno ilimitado"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 72,
+      "pregunta": "¿Qué sistema sirve para administrar los activos financieros y registros?",
+      "opciones": [
+        "Ventas y Marketing",
+        "Manufactura y Producción",
+        "Finanzas y Contabilidad",
+        "Recursos Humanos"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 73,
+      "pregunta": "Un objetivo 'Achievable' significa que:",
+      "opciones": [
+        "Es muy difícil de lograr",
+        "Es alcanzable y realista",
+        "No tiene importancia",
+        "Es puramente técnico"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 74,
+      "pregunta": "¿Qué es un 'Sprint'?",
+      "opciones": [
+        "Una carrera de atletismo",
+        "Ciclo de desarrollo (1-4 semanas) para una entrega parcial del producto",
+        "Una reunión de 8 horas",
+        "Un error de base de datos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 75,
+      "pregunta": "El 'SLA' debe ser revisado periódicamente porque:",
+      "opciones": [
+        "Se gasta el papel",
+        "Las demandas y necesidades pueden cambiar con el tiempo",
+        "Es una ley nacional",
+        "Para cambiar los colores del logo"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 76,
+      "pregunta": "En la primera generación de SI (1950-1960), se usaba procesamiento:",
+      "opciones": [
+        "Distribuido",
+        "Centralizado para tareas básicas como contabilidad",
+        "Basado en la nube",
+        "Basado en IA"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 77,
+      "pregunta": "La 'Estrategia paralela' es menos riesgosa porque:",
+      "opciones": [
+        "Es más barata",
+        "El sistema viejo sigue funcionando mientras se prueba el nuevo",
+        "No requiere capacitación",
+        "Usa menos hardware"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 78,
+      "pregunta": "En XP, la práctica de 'Pruebas Continuas' implica:",
+      "opciones": [
+        "Probar solo al final del año",
+        "Realizar pruebas automáticas continuamente para validar versiones",
+        "Que el cliente nunca vea el sistema",
+        "No hacer pruebas de código"
+      ],
+      "Castigar a quien no terminó su tarea": 1,
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 79,
+      "pregunta": "¿Qué es la 'Diseminación' en la cadena de valor de información?",
+      "opciones": [
+        "Borrar datos",
+        "Distribución de la información procesada a los gerentes",
+        "Vender computadoras",
+        "Contratar analistas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 80,
+      "pregunta": "¿Qué significa que el trabajo del gerente sea 'Creativo'?",
+      "opciones": [
+        "Que debe pintar cuadros",
+        "Debe crear nuevos productos, servicios y a veces rediseñar la organización",
+        "Que no sigue reglas",
+        "Que solo usa Photoshop"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 81,
+      "pregunta": "El 'Análisis de viabilidad' determina:",
+      "opciones": [
+        "Si el programador es simpático",
+        "Si la solución es deseable considerando costos, beneficios e impacto",
+        "Qué marca de computadoras comprar",
+        "El color de la oficina"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 82,
+      "pregunta": "En Kanban, las tarjetas deben estar:",
+      "opciones": [
+        "Guardadas en un cajón",
+        "Al alcance de todos los miembros del equipo",
+        "Escritas en código secreto",
+        "Solo disponibles para el jefe"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 83,
+      "pregunta": "El 'Software de computadora' incluye:",
+      "opciones": [
+        "El monitor y el teclado",
+        "Instrucciones detalladas que controlan y coordinan el hardware",
+        "Los cables de red",
+        "El escritorio del gerente"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 84,
+      "pregunta": "Un activo gerencial complementario es:",
+      "opciones": [
+        "Cultura organizacional",
+        "Sólido apoyo de la gerencia de nivel superior a la inversión en TI",
+        "Leyes y regulaciones",
+        "Infraestructura de internet"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 85,
+      "pregunta": "En el modelo de cascada, si hay que revisar requerimientos:",
+      "opciones": [
+        "Se hace en 5 minutos",
+        "Hay que volver a trazar pasos y generar volúmenes de documentos",
+        "No se puede hacer nada",
+        "Se ignora el cambio"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 86,
+      "pregunta": "La 'Alineación de TI con negocios' logra:",
+      "opciones": [
+        "Menor rentabilidad",
+        "Mayor rentabilidad para la empresa",
+        "Que el CIO trabaje menos",
+        "Que no se necesite presupuesto"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 87,
+      "pregunta": "¿Qué es el 'Body Shopping'?",
+      "opciones": [
+        "Ir a comprar ropa",
+        "Contratación de personal a través de una empresa externa para roles específicos",
+        "Un tipo de virus",
+        "Un modelo de base de datos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 88,
+      "pregunta": "Un KPI debe ser 'Específico', lo que significa:",
+      "opciones": [
+        "Que sea vago",
+        "Que tenga un propósito claro y contribuya a metas específicas",
+        "Que sea muy largo",
+        "Que sea difícil de entender"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 89,
+      "pregunta": "La 'Prueba Unitaria' consiste en:",
+      "opciones": [
+        "Probar todo el sistema junto",
+        "Probar cada programa por separado",
+        "Probar la conexión a internet",
+        "Probar el monitor"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 90,
+      "pregunta": "En Porter, los 'Productos sustitutos' son:",
+      "opciones": [
+        "Regalos para clientes",
+        "Productos que los clientes podrían usar si los precios aumentan demasiado",
+        "Productos rotos",
+        "Marcas blancas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 91,
+      "pregunta": "El 'Diseño de Sistemas' es equivalente a:",
+      "opciones": [
+        "El plano de construcción de una casa",
+        "El ticket de compra",
+        "Un dibujo artístico",
+        "Un manual de usuario final"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 92,
+      "pregunta": "En Scrum, el 'Development Team' debe ser:",
+      "opciones": [
+        "Especialistas aislados",
+        "Auto-organizados y cross-funcionales",
+        "Dirigidos por el Scrum Master",
+        "Expertos en marketing"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 93,
+      "pregunta": "¿Qué es el 'RFQ' (Request for Quotation)?",
+      "opciones": [
+        "Solicitud de información general",
+        "Petición de oferta que se refiere principalmente a los costes",
+        "Una entrevista de trabajo",
+        "Un manual de marca"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 94,
+      "pregunta": "La 'Seguridad y Privacidad' es hoy importante por:",
+      "opciones": [
+        "La poca cantidad de datos",
+        "La creciente cantidad de datos recolectados y almacenados",
+        "Que las computadoras son lentas",
+        "Que no hay regulaciones"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 95,
+      "pregunta": "El 'Mantenimiento' de un sistema incluye cambios en:",
+      "opciones": [
+        "Hardware, software, documentación o procedimientos",
+        "Solo en el color de la oficina",
+        "Solo en el sueldo del CIO",
+        "Únicamente en el logo de la empresa"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 96,
+      "pregunta": "En Porter, el poder de los 'Proveedores' es alto si:",
+      "opciones": [
+        "Hay muchos proveedores diferentes",
+        "La empresa no puede aumentar precios a la par que sus suministradores",
+        "La empresa tiene control total",
+        "No se necesitan insumos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 97,
+      "pregunta": "Un sistema de información crea 'Valor de Negocios' al:",
+      "opciones": [
+        "Gastar todo el presupuesto",
+        "Mejorar la toma de decisiones y la rentabilidad",
+        "Comprar muchas computadoras",
+        "Hacer dibujos bonitos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 98,
+      "pregunta": "La 'Estrategia de reemplazo directo' es muy riesgosa porque:",
+      "opciones": [
+        "Es muy lenta",
+        "No hay un sistema de respaldo si el nuevo falla el primer día",
+        "Usa demasiado papel",
+        "Requiere dos servidores"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 99,
+      "pregunta": "En XP, el 'Cliente in situ' significa:",
+      "opciones": [
+        "Que el cliente llama por teléfono",
+        "Que el cliente está presente y disponible para el equipo de desarrollo",
+        "Que el cliente paga por adelantado",
+        "Que el cliente no participa"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 100,
+      "pregunta": "La 'Automatización de procesos' busca:",
+      "opciones": [
+        "Aumentar los costos",
+        "Automatizar tareas administrativas como facturación y contabilidad para eficiencia",
+        "Que los empleados trabajen más horas",
+        "Eliminar todas las computadoras"
+      ],
+      "respuesta_correcta": 1
+    }
+  ]
+}
