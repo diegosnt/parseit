@@ -1,12 +1,7 @@
 [
   {
-    "id": "preguntas01",
-    "materia": "1.Gest. de Sist. de Información",
+    "id": "preguntas00001",
+    "materia": "Gest.de Sist.de Información",
     "titulo": "Uni. 1 y 2"
-  },
-  {
-    "id": "preguntas02",
-    "materia": "2.Base de Datos",
-    "titulo": "Uni. 1, 2 y 3"
   }
 ]
