@@ -1,0 +1,2078 @@
+{
+  "materia": "Análisis de Datos I",
+  "titulo": "Primer Parcial",
+  "duracion": 120,
+  "preguntas_para_aprobar": 113,
+  "fecha": "2026-05-05",
+  "version": "4.0",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Cómo se define formalmente un 'dato'?",
+      "opciones": [
+        "Representación simbólica de un atributo o variable (cuantitativa o cualitativa) sobre un hecho de la realidad",
+        "Información procesada lista para tomar decisiones de negocio",
+        "Conocimiento estructurado almacenado en bases de datos",
+        "Un número almacenado en un sistema de archivos"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Cuáles son las dos grandes categorías de tipos de datos?",
+      "opciones": [
+        "Nominales y ordinales",
+        "Cualitativos y cuantitativos",
+        "Discretos y continuos",
+        "Estructurados y no estructurados"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "pregunta": "Los datos cualitativos se caracterizan por ser:",
+      "opciones": [
+        "Cuantificables y siempre numéricos",
+        "Siempre continuos",
+        "No cuantificables",
+        "Solo de valores enteros"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 4,
+      "pregunta": "Los datos cuantitativos se caracterizan por ser:",
+      "opciones": [
+        "No cuantificables y descriptivos",
+        "Solo de dos valores posibles",
+        "Cuantificables y numéricos",
+        "Siempre sin orden entre sí"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Cuáles son los tres subtipos de datos cualitativos?",
+      "opciones": [
+        "Nominales, ordinales y binarios",
+        "Nominales, discretos y continuos",
+        "Ordinales, discretos y continuos",
+        "Binarios, discretos y continuos"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 6,
+      "pregunta": "Los datos nominales son:",
+      "opciones": [
+        "Descriptivos, sin orden entre sí",
+        "Con orden crítico entre sus valores",
+        "Solo de dos valores posibles",
+        "Numéricos e indivisibles"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 7,
+      "pregunta": "Los datos ordinales tienen como característica fundamental:",
+      "opciones": [
+        "No tienen ningún orden entre sí",
+        "Solo aceptan dos valores posibles",
+        "El orden entre ellos es crítico",
+        "Son siempre numéricos continuos"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 8,
+      "pregunta": "Los datos binarios suelen representar:",
+      "opciones": [
+        "Valores con orden jerárquico estricto",
+        "Cualquier valor dentro de un intervalo",
+        "Estados, con solo dos valores posibles",
+        "Valores descriptivos sin orden alguno"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 9,
+      "pregunta": "Los datos discretos son aquellos que:",
+      "opciones": [
+        "Pueden tomar cualquier valor dentro de un intervalo",
+        "Son enteros e indivisibles",
+        "Siempre son negativos",
+        "Son solo cualitativos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 10,
+      "pregunta": "Los datos continuos se caracterizan porque:",
+      "opciones": [
+        "Solo toman valores enteros",
+        "Solo tienen dos valores posibles",
+        "Tienen un orden crítico entre sus valores",
+        "Pueden ser cualquier número dentro de un intervalo"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 11,
+      "pregunta": "¿Cuál de los siguientes es un ejemplo de dato ORDINAL?",
+      "opciones": [
+        "Colores de un LED: Rojo, Verde, Azul",
+        "Altura de un objeto: Alto-Medio-Bajo",
+        "Carlos mide 1.78",
+        "Frío-Caliente"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 12,
+      "pregunta": "¿Cuál de los siguientes es un ejemplo de dato CONTINUO?",
+      "opciones": [
+        "Roberto Carlos tiene un millón de amigos",
+        "Frío-Caliente",
+        "Carlos mide 1.78",
+        "Colores de un LED: Rojo, Verde, Azul"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 13,
+      "pregunta": "¿Cuál de los siguientes es un ejemplo de dato DISCRETO?",
+      "opciones": [
+        "Carlos mide 1.78",
+        "Altura de un objeto: Alto-Medio-Bajo",
+        "Frío-Caliente",
+        "Roberto Carlos tiene un millón de amigos"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 14,
+      "pregunta": "¿Cuál de los siguientes es un ejemplo de dato NOMINAL?",
+      "opciones": [
+        "Altura de un objeto: Alto-Medio-Bajo",
+        "Colores de un LED: Rojo, Verde, Azul",
+        "Carlos mide 1.78",
+        "Frío-Caliente"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 15,
+      "pregunta": "¿Cuál de los siguientes es un ejemplo de dato BINARIO?",
+      "opciones": [
+        "Roberto Carlos tiene un millón de amigos",
+        "Colores de un LED: Rojo, Verde, Azul",
+        "Frío-Caliente",
+        "Carlos mide 1.78"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 16,
+      "pregunta": "¿Cuántas 'V' definen formalmente al Big Data?",
+      "opciones": [
+        "3",
+        "4",
+        "5",
+        "7"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 17,
+      "pregunta": "¿Cuáles son las 5 V del Big Data?",
+      "opciones": [
+        "Volumen, Velocidad, Variedad, Veracidad, Valor",
+        "Volumen, Visualización, Variedad, Veracidad, Valor",
+        "Velocidad, Volumen, Visibilidad, Veracidad, Valor",
+        "Variedad, Validez, Volumen, Veracidad, Valor"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 18,
+      "pregunta": "Según Gartner, Big Data demanda formas innovadoras de procesamiento para permitir:",
+      "opciones": [
+        "Solo almacenamiento masivo de datos",
+        "Ideas extendidas, toma de decisiones y automatización del proceso",
+        "Solo reducir costos de hardware",
+        "Únicamente generar reportes en Excel"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 19,
+      "pregunta": "¿Cuántos bytes de datos se generan diariamente en el mundo?",
+      "opciones": [
+        "2.5 millones de bytes",
+        "2.5 billones de bytes",
+        "2.5 quintillones de bytes",
+        "2.5 trillones de bytes"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 20,
+      "pregunta": "¿Qué porcentaje de los datos del mundo se ha creado en los últimos dos años?",
+      "opciones": [
+        "50%",
+        "70%",
+        "30%",
+        "90%"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 21,
+      "pregunta": "¿Cuál es el crecimiento anual predicho de la generación de datos en el mundo?",
+      "opciones": [
+        "25%",
+        "40%",
+        "60%",
+        "10%"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 22,
+      "pregunta": "¿Cuáles son los impulsores del 'Big Bang' de los datos?",
+      "opciones": [
+        "Cloud, Blockchain y AI",
+        "IoT (Internet of Things), 5G y Redes Sociales",
+        "Email, telefonía fija y televisión",
+        "Solo las redes sociales"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 23,
+      "pregunta": "Las empresas data-driven son cuántas veces más rentables que las que no lo son:",
+      "opciones": [
+        "2x",
+        "3x",
+        "6x",
+        "10x"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 24,
+      "pregunta": "¿Cuál de las siguientes es una razón de importancia del Big Data?",
+      "opciones": [
+        "Responde preguntas que las empresas ni siquiera sabían que tenían",
+        "Elimina por completo la necesidad de tomar decisiones",
+        "Solo sirve para almacenamiento masivo",
+        "Solo es útil para empresas tecnológicas"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 25,
+      "pregunta": "¿Cuál es el beneficio del Big Data en la dimensión de GESTIÓN empresarial?",
+      "opciones": [
+        "Generar nuevos servicios con alianzas externas",
+        "Ofrecer servicios personalizados al consumidor",
+        "Reducción de costos, mejora en toma de decisiones y mayor eficiencia",
+        "Reemplazar a todos los empleados del área"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 26,
+      "pregunta": "El beneficio del Big Data denominado 'NEGOCIO' implica:",
+      "opciones": [
+        "Optimización de rutas logísticas internas",
+        "Acumulación de datos más alianzas empresariales para generar nuevos servicios e ingresos",
+        "Personalización del servicio al cliente final",
+        "Solo reducción de costos operativos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 27,
+      "pregunta": "El beneficio del Big Data en 'SERVICIOS' se refiere a:",
+      "opciones": [
+        "Reducción de costos de infraestructura tecnológica",
+        "Nuevas alianzas empresariales entre competidores",
+        "La empresa puede ofrecer servicios adaptados a las necesidades de cada consumidor a precio ajustado",
+        "Solo la generación de reportes más rápidos"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 28,
+      "pregunta": "¿Qué herramienta tecnológica se menciona como reductora de costos de almacenamiento en Big Data?",
+      "opciones": [
+        "Power BI",
+        "Hadoop y la nube",
+        "SQL Server",
+        "Excel avanzado"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 29,
+      "pregunta": "¿Cuál de estas capacidades habilita el Big Data en las organizaciones?",
+      "opciones": [
+        "Anticiparse o predecir comportamientos futuros",
+        "Solo registrar lo que ocurrió en el pasado",
+        "Eliminar todos los riesgos del negocio",
+        "Solo hacer reportes mensuales automáticos"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 30,
+      "pregunta": "La metáfora 'Los datos son el petróleo del siglo XXI' implica que:",
+      "opciones": [
+        "Los datos son finitos y se van a acabar pronto",
+        "Los datos contaminan el medio ambiente como el petróleo",
+        "Los datos deben ser extraídos, refinados y distribuidos para ser útiles",
+        "Los datos son literalmente un combustible físico"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 31,
+      "pregunta": "Una organización Data-Driven es aquella que:",
+      "opciones": [
+        "Toma decisiones basadas en información concreta y analizada",
+        "Solo usa intuición para tomar decisiones",
+        "Recolecta datos pero nunca los analiza",
+        "Compra datos a terceros sin procesarlos"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 32,
+      "pregunta": "¿Cuál de las siguientes es una característica de las organizaciones data-driven?",
+      "opciones": [
+        "Identificar nuevas oportunidades y entender mejor al consumidor",
+        "Solo registrar datos históricos sin analizarlos",
+        "Operar sin ningún tipo de tecnología digital",
+        "Solo usar datos cualitativos para decisiones"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 33,
+      "pregunta": "¿En qué año aproximado comenzó la 1ª Revolución Industrial?",
+      "opciones": [
+        "1870",
+        "1750",
+        "1950",
+        "1700"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 34,
+      "pregunta": "¿Cuál fue el invento emblema de la 1ª Revolución Industrial?",
+      "opciones": [
+        "Motor de gasolina",
+        "Microelectrónica",
+        "Máquina a vapor",
+        "Internet"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 35,
+      "pregunta": "La 1ª Revolución Industrial se caracterizó por ser la era de:",
+      "opciones": [
+        "La ciencia y producción masiva",
+        "La revolución digital",
+        "La producción mecanizada",
+        "La inteligencia artificial"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 36,
+      "pregunta": "¿En qué año comenzó la 2ª Revolución Industrial?",
+      "opciones": [
+        "1750",
+        "1870",
+        "1950",
+        "2000"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 37,
+      "pregunta": "La 2ª Revolución Industrial introdujo principalmente:",
+      "opciones": [
+        "La máquina a vapor y el ferrocarril",
+        "El motor de gasolina, el avión y la línea de montaje",
+        "La microelectrónica y lo digital",
+        "La inteligencia artificial y el machine learning"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 38,
+      "pregunta": "La 3ª Revolución Industrial comenzó aproximadamente en:",
+      "opciones": [
+        "1750",
+        "1870",
+        "1950",
+        "2000"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 39,
+      "pregunta": "La 3ª Revolución Industrial se conoce como la era de:",
+      "opciones": [
+        "La producción mecanizada",
+        "La ciencia y producción masiva",
+        "La revolución digital",
+        "La inteligencia"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 40,
+      "pregunta": "La 4ª Revolución Industrial es catalogada como la era de:",
+      "opciones": [
+        "El vapor",
+        "La electricidad",
+        "La computación tradicional",
+        "La inteligencia"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 41,
+      "pregunta": "Según Klaus Schwab, ¿qué caracteriza a la 4ª Revolución Industrial?",
+      "opciones": [
+        "Solo la mecanización agrícola a escala global",
+        "Internet móvil, sensores potentes, inteligencia artificial y aprendizaje automático",
+        "Solo la electricidad industrial",
+        "Solo la computación de escritorio"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 42,
+      "pregunta": "Erik Brynjolfsson y Andrew McAfee denominan a la 4ª Revolución Industrial como:",
+      "opciones": [
+        "La era del vapor digital",
+        "La segunda era de las máquinas",
+        "La era de la electricidad inteligente",
+        "La tercera revolución computacional"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 43,
+      "pregunta": "¿Cuál perfil se enfoca en analizar datos existentes y comunicar hallazgos a stakeholders?",
+      "opciones": [
+        "Ingeniero de Datos",
+        "Business Analyst",
+        "Data Analyst (Analista de Datos)",
+        "Científico de Datos"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 44,
+      "pregunta": "¿Cuál perfil se enfoca en diseñar y construir pipelines de datos?",
+      "opciones": [
+        "Analista de Datos",
+        "Business Analyst",
+        "Científico de Datos",
+        "Ingeniero de Datos"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 45,
+      "pregunta": "¿Cuál perfil se enfoca en desarrollar modelos predictivos y de Machine Learning?",
+      "opciones": [
+        "Analista de Datos",
+        "Científico de Datos",
+        "Ingeniero de Datos",
+        "Business Analyst"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 46,
+      "pregunta": "Las herramientas principales del Analista de Datos son:",
+      "opciones": [
+        "Python, Spark, Cloud, ETL",
+        "SQL, Excel, Power BI, Estadística",
+        "Python, ML, Estadística avanzada",
+        "Java, Hadoop, Kafka"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 47,
+      "pregunta": "Las herramientas principales del Ingeniero de Datos incluyen:",
+      "opciones": [
+        "SQL, Excel, Power BI, Estadística",
+        "Python, ML, Estadística avanzada",
+        "Python, Spark, Cloud, ETL",
+        "Java, Power BI, R, Tableau"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 48,
+      "pregunta": "Las herramientas principales del Científico de Datos incluyen:",
+      "opciones": [
+        "SQL, Excel, Power BI, Estadística",
+        "Python, Spark, Cloud, ETL",
+        "Python, ML, Estadística avanzada",
+        "Java, Hadoop, Kafka, Redis"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 49,
+      "pregunta": "¿Qué hace el Business Analyst en relación al Data Analyst?",
+      "opciones": [
+        "Lo reemplaza completamente en sus funciones técnicas",
+        "Ayuda a transformar necesidades del negocio en preguntas de información",
+        "Solo diseña bases de datos estructuradas",
+        "Solo crea dashboards en herramientas BI"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 50,
+      "pregunta": "El Business Analyst tiene como característica diferencial principal:",
+      "opciones": [
+        "Mayor habilidad en Machine Learning que el Data Analyst",
+        "Conocimiento más profundo sobre el negocio",
+        "Solo saber programar en Python avanzado",
+        "Mayor experiencia en visualización de datos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 51,
+      "pregunta": "¿Con quiénes interactúa principalmente el Business Analyst?",
+      "opciones": [
+        "Con los clientes externos de la empresa únicamente",
+        "Con los servidores de datos directamente",
+        "Con las unidades de negocio",
+        "Solo con los equipos de desarrollo de software"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 52,
+      "pregunta": "¿Cuál es la función del Data Visualization Specialist?",
+      "opciones": [
+        "Construir pipelines de datos en producción",
+        "Desarrollar modelos de Machine Learning",
+        "Gestionar bases de datos relacionales",
+        "Presentar resultados y diseñar visualizaciones"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 53,
+      "pregunta": "El Data Engineer diseña y construye principalmente:",
+      "opciones": [
+        "Dashboards en Power BI",
+        "Modelos predictivos de ML",
+        "Data Pipelines",
+        "Reportes estáticos en Excel"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 54,
+      "pregunta": "Una vez transformados, ¿para quién pone los datos en producción el Ingeniero de Datos?",
+      "opciones": [
+        "Para los directivos de la empresa únicamente",
+        "Para los clientes externos de la organización",
+        "Para los desarrolladores front-end",
+        "Para los analistas o científicos de datos"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 55,
+      "pregunta": "¿Cuál es el vocabulario clave del Data Engineer?",
+      "opciones": [
+        "Python, ML y estadística avanzada",
+        "ETL, Data Lake, Pipeline de datos, Data Warehouse",
+        "Solo SQL y Excel avanzado",
+        "Solo Power BI y Tableau"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 56,
+      "pregunta": "¿Cuáles son las herramientas ETL mencionadas para el Data Engineer?",
+      "opciones": [
+        "Excel, Word y PowerPoint",
+        "Solo Python sin frameworks adicionales",
+        "Solo bases de datos NoSQL",
+        "SQL, Apache Spark y Airflow"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 57,
+      "pregunta": "El Data Engineer transforma y trabaja con datos provenientes de:",
+      "opciones": [
+        "Solo fuentes internas de la empresa",
+        "Exclusivamente bases de datos relacionales",
+        "Solo archivos Excel y CSV",
+        "Diferentes fuentes y formatos"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 58,
+      "pregunta": "¿Cuántas habilidades esenciales se mencionan para el Data Scientist?",
+      "opciones": [
+        "3",
+        "4",
+        "5",
+        "8"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 59,
+      "pregunta": "¿Cuál NO es una de las 5 habilidades esenciales del Data Scientist?",
+      "opciones": [
+        "Habilidades blandas y de negocio",
+        "Habilidad de crear modelos predictivos",
+        "Habilidades en matemáticas, estadística y probabilidad",
+        "Diseño de interfaces de usuario (UX)"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 60,
+      "pregunta": "El objetivo final del trabajo del Data Scientist es:",
+      "opciones": [
+        "Solo producir reportes estáticos mensuales",
+        "Diseñar interfaces de usuario web",
+        "Generar cultura de toma de decisiones basadas en datos",
+        "Administrar los servidores de la empresa"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 61,
+      "pregunta": "El Data Scientist usa datos de diversas fuentes para:",
+      "opciones": [
+        "Desarrollar modelos de Machine Learning",
+        "Diseñar visualizaciones únicamente",
+        "Crear informes de Excel",
+        "Administrar bases de datos"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 62,
+      "pregunta": "Según la tabla comparativa de perfiles, ¿cuál habilidad es 'no tan importante' para el Data Analyst pero 'muy importante' para el Data Scientist?",
+      "opciones": [
+        "Visualización y comunicación de datos",
+        "Intuición de datos",
+        "Machine Learning",
+        "Estadística"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 63,
+      "pregunta": "Según la tabla comparativa de perfiles, ¿cuál habilidad comparten los tres roles con alta relevancia?",
+      "opciones": [
+        "Cálculo multivariable y álgebra lineal",
+        "Programación",
+        "Machine Learning avanzado",
+        "Ingeniería de software avanzada"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 64,
+      "pregunta": "¿Cuántos pasos tiene el flujo de trabajo del analista de datos?",
+      "opciones": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 65,
+      "pregunta": "¿Cuál es el primer paso del flujo del analista de datos?",
+      "opciones": [
+        "Visualización y storytelling",
+        "Limpieza y calidad de datos",
+        "Recolección de datos",
+        "Problema de negocio"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 66,
+      "pregunta": "¿Cuál es el último paso del flujo del analista de datos?",
+      "opciones": [
+        "Visualización",
+        "Análisis exploratorio",
+        "Decisión de negocio",
+        "Limpieza de datos"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 67,
+      "pregunta": "¿Cuál es el orden correcto del flujo del analista de datos?",
+      "opciones": [
+        "Problema → Recolección → Limpieza → Análisis → Visualización → Decisión",
+        "Recolección → Limpieza → Problema → Análisis → Decisión → Visualización",
+        "Análisis → Recolección → Limpieza → Problema → Visualización → Decisión",
+        "Decisión → Análisis → Recolección → Visualización → Limpieza → Problema"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 68,
+      "pregunta": "ETL significa:",
+      "opciones": [
+        "Extract, Translate, Load",
+        "Extracción, Transformación y Carga",
+        "Examinar, Tratar, Limpiar",
+        "Evaluación, Transferencia, Lectura"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 69,
+      "pregunta": "¿Cuáles son los aspectos de calidad del dato mencionados?",
+      "opciones": [
+        "Solo precisión y velocidad",
+        "Solo completitud y exactitud",
+        "Integridad, completitud, precisión, unicidad",
+        "Solo volumen y variedad"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 70,
+      "pregunta": "¿Cuáles son los tipos de análisis de datos mencionados?",
+      "opciones": [
+        "Solo descriptivo y predictivo",
+        "Solo cualitativo y cuantitativo",
+        "Descriptivo, diagnóstico, exploratorio, predictivo, prescriptivo",
+        "Solo predictivo y prescriptivo"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 71,
+      "pregunta": "¿Qué son los 'outliers' en el contexto del Análisis Exploratorio de Datos (EDA)?",
+      "opciones": [
+        "Tipos de gráficos disponibles en Power BI",
+        "Valores atípicos o anómalos dentro de un conjunto de datos",
+        "Tipos de bases de datos NoSQL",
+        "Medidas de tendencia central"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 72,
+      "pregunta": "¿Qué es un Diagrama Entidad-Relación (DER)?",
+      "opciones": [
+        "Un tipo de gráfico de barras en Power BI",
+        "Una técnica del análisis estadístico descriptivo",
+        "Una herramienta para modelar la estructura de bases de datos relacionales",
+        "Un tipo de visualización de Big Data"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 73,
+      "pregunta": "¿En qué unidad del programa se estudian medidas de tendencia central y dispersión?",
+      "opciones": [
+        "Unidad 1 – Introducción a los datos",
+        "Unidad 2 – Principios de Estadística",
+        "Unidad 4 – Fundamentos de BD",
+        "Unidad 5 – Power BI"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 74,
+      "pregunta": "¿Qué mide la varianza en estadística descriptiva?",
+      "opciones": [
+        "La tendencia central de los datos",
+        "La relación lineal entre dos variables",
+        "La dispersión de los datos respecto a su media",
+        "El valor más frecuente en el conjunto de datos"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 75,
+      "pregunta": "¿Cuáles son las medidas de tendencia central mencionadas en el programa?",
+      "opciones": [
+        "Solo la media aritmética",
+        "Media, mediana y moda",
+        "Varianza y desvío estándar",
+        "Solo la mediana"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 76,
+      "pregunta": "¿Para qué se utilizan los QQ-plots en estadística?",
+      "opciones": [
+        "Son gráficos de torta (pie charts) especiales",
+        "Para evaluar la normalidad de la distribución de los datos",
+        "Para crear dashboards en Power BI",
+        "Para visualizar matrices de correlación en SQL"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 77,
+      "pregunta": "¿Qué mide el coeficiente de correlación de Pearson?",
+      "opciones": [
+        "La dispersión de los datos respecto a su media",
+        "El valor más frecuente en los datos",
+        "Las relaciones lineales entre dos variables",
+        "La cantidad de outliers en los datos"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 78,
+      "pregunta": "PCA (Análisis de Componentes Principales) es una técnica de:",
+      "opciones": [
+        "Modelado de bases de datos relacionales",
+        "Reducción de dimensionalidad",
+        "Diseño de dashboards en Power BI",
+        "Storytelling con datos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 79,
+      "pregunta": "¿Qué estudia la unidad de EDA (Análisis Exploratorio de Datos)?",
+      "opciones": [
+        "Solo bases de datos relacionales",
+        "Fundamentos de Power BI y DAX",
+        "Outliers, correlaciones, regresión lineal y PCA",
+        "Solo medidas de tendencia central"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 80,
+      "pregunta": "¿Qué es el coeficiente de Spearman en estadística?",
+      "opciones": [
+        "Una medida de correlación para variables ordinales o no paramétricas",
+        "Un tipo de dashboard en Power BI",
+        "Una técnica de clustering avanzado",
+        "Una medida de tendencia central"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 81,
+      "pregunta": "En Power BI, ¿para qué se usa DAX?",
+      "opciones": [
+        "Para diseñar el layout visual de los dashboards",
+        "Para conectar distintas fuentes de datos externas",
+        "Para crear medidas, modelado de datos y KPIs",
+        "Para imprimir y exportar los reportes"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 82,
+      "pregunta": "¿Qué es Power Query dentro de Power BI?",
+      "opciones": [
+        "Un motor de base de datos relacional",
+        "La herramienta ETL de Power BI para transformar y limpiar datos",
+        "Un lenguaje de programación general de Microsoft",
+        "Un tipo de visualización avanzada"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 83,
+      "pregunta": "El storytelling con datos busca principalmente:",
+      "opciones": [
+        "Decorar gráficos con más colores y animaciones",
+        "Usar la mayor cantidad de visualizaciones posibles en un reporte",
+        "Comunicar un argumento que lleve a una decisión concreta",
+        "Solo entretener al público durante las presentaciones"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 84,
+      "pregunta": "¿Cuál es la estructura narrativa del storytelling con datos?",
+      "opciones": [
+        "Inicio, Desarrollo y Final",
+        "Contexto, Conflicto y Resolución",
+        "Pregunta, Análisis y Respuesta",
+        "Datos, Gráficos e Insight"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 85,
+      "pregunta": "¿En qué unidad del programa se trabajan SQL y el modelado de bases de datos?",
+      "opciones": [
+        "Unidad 2 – Principios de Estadística",
+        "Unidad 3 – Análisis Exploratorio (EDA)",
+        "Unidad 5 – Power BI",
+        "Unidad 4 – Fundamentos de BD"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 86,
+      "pregunta": "¿Cuáles son las fuentes de datos abiertas mencionadas en la materia?",
+      "opciones": [
+        "Solo Google y Wikipedia",
+        "Solo datos privados corporativos",
+        "Datos Abiertos BA, Kaggle, Google Dataset Search, World Bank, INDEC",
+        "Solo Kaggle y GitHub"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 87,
+      "pregunta": "¿Qué es Data Governance en el contexto del análisis de datos?",
+      "opciones": [
+        "Solo un lenguaje de programación para bases de datos",
+        "El conjunto de principios, procesos y roles para gestionar y asegurar la calidad de los datos en la organización",
+        "Solo un tipo de base de datos NoSQL",
+        "Solo una herramienta dentro de Power BI"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 88,
+      "pregunta": "Según el World Economic Forum 2025, ¿qué posición ocupa el Data Analyst entre los trabajos más demandados?",
+      "opciones": [
+        "Puesto #1",
+        "Puesto #3",
+        "Puesto #5",
+        "Puesto #10"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 89,
+      "pregunta": "¿Cuál es el crecimiento esperado en roles de datos entre 2025 y 2030?",
+      "opciones": [
+        "2x",
+        "3x",
+        "5x",
+        "10x"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 90,
+      "pregunta": "¿Cuál es la hard skill más demandada según las estadísticas del mercado presentadas?",
+      "opciones": [
+        "Power BI / Tableau (85%)",
+        "Excel avanzado (80%)",
+        "Python (70%)",
+        "SQL (95%)"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 91,
+      "pregunta": "¿Cuál de las siguientes es una soft skill diferenciadora para el analista de datos?",
+      "opciones": [
+        "Solo saber programar en Python avanzado",
+        "Solo dominar Power BI",
+        "Comunicar resultados: traducir datos en decisiones para perfiles no técnicos",
+        "Solo saber SQL avanzado"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 92,
+      "pregunta": "¿Qué porcentaje de las hard skills técnicas del mercado laboral cubre la materia?",
+      "opciones": [
+        "50%",
+        "65%",
+        "80%",
+        "95%"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 93,
+      "pregunta": "El caso de éxito de UPS-ORION ilustra el beneficio del Big Data en:",
+      "opciones": [
+        "Negocio (nuevas alianzas empresariales)",
+        "Servicios personalizados al consumidor",
+        "Solo marketing digital",
+        "Gestión (optimización de procesos y rutas de entrega)"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 94,
+      "pregunta": "El caso de Telefónica-BBVA demuestra que la acumulación de datos más alianzas empresariales puede:",
+      "opciones": [
+        "Reducir todos los costos a cero",
+        "Generar nuevos servicios y fuentes de ingresos para la compañía",
+        "Reemplazar completamente al capital humano",
+        "Solo mejorar el almacenamiento de datos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 95,
+      "pregunta": "El caso de Generali Seguros ilustra cómo el Big Data permite:",
+      "opciones": [
+        "Solo reducir empleados del área de ventas",
+        "Nuevas alianzas entre aseguradoras competidoras",
+        "Ofrecer un seguro personalizado adaptado a las necesidades de cada asegurado",
+        "Solo reducir costos de almacenamiento de datos"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 96,
+      "pregunta": "¿Qué es un Data Warehouse en el ecosistema de datos?",
+      "opciones": [
+        "Un tipo de visualización avanzada en Power BI",
+        "Un repositorio centralizado diseñado para el análisis y reportes de datos estructurados",
+        "Un algoritmo de Machine Learning supervisado",
+        "Un tipo de gráfico estadístico"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 97,
+      "pregunta": "¿Qué es un Data Lake?",
+      "opciones": [
+        "Un repositorio que almacena grandes volúmenes de datos en su formato nativo (estructurados, semiestructurados y no estructurados)",
+        "Un tipo de base de datos relacional con tablas normalizadas",
+        "Un dashboard analítico interactivo avanzado",
+        "Un tipo de modelo predictivo de Machine Learning"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 98,
+      "pregunta": "¿Cuál es la etapa inicial en la evolución de una empresa hacia una cultura de datos donde existe resistencia activa?",
+      "opciones": [
+        "Data-Aware",
+        "Data-Resistant",
+        "Data-Guided",
+        "Data-Savvy"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 99,
+      "pregunta": "¿En qué etapa la organización comienza a usar datos en producción?",
+      "opciones": [
+        "Data-Aware",
+        "Data-Guided",
+        "Data-Savvy",
+        "Data-Driven"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 100,
+      "pregunta": "¿Qué etapa se caracteriza porque la organización utiliza datos en la mayoría de sus procesos de producción?",
+      "opciones": [
+        "Data-Aware",
+        "Data-Guided",
+        "Data-Savvy",
+        "Data-Driven"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 101,
+      "pregunta": "¿Cuál es la etapa estratégica donde la organización se convierte en 'data-first'?",
+      "opciones": [
+        "Data-Savvy",
+        "Data-Guided",
+        "Data-Driven",
+        "Data-Aware"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 102,
+      "pregunta": "¿Qué característica de calidad del dato mide el porcentaje del conjunto total de datos obligatorios presentes?",
+      "opciones": [
+        "Consistencia",
+        "Exactitud",
+        "Completitud",
+        "Unicidad"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 103,
+      "pregunta": "¿Qué técnica facilita la identificación de características y la comprensión de los datos evaluando su calidad?",
+      "opciones": [
+        "Limpieza de datos",
+        "Perfilado o Data Profiling",
+        "Carga de datos",
+        "Exportación"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 104,
+      "pregunta": "¿Qué dimensión de calidad asegura que los datos no presenten discrepancias entre distintas bases o tablas?",
+      "opciones": [
+        "Exactitud",
+        "Consistencia",
+        "Validez",
+        "Integridad"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 105,
+      "pregunta": "¿Cuál es el objetivo de la técnica de Unicidad (Uniqueness)?",
+      "opciones": [
+        "Completar nulos",
+        "Corregir duplicidad no deseada",
+        "Asegurar el formato",
+        "Proteger contra ataques"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 106,
+      "pregunta": "¿Qué rol lidera el desarrollo IT y mantiene la dirección de la estrategia técnica del grupo?",
+      "opciones": [
+        "CDO",
+        "CTO",
+        "CIO",
+        "CISO"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 107,
+      "pregunta": "¿Qué rol analiza el mercado para identificar tecnologías que generen ventaja competitiva?",
+      "opciones": [
+        "CIO",
+        "CTO",
+        "CDO",
+        "CSO"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 108,
+      "pregunta": "¿De qué se encarga el CSO (Chief Security Officer)?",
+      "opciones": [
+        "Seguridad física y tecnológica",
+        "Solo bases de datos",
+        "Marketing digital",
+        "Recursos humanos"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 109,
+      "pregunta": "¿Qué rol protege la información ante posibles ciberataques y fuga de datos?",
+      "opciones": [
+        "CIO",
+        "CISO",
+        "CTO",
+        "CEO"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 110,
+      "pregunta": "¿Cuál es la función principal del CDO (Chief Data Officer)?",
+      "opciones": [
+        "Arreglar servidores",
+        "Establecer la estrategia de uso y explotación de los datos",
+        "Programar la web",
+        "Gestionar redes sociales"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 111,
+      "pregunta": "¿Qué pilares componen el Data Governance?",
+      "opciones": [
+        "Hardware y Software",
+        "Personas, Procesos y Tecnologías",
+        "Dinero y Tiempo",
+        "Clientes y Ventas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 112,
+      "pregunta": "¿Qué tipo de análisis de datos responde a la pregunta '¿Por qué sucedió?'?",
+      "opciones": [
+        "Descriptivo",
+        "Predictivo",
+        "De diagnóstico",
+        "Prescriptivo"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 113,
+      "pregunta": "¿Qué tipo de análisis utiliza modelos para predecir ventas futuras?",
+      "opciones": [
+        "Descriptivo",
+        "Exploratorio",
+        "Predictivo",
+        "Prescriptivo"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 114,
+      "pregunta": "¿Qué nivel de la pirámide representa los datos procesados para ser útiles?",
+      "opciones": [
+        "Datos",
+        "Información",
+        "Conocimiento",
+        "Sabiduría"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 115,
+      "pregunta": "¿Cuál es una herramienta de visualización mencionada?",
+      "opciones": [
+        "Oracle",
+        "Tableau",
+        "AWS",
+        "SAP"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 116,
+      "pregunta": "¿Qué característica define a la Integridad de Datos?",
+      "opciones": [
+        "Formato correcto",
+        "Ausencia de cambios involuntarios",
+        "Datos sin nulos",
+        "Valores únicos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 117,
+      "pregunta": "¿Qué rama de la estadística se encarga de recolectar, organizar y caracterizar un conjunto de datos?",
+      "opciones": [
+        "Inferencial",
+        "Descriptiva",
+        "Probabilística",
+        "Matemática"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 118,
+      "pregunta": "¿Qué es la población en un estudio estadístico?",
+      "opciones": [
+        "Un grupo pequeño",
+        "Conjunto de todos los elementos a estudiar",
+        "Las personas que responden",
+        "Los datos erróneos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 119,
+      "pregunta": "¿Cómo se denomina al subconjunto representativo de la población?",
+      "opciones": [
+        "Censo",
+        "Muestra",
+        "Variable",
+        "Dato"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 120,
+      "pregunta": "¿Qué tipo de variable es el 'Color de ojos'?",
+      "opciones": [
+        "Cualitativa Nominal",
+        "Cualitativa Ordinal",
+        "Cuantitativa Discreta",
+        "Cuantitativa Continua"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 121,
+      "pregunta": "¿Qué tipo de variable es la 'Jerarquía en una empresa'?",
+      "opciones": [
+        "Nominal",
+        "Ordinal",
+        "Discreta",
+        "Continua"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 122,
+      "pregunta": "¿Cuál es una variable cuantitativa discreta?",
+      "opciones": [
+        "Estatura",
+        "Peso",
+        "Cantidad de hijos",
+        "Temperatura"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 123,
+      "pregunta": "¿Cuál es una variable cuantitativa continua?",
+      "opciones": [
+        "DNI",
+        "Número de página",
+        "Tiempo de espera",
+        "Cantidad de autos"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 124,
+      "pregunta": "¿Qué representa la frecuencia absoluta ($f_i$)?",
+      "opciones": [
+        "El promedio",
+        "Número de veces que se repite un valor",
+        "El porcentaje",
+        "La suma total"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 125,
+      "pregunta": "¿Cómo se calcula la frecuencia relativa ($h_i$)?",
+      "opciones": [
+        "$f_i / n$",
+        "$f_i * 100$",
+        "$f_i + F_i$",
+        "$n / f_i$"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 126,
+      "pregunta": "¿Qué es la Media Aritmética?",
+      "opciones": [
+        "El valor central",
+        "El valor más frecuente",
+        "Suma de valores dividida por el total",
+        "El valor máximo"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 127,
+      "pregunta": "¿Qué medida de tendencia central es el valor que más se repite?",
+      "opciones": [
+        "Media",
+        "Mediana",
+        "Moda",
+        "Varianza"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 128,
+      "pregunta": "¿Qué es la Mediana?",
+      "opciones": [
+        "El promedio",
+        "El valor que divide al conjunto en dos partes iguales",
+        "La suma de frecuencias",
+        "El rango"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 129,
+      "pregunta": "¿Qué sucede con la Media si hay valores extremadamente altos?",
+      "opciones": [
+        "No cambia",
+        "Disminuye",
+        "Se desplaza hacia esos valores",
+        "Se vuelve cero"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 130,
+      "pregunta": "¿Qué indica una frecuencia relativa acumulada ($H_i$) final?",
+      "opciones": [
+        "0",
+        "0.5",
+        "1",
+        "100"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 131,
+      "pregunta": "En un estudio de sueldos, ¿qué medida es más robusta frente a sueldos millonarios atípicos?",
+      "opciones": [
+        "Media",
+        "Mediana",
+        "Rango",
+        "Desviación"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 132,
+      "pregunta": "¿Qué tipo de variable es la 'Nacionalidad'?",
+      "opciones": [
+        "Cualitativa Nominal",
+        "Cualitativa Ordinal",
+        "Cuantitativa Discreta",
+        "Cuantitativa Continua"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 133,
+      "pregunta": "¿Qué tipo de variable es la 'Calificación de un examen (A, B, C)'?",
+      "opciones": [
+        "Nominal",
+        "Ordinal",
+        "Discreta",
+        "Continua"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 134,
+      "pregunta": "¿Cuál es el símbolo del tamaño de la muestra?",
+      "opciones": [
+        "N",
+        "n",
+        "x",
+        "f"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 135,
+      "pregunta": "¿Qué es la estadística inferencial?",
+      "opciones": [
+        "Solo describir datos",
+        "Obtener conclusiones de una población a partir de una muestra",
+        "Limpiar datos",
+        "Hacer gráficos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 136,
+      "pregunta": "¿Qué es el Análisis Exploratorio de Datos (EDA)?",
+      "opciones": [
+        "Cargar datos",
+        "Tratamiento estadístico para entender la estructura de los datos",
+        "Solo hacer predicciones",
+        "Borrar datos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 137,
+      "pregunta": "¿Cuál es un objetivo del EDA?",
+      "opciones": [
+        "Maximizar el error",
+        "Detectar anomalías y valores atípicos",
+        "Ocultar patrones",
+        "Evitar el análisis"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 138,
+      "pregunta": "¿Qué gráfico permite visualizar la distribución y frecuencia de una variable cuantitativa?",
+      "opciones": [
+        "Scatter plot",
+        "Histograma",
+        "Gráfico de torta",
+        "Diagrama de red"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 139,
+      "pregunta": "¿Qué información proporciona el eje horizontal de un histograma?",
+      "opciones": [
+        "Frecuencia",
+        "Intervalos de la variable",
+        "Nombres de categorías",
+        "Tiempo"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 140,
+      "pregunta": "¿Qué gráfico es ideal para identificar valores atípicos (outliers)?",
+      "opciones": [
+        "Barras",
+        "Histograma",
+        "Boxplot",
+        "Líneas"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 141,
+      "pregunta": "¿Qué representa la línea central dentro de la caja de un Boxplot?",
+      "opciones": [
+        "Media",
+        "Mediana",
+        "Moda",
+        "Máximo"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 142,
+      "pregunta": "¿Qué son los 'bigotes' en un Boxplot?",
+      "opciones": [
+        "Los cuartiles",
+        "Extensión de los datos fuera del cuartil medio",
+        "La media",
+        "Los nombres"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 143,
+      "pregunta": "¿Qué gráfico muestra la relación entre dos variables numéricas?",
+      "opciones": [
+        "Histograma",
+        "Boxplot",
+        "Scatter plot (Dispersión)",
+        "Torta"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 144,
+      "pregunta": "¿Qué indica una nube de puntos que asciende de izquierda a derecha en un scatter plot?",
+      "opciones": [
+        "Relación negativa",
+        "Relación positiva",
+        "Sin relación",
+        "Relación constante"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 145,
+      "pregunta": "¿Qué coeficiente mide la fuerza y dirección de la relación lineal entre dos variables?",
+      "opciones": [
+        "Media",
+        "Desviación",
+        "Correlación de Pearson ($r$)",
+        "Varianza"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 146,
+      "pregunta": "¿Qué valor indica una correlación positiva perfecta?",
+      "opciones": [
+        "0",
+        "-1",
+        "1",
+        "100"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 147,
+      "pregunta": "¿Qué valor indica una correlación negativa perfecta?",
+      "opciones": [
+        "0",
+        "1",
+        "-1",
+        "0.5"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 148,
+      "pregunta": "¿Qué significa un coeficiente de correlación cercano a 0?",
+      "opciones": [
+        "Fuerte relación",
+        "Ausencia de relación lineal",
+        "Error en el cálculo",
+        "Relación negativa"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 149,
+      "pregunta": "¿Cuál es una advertencia fundamental sobre la correlación?",
+      "opciones": [
+        "Siempre implica causalidad",
+        "Correlación no implica causalidad",
+        "Es lo mismo que el promedio",
+        "Solo sirve para variables cualitativas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 150,
+      "pregunta": "¿Qué es un outlier?",
+      "opciones": [
+        "El valor medio",
+        "Un valor que se encuentra fuera del patrón general",
+        "Un valor nulo",
+        "La moda"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 151,
+      "pregunta": "¿Por qué es importante detectar outliers?",
+      "opciones": [
+        "Para borrarlos siempre",
+        "Porque pueden afectar los resultados del análisis",
+        "Para que el gráfico se vea mejor",
+        "No es importante"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 152,
+      "pregunta": "¿Qué indica una asimetría a la derecha en la distribución?",
+      "opciones": [
+        "Cola más larga a la izquierda",
+        "Cola más larga a la derecha",
+        "Distribución uniforme",
+        "Forma de campana perfecta"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 153,
+      "pregunta": "En un Boxplot, ¿qué porcentaje de datos hay dentro de la 'caja'?",
+      "opciones": [
+        "25%",
+        "50%",
+        "75%",
+        "100%"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 154,
+      "pregunta": "¿Qué indica un scatter plot con puntos dispersos al azar sin forma clara?",
+      "opciones": [
+        "Relación lineal fuerte",
+        "Ausencia de correlación",
+        "Relación cuadrática",
+        "Error de carga"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 155,
+      "pregunta": "¿Cuál es la primera fase sugerida en el EDA?",
+      "opciones": [
+        "Hacer predicciones",
+        "Entender la estructura y tipos de variables",
+        "Presentar al CEO",
+        "Borrar outliers"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 156,
+      "pregunta": "¿Qué significa que un dato sea 'Valido'?",
+      "opciones": [
+        "Que sea verdadero",
+        "Que cumpla con reglas o restricciones definidas",
+        "Que sea único",
+        "Que no tenga nulos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 157,
+      "pregunta": "¿Qué rol lidera la gestión del cambio y formación en IT?",
+      "opciones": [
+        "CDO",
+        "CIO",
+        "CEO",
+        "CFO"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 158,
+      "pregunta": "¿Qué rol asegura la estabilidad de sistemas y soporte a usuarios de ERP?",
+      "opciones": [
+        "CIO",
+        "CTO",
+        "CISO",
+        "Data Analyst"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 159,
+      "pregunta": "¿Qué rol toma decisiones ejecutivas sobre necesidades tecnológicas?",
+      "opciones": [
+        "CTO",
+        "CSO",
+        "CDO",
+        "Data Analyst"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 160,
+      "pregunta": "¿Qué busca el perfilado de datos respecto a nulos?",
+      "opciones": [
+        "Ignorarlos",
+        "Identificar datos completos e incompletos",
+        "Borrarlos automáticamente",
+        "Pintarlos de rojo"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 161,
+      "pregunta": "¿Qué característica de calidad se asocia a la 'Exactitud'?",
+      "opciones": [
+        "Datos rápidos",
+        "Datos precisos que reflejan la realidad",
+        "Datos formateados",
+        "Datos en la nube"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 162,
+      "pregunta": "¿Qué beneficio trae el Data Governance sobre los costos?",
+      "opciones": [
+        "Los aumenta",
+        "Reduce costos y optimiza esfuerzos",
+        "No influye",
+        "Elimina los presupuestos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 163,
+      "pregunta": "¿Qué es el 'Conocimiento' en la jerarquía de información?",
+      "opciones": [
+        "Datos puros",
+        "Aplicación mental de los datos y la información",
+        "Gráficos simples",
+        "Base de datos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 164,
+      "pregunta": "¿Qué es la 'Sabiduría'?",
+      "opciones": [
+        "Información organizada",
+        "Evaluación e internalización del conocimiento",
+        "Programación en Python",
+        "Uso de Excel"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 165,
+      "pregunta": "¿Qué es un Insight?",
+      "opciones": [
+        "Un error",
+        "Información de valor para la toma de decisiones",
+        "Un gráfico circular",
+        "Un archivo CSV"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 166,
+      "pregunta": "¿Qué tipo de variable es la 'Marca de un auto'?",
+      "opciones": [
+        "Nominal",
+        "Ordinal",
+        "Discreta",
+        "Continua"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 167,
+      "pregunta": "¿Qué tipo de variable es el 'Puesto en una carrera'?",
+      "opciones": [
+        "Nominal",
+        "Ordinal",
+        "Discreta",
+        "Continua"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 168,
+      "pregunta": "¿Qué tipo de variable es el 'Sueldo'?",
+      "opciones": [
+        "Nominal",
+        "Ordinal",
+        "Discreta",
+        "Continua"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 169,
+      "pregunta": "Si un conjunto de datos es: 2, 2, 4, 6. ¿Cuál es la moda?",
+      "opciones": [
+        "2",
+        "4",
+        "6",
+        "14"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 170,
+      "pregunta": "Si un conjunto ordenado es: 1, 3, 5. ¿Cuál es la mediana?",
+      "opciones": [
+        "1",
+        "3",
+        "5",
+        "9"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 171,
+      "pregunta": "¿Qué permite visualizar un scatter plot?",
+      "opciones": [
+        "Solo promedios",
+        "Correlación entre variables",
+        "Solo una variable",
+        "El tiempo"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 172,
+      "pregunta": "¿Qué indica un Boxplot muy 'aplastado'?",
+      "opciones": [
+        "Mucha variabilidad",
+        "Baja variabilidad o dispersión",
+        "Muchos errores",
+        "Sin datos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 173,
+      "pregunta": "¿Qué es la correlación negativa?",
+      "opciones": [
+        "Ambas suben",
+        "Una sube y la otra baja",
+        "Ambas bajan",
+        "No hay relación"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 174,
+      "pregunta": "¿Qué es la correlación positiva?",
+      "opciones": [
+        "Ambas suben o ambas bajan en conjunto",
+        "Una sube y la otra baja",
+        "Sin relación",
+        "Relación inversa"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 175,
+      "pregunta": "¿Qué herramienta de visualización se menciona para Python?",
+      "opciones": [
+        "Matplotlib",
+        "Excel",
+        "Photoshop",
+        "Notepad"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 176,
+      "pregunta": "¿Qué indica el coeficiente $r = 0.9$?",
+      "opciones": [
+        "Relación positiva débil",
+        "Relación positiva fuerte",
+        "Relación negativa fuerte",
+        "Sin relación"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 177,
+      "pregunta": "¿Qué indica el coeficiente $r = -0.8$?",
+      "opciones": [
+        "Relación negativa fuerte",
+        "Relación positiva fuerte",
+        "Sin relación",
+        "Relación débil"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 178,
+      "pregunta": "¿Qué puede causar un outlier?",
+      "opciones": [
+        "Error en la toma de datos",
+        "Variabilidad natural extrema",
+        "Ambas son correctas",
+        "Ninguna es correcta"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 179,
+      "pregunta": "¿Qué es el rango intercuartílico?",
+      "opciones": [
+        "Diferencia entre Q3 y Q1",
+        "Suma de todos los datos",
+        "El valor central",
+        "El promedio"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 180,
+      "pregunta": "¿Qué tipo de análisis sugiere acciones basadas en predicciones?",
+      "opciones": [
+        "Descriptivo",
+        "Diagnóstico",
+        "Predictivo",
+        "Prescriptivo"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 181,
+      "pregunta": "¿Qué etapa implica ser 'data-curious'?",
+      "opciones": [
+        "Data-Aware",
+        "Data-Resistant",
+        "Data-Guided",
+        "Data-Driven"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 182,
+      "pregunta": "¿Qué es la frecuencia absoluta acumulada ($F_i$)?",
+      "opciones": [
+        "Suma de frecuencias absolutas hasta ese valor",
+        "El promedio final",
+        "El porcentaje acumulado",
+        "La resta de valores"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 183,
+      "pregunta": "¿Cuál es la sumatoria de las frecuencias relativas ($h_i$)?",
+      "opciones": [
+        "0",
+        "1",
+        "100",
+        "n"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 184,
+      "pregunta": "¿Qué es una muestra representativa?",
+      "opciones": [
+        "Cualquier grupo",
+        "Subconjunto que refleja las características de la población",
+        "Solo los mejores datos",
+        "La población entera"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 185,
+      "pregunta": "¿Qué gráfico muestra la evolución de una variable en el tiempo?",
+      "opciones": [
+        "Histograma",
+        "Gráfico de líneas",
+        "Scatter plot",
+        "Boxplot"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 186,
+      "pregunta": "¿Qué indica un histograma con forma de campana?",
+      "opciones": [
+        "Distribución normal o simétrica",
+        "Distribución asimétrica",
+        "Sin datos",
+        "Muchos outliers"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 187,
+      "pregunta": "¿Cuál es el valor máximo del coeficiente de correlación de Pearson?",
+      "opciones": [
+        "0",
+        "1",
+        "100",
+        "Infinito"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 188,
+      "pregunta": "¿Qué busca el EDA antes de aplicar modelos complejos?",
+      "opciones": [
+        "Ahorrar tiempo",
+        "Entender la naturaleza de los datos",
+        "Borrar todo",
+        "Hacer presentaciones"
+      ],
+      "respuesta_correcta": 1
+    }
+  ]
+}
