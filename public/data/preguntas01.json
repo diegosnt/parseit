@@ -1,10 +1,10 @@
 {
   "materia": "Análisis de Datos I",
-  "titulo": "Banco Maestro – Datos, Estadística, Roles, BD y SQL",
+  "titulo": "Primera Parcial",
   "duracion": 120,
   "preguntas_para_aprobar": 150,
   "fecha": "2026-05-05",
-  "version": "5.0",
+  "version": "6.0",
   "preguntas": [
     {
       "id": 1,
