@@ -1,11 +1,11 @@
 [
   {
-    "id": "preguntas001",
+    "id": "preguntas01",
     "materia": "Análisis de Datos I",
-    "titulo": "Primer Parcial"
+    "titulo": "Banco Maestro – Datos, Estadística, Roles, BD y SQL"
   },
   {
-    "id": "preguntas002",
+    "id": "preguntas02",
     "materia": "Gest.de Sist.de Información",
     "titulo": "Uni. 1 y 2"
   }

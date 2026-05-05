@@ -1,10 +1,10 @@
 {
   "materia": "Análisis de Datos I",
-  "titulo": "Primer Parcial",
+  "titulo": "Banco Maestro – Datos, Estadística, Roles, BD y SQL",
   "duracion": 120,
-  "preguntas_para_aprobar": 113,
+  "preguntas_para_aprobar": 150,
   "fecha": "2026-05-05",
-  "version": "4.0",
+  "version": "5.0",
   "preguntas": [
     {
       "id": 1,
@@ -30,39 +30,6 @@
     },
     {
       "id": 3,
-      "pregunta": "Los datos cualitativos se caracterizan por ser:",
-      "opciones": [
-        "Cuantificables y siempre numéricos",
-        "Siempre continuos",
-        "No cuantificables",
-        "Solo de valores enteros"
-      ],
-      "respuesta_correcta": 2
-    },
-    {
-      "id": 4,
-      "pregunta": "Los datos cuantitativos se caracterizan por ser:",
-      "opciones": [
-        "No cuantificables y descriptivos",
-        "Solo de dos valores posibles",
-        "Cuantificables y numéricos",
-        "Siempre sin orden entre sí"
-      ],
-      "respuesta_correcta": 2
-    },
-    {
-      "id": 5,
-      "pregunta": "¿Cuáles son los tres subtipos de datos cualitativos?",
-      "opciones": [
-        "Nominales, ordinales y binarios",
-        "Nominales, discretos y continuos",
-        "Ordinales, discretos y continuos",
-        "Binarios, discretos y continuos"
-      ],
-      "respuesta_correcta": 0
-    },
-    {
-      "id": 6,
       "pregunta": "Los datos nominales son:",
       "opciones": [
         "Descriptivos, sin orden entre sí",
@@ -73,7 +40,7 @@
       "respuesta_correcta": 0
     },
     {
-      "id": 7,
+      "id": 4,
       "pregunta": "Los datos ordinales tienen como característica fundamental:",
       "opciones": [
         "No tienen ningún orden entre sí",
@@ -84,18 +51,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 8,
-      "pregunta": "Los datos binarios suelen representar:",
-      "opciones": [
-        "Valores con orden jerárquico estricto",
-        "Cualquier valor dentro de un intervalo",
-        "Estados, con solo dos valores posibles",
-        "Valores descriptivos sin orden alguno"
-      ],
-      "respuesta_correcta": 2
-    },
-    {
-      "id": 9,
+      "id": 5,
       "pregunta": "Los datos discretos son aquellos que:",
       "opciones": [
         "Pueden tomar cualquier valor dentro de un intervalo",
@@ -106,7 +62,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 10,
+      "id": 6,
       "pregunta": "Los datos continuos se caracterizan porque:",
       "opciones": [
         "Solo toman valores enteros",
@@ -117,7 +73,7 @@
       "respuesta_correcta": 3
     },
     {
-      "id": 11,
+      "id": 7,
       "pregunta": "¿Cuál de los siguientes es un ejemplo de dato ORDINAL?",
       "opciones": [
         "Colores de un LED: Rojo, Verde, Azul",
@@ -128,7 +84,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 12,
+      "id": 8,
       "pregunta": "¿Cuál de los siguientes es un ejemplo de dato CONTINUO?",
       "opciones": [
         "Roberto Carlos tiene un millón de amigos",
@@ -139,7 +95,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 13,
+      "id": 9,
       "pregunta": "¿Cuál de los siguientes es un ejemplo de dato DISCRETO?",
       "opciones": [
         "Carlos mide 1.78",
@@ -150,7 +106,7 @@
       "respuesta_correcta": 3
     },
     {
-      "id": 14,
+      "id": 10,
       "pregunta": "¿Cuál de los siguientes es un ejemplo de dato NOMINAL?",
       "opciones": [
         "Altura de un objeto: Alto-Medio-Bajo",
@@ -161,7 +117,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 15,
+      "id": 11,
       "pregunta": "¿Cuál de los siguientes es un ejemplo de dato BINARIO?",
       "opciones": [
         "Roberto Carlos tiene un millón de amigos",
@@ -172,18 +128,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 16,
-      "pregunta": "¿Cuántas 'V' definen formalmente al Big Data?",
-      "opciones": [
-        "3",
-        "4",
-        "5",
-        "7"
-      ],
-      "respuesta_correcta": 2
-    },
-    {
-      "id": 17,
+      "id": 12,
       "pregunta": "¿Cuáles son las 5 V del Big Data?",
       "opciones": [
         "Volumen, Velocidad, Variedad, Veracidad, Valor",
@@ -194,7 +139,7 @@
       "respuesta_correcta": 0
     },
     {
-      "id": 18,
+      "id": 13,
       "pregunta": "Según Gartner, Big Data demanda formas innovadoras de procesamiento para permitir:",
       "opciones": [
         "Solo almacenamiento masivo de datos",
@@ -205,40 +150,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 19,
-      "pregunta": "¿Cuántos bytes de datos se generan diariamente en el mundo?",
-      "opciones": [
-        "2.5 millones de bytes",
-        "2.5 billones de bytes",
-        "2.5 quintillones de bytes",
-        "2.5 trillones de bytes"
-      ],
-      "respuesta_correcta": 2
-    },
-    {
-      "id": 20,
-      "pregunta": "¿Qué porcentaje de los datos del mundo se ha creado en los últimos dos años?",
-      "opciones": [
-        "50%",
-        "70%",
-        "30%",
-        "90%"
-      ],
-      "respuesta_correcta": 3
-    },
-    {
-      "id": 21,
-      "pregunta": "¿Cuál es el crecimiento anual predicho de la generación de datos en el mundo?",
-      "opciones": [
-        "25%",
-        "40%",
-        "60%",
-        "10%"
-      ],
-      "respuesta_correcta": 1
-    },
-    {
-      "id": 22,
+      "id": 14,
       "pregunta": "¿Cuáles son los impulsores del 'Big Bang' de los datos?",
       "opciones": [
         "Cloud, Blockchain y AI",
@@ -249,7 +161,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 23,
+      "id": 15,
       "pregunta": "Las empresas data-driven son cuántas veces más rentables que las que no lo son:",
       "opciones": [
         "2x",
@@ -260,18 +172,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 24,
-      "pregunta": "¿Cuál de las siguientes es una razón de importancia del Big Data?",
-      "opciones": [
-        "Responde preguntas que las empresas ni siquiera sabían que tenían",
-        "Elimina por completo la necesidad de tomar decisiones",
-        "Solo sirve para almacenamiento masivo",
-        "Solo es útil para empresas tecnológicas"
-      ],
-      "respuesta_correcta": 0
-    },
-    {
-      "id": 25,
+      "id": 16,
       "pregunta": "¿Cuál es el beneficio del Big Data en la dimensión de GESTIÓN empresarial?",
       "opciones": [
         "Generar nuevos servicios con alianzas externas",
@@ -282,7 +183,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 26,
+      "id": 17,
       "pregunta": "El beneficio del Big Data denominado 'NEGOCIO' implica:",
       "opciones": [
         "Optimización de rutas logísticas internas",
@@ -293,7 +194,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 27,
+      "id": 18,
       "pregunta": "El beneficio del Big Data en 'SERVICIOS' se refiere a:",
       "opciones": [
         "Reducción de costos de infraestructura tecnológica",
@@ -304,7 +205,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 28,
+      "id": 19,
       "pregunta": "¿Qué herramienta tecnológica se menciona como reductora de costos de almacenamiento en Big Data?",
       "opciones": [
         "Power BI",
@@ -315,18 +216,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 29,
-      "pregunta": "¿Cuál de estas capacidades habilita el Big Data en las organizaciones?",
-      "opciones": [
-        "Anticiparse o predecir comportamientos futuros",
-        "Solo registrar lo que ocurrió en el pasado",
-        "Eliminar todos los riesgos del negocio",
-        "Solo hacer reportes mensuales automáticos"
-      ],
-      "respuesta_correcta": 0
-    },
-    {
-      "id": 30,
+      "id": 20,
       "pregunta": "La metáfora 'Los datos son el petróleo del siglo XXI' implica que:",
       "opciones": [
         "Los datos son finitos y se van a acabar pronto",
@@ -337,7 +227,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 31,
+      "id": 21,
       "pregunta": "Una organización Data-Driven es aquella que:",
       "opciones": [
         "Toma decisiones basadas en información concreta y analizada",
@@ -348,18 +238,7 @@
       "respuesta_correcta": 0
     },
     {
-      "id": 32,
-      "pregunta": "¿Cuál de las siguientes es una característica de las organizaciones data-driven?",
-      "opciones": [
-        "Identificar nuevas oportunidades y entender mejor al consumidor",
-        "Solo registrar datos históricos sin analizarlos",
-        "Operar sin ningún tipo de tecnología digital",
-        "Solo usar datos cualitativos para decisiones"
-      ],
-      "respuesta_correcta": 0
-    },
-    {
-      "id": 33,
+      "id": 22,
       "pregunta": "¿En qué año aproximado comenzó la 1ª Revolución Industrial?",
       "opciones": [
         "1870",
@@ -370,18 +249,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 34,
-      "pregunta": "¿Cuál fue el invento emblema de la 1ª Revolución Industrial?",
-      "opciones": [
-        "Motor de gasolina",
-        "Microelectrónica",
-        "Máquina a vapor",
-        "Internet"
-      ],
-      "respuesta_correcta": 2
-    },
-    {
-      "id": 35,
+      "id": 23,
       "pregunta": "La 1ª Revolución Industrial se caracterizó por ser la era de:",
       "opciones": [
         "La ciencia y producción masiva",
@@ -392,18 +260,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 36,
-      "pregunta": "¿En qué año comenzó la 2ª Revolución Industrial?",
-      "opciones": [
-        "1750",
-        "1870",
-        "1950",
-        "2000"
-      ],
-      "respuesta_correcta": 1
-    },
-    {
-      "id": 37,
+      "id": 24,
       "pregunta": "La 2ª Revolución Industrial introdujo principalmente:",
       "opciones": [
         "La máquina a vapor y el ferrocarril",
@@ -414,18 +271,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 38,
-      "pregunta": "La 3ª Revolución Industrial comenzó aproximadamente en:",
-      "opciones": [
-        "1750",
-        "1870",
-        "1950",
-        "2000"
-      ],
-      "respuesta_correcta": 2
-    },
-    {
-      "id": 39,
+      "id": 25,
       "pregunta": "La 3ª Revolución Industrial se conoce como la era de:",
       "opciones": [
         "La producción mecanizada",
@@ -436,7 +282,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 40,
+      "id": 26,
       "pregunta": "La 4ª Revolución Industrial es catalogada como la era de:",
       "opciones": [
         "El vapor",
@@ -447,7 +293,7 @@
       "respuesta_correcta": 3
     },
     {
-      "id": 41,
+      "id": 27,
       "pregunta": "Según Klaus Schwab, ¿qué caracteriza a la 4ª Revolución Industrial?",
       "opciones": [
         "Solo la mecanización agrícola a escala global",
@@ -458,7 +304,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 42,
+      "id": 28,
       "pregunta": "Erik Brynjolfsson y Andrew McAfee denominan a la 4ª Revolución Industrial como:",
       "opciones": [
         "La era del vapor digital",
@@ -469,7 +315,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 43,
+      "id": 29,
       "pregunta": "¿Cuál perfil se enfoca en analizar datos existentes y comunicar hallazgos a stakeholders?",
       "opciones": [
         "Ingeniero de Datos",
@@ -480,7 +326,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 44,
+      "id": 30,
       "pregunta": "¿Cuál perfil se enfoca en diseñar y construir pipelines de datos?",
       "opciones": [
         "Analista de Datos",
@@ -491,7 +337,7 @@
       "respuesta_correcta": 3
     },
     {
-      "id": 45,
+      "id": 31,
       "pregunta": "¿Cuál perfil se enfoca en desarrollar modelos predictivos y de Machine Learning?",
       "opciones": [
         "Analista de Datos",
@@ -502,7 +348,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 46,
+      "id": 32,
       "pregunta": "Las herramientas principales del Analista de Datos son:",
       "opciones": [
         "Python, Spark, Cloud, ETL",
@@ -513,7 +359,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 47,
+      "id": 33,
       "pregunta": "Las herramientas principales del Ingeniero de Datos incluyen:",
       "opciones": [
         "SQL, Excel, Power BI, Estadística",
@@ -524,7 +370,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 48,
+      "id": 34,
       "pregunta": "Las herramientas principales del Científico de Datos incluyen:",
       "opciones": [
         "SQL, Excel, Power BI, Estadística",
@@ -535,7 +381,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 49,
+      "id": 35,
       "pregunta": "¿Qué hace el Business Analyst en relación al Data Analyst?",
       "opciones": [
         "Lo reemplaza completamente en sus funciones técnicas",
@@ -546,18 +392,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 50,
-      "pregunta": "El Business Analyst tiene como característica diferencial principal:",
-      "opciones": [
-        "Mayor habilidad en Machine Learning que el Data Analyst",
-        "Conocimiento más profundo sobre el negocio",
-        "Solo saber programar en Python avanzado",
-        "Mayor experiencia en visualización de datos"
-      ],
-      "respuesta_correcta": 1
-    },
-    {
-      "id": 51,
+      "id": 36,
       "pregunta": "¿Con quiénes interactúa principalmente el Business Analyst?",
       "opciones": [
         "Con los clientes externos de la empresa únicamente",
@@ -568,7 +403,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 52,
+      "id": 37,
       "pregunta": "¿Cuál es la función del Data Visualization Specialist?",
       "opciones": [
         "Construir pipelines de datos en producción",
@@ -579,7 +414,7 @@
       "respuesta_correcta": 3
     },
     {
-      "id": 53,
+      "id": 38,
       "pregunta": "El Data Engineer diseña y construye principalmente:",
       "opciones": [
         "Dashboards en Power BI",
@@ -590,18 +425,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 54,
-      "pregunta": "Una vez transformados, ¿para quién pone los datos en producción el Ingeniero de Datos?",
-      "opciones": [
-        "Para los directivos de la empresa únicamente",
-        "Para los clientes externos de la organización",
-        "Para los desarrolladores front-end",
-        "Para los analistas o científicos de datos"
-      ],
-      "respuesta_correcta": 3
-    },
-    {
-      "id": 55,
+      "id": 39,
       "pregunta": "¿Cuál es el vocabulario clave del Data Engineer?",
       "opciones": [
         "Python, ML y estadística avanzada",
@@ -612,7 +436,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 56,
+      "id": 40,
       "pregunta": "¿Cuáles son las herramientas ETL mencionadas para el Data Engineer?",
       "opciones": [
         "Excel, Word y PowerPoint",
@@ -623,18 +447,7 @@
       "respuesta_correcta": 3
     },
     {
-      "id": 57,
-      "pregunta": "El Data Engineer transforma y trabaja con datos provenientes de:",
-      "opciones": [
-        "Solo fuentes internas de la empresa",
-        "Exclusivamente bases de datos relacionales",
-        "Solo archivos Excel y CSV",
-        "Diferentes fuentes y formatos"
-      ],
-      "respuesta_correcta": 3
-    },
-    {
-      "id": 58,
+      "id": 41,
       "pregunta": "¿Cuántas habilidades esenciales se mencionan para el Data Scientist?",
       "opciones": [
         "3",
@@ -645,7 +458,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 59,
+      "id": 42,
       "pregunta": "¿Cuál NO es una de las 5 habilidades esenciales del Data Scientist?",
       "opciones": [
         "Habilidades blandas y de negocio",
@@ -656,7 +469,7 @@
       "respuesta_correcta": 3
     },
     {
-      "id": 60,
+      "id": 43,
       "pregunta": "El objetivo final del trabajo del Data Scientist es:",
       "opciones": [
         "Solo producir reportes estáticos mensuales",
@@ -667,7 +480,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 61,
+      "id": 44,
       "pregunta": "El Data Scientist usa datos de diversas fuentes para:",
       "opciones": [
         "Desarrollar modelos de Machine Learning",
@@ -678,7 +491,7 @@
       "respuesta_correcta": 0
     },
     {
-      "id": 62,
+      "id": 45,
       "pregunta": "Según la tabla comparativa de perfiles, ¿cuál habilidad es 'no tan importante' para el Data Analyst pero 'muy importante' para el Data Scientist?",
       "opciones": [
         "Visualización y comunicación de datos",
@@ -689,18 +502,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 63,
-      "pregunta": "Según la tabla comparativa de perfiles, ¿cuál habilidad comparten los tres roles con alta relevancia?",
-      "opciones": [
-        "Cálculo multivariable y álgebra lineal",
-        "Programación",
-        "Machine Learning avanzado",
-        "Ingeniería de software avanzada"
-      ],
-      "respuesta_correcta": 1
-    },
-    {
-      "id": 64,
+      "id": 46,
       "pregunta": "¿Cuántos pasos tiene el flujo de trabajo del analista de datos?",
       "opciones": [
         "4",
@@ -711,7 +513,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 65,
+      "id": 47,
       "pregunta": "¿Cuál es el primer paso del flujo del analista de datos?",
       "opciones": [
         "Visualización y storytelling",
@@ -722,7 +524,7 @@
       "respuesta_correcta": 3
     },
     {
-      "id": 66,
+      "id": 48,
       "pregunta": "¿Cuál es el último paso del flujo del analista de datos?",
       "opciones": [
         "Visualización",
@@ -733,7 +535,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 67,
+      "id": 49,
       "pregunta": "¿Cuál es el orden correcto del flujo del analista de datos?",
       "opciones": [
         "Problema → Recolección → Limpieza → Análisis → Visualización → Decisión",
@@ -744,7 +546,7 @@
       "respuesta_correcta": 0
     },
     {
-      "id": 68,
+      "id": 50,
       "pregunta": "ETL significa:",
       "opciones": [
         "Extract, Translate, Load",
@@ -755,7 +557,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 69,
+      "id": 51,
       "pregunta": "¿Cuáles son los aspectos de calidad del dato mencionados?",
       "opciones": [
         "Solo precisión y velocidad",
@@ -766,7 +568,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 70,
+      "id": 52,
       "pregunta": "¿Cuáles son los tipos de análisis de datos mencionados?",
       "opciones": [
         "Solo descriptivo y predictivo",
@@ -777,7 +579,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 71,
+      "id": 53,
       "pregunta": "¿Qué son los 'outliers' en el contexto del Análisis Exploratorio de Datos (EDA)?",
       "opciones": [
         "Tipos de gráficos disponibles en Power BI",
@@ -788,7 +590,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 72,
+      "id": 54,
       "pregunta": "¿Qué es un Diagrama Entidad-Relación (DER)?",
       "opciones": [
         "Un tipo de gráfico de barras en Power BI",
@@ -799,18 +601,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 73,
-      "pregunta": "¿En qué unidad del programa se estudian medidas de tendencia central y dispersión?",
-      "opciones": [
-        "Unidad 1 – Introducción a los datos",
-        "Unidad 2 – Principios de Estadística",
-        "Unidad 4 – Fundamentos de BD",
-        "Unidad 5 – Power BI"
-      ],
-      "respuesta_correcta": 1
-    },
-    {
-      "id": 74,
+      "id": 55,
       "pregunta": "¿Qué mide la varianza en estadística descriptiva?",
       "opciones": [
         "La tendencia central de los datos",
@@ -821,18 +612,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 75,
-      "pregunta": "¿Cuáles son las medidas de tendencia central mencionadas en el programa?",
-      "opciones": [
-        "Solo la media aritmética",
-        "Media, mediana y moda",
-        "Varianza y desvío estándar",
-        "Solo la mediana"
-      ],
-      "respuesta_correcta": 1
-    },
-    {
-      "id": 76,
+      "id": 56,
       "pregunta": "¿Para qué se utilizan los QQ-plots en estadística?",
       "opciones": [
         "Son gráficos de torta (pie charts) especiales",
@@ -843,51 +623,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 77,
-      "pregunta": "¿Qué mide el coeficiente de correlación de Pearson?",
-      "opciones": [
-        "La dispersión de los datos respecto a su media",
-        "El valor más frecuente en los datos",
-        "Las relaciones lineales entre dos variables",
-        "La cantidad de outliers en los datos"
-      ],
-      "respuesta_correcta": 2
-    },
-    {
-      "id": 78,
-      "pregunta": "PCA (Análisis de Componentes Principales) es una técnica de:",
-      "opciones": [
-        "Modelado de bases de datos relacionales",
-        "Reducción de dimensionalidad",
-        "Diseño de dashboards en Power BI",
-        "Storytelling con datos"
-      ],
-      "respuesta_correcta": 1
-    },
-    {
-      "id": 79,
-      "pregunta": "¿Qué estudia la unidad de EDA (Análisis Exploratorio de Datos)?",
-      "opciones": [
-        "Solo bases de datos relacionales",
-        "Fundamentos de Power BI y DAX",
-        "Outliers, correlaciones, regresión lineal y PCA",
-        "Solo medidas de tendencia central"
-      ],
-      "respuesta_correcta": 2
-    },
-    {
-      "id": 80,
-      "pregunta": "¿Qué es el coeficiente de Spearman en estadística?",
-      "opciones": [
-        "Una medida de correlación para variables ordinales o no paramétricas",
-        "Un tipo de dashboard en Power BI",
-        "Una técnica de clustering avanzado",
-        "Una medida de tendencia central"
-      ],
-      "respuesta_correcta": 0
-    },
-    {
-      "id": 81,
+      "id": 57,
       "pregunta": "En Power BI, ¿para qué se usa DAX?",
       "opciones": [
         "Para diseñar el layout visual de los dashboards",
@@ -898,7 +634,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 82,
+      "id": 58,
       "pregunta": "¿Qué es Power Query dentro de Power BI?",
       "opciones": [
         "Un motor de base de datos relacional",
@@ -909,7 +645,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 83,
+      "id": 59,
       "pregunta": "El storytelling con datos busca principalmente:",
       "opciones": [
         "Decorar gráficos con más colores y animaciones",
@@ -920,7 +656,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 84,
+      "id": 60,
       "pregunta": "¿Cuál es la estructura narrativa del storytelling con datos?",
       "opciones": [
         "Inicio, Desarrollo y Final",
@@ -931,29 +667,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 85,
-      "pregunta": "¿En qué unidad del programa se trabajan SQL y el modelado de bases de datos?",
-      "opciones": [
-        "Unidad 2 – Principios de Estadística",
-        "Unidad 3 – Análisis Exploratorio (EDA)",
-        "Unidad 5 – Power BI",
-        "Unidad 4 – Fundamentos de BD"
-      ],
-      "respuesta_correcta": 3
-    },
-    {
-      "id": 86,
-      "pregunta": "¿Cuáles son las fuentes de datos abiertas mencionadas en la materia?",
-      "opciones": [
-        "Solo Google y Wikipedia",
-        "Solo datos privados corporativos",
-        "Datos Abiertos BA, Kaggle, Google Dataset Search, World Bank, INDEC",
-        "Solo Kaggle y GitHub"
-      ],
-      "respuesta_correcta": 2
-    },
-    {
-      "id": 87,
+      "id": 61,
       "pregunta": "¿Qué es Data Governance en el contexto del análisis de datos?",
       "opciones": [
         "Solo un lenguaje de programación para bases de datos",
@@ -964,40 +678,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 88,
-      "pregunta": "Según el World Economic Forum 2025, ¿qué posición ocupa el Data Analyst entre los trabajos más demandados?",
-      "opciones": [
-        "Puesto #1",
-        "Puesto #3",
-        "Puesto #5",
-        "Puesto #10"
-      ],
-      "respuesta_correcta": 0
-    },
-    {
-      "id": 89,
-      "pregunta": "¿Cuál es el crecimiento esperado en roles de datos entre 2025 y 2030?",
-      "opciones": [
-        "2x",
-        "3x",
-        "5x",
-        "10x"
-      ],
-      "respuesta_correcta": 1
-    },
-    {
-      "id": 90,
-      "pregunta": "¿Cuál es la hard skill más demandada según las estadísticas del mercado presentadas?",
-      "opciones": [
-        "Power BI / Tableau (85%)",
-        "Excel avanzado (80%)",
-        "Python (70%)",
-        "SQL (95%)"
-      ],
-      "respuesta_correcta": 3
-    },
-    {
-      "id": 91,
+      "id": 62,
       "pregunta": "¿Cuál de las siguientes es una soft skill diferenciadora para el analista de datos?",
       "opciones": [
         "Solo saber programar en Python avanzado",
@@ -1008,18 +689,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 92,
-      "pregunta": "¿Qué porcentaje de las hard skills técnicas del mercado laboral cubre la materia?",
-      "opciones": [
-        "50%",
-        "65%",
-        "80%",
-        "95%"
-      ],
-      "respuesta_correcta": 2
-    },
-    {
-      "id": 93,
+      "id": 63,
       "pregunta": "El caso de éxito de UPS-ORION ilustra el beneficio del Big Data en:",
       "opciones": [
         "Negocio (nuevas alianzas empresariales)",
@@ -1030,7 +700,7 @@
       "respuesta_correcta": 3
     },
     {
-      "id": 94,
+      "id": 64,
       "pregunta": "El caso de Telefónica-BBVA demuestra que la acumulación de datos más alianzas empresariales puede:",
       "opciones": [
         "Reducir todos los costos a cero",
@@ -1041,7 +711,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 95,
+      "id": 65,
       "pregunta": "El caso de Generali Seguros ilustra cómo el Big Data permite:",
       "opciones": [
         "Solo reducir empleados del área de ventas",
@@ -1052,7 +722,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 96,
+      "id": 66,
       "pregunta": "¿Qué es un Data Warehouse en el ecosistema de datos?",
       "opciones": [
         "Un tipo de visualización avanzada en Power BI",
@@ -1063,7 +733,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 97,
+      "id": 67,
       "pregunta": "¿Qué es un Data Lake?",
       "opciones": [
         "Un repositorio que almacena grandes volúmenes de datos en su formato nativo (estructurados, semiestructurados y no estructurados)",
@@ -1074,7 +744,7 @@
       "respuesta_correcta": 0
     },
     {
-      "id": 98,
+      "id": 68,
       "pregunta": "¿Cuál es la etapa inicial en la evolución de una empresa hacia una cultura de datos donde existe resistencia activa?",
       "opciones": [
         "Data-Aware",
@@ -1085,7 +755,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 99,
+      "id": 69,
       "pregunta": "¿En qué etapa la organización comienza a usar datos en producción?",
       "opciones": [
         "Data-Aware",
@@ -1096,7 +766,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 100,
+      "id": 70,
       "pregunta": "¿Qué etapa se caracteriza porque la organización utiliza datos en la mayoría de sus procesos de producción?",
       "opciones": [
         "Data-Aware",
@@ -1107,7 +777,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 101,
+      "id": 71,
       "pregunta": "¿Cuál es la etapa estratégica donde la organización se convierte en 'data-first'?",
       "opciones": [
         "Data-Savvy",
@@ -1118,7 +788,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 102,
+      "id": 72,
       "pregunta": "¿Qué característica de calidad del dato mide el porcentaje del conjunto total de datos obligatorios presentes?",
       "opciones": [
         "Consistencia",
@@ -1129,7 +799,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 103,
+      "id": 73,
       "pregunta": "¿Qué técnica facilita la identificación de características y la comprensión de los datos evaluando su calidad?",
       "opciones": [
         "Limpieza de datos",
@@ -1140,7 +810,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 104,
+      "id": 74,
       "pregunta": "¿Qué dimensión de calidad asegura que los datos no presenten discrepancias entre distintas bases o tablas?",
       "opciones": [
         "Exactitud",
@@ -1151,7 +821,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 105,
+      "id": 75,
       "pregunta": "¿Cuál es el objetivo de la técnica de Unicidad (Uniqueness)?",
       "opciones": [
         "Completar nulos",
@@ -1162,7 +832,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 106,
+      "id": 76,
       "pregunta": "¿Qué rol lidera el desarrollo IT y mantiene la dirección de la estrategia técnica del grupo?",
       "opciones": [
         "CDO",
@@ -1173,7 +843,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 107,
+      "id": 77,
       "pregunta": "¿Qué rol analiza el mercado para identificar tecnologías que generen ventaja competitiva?",
       "opciones": [
         "CIO",
@@ -1184,7 +854,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 108,
+      "id": 78,
       "pregunta": "¿De qué se encarga el CSO (Chief Security Officer)?",
       "opciones": [
         "Seguridad física y tecnológica",
@@ -1195,7 +865,7 @@
       "respuesta_correcta": 0
     },
     {
-      "id": 109,
+      "id": 79,
       "pregunta": "¿Qué rol protege la información ante posibles ciberataques y fuga de datos?",
       "opciones": [
         "CIO",
@@ -1206,7 +876,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 110,
+      "id": 80,
       "pregunta": "¿Cuál es la función principal del CDO (Chief Data Officer)?",
       "opciones": [
         "Arreglar servidores",
@@ -1217,7 +887,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 111,
+      "id": 81,
       "pregunta": "¿Qué pilares componen el Data Governance?",
       "opciones": [
         "Hardware y Software",
@@ -1228,7 +898,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 112,
+      "id": 82,
       "pregunta": "¿Qué tipo de análisis de datos responde a la pregunta '¿Por qué sucedió?'?",
       "opciones": [
         "Descriptivo",
@@ -1239,7 +909,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 113,
+      "id": 83,
       "pregunta": "¿Qué tipo de análisis utiliza modelos para predecir ventas futuras?",
       "opciones": [
         "Descriptivo",
@@ -1250,7 +920,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 114,
+      "id": 84,
       "pregunta": "¿Qué nivel de la pirámide representa los datos procesados para ser útiles?",
       "opciones": [
         "Datos",
@@ -1261,7 +931,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 115,
+      "id": 85,
       "pregunta": "¿Cuál es una herramienta de visualización mencionada?",
       "opciones": [
         "Oracle",
@@ -1272,7 +942,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 116,
+      "id": 86,
       "pregunta": "¿Qué característica define a la Integridad de Datos?",
       "opciones": [
         "Formato correcto",
@@ -1283,7 +953,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 117,
+      "id": 87,
       "pregunta": "¿Qué rama de la estadística se encarga de recolectar, organizar y caracterizar un conjunto de datos?",
       "opciones": [
         "Inferencial",
@@ -1294,7 +964,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 118,
+      "id": 88,
       "pregunta": "¿Qué es la población en un estudio estadístico?",
       "opciones": [
         "Un grupo pequeño",
@@ -1305,7 +975,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 119,
+      "id": 89,
       "pregunta": "¿Cómo se denomina al subconjunto representativo de la población?",
       "opciones": [
         "Censo",
@@ -1316,7 +986,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 120,
+      "id": 90,
       "pregunta": "¿Qué tipo de variable es el 'Color de ojos'?",
       "opciones": [
         "Cualitativa Nominal",
@@ -1327,7 +997,7 @@
       "respuesta_correcta": 0
     },
     {
-      "id": 121,
+      "id": 91,
       "pregunta": "¿Qué tipo de variable es la 'Jerarquía en una empresa'?",
       "opciones": [
         "Nominal",
@@ -1338,7 +1008,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 122,
+      "id": 92,
       "pregunta": "¿Cuál es una variable cuantitativa discreta?",
       "opciones": [
         "Estatura",
@@ -1349,7 +1019,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 123,
+      "id": 93,
       "pregunta": "¿Cuál es una variable cuantitativa continua?",
       "opciones": [
         "DNI",
@@ -1360,7 +1030,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 124,
+      "id": 94,
       "pregunta": "¿Qué representa la frecuencia absoluta ($f_i$)?",
       "opciones": [
         "El promedio",
@@ -1371,7 +1041,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 125,
+      "id": 95,
       "pregunta": "¿Cómo se calcula la frecuencia relativa ($h_i$)?",
       "opciones": [
         "$f_i / n$",
@@ -1382,7 +1052,7 @@
       "respuesta_correcta": 0
     },
     {
-      "id": 126,
+      "id": 96,
       "pregunta": "¿Qué es la Media Aritmética?",
       "opciones": [
         "El valor central",
@@ -1393,7 +1063,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 127,
+      "id": 97,
       "pregunta": "¿Qué medida de tendencia central es el valor que más se repite?",
       "opciones": [
         "Media",
@@ -1404,7 +1074,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 128,
+      "id": 98,
       "pregunta": "¿Qué es la Mediana?",
       "opciones": [
         "El promedio",
@@ -1415,7 +1085,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 129,
+      "id": 99,
       "pregunta": "¿Qué sucede con la Media si hay valores extremadamente altos?",
       "opciones": [
         "No cambia",
@@ -1426,7 +1096,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 130,
+      "id": 100,
       "pregunta": "¿Qué indica una frecuencia relativa acumulada ($H_i$) final?",
       "opciones": [
         "0",
@@ -1437,7 +1107,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 131,
+      "id": 101,
       "pregunta": "En un estudio de sueldos, ¿qué medida es más robusta frente a sueldos millonarios atípicos?",
       "opciones": [
         "Media",
@@ -1448,7 +1118,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 132,
+      "id": 102,
       "pregunta": "¿Qué tipo de variable es la 'Nacionalidad'?",
       "opciones": [
         "Cualitativa Nominal",
@@ -1459,7 +1129,7 @@
       "respuesta_correcta": 0
     },
     {
-      "id": 133,
+      "id": 103,
       "pregunta": "¿Qué tipo de variable es la 'Calificación de un examen (A, B, C)'?",
       "opciones": [
         "Nominal",
@@ -1470,7 +1140,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 134,
+      "id": 104,
       "pregunta": "¿Cuál es el símbolo del tamaño de la muestra?",
       "opciones": [
         "N",
@@ -1481,7 +1151,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 135,
+      "id": 105,
       "pregunta": "¿Qué es la estadística inferencial?",
       "opciones": [
         "Solo describir datos",
@@ -1492,7 +1162,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 136,
+      "id": 106,
       "pregunta": "¿Qué es el Análisis Exploratorio de Datos (EDA)?",
       "opciones": [
         "Cargar datos",
@@ -1503,7 +1173,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 137,
+      "id": 107,
       "pregunta": "¿Cuál es un objetivo del EDA?",
       "opciones": [
         "Maximizar el error",
@@ -1514,7 +1184,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 138,
+      "id": 108,
       "pregunta": "¿Qué gráfico permite visualizar la distribución y frecuencia de una variable cuantitativa?",
       "opciones": [
         "Scatter plot",
@@ -1525,7 +1195,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 139,
+      "id": 109,
       "pregunta": "¿Qué información proporciona el eje horizontal de un histograma?",
       "opciones": [
         "Frecuencia",
@@ -1536,7 +1206,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 140,
+      "id": 110,
       "pregunta": "¿Qué gráfico es ideal para identificar valores atípicos (outliers)?",
       "opciones": [
         "Barras",
@@ -1547,7 +1217,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 141,
+      "id": 111,
       "pregunta": "¿Qué representa la línea central dentro de la caja de un Boxplot?",
       "opciones": [
         "Media",
@@ -1558,7 +1228,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 142,
+      "id": 112,
       "pregunta": "¿Qué son los 'bigotes' en un Boxplot?",
       "opciones": [
         "Los cuartiles",
@@ -1569,7 +1239,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 143,
+      "id": 113,
       "pregunta": "¿Qué gráfico muestra la relación entre dos variables numéricas?",
       "opciones": [
         "Histograma",
@@ -1580,7 +1250,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 144,
+      "id": 114,
       "pregunta": "¿Qué indica una nube de puntos que asciende de izquierda a derecha en un scatter plot?",
       "opciones": [
         "Relación negativa",
@@ -1591,7 +1261,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 145,
+      "id": 115,
       "pregunta": "¿Qué coeficiente mide la fuerza y dirección de la relación lineal entre dos variables?",
       "opciones": [
         "Media",
@@ -1602,7 +1272,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 146,
+      "id": 116,
       "pregunta": "¿Qué valor indica una correlación positiva perfecta?",
       "opciones": [
         "0",
@@ -1613,7 +1283,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 147,
+      "id": 117,
       "pregunta": "¿Qué valor indica una correlación negativa perfecta?",
       "opciones": [
         "0",
@@ -1624,7 +1294,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 148,
+      "id": 118,
       "pregunta": "¿Qué significa un coeficiente de correlación cercano a 0?",
       "opciones": [
         "Fuerte relación",
@@ -1635,7 +1305,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 149,
+      "id": 119,
       "pregunta": "¿Cuál es una advertencia fundamental sobre la correlación?",
       "opciones": [
         "Siempre implica causalidad",
@@ -1646,7 +1316,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 150,
+      "id": 120,
       "pregunta": "¿Qué es un outlier?",
       "opciones": [
         "El valor medio",
@@ -1657,7 +1327,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 151,
+      "id": 121,
       "pregunta": "¿Por qué es importante detectar outliers?",
       "opciones": [
         "Para borrarlos siempre",
@@ -1668,7 +1338,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 152,
+      "id": 122,
       "pregunta": "¿Qué indica una asimetría a la derecha en la distribución?",
       "opciones": [
         "Cola más larga a la izquierda",
@@ -1679,7 +1349,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 153,
+      "id": 123,
       "pregunta": "En un Boxplot, ¿qué porcentaje de datos hay dentro de la 'caja'?",
       "opciones": [
         "25%",
@@ -1690,7 +1360,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 154,
+      "id": 124,
       "pregunta": "¿Qué indica un scatter plot con puntos dispersos al azar sin forma clara?",
       "opciones": [
         "Relación lineal fuerte",
@@ -1701,7 +1371,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 155,
+      "id": 125,
       "pregunta": "¿Cuál es la primera fase sugerida en el EDA?",
       "opciones": [
         "Hacer predicciones",
@@ -1712,7 +1382,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 156,
+      "id": 126,
       "pregunta": "¿Qué significa que un dato sea 'Valido'?",
       "opciones": [
         "Que sea verdadero",
@@ -1723,7 +1393,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 157,
+      "id": 127,
       "pregunta": "¿Qué rol lidera la gestión del cambio y formación en IT?",
       "opciones": [
         "CDO",
@@ -1734,7 +1404,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 158,
+      "id": 128,
       "pregunta": "¿Qué rol asegura la estabilidad de sistemas y soporte a usuarios de ERP?",
       "opciones": [
         "CIO",
@@ -1745,7 +1415,7 @@
       "respuesta_correcta": 0
     },
     {
-      "id": 159,
+      "id": 129,
       "pregunta": "¿Qué rol toma decisiones ejecutivas sobre necesidades tecnológicas?",
       "opciones": [
         "CTO",
@@ -1756,7 +1426,7 @@
       "respuesta_correcta": 0
     },
     {
-      "id": 160,
+      "id": 130,
       "pregunta": "¿Qué busca el perfilado de datos respecto a nulos?",
       "opciones": [
         "Ignorarlos",
@@ -1767,7 +1437,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 161,
+      "id": 131,
       "pregunta": "¿Qué característica de calidad se asocia a la 'Exactitud'?",
       "opciones": [
         "Datos rápidos",
@@ -1778,7 +1448,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 162,
+      "id": 132,
       "pregunta": "¿Qué beneficio trae el Data Governance sobre los costos?",
       "opciones": [
         "Los aumenta",
@@ -1789,7 +1459,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 163,
+      "id": 133,
       "pregunta": "¿Qué es el 'Conocimiento' en la jerarquía de información?",
       "opciones": [
         "Datos puros",
@@ -1800,7 +1470,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 164,
+      "id": 134,
       "pregunta": "¿Qué es la 'Sabiduría'?",
       "opciones": [
         "Información organizada",
@@ -1811,7 +1481,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 165,
+      "id": 135,
       "pregunta": "¿Qué es un Insight?",
       "opciones": [
         "Un error",
@@ -1822,7 +1492,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 166,
+      "id": 136,
       "pregunta": "¿Qué tipo de variable es la 'Marca de un auto'?",
       "opciones": [
         "Nominal",
@@ -1833,7 +1503,7 @@
       "respuesta_correcta": 0
     },
     {
-      "id": 167,
+      "id": 137,
       "pregunta": "¿Qué tipo de variable es el 'Puesto en una carrera'?",
       "opciones": [
         "Nominal",
@@ -1844,7 +1514,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 168,
+      "id": 138,
       "pregunta": "¿Qué tipo de variable es el 'Sueldo'?",
       "opciones": [
         "Nominal",
@@ -1855,7 +1525,7 @@
       "respuesta_correcta": 3
     },
     {
-      "id": 169,
+      "id": 139,
       "pregunta": "Si un conjunto de datos es: 2, 2, 4, 6. ¿Cuál es la moda?",
       "opciones": [
         "2",
@@ -1866,7 +1536,7 @@
       "respuesta_correcta": 0
     },
     {
-      "id": 170,
+      "id": 140,
       "pregunta": "Si un conjunto ordenado es: 1, 3, 5. ¿Cuál es la mediana?",
       "opciones": [
         "1",
@@ -1877,18 +1547,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 171,
-      "pregunta": "¿Qué permite visualizar un scatter plot?",
-      "opciones": [
-        "Solo promedios",
-        "Correlación entre variables",
-        "Solo una variable",
-        "El tiempo"
-      ],
-      "respuesta_correcta": 1
-    },
-    {
-      "id": 172,
+      "id": 141,
       "pregunta": "¿Qué indica un Boxplot muy 'aplastado'?",
       "opciones": [
         "Mucha variabilidad",
@@ -1899,7 +1558,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 173,
+      "id": 142,
       "pregunta": "¿Qué es la correlación negativa?",
       "opciones": [
         "Ambas suben",
@@ -1910,18 +1569,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 174,
-      "pregunta": "¿Qué es la correlación positiva?",
-      "opciones": [
-        "Ambas suben o ambas bajan en conjunto",
-        "Una sube y la otra baja",
-        "Sin relación",
-        "Relación inversa"
-      ],
-      "respuesta_correcta": 0
-    },
-    {
-      "id": 175,
+      "id": 143,
       "pregunta": "¿Qué herramienta de visualización se menciona para Python?",
       "opciones": [
         "Matplotlib",
@@ -1932,7 +1580,7 @@
       "respuesta_correcta": 0
     },
     {
-      "id": 176,
+      "id": 144,
       "pregunta": "¿Qué indica el coeficiente $r = 0.9$?",
       "opciones": [
         "Relación positiva débil",
@@ -1943,7 +1591,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 177,
+      "id": 145,
       "pregunta": "¿Qué indica el coeficiente $r = -0.8$?",
       "opciones": [
         "Relación negativa fuerte",
@@ -1954,7 +1602,7 @@
       "respuesta_correcta": 0
     },
     {
-      "id": 178,
+      "id": 146,
       "pregunta": "¿Qué puede causar un outlier?",
       "opciones": [
         "Error en la toma de datos",
@@ -1965,7 +1613,7 @@
       "respuesta_correcta": 2
     },
     {
-      "id": 179,
+      "id": 147,
       "pregunta": "¿Qué es el rango intercuartílico?",
       "opciones": [
         "Diferencia entre Q3 y Q1",
@@ -1976,7 +1624,7 @@
       "respuesta_correcta": 0
     },
     {
-      "id": 180,
+      "id": 148,
       "pregunta": "¿Qué tipo de análisis sugiere acciones basadas en predicciones?",
       "opciones": [
         "Descriptivo",
@@ -1987,7 +1635,7 @@
       "respuesta_correcta": 3
     },
     {
-      "id": 181,
+      "id": 149,
       "pregunta": "¿Qué etapa implica ser 'data-curious'?",
       "opciones": [
         "Data-Aware",
@@ -1998,7 +1646,7 @@
       "respuesta_correcta": 0
     },
     {
-      "id": 182,
+      "id": 150,
       "pregunta": "¿Qué es la frecuencia absoluta acumulada ($F_i$)?",
       "opciones": [
         "Suma de frecuencias absolutas hasta ese valor",
@@ -2009,7 +1657,7 @@
       "respuesta_correcta": 0
     },
     {
-      "id": 183,
+      "id": 151,
       "pregunta": "¿Cuál es la sumatoria de las frecuencias relativas ($h_i$)?",
       "opciones": [
         "0",
@@ -2020,7 +1668,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 184,
+      "id": 152,
       "pregunta": "¿Qué es una muestra representativa?",
       "opciones": [
         "Cualquier grupo",
@@ -2031,7 +1679,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 185,
+      "id": 153,
       "pregunta": "¿Qué gráfico muestra la evolución de una variable en el tiempo?",
       "opciones": [
         "Histograma",
@@ -2042,7 +1690,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 186,
+      "id": 154,
       "pregunta": "¿Qué indica un histograma con forma de campana?",
       "opciones": [
         "Distribución normal o simétrica",
@@ -2053,7 +1701,7 @@
       "respuesta_correcta": 0
     },
     {
-      "id": 187,
+      "id": 155,
       "pregunta": "¿Cuál es el valor máximo del coeficiente de correlación de Pearson?",
       "opciones": [
         "0",
@@ -2064,7 +1712,7 @@
       "respuesta_correcta": 1
     },
     {
-      "id": 188,
+      "id": 156,
       "pregunta": "¿Qué busca el EDA antes de aplicar modelos complejos?",
       "opciones": [
         "Ahorrar tiempo",
@@ -2073,6 +1721,1040 @@
         "Hacer presentaciones"
       ],
       "respuesta_correcta": 1
+    },
+    {
+      "id": 157,
+      "pregunta": "¿Qué es una base de datos según el material?",
+      "opciones": [
+        "Un programa para hacer cálculos matemáticos",
+        "Un conjunto de datos interrelacionados por un contexto en común",
+        "Un hardware específico para guardar fotos",
+        "Un lenguaje de programación"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 158,
+      "pregunta": "¿Qué significan las siglas DBMS?",
+      "opciones": [
+        "Data Base Management System",
+        "Data Basic Modern System",
+        "Digital Base Model Software",
+        "Distributed Base Management System"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 159,
+      "pregunta": "¿Cuál de las siguientes es una función principal de un DBMS?",
+      "opciones": [
+        "Definir, construir, manipular y compartir bases de datos",
+        "Reparar hardware dañado",
+        "Diseñar logotipos para empresas",
+        "Navegar por internet"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 160,
+      "pregunta": "¿A qué se refiere la característica de 'Concurrencia' en un DBMS?",
+      "opciones": [
+        "A que solo un usuario puede entrar por vez",
+        "A permitir que muchas transacciones accedan a la base a la vez",
+        "A que los datos sean correctos",
+        "A proteger la base de virus"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 161,
+      "pregunta": "¿Cuál de estos es un ejemplo de DBMS mencionado en el texto?",
+      "opciones": [
+        "Windows 10",
+        "PostgreSQL",
+        "Adobe Photoshop",
+        "Google Chrome"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 162,
+      "pregunta": "¿Qué perfil de usuario es el encargado de la seguridad y performance de la base?",
+      "opciones": [
+        "Usuario común",
+        "Programador",
+        "Administrador (DBA)",
+        "Diseñador"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 163,
+      "pregunta": "¿Qué es una transacción en el contexto de bases de datos?",
+      "opciones": [
+        "Una transferencia bancaria únicamente",
+        "Un programa en ejecución que incluye accesos a la base de datos",
+        "Un correo electrónico",
+        "La instalación del software"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 164,
+      "pregunta": "En las propiedades ACID, ¿qué significa la 'A'?",
+      "opciones": [
+        "Actualización",
+        "Atomicidad",
+        "Aislamiento",
+        "Agregación"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 165,
+      "pregunta": "¿Qué propiedad de las transacciones garantiza que los cambios persistan ante un fallo?",
+      "opciones": [
+        "Consistencia",
+        "Aislamiento",
+        "Durabilidad",
+        "Atomicidad"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 166,
+      "pregunta": "¿Qué permite generar un modelo de base de datos?",
+      "opciones": [
+        "La estructura lógica de la base",
+        "El diseño de la interfaz gráfica",
+        "El cableado del servidor",
+        "El manual de usuario"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 167,
+      "pregunta": "¿Cuál es el modelo de base de datos que usa una colección de tablas?",
+      "opciones": [
+        "Modelo Jerárquico",
+        "Modelo Entidad-Relación",
+        "Modelo Relacional",
+        "Modelo de Red"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 168,
+      "pregunta": "¿Qué componente del modelo Entidad-Relación se representa con un rectángulo?",
+      "opciones": [
+        "Atributo",
+        "Relación/Acción",
+        "Conjunto de entidades",
+        "Línea de unión"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 169,
+      "pregunta": "¿Qué representan las elipses en un diagrama E-R?",
+      "opciones": [
+        "Entidades",
+        "Atributos",
+        "Relaciones",
+        "Tablas físicas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 170,
+      "pregunta": "¿Qué símbolo se utiliza para representar acciones o relaciones entre tablas en un diagrama E-R?",
+      "opciones": [
+        "Círculo",
+        "Triángulo",
+        "Rombo",
+        "Cuadrado"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 171,
+      "pregunta": "¿Qué significan las siglas SQL?",
+      "opciones": [
+        "Simple Query Language",
+        "Structured Query Language",
+        "Sequential Query Language",
+        "Standard Query Logic"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 172,
+      "pregunta": "¿Cuál de estos es un sublenguaje de SQL?",
+      "opciones": [
+        "DDL",
+        "HTTP",
+        "HTML",
+        "JSON"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 173,
+      "pregunta": "¿Qué permite hacer el Data Definition Language (DDL)?",
+      "opciones": [
+        "Insertar datos",
+        "Crear, modificar y eliminar estructuras",
+        "Asignar permisos",
+        "Gestionar transacciones"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 174,
+      "pregunta": "¿Cuál de los siguientes comandos pertenece al DML?",
+      "opciones": [
+        "CREATE",
+        "ALTER",
+        "INSERT",
+        "DROP"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 175,
+      "pregunta": "¿Qué comando SQL se usa para eliminar un objeto de la base de datos?",
+      "opciones": [
+        "DELETE",
+        "REMOVE",
+        "DROP",
+        "CLEAR"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 176,
+      "pregunta": "¿Qué comando se utiliza para recuperar información de una tabla?",
+      "opciones": [
+        "GET",
+        "SELECT",
+        "FETCH",
+        "SEARCH"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 177,
+      "pregunta": "¿Cuál es la principal característica del modelo relacional?",
+      "opciones": [
+        "Tener muchos archivos",
+        "No poseer información repetida de forma innecesaria",
+        "Ser difícil de usar",
+        "No permitir relaciones"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 178,
+      "pregunta": "¿Cómo se llama también a una fila en una tabla relacional?",
+      "opciones": [
+        "Atributo",
+        "Tupla o registro",
+        "Campo",
+        "Columna"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 179,
+      "pregunta": "¿Qué es la Integridad Referencial?",
+      "opciones": [
+        "Que los datos sean numéricos",
+        "Garantizar que no se eliminen registros relacionados en otras tablas",
+        "Que la base de datos sea rápida",
+        "Que el DBA tenga acceso"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 180,
+      "pregunta": "¿Qué tipo de relación se da cuando cada registro en cada tabla solo aparece una vez?",
+      "opciones": [
+        "Uno a muchos",
+        "Muchos a muchos",
+        "Uno a uno",
+        "Cero a uno"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 181,
+      "pregunta": "¿Qué tipo de relación es la más común entre Clientes y Ventas?",
+      "opciones": [
+        "Uno a uno",
+        "Uno a muchos",
+        "Muchos a muchos",
+        "Ninguna"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 182,
+      "pregunta": "¿Qué es una Clave Primaria (PK)?",
+      "opciones": [
+        "Una clave que puede ser nula",
+        "Un campo que identifica de forma unívoca a un registro y no es nulo",
+        "Una clave para entrar al sistema",
+        "Un índice secundario"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 183,
+      "pregunta": "¿Cuál es la función de una Clave Foránea (FK)?",
+      "opciones": [
+        "Ser el punto de enlace con otra tabla donde es PK",
+        "Ser la clave principal de la tabla actual",
+        "Encriptar los datos",
+        "Borrar registros automáticamente"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 184,
+      "pregunta": "¿Qué es una clave concatenada?",
+      "opciones": [
+        "Una clave que se repite",
+        "La combinación de dos campos para hallar singularidad",
+        "Una clave de otro servidor",
+        "Un tipo de dato de texto"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 185,
+      "pregunta": "¿Con qué símbolo finaliza obligatoriamente cada consulta SQL?",
+      "opciones": [
+        ":",
+        ".",
+        ";",
+        ","
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 186,
+      "pregunta": "¿SQL es sensible a mayúsculas y minúsculas en sus comandos (SELECT, FROM)?",
+      "opciones": [
+        "Sí, siempre",
+        "No",
+        "Solo en sistemas Linux",
+        "Solo al principio de la línea"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 187,
+      "pregunta": "¿Qué comodín se usa en una búsqueda para representar un solo carácter?",
+      "opciones": [
+        "%",
+        "*",
+        "_",
+        "#"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 188,
+      "pregunta": "¿Qué tipo de dato SQL se usa para valores enteros?",
+      "opciones": [
+        "Float",
+        "Varchar",
+        "Int",
+        "Bit"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 189,
+      "pregunta": "¿Qué diferencia hay entre CHAR y VARCHAR?",
+      "opciones": [
+        "CHAR es para números",
+        "CHAR tiene tamaño fijo y VARCHAR tamaño variable",
+        "VARCHAR es más lento",
+        "No hay diferencia"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 190,
+      "pregunta": "¿Qué tipo de dato almacena fecha y hora?",
+      "opciones": [
+        "Date",
+        "Timestamp",
+        "Time",
+        "Clock"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 191,
+      "pregunta": "¿Cuál es la cláusula obligatoria que especifica la tabla de origen de los datos?",
+      "opciones": [
+        "WHERE",
+        "SELECT",
+        "FROM",
+        "ORDER BY"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 192,
+      "pregunta": "¿Para qué sirve la cláusula WHERE?",
+      "opciones": [
+        "Para ordenar",
+        "Para filtrar registros bajo una condición",
+        "Para agrupar",
+        "Para borrar la tabla"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 193,
+      "pregunta": "¿Qué cláusula se usa para ordenar los resultados?",
+      "opciones": [
+        "SORT BY",
+        "GROUP BY",
+        "ORDER BY",
+        "ARRANGE"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 194,
+      "pregunta": "¿Qué comando permite eliminar registros repetidos del resultado de una consulta?",
+      "opciones": [
+        "UNIQUE",
+        "DISTINCT",
+        "SINGLE",
+        "DIFFERENT"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 195,
+      "pregunta": "¿Para qué sirve el comando AS?",
+      "opciones": [
+        "Para sumar campos",
+        "Para renombrar temporalmente un objeto o columna",
+        "Para borrar una base",
+        "Para comparar valores"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 196,
+      "pregunta": "¿Qué operador relacional significa 'Diferente de'?",
+      "opciones": [
+        "=",
+        "==",
+        "!=",
+        "><"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 197,
+      "pregunta": "¿Qué operador lógico se usa para buscar un patrón de texto?",
+      "opciones": [
+        "IN",
+        "LIKE",
+        "BETWEEN",
+        "MATCH"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 198,
+      "pregunta": "¿Qué operador lógico devuelve verdadero si el valor está en un rango?",
+      "opciones": [
+        "IN",
+        "AND",
+        "BETWEEN",
+        "OR"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 199,
+      "pregunta": "¿Qué operador aritmético se usa para multiplicar?",
+      "opciones": [
+        "x",
+        "+",
+        "*",
+        "^"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 200,
+      "pregunta": "¿Cómo se ordenan los resultados por defecto con ORDER BY?",
+      "opciones": [
+        "Descendente",
+        "Aleatorio",
+        "Ascendente",
+        "No tienen orden"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 201,
+      "pregunta": "¿Qué comando limita la cantidad de filas devueltas en algunos sistemas SQL?",
+      "opciones": [
+        "STOP",
+        "LIMIT o TOP",
+        "BREAK",
+        "END"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 202,
+      "pregunta": "¿Qué función de agregación se usa para contar registros?",
+      "opciones": [
+        "SUM",
+        "TOTAL",
+        "COUNT",
+        "AVG"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 203,
+      "pregunta": "¿Qué función calcula el promedio de una columna?",
+      "opciones": [
+        "PROM",
+        "AVG",
+        "MEAN",
+        "SUM"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 204,
+      "pregunta": "¿Para qué se utiliza la cláusula GROUP BY?",
+      "opciones": [
+        "Para ordenar por nombre",
+        "Para agrupar registros y usar funciones de agregación",
+        "Para unir dos tablas",
+        "Para filtrar datos de texto"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 205,
+      "pregunta": "¿Cuál es la diferencia entre WHERE y HAVING?",
+      "opciones": [
+        "No hay diferencia",
+        "WHERE filtra filas, HAVING filtra grupos/funciones de agregación",
+        "HAVING es más rápido",
+        "WHERE solo se usa con números"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 206,
+      "pregunta": "¿Cuál es el orden correcto de las sentencias SQL?",
+      "opciones": [
+        "SELECT, WHERE, FROM",
+        "SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY",
+        "FROM, SELECT, ORDER BY",
+        "SELECT, ORDER BY, FROM, WHERE"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 207,
+      "pregunta": "¿Qué es una función escalar?",
+      "opciones": [
+        "Una que suma toda una columna",
+        "Una que opera sobre un valor individual y devuelve un resultado",
+        "Una que borra la base",
+        "Un tipo de tabla"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 208,
+      "pregunta": "¿Qué función extrae caracteres desde el lado izquierdo de una cadena?",
+      "opciones": [
+        "START",
+        "LEFT",
+        "RIGHT",
+        "MID"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 209,
+      "pregunta": "¿Qué función permite unir dos o más campos de texto?",
+      "opciones": [
+        "JOIN",
+        "UNION",
+        "CONCAT",
+        "ADD"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 210,
+      "pregunta": "¿Qué función convierte un texto a mayúsculas?",
+      "opciones": [
+        "MAX",
+        "UPPER",
+        "LOWER",
+        "BIG"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 211,
+      "pregunta": "¿Qué hace la función TRIM?",
+      "opciones": [
+        "Corta la base",
+        "Elimina espacios al inicio y al final",
+        "Suma números",
+        "Cambia el formato de fecha"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 212,
+      "pregunta": "¿Qué función devuelve el año de una fecha?",
+      "opciones": [
+        "DAY",
+        "MONTH",
+        "YEAR",
+        "DATEPART"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 213,
+      "pregunta": "¿Qué función permite calcular la diferencia entre dos fechas?",
+      "opciones": [
+        "DATEDIFF",
+        "SUBSTRACT",
+        "MINUS",
+        "DATEADD"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 214,
+      "pregunta": "¿Para qué sirve la función CAST?",
+      "opciones": [
+        "Para buscar",
+        "Para convertir un tipo de dato en otro",
+        "Para unir tablas",
+        "Para crear una base"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 215,
+      "pregunta": "¿Qué es una subconsulta?",
+      "opciones": [
+        "Una consulta que se hace por teléfono",
+        "Una sentencia SELECT dentro de otra SELECT",
+        "Un índice",
+        "Una tabla temporal"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 216,
+      "pregunta": "¿Cuál es una ventaja de usar subconsultas?",
+      "opciones": [
+        "Hacen la base más grande",
+        "El código puede ser más fácil de leer en ciertos casos",
+        "No requieren SQL",
+        "Son obligatorias siempre"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 217,
+      "pregunta": "¿Qué permite hacer la cláusula JOIN?",
+      "opciones": [
+        "Borrar datos",
+        "Combinar registros de diferentes tablas basándose en un campo común",
+        "Crear usuarios",
+        "Hacer copias de seguridad"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 218,
+      "pregunta": "¿Qué cláusula acompaña al JOIN para establecer la condición de unión?",
+      "opciones": [
+        "WHERE",
+        "ON",
+        "IN",
+        "USING"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 219,
+      "pregunta": "¿Qué retorna un INNER JOIN?",
+      "opciones": [
+        "Todas las filas de la izquierda",
+        "Solo las filas donde hay coincidencia en ambas tablas",
+        "Todas las filas de ambas tablas",
+        "Solo la primera fila"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 220,
+      "pregunta": "¿Qué retorna un LEFT JOIN?",
+      "opciones": [
+        "Solo lo de la derecha",
+        "Todo lo de la tabla izquierda y las coincidencias de la derecha",
+        "Nada si no hay coincidencia",
+        "Solo las PK"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 221,
+      "pregunta": "¿Qué valor se muestra en las columnas de la derecha en un LEFT JOIN si no hay coincidencia?",
+      "opciones": [
+        "0",
+        "Espacio vacío",
+        "NULL",
+        "Error"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 222,
+      "pregunta": "¿Qué hace un RIGHT JOIN?",
+      "opciones": [
+        "Lo mismo que el INNER JOIN",
+        "Devuelve todas las filas de la tabla derecha y coincidencias de la izquierda",
+        "Borra la tabla izquierda",
+        "Es solo para expertos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 223,
+      "pregunta": "¿Qué combina un FULL OUTER JOIN?",
+      "opciones": [
+        "SELECT e INSERT",
+        "LEFT JOIN y RIGHT JOIN",
+        "Tablas y Vistas",
+        "Solo PK y FK"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 224,
+      "pregunta": "¿Para qué sirve el operador UNION?",
+      "opciones": [
+        "Para multiplicar tablas",
+        "Para combinar el resultado de varias consultas SELECT concatenándolas",
+        "Para crear una relación 1:1",
+        "Para asignar permisos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 225,
+      "pregunta": "¿Qué condición debe cumplirse para usar UNION?",
+      "opciones": [
+        "Las tablas deben tener el mismo nombre",
+        "El número y tipo de datos de las columnas deben coincidir",
+        "Debe haber una PK común",
+        "Solo funciona con números"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 226,
+      "pregunta": "¿Qué permite visualizar un diagrama de Venn en SQL?",
+      "opciones": [
+        "La velocidad de la red",
+        "Los tipos de uniones (JOINs)",
+        "El espacio en disco",
+        "La lista de usuarios"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 227,
+      "pregunta": "¿Qué función de agregación usarías para saber el ingreso total de una tabla de ventas?",
+      "opciones": [
+        "COUNT",
+        "SUM",
+        "MAX",
+        "AVG"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 228,
+      "pregunta": "¿Qué cláusula se usa para filtrar después de un GROUP BY?",
+      "opciones": [
+        "WHERE",
+        "HAVING",
+        "ORDER BY",
+        "DISTINCT"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 229,
+      "pregunta": "¿Qué comando se usa para renombrar una columna en el resultado de una consulta?",
+      "opciones": [
+        "RENAME",
+        "CHANGE",
+        "AS",
+        "SET"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 230,
+      "pregunta": "¿Qué es una CTE (Common Table Expression)?",
+      "opciones": [
+        "Un error de sistema",
+        "Una forma de simplificar consultas complejas dividiéndolas en partes",
+        "Un tipo de cable",
+        "Una base de datos antigua"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 231,
+      "pregunta": "¿Para qué sirve la función ROW_NUMBER()?",
+      "opciones": [
+        "Para sumar filas",
+        "Para asignar un número secuencial a cada fila en una partición",
+        "Para contar cuántas tablas hay",
+        "Para borrar filas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 232,
+      "pregunta": "¿Qué permiten hacer las funciones LEAD y LAG?",
+      "opciones": [
+        "Sumar y restar",
+        "Comparar el valor de una fila con la siguiente o anterior",
+        "Cambiar el nombre de la tabla",
+        "Crear índices"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 233,
+      "pregunta": "¿Cuál es la utilidad de una tabla temporal?",
+      "opciones": [
+        "Guardar datos para siempre",
+        "Trabajar con datos intermedios sin afectar la base principal",
+        "Es más rápida que la memoria RAM",
+        "No necesita SQL"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 234,
+      "pregunta": "¿Qué es un índice en una base de datos?",
+      "opciones": [
+        "Un resumen del libro",
+        "Una estructura que permite acceder más rápido a los datos",
+        "Una lista de errores",
+        "El nombre de la base"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 235,
+      "pregunta": "¿Cuál es un posible efecto negativo de crear demasiados índices?",
+      "opciones": [
+        "La base ocupa menos espacio",
+        "Las inserciones y actualizaciones pueden volverse más lentas",
+        "El SELECT se rompe",
+        "Se borran los datos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 236,
+      "pregunta": "¿Qué hace la función REPLACE?",
+      "opciones": [
+        "Borra una tabla",
+        "Reemplaza caracteres específicos en un campo",
+        "Cambia el dueño de la base",
+        "Reinicia el servidor"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 237,
+      "pregunta": "¿Qué operador lógico usarías para verificar si un valor está en una lista específica?",
+      "opciones": [
+        "LIKE",
+        "BETWEEN",
+        "IN",
+        "AND"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 238,
+      "pregunta": "¿Qué función matemática devuelve el valor absoluto?",
+      "opciones": [
+        "ABS",
+        "FLOOR",
+        "CEIL",
+        "MAX"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 239,
+      "pregunta": "¿Qué comando DDL se usa para modificar la estructura de una tabla existente?",
+      "opciones": [
+        "UPDATE",
+        "CHANGE",
+        "ALTER",
+        "MODIFY"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 240,
+      "pregunta": "¿Qué significa que un campo sea 'NOT NULL'?",
+      "opciones": [
+        "Que puede estar vacío",
+        "Que es obligatorio que tenga un valor",
+        "Que solo acepta ceros",
+        "Que no es una clave"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 241,
+      "pregunta": "¿En qué parte de la sentencia SELECT se suelen colocar las funciones de agregación?",
+      "opciones": [
+        "En el FROM",
+        "En la lista de columnas después del SELECT",
+        "En el ORDER BY",
+        "En el JOIN"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 242,
+      "pregunta": "¿Qué palabra clave se usa para indicar un orden descendente?",
+      "opciones": [
+        "ASC",
+        "DOWN",
+        "DESC",
+        "BACK"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 243,
+      "pregunta": "¿Qué tipo de dato usarías para el nombre de una persona?",
+      "opciones": [
+        "INT",
+        "DECIMAL",
+        "VARCHAR",
+        "BIT"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 244,
+      "pregunta": "¿Qué función devuelve la parte entera de un número decimal?",
+      "opciones": [
+        "ABS",
+        "FLOOR",
+        "INT",
+        "ROUND"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 245,
+      "pregunta": "¿Qué operador lógico tiene mayor precedencia: AND u OR?",
+      "opciones": [
+        "AND",
+        "OR",
+        "Tienen la misma",
+        "Depende del DBMS"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 246,
+      "pregunta": "¿Cómo se llama el proceso de eliminar redundancia en el modelo relacional?",
+      "opciones": [
+        "Simplificación",
+        "Normalización",
+        "Limpieza",
+        "Agrupación"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 247,
+      "pregunta": "¿Qué comando TCL confirma los cambios de una transacción?",
+      "opciones": [
+        "SAVE",
+        "COMMIT",
+        "ROLLBACK",
+        "FINISH"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 248,
+      "pregunta": "¿Qué comando deshace los cambios de una transacción no confirmada?",
+      "opciones": [
+        "UNDO",
+        "DELETE",
+        "ROLLBACK",
+        "BACK"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 249,
+      "pregunta": "¿A qué nivel operan las funciones de agregación?",
+      "opciones": [
+        "Fila por fila",
+        "Sobre un conjunto de valores (columna)",
+        "Sobre toda la base de datos",
+        "Sobre el hardware"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 250,
+      "pregunta": "¿Qué cláusula es opcional en una sentencia SELECT?",
+      "opciones": [
+        "SELECT",
+        "FROM",
+        "WHERE",
+        "Ninguna"
+      ],
+      "respuesta_correcta": 2
     }
   ]
 }
