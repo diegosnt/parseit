@@ -1,0 +1,2760 @@
+{
+  "materia": "Bases de Datos",
+  "titulo": "Evaluación Integral",
+  "duracion": 120,
+  "preguntas_para_aprobar": 100,
+  "fecha": "2026-05-16",
+  "version": "1.0",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué tipo de anomalía se genera cuando una celda contiene múltiples valores separados por comas?",
+      "opciones": [
+        "Duplicación de registros",
+        "Violación de atomicidad",
+        "Dependencia funcional parcial",
+        "Ninguna de las anteriores"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Cuál de estas afirmaciones es verdadera respecto a la Primera Forma Normal (1FN)?",
+      "opciones": [
+        "Permite celdas con listas de valores si son del mismo tipo",
+        "Asegura que cada columna contenga un solo atributo de la entidad",
+        "Solo se aplica a claves foráneas",
+        "Se enfoca en la eliminación de valores nulos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Qué se busca eliminar en la Segunda Forma Normal (2FN)?",
+      "opciones": [
+        "Relaciones uno a muchos",
+        "Repetición de atributos clave",
+        "Atributos duplicados en diferentes tablas",
+        "Dependencias parciales respecto a claves compuestas"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Qué anomalía representa la presencia de varias columnas para registrar el mismo tipo de información (por ejemplo, producto1, producto2, producto3)?",
+      "opciones": [
+        "Clave primaria compuesta",
+        "Duplicación de entidades",
+        "Grupo repetitivo",
+        "Violación de integridad referencial"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 5,
+      "pregunta": "Si un atributo no clave depende de otro atributo no clave, ¿qué forma normal se está violando de manera directa?",
+      "opciones": [
+        "Primera Forma Normal (1FN)",
+        "Segunda Forma Normal (2FN)",
+        "Tercera Forma Normal (3FN)",
+        "Ninguna de las anteriores"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 6,
+      "pregunta": "¿Cuál es la correspondencia correcta entre cada Forma Normal y el problema principal que soluciona?",
+      "opciones": [
+        "1FN: Dependencias transitivas; 2FN: Dependencias parciales; 3FN: Celdas con valores múltiples",
+        "1FN: Celdas con valores múltiples; 2FN: Dependencias parciales; 3FN: Dependencias de atributos no clave entre sí",
+        "1FN: Dependencias parciales; 2FN: Grupos repetitivos; 3FN: Inconsistencias de tipo de dato",
+        "1FN: Valores nulos; 2FN: Claves compuestas; 3FN: redundancia espacial"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 7,
+      "pregunta": "Según el ciclo de vida de una base de datos presentado en el material, ¿cuáles son las etapas que componen la fase de 'DISEÑO'?",
+      "opciones": [
+        "Requerimientos y Objetivos",
+        "Generación de datos y Calidad de datos",
+        "Diseño Conceptual, Diseño Lógico y Diseño Físico",
+        "Pruebas y Mantenimiento"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 8,
+      "pregunta": "En el contexto del Modelo Entidad-Relación, ¿cómo se define formalmente una Entidad?",
+      "opciones": [
+        "Una característica específica que deseamos individualizar en el modelo",
+        "Un tipo de dato entero que se auto-incrementa en una tabla",
+        "Una cosa u objeto en el mundo real que es distinguible de todos los demás objetos",
+        "La asociación lógica establecida exclusivamente entre claves foráneas"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 9,
+      "pregunta": "¿Qué notación gráfica estándar se utiliza en el Modelo Entidad-Relación para indicar un atributo clave o identificador principal?",
+      "opciones": [
+        "Un óvalo con línea discontinua",
+        "Un óvalo con el texto subrayado",
+        "Un óvalo doble o concéntrico",
+        "Un rectángulo con bordes dobles"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 10,
+      "pregunta": "¿Qué representa un óvalo doble o concéntrico en un diagrama Entidad-Relación?",
+      "opciones": [
+        "Un atributo derivable",
+        "Un atributo clave primaria",
+        "Un atributo multivaluado",
+        "Una entidad débil"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 11,
+      "pregunta": "Si un atributo como 'Edad' se puede calcular a partir de la 'Fecha de Nacimiento', se lo clasifica gráficamente con un óvalo de línea discontinua. ¿Cómo se denomina este tipo de atributo?",
+      "opciones": [
+        "Atributo multivaluado",
+        "Atributo atómico",
+        "Atributo derivable",
+        "Atributo compuesto"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 12,
+      "pregunta": "¿A qué se refiere el término 'Grado de una relación' en el diseño conceptual?",
+      "opciones": [
+        "Al número de registros máximos que se pueden insertar",
+        "A la cantidad de tipos de entidad participantes en la relación",
+        "A la restricción de participación total o parcial",
+        "Al número de atributos que posee la relación"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 13,
+      "pregunta": "Una relación binaria es aquella que conecta:",
+      "opciones": [
+        "Una sola entidad consigo misma",
+        "Dos tipos de entidades",
+        "Tres tipos de entidades de forma simultánea",
+        "Cualquier número de entidades mediante operadores lógicos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 14,
+      "pregunta": "Según las diapositivas de la materia, la relación 'SUMINISTRO' entre proveedor, repuesto y proyecto es un ejemplo de relación de grado:",
+      "opciones": [
+        "Unaria",
+        "Binaria",
+        "Ternaria",
+        "Cuaternaria"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 15,
+      "pregunta": "¿Cuáles son las posibles razones de cardinalidad existentes para los tipos de relación binaria?",
+      "opciones": [
+        "Únicamente 1:1 y 1:N",
+        "1:1, 1:N, N:1 y M:N",
+        "Total y Parcial",
+        "Atómica, Transitiva y Derivable"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 16,
+      "pregunta": "¿Qué especifica la restricción de participación total de una entidad en una relación?",
+      "opciones": [
+        "Que todos los elementos de la entidad deben estar involucrados en al menos una instancia de la relación",
+        "Que la entidad posee una clave primaria compuesta",
+        "Que sólo un elemento de la entidad puede relacionarse con el exterior",
+        "Que no se permiten valores nulos en ninguna de las columnas de la tabla"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 17,
+      "pregunta": "Gráficamente, ¿cómo se representa la participación total de una entidad en una relación dentro de un diagrama ER?",
+      "opciones": [
+        "Con una línea discontinua",
+        "Con una doble línea de conexión",
+        "Con un rombo con bordes dobles",
+        "Con un rectángulo de trazo grueso"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 18,
+      "pregunta": "En una relación unaria como 'Tiene por Jefe' aplicada a la entidad 'Empleado', si las reglas de negocio dictan que cada empleado tiene un solo jefe, la cardinalidad es:",
+      "opciones": [
+        "1 a 1",
+        "1 a N",
+        "M a N",
+        "Parcial recursiva"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 19,
+      "pregunta": "En el ejemplo de la entidad 'País' y la relación unaria 'Tiene por límite', la cardinalidad es de 1 a N porque:",
+      "opciones": [
+        "Un país obligatoriamente debe limitar con todos los países del mundo",
+        "Un país puede tener cero, uno o muchos países limítrofes",
+        "La clave primaria de la tabla cambia dinámicamente",
+        "La relación requiere una tabla intermedia de forma mandatoria"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 20,
+      "pregunta": "¿Qué es una entidad débil?",
+      "opciones": [
+        "Una entidad que no tiene ningún atributo asignado",
+        "Una entidad cuya existencia depende de la existencia previa de otra entidad llamada fuerte",
+        "Una tabla con bajo rendimiento en consultas SELECT",
+        "Una entidad que solo participa en relaciones unarias"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 21,
+      "pregunta": "¿Cómo forma su clave primaria una entidad débil si no posee suficientes atributos propios?",
+      "opciones": [
+        "Utilizando un atributo de tipo FLOAT aleatorio",
+        "Heredando la clave primaria de la entidad fuerte de la que depende para complementarla con su clave parcial",
+        "Eliminando la restricción UNIQUE de sus registros",
+        "Convirtiéndose automáticamente en una vista indexada"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 22,
+      "pregunta": "¿Cómo se denomina a la relación que une una entidad fuerte con una entidad débil?",
+      "opciones": [
+        "Relación transitiva",
+        "Relación unaria",
+        "Relación débil (o identificadora)",
+        "Relación compuesta"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 23,
+      "pregunta": "En la solución del ejercicio de la empresa de seguros, la entidad 'SUBORDINADO' se representa con un rectángulo de doble línea. Esto significa que es:",
+      "opciones": [
+        "Una entidad fuerte",
+        "Una entidad débil",
+        "Un atributo multivaluado",
+        "Una relación ternaria"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 24,
+      "pregunta": "Cuando se desea conservar un histórico de precios a lo largo del tiempo para un producto, el precio no depende únicamente del producto sino también de:",
+      "opciones": [
+        "El nombre del cliente",
+        "El lapso de tiempo o fecha en que se mantuvo dicho precio",
+        "El esquema de la base de datos",
+        "La clave foránea del proveedor"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 25,
+      "pregunta": "¿A qué concepto corresponde la siguiente definición: 'Concepto que busca dividir una entidad de nivel superior en entidades de nivel inferior con atributos propios y compartidos'?",
+      "opciones": [
+        "Especialización",
+        "Generalización",
+        "Normalización",
+        "Atomicidad"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 26,
+      "pregunta": "Si representamos 'Persona' en la parte superior y mediante un triángulo invertido con la palabra 'ES' derivamos en 'Secretaria', 'Alumno' y 'Docente', estamos aplicando:",
+      "opciones": [
+        "Una relación M:N",
+        "Una Especialización",
+        "Una Tercera Forma Normal",
+        "Una restricción CHECK"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 27,
+      "pregunta": "La generalización y la especialización son descritas en las clases como:",
+      "opciones": [
+        "Dos procesos de optimización de hardware independientes",
+        "Dos caras de una misma moneda",
+        "Dos tipos de encriptación en tránsito",
+        "Dos comandos DML nativos de PostgreSQL"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 28,
+      "pregunta": "En la terminología formal del modelo relacional, una fila de una tabla recibe el nombre de:",
+      "opciones": [
+        "Atributo",
+        "Tupla",
+        "Relación",
+        "Dominio"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 29,
+      "pregunta": "En la terminología formal del modelo relacional, la cabecera de una columna es un/a ________ y el nombre de la tabla es un/a ________.",
+      "opciones": [
+        "Tupla / Dominio",
+        "Atributo / Relación",
+        "Clave / Esquema",
+        "Registro / Campo"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 30,
+      "pregunta": "¿Qué es el dominio en el modelo relacional?",
+      "opciones": [
+        "El nombre único de la base de datos en la red",
+        "El tipo de dato que describe los valores válidos que pueden aparecer en cada columna",
+        "La jerarquía máxima de permisos de un administrador",
+        "El espacio físico en disco que ocupa una tabla"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 31,
+      "pregunta": "¿Qué siglas corresponden al Lenguaje de Definición de Datos en SQL?",
+      "opciones": [
+        "DML",
+        "DCL",
+        "DDL",
+        "TCL"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 32,
+      "pregunta": "¿Qué siglas corresponden al Lenguaje de Manipulación de Datos en SQL?",
+      "opciones": [
+        "DDL",
+        "DML",
+        "XML",
+        "DRY"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 33,
+      "pregunta": "SQL es un estándar utilizado por múltiples sistemas de gestión. ¿Cuál de los siguientes es el motor elegido para la implementación de ejemplos en el material de estudio?",
+      "opciones": [
+        "Oracle 11g",
+        "PostgreSQL",
+        "Microsoft Access",
+        "SQLite sin extensiones"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 34,
+      "pregunta": "¿Cuál es el comando correcto para crear una nueva base de datos llamada 'fintech'?",
+      "opciones": [
+        "CREATE SCHEMA fintech;",
+        "CREATE TABLE fintech;",
+        "CREATE DATABASE fintech;",
+        "NEW DATABASE fintech;"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 35,
+      "pregunta": "¿Qué es un Esquema en una base de datos relacional?",
+      "opciones": [
+        "Una copia de seguridad incremental de los datos",
+        "La estructura lógica que define y organiza objetos como tablas y vistas como si fuera un contenedor",
+        "Un índice compuesto de tipo B-Tree",
+        "El formato físico de compresión de archivos binarios"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 36,
+      "pregunta": "Para crear un contenedor lógico llamado 'gestion_clientes' dentro de la base de datos, ejecutamos:",
+      "opciones": [
+        "CREATE TABLE g_clientes;",
+        "CREATE SCHEMA gestion_clientes;",
+        "ADD SCHEMA gestion_clientes;",
+        "CREATE DATABASE gestion_clientes;"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 37,
+      "pregunta": "¿Qué es una Constraint en SQL?",
+      "opciones": [
+        "Una función de cadena para convertir texto a minúsculas",
+        "Una regla explícita que aplica sobre una tabla para asegurar la integridad y validez de los datos",
+        "Un comando para eliminar permanentemente una base de datos",
+        "Un tipo de dato especial para almacenar imágenes"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 38,
+      "pregunta": "¿Qué restricción garantiza que cada valor en la columna sea único y no nulo?",
+      "opciones": [
+        "FOREIGN KEY",
+        "NOT NULL compuesto",
+        "PRIMARY KEY",
+        "DEFAULT"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 39,
+      "pregunta": "La restricción FOREIGN KEY sirve para:",
+      "opciones": [
+        "Impedir la inserción de cualquier valor numérico negativo",
+        "Asegurar la integridad referencial entre tablas, validando que el valor exista en la tabla referenciada",
+        "Auto-incrementar el valor de la clave primaria",
+        "Limitar el número de filas devueltas por un SELECT"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 40,
+      "pregunta": "¿Cuál es la diferencia principal entre las restricciones UNIQUE y PRIMARY KEY?",
+      "opciones": [
+        "UNIQUE permite valores repetidos si son de tipo texto",
+        "UNIQUE impide que se repitan valores en una columna pero permite valores nulos, a diferencia de PRIMARY KEY",
+        "PRIMARY KEY se puede aplicar a todas las columnas de la tabla al mismo tiempo",
+        "No existe ninguna diferencia, son sinónimos perfectos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 41,
+      "pregunta": "Si deseamos evitar explícitamente que una columna acepte valores vacíos o indeterminados (nulos), debemos usar la restricción:",
+      "opciones": [
+        "DEFAULT NULL",
+        "NOT NULL",
+        "CHECK (NULL = 0)",
+        "UNIQUE"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 42,
+      "pregunta": "¿Qué tipo de restricción verifica que los valores de una columna cumplan una condición específica definida por el usuario (ej. sueldo > 0)?",
+      "opciones": [
+        "DEFAULT",
+        "UNIQUE",
+        "CHECK",
+        "FOREIGN KEY"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 43,
+      "pregunta": "La restricción DEFAULT se utiliza para:",
+      "opciones": [
+        "Establecer un valor predeterminado para una columna si no se especifica uno durante la inserción",
+        "Marcar una columna como clave primaria externa",
+        "Forzar la indexación hash de la tabla",
+        "Validar el formato de los correos electrónicos"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 44,
+      "pregunta": "Los tipos de datos NUMERIC(p, s) y DECIMAL(p, s) se recomiendan especialmente para:",
+      "opciones": [
+        "Cadenas de texto de longitud ilimitada",
+        "Datos financieros o de precisión exacta fija",
+        "Identificadores únicos distribuidos aleatorios",
+        "Contener únicamente valores booleanos TRUE o FALSE"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 45,
+      "pregunta": "En PostgreSQL, ¿cuál es la diferencia entre los tipos VARCHAR(n) y TEXT?",
+      "opciones": [
+        "VARCHAR(n) guarda únicamente datos binarios en formato de bits",
+        "VARCHAR(n) tiene longitud variable limitada a 'n' caracteres, mientras que TEXT permite longitud ilimitada",
+        "TEXT no puede ser utilizado en ninguna condición WHERE",
+        "TEXT ocupa obligatoriamente el triple de memoria RAM en el servidor"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 46,
+      "pregunta": "¿Qué formato estándar adopta el tipo de dato DATE para almacenar fechas sin hora?",
+      "opciones": [
+        "DD-MM-YYYY",
+        "YYYY-MM-DD",
+        "MM-DD-YYYY",
+        "HH:MI:SS"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 47,
+      "pregunta": "¿Qué tipo de dato especial de PostgreSQL se comporta como un entero auto-incremental utilizado frecuentemente para claves primarias?",
+      "opciones": [
+        "UUID",
+        "BYTEA",
+        "SERIAL",
+        "BIGINT FLOAT"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 48,
+      "pregunta": "¿Qué comando DML se utiliza para agregar nuevos registros a una tabla de la base de datos?",
+      "opciones": [
+        "ADD ROW",
+        "INSERT INTO",
+        "UPDATE VALUES",
+        "CREATE TABLE"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 49,
+      "pregunta": "¿Qué cláusula es crítica incluir en un comando UPDATE o DELETE para evitar modificar o borrar accidentalmente todas las filas de una tabla?",
+      "opciones": [
+        "ORDER BY",
+        "GROUP BY",
+        "WHERE",
+        "LIMIT"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 50,
+      "pregunta": "Para modificar el saldo de una cuenta específica a un nuevo valor, la sintaxis correcta en SQL es:",
+      "opciones": [
+        "UPDATE cuenta SET saldo_final = 6000 WHERE num_cuenta = 3001;",
+        "MODIFY cuenta SET saldo_final = 6000 IF num_cuenta = 3001;",
+        "INSERT INTO cuenta (saldo_final) VALUES (6000) WHERE num_cuenta = 3001;",
+        "DELETE saldo_final FROM cuenta WHERE num_cuenta = 3001;"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 51,
+      "pregunta": "Para eliminar filas de una tabla, se utiliza el comando:",
+      "opciones": [
+        "DROP TABLE",
+        "DELETE FROM",
+        "REMOVE ROWS",
+        "ALTER TABLE BLANK"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 52,
+      "pregunta": "¿Qué cláusula de una consulta SELECT se encarga de ordenar los resultados en forma ascendente (ASC) o descendente (DESC)?",
+      "opciones": [
+        "GROUP BY",
+        "SORT BY",
+        "ORDER BY",
+        "LIMIT BY"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 53,
+      "pregunta": "¿Qué operador lógico requiere que TODAS las condiciones especificadas en el filtrado WHERE sean verdaderas simultáneamente?",
+      "opciones": [
+        "OR",
+        "NOT",
+        "AND",
+        "IN"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 54,
+      "pregunta": "En las condiciones de filtrado de patrones de texto con LIKE, ¿qué representa el carácter comodín '%'?",
+      "opciones": [
+        "Representa exactamente un solo carácter obligatorio",
+        "Representa cero, uno o más caracteres cualesquiera",
+        "Representa un número entero obligatorio",
+        "Invierte el resultado de la condición de igualdad"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 55,
+      "pregunta": "En las condiciones de filtrado de patrones de texto con LIKE, ¿qué representa el carácter comodín '_' (guión bajo)?",
+      "opciones": [
+        "Representa cero o más caracteres",
+        "Representa exactamente un solo carácter",
+        "Representa que el texto debe contener un espacio",
+        "Representa el final de la cadena de texto"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 56,
+      "pregunta": "¿Qué operador de conjunto de SQL se utiliza para verificar si un valor se encuentra incluido dentro de una lista explícita de valores?",
+      "opciones": [
+        "BETWEEN",
+        "LIKE",
+        "IN",
+        "AND"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 57,
+      "pregunta": "El operador BETWEEN sirve para:",
+      "opciones": [
+        "Verificar si una columna tiene valores nulos",
+        "Seleccionar valores que se encuentran dentro de un rango inclusivo",
+        "Unir dos tablas mediante sus claves foráneas",
+        "Contar el número total de registros de forma agrupada"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 58,
+      "pregunta": "¿Para qué sirve la cláusula LIMIT en una consulta SQL?",
+      "opciones": [
+        "Para limitar el número de columnas devueltas por el comando SELECT",
+        "Para restringir el número máximo de filas devueltas por la consulta",
+        "Para acelerar el procesamiento de funciones trigonométricas",
+        "Para impedir que usuarios sin permisos ejecuten la consulta"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 59,
+      "pregunta": "¿Qué diferencia existe entre las funciones UPPER y LOWER de cadenas de texto?",
+      "opciones": [
+        "UPPER convierte el texto a mayúsculas y LOWER a minúsculas",
+        "UPPER cuenta los caracteres y LOWER elimina los espacios en blanco",
+        "UPPER se ejecuta en el cliente y LOWER en el servidor físico",
+        "No pertenecen al estándar SQL de manipulación de texto"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 60,
+      "pregunta": "¿Qué función de texto de PostgreSQL permite unir dos o más cadenas en un solo campo?",
+      "opciones": [
+        "ROUND()",
+        "CONCAT()",
+        "SUBSTR()",
+        "ABS()"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 61,
+      "pregunta": "¿Qué realiza la expresión 'NOW() - INTERVAL '1 month'' en una consulta de filtrado por fecha?",
+      "opciones": [
+        "Borra las transacciones del mes en curso",
+        "Calcula la fecha exacta correspondiente a un mes atrás respecto al momento actual",
+        "Suspende la ejecución del servidor durante 30 días",
+        "Devuelve un valor booleano FALSE si el mes cambió"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 62,
+      "pregunta": "¿Qué es un JOIN en SQL?",
+      "opciones": [
+        "Un comando DDL para crear restricciones CHECK",
+        "Una operación que permite combinar filas de dos o más tablas basadas en una columna relacionada entre ellas",
+        "Un método criptográfico para proteger contraseñas en reposo",
+        "Una función de agregación matemática"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 63,
+      "pregunta": "¿Qué cláusula se utiliza específicamente para indicar las columnas que deben coincidir para combinar las tablas en un JOIN?",
+      "opciones": [
+        "WHERE",
+        "HAVING",
+        "ON",
+        "GROUP BY"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 64,
+      "pregunta": "¿Qué registros devuelve específicamente una operación INNER JOIN?",
+      "opciones": [
+        "Todas las filas de la tabla izquierda sin importar si coinciden",
+        "Solo las filas que tienen coincidencias exactas en ambas tablas",
+        "Todas las filas de ambas tablas mezcladas sin criterio",
+        "Únicamente los registros con claves foráneas nulas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 65,
+      "pregunta": "¿Cómo se comporta un LEFT JOIN (o LEFT OUTER JOIN) respecto a la tabla izquierda?",
+      "opciones": [
+        "Devuelve solo las filas que no coinciden en absoluto",
+        "Devuelve todas las filas de la tabla izquierda y las coincidencias de la tabla derecha (completando con NULL si no hay coincidencia)",
+        "Elimina los datos redundantes de la tabla izquierda",
+        "Requiere un índice compuesto B-Tree obligatorio en la tabla izquierda"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 66,
+      "pregunta": "Si realizamos un RIGHT JOIN y una fila de la tabla derecha no presenta coincidencia alguna en la tabla izquierda, ¿qué valores se muestran en las columnas pertenecientes a la tabla izquierda?",
+      "opciones": [
+        "Ceros numéricos (0)",
+        "Valores nulos (NULL)",
+        "Cadenas de texto vacías",
+        "La consulta arroja un error de ejecución inmediato"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 67,
+      "pregunta": "¿Qué tipo de JOIN devuelve todas las filas cuando hay una coincidencia en cualquiera de las tablas, poblando con NULL los extremos sin match?",
+      "opciones": [
+        "INNER JOIN",
+        "LEFT JOIN",
+        "FULL OUTER JOIN",
+        "RIGHT JOIN"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 68,
+      "pregunta": "¿Para qué sirven las funciones de agregación en SQL?",
+      "opciones": [
+        "Para alterar los nombres de los esquemas lógicos",
+        "Para realizar cálculos sobre un conjunto de valores y devolver un único valor de resumen",
+        "Para añadir restricciones CHECK automáticas a nivel de hardware",
+        "Para encriptar bases de datos fintech en tránsito"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 69,
+      "pregunta": "¿Cuál es el propósito específico de la función de agregación COUNT()?",
+      "opciones": [
+        "Calcular la suma total de valores numéricos de una columna",
+        "Devolver el número total de filas que coinciden con un criterio",
+        "Encontrar el promedio exacto de una columna de tipo FLOAT",
+        "Retornar el identificador único universal de un registro"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 70,
+      "pregunta": "¿Qué funciones de agregación se utilizan para obtener la suma total, el promedio, el mínimo y el valor máximo de una columna numérica respectivamente?",
+      "opciones": [
+        "SUM(), AVG(), MIN(), MAX()",
+        "ADD(), AVERAGE(), LESS(), MORE()",
+        "COUNT(), ROUND(), FLOOR(), CEIL()",
+        "TOTAL(), PROM(), MINIMUM(), MAXIMUM()"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 71,
+      "pregunta": "Si utilizamos una función de agregación (ej. SUM) junto con columnas individuales de categoría en un SELECT, ¿qué cláusula es obligatoria para agrupar los resultados?",
+      "opciones": [
+        "ORDER BY",
+        "HAVING",
+        "GROUP BY",
+        "LIMIT"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 72,
+      "pregunta": "Sin la cláusula GROUP BY, las funciones de agregación calculan los resultados para:",
+      "opciones": [
+        "Únicamente el primer registro de la tabla",
+        "Todo el conjunto de datos completo de la tabla como un único bloque",
+        "Ninguna fila (arroja error sintáctico directo)",
+        "Las primeras tres filas según el índice"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 73,
+      "pregunta": "¿Qué cláusula se utiliza para filtrar los resultados de un conjunto de datos agrupado DESPUÉS de que se ha aplicado GROUP BY?",
+      "opciones": [
+        "WHERE",
+        "HAVING",
+        "LIMIT",
+        "CONSTRAINT"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 74,
+      "pregunta": "¿Cuál es la diferencia fundamental entre las cláusulas WHERE y HAVING?",
+      "opciones": [
+        "WHERE filtra filas antes de la agrupación, mientras que HAVING se aplica a los grupos después de GROUP BY",
+        "HAVING es exclusivo para comandos DDL de creación de tablas",
+        "WHERE sólo opera con cadenas de texto y HAVING con números enteros",
+        "No existe diferencia, se pueden intercambiar libremente en la consulta"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 75,
+      "pregunta": "Dada la consulta: 'SELECT tipo_cuenta, COUNT(*) FROM cuenta GROUP BY tipo_cuenta HAVING COUNT(*) > 2;', ¿qué registros se filtrarán?",
+      "opciones": [
+        "Aquellos registros individuales cuyo número de cuenta sea mayor a 2",
+        "Aquellos tipos de cuenta que agrupen a más de 2 instancias de cuentas",
+        "Todas las cuentas de tipo Ahorros sin excepción",
+        "Ninguna, la consulta tiene un error de sintaxis al repetir COUNT(*)"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 76,
+      "pregunta": "¿Qué es una subconsulta en SQL?",
+      "opciones": [
+        "Un índice secundario optimizado para hardware de múltiples núcleos",
+        "Una consulta anidada dentro de otra consulta SQL (interna respecto a una externa)",
+        "Un alias asignado a una tabla mediante la palabra clave AS",
+        "Una copia de seguridad de un único esquema lógico"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 77,
+      "pregunta": "¿En qué partes de una consulta SQL estructurada puede aparecer legítimamente una subconsulta?",
+      "opciones": [
+        "Únicamente en la cláusula VALUES de un INSERT",
+        "En la cláusula SELECT, FROM, WHERE o HAVING",
+        "Exclusivamente al principio de un comando DDL",
+        "Solo dentro de una restricción de tipo FOREIGN KEY"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 78,
+      "pregunta": "¿Qué caracteriza a una subconsulta escalar?",
+      "opciones": [
+        "Devuelve una tabla completa de múltiples filas y columnas",
+        "Devuelve un solo valor elemental (una única fila y una única columna)",
+        "Devuelve una lista continua de nombres de columnas de texto",
+        "Modifica los datos del servidor físico de forma automática"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 79,
+      "pregunta": "¿Qué significan las siglas CTE en el contexto de SQL Avanzado?",
+      "opciones": [
+        "Common Table Expressions (Expresiones de Tabla Comunes)",
+        "Central Transaction Engine (Motor de Transacciones Central)",
+        "Column Type Encryption (Encriptación de Tipos de Columna)",
+        "Constraint Transfer Execution (Ejecución de Transferencia de Restricciones)"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 80,
+      "pregunta": "¿Con qué palabra clave o cláusula se define obligatoriamente una CTE en SQL?",
+      "opciones": [
+        "HAVING",
+        "WITH",
+        "AS PRIMARY",
+        "EXPLAIN"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 81,
+      "pregunta": "¿Cuál de las siguientes es una ventaja destacada del uso de CTEs frente a múltiples subconsultas anidadas?",
+      "opciones": [
+        "Permite eliminar físicamente las tablas del disco rígido",
+        "Mejora notablemente la legibilidad, reutilización y organización del código de la consulta",
+        "Evita por completo la necesidad de asignar tipos de datos a las columnas",
+        "Desactiva los bloqueos de concurrencia de la base de datos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 82,
+      "pregunta": "Con respecto al rendimiento de bases de datos, ¿qué es la Escalabilidad?",
+      "opciones": [
+        "La capacidad de formatear el esquema lógico sin perder índices",
+        "La capacidad del sistema de manejar un volumen creciente de datos sin perder rendimiento",
+        "El número máximo de tablas permitidas dentro de un esquema de PostgreSQL",
+        "La velocidad de respuesta medida únicamente en microsegundos de CPU"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 83,
+      "pregunta": "¿Cuál de los siguientes NO es un factor directo que influya en el rendimiento de una consulta según las filminas?",
+      "opciones": [
+        "La forma en que las consultas están escritas y estructuradas",
+        "La presencia y correcto diseño de Índices",
+        "El color corporativo utilizado en los diagramas lógicos",
+        "El hardware disponible (CPU, memoria y disco)"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 84,
+      "pregunta": "¿Cuál es la función primordial de los Índices en una base de datos relacional?",
+      "opciones": [
+        "Asegurar la integridad referencial de forma exclusiva",
+        "Facilitar y mejorar significativamente la velocidad de búsqueda de los datos en las tablas",
+        "Comprimir los archivos de texto ilimitado (TEXT)",
+        "Asignar contraseñas seguras a los usuarios"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 85,
+      "pregunta": "Según el material didáctico brindado, ¿cuáles son los dos tipos principales de estructuras para índices?",
+      "opciones": [
+        "Serial y Secuencial",
+        "B-Tree y Hash",
+        "Atómicos y Transitivos",
+        "Primarios y Foráneos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 86,
+      "pregunta": "¿Cuál es el costo colateral asociado al uso excesivo de índices en una tabla?",
+      "opciones": [
+        "Mejoran las lecturas, pero afectan negativamente la velocidad de las operaciones de escritura (INSERT, UPDATE, DELETE)",
+        "Impiden la ejecución de consultas que incluyan un INNER JOIN",
+        "Limitan la cantidad de columnas de texto de longitud variable",
+        "Borran de forma aleatoria los registros duplicados"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 87,
+      "pregunta": "¿Qué comando nativo se utiliza en SQL para analizar de forma detallada el plan de ejecución y costo de las consultas?",
+      "opciones": [
+        "GRANT",
+        "EXPLAIN",
+        "REVOKE",
+        "CHECK_PERFORMANCE"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 88,
+      "pregunta": "En términos de buenas prácticas para optimizar consultas, ¿qué acción se recomienda realizar con respecto al uso de 'SELECT *'?",
+      "opciones": [
+        "Usarlo en todas las consultas de producción de forma obligatoria",
+        "Evitar SELECT *, seleccionando explícitamente solo las columnas necesarias para optimizar recursos",
+        "Reemplazarlo por subconsultas correlacionadas escalares",
+        "No tiene impacto en el rendimiento ni en el consumo de memoria"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 89,
+      "pregunta": "¿En qué consiste la técnica de Desnormalización controlada?",
+      "opciones": [
+        "En eliminar la base de datos completa y reconstruirla sin claves primarias",
+        "En añadir redundancia de datos intencional en las tablas para reducir el número de operaciones JOIN y mejorar lecturas",
+        "En forzar el cumplimiento estricto de la Tercera Forma Normal",
+        "En obligar al hardware a duplicar su memoria RAM"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 90,
+      "pregunta": "¿Cuál es el riesgo principal asociado con la técnica de Desnormalización?",
+      "opciones": [
+        "El software deja de ser compatible con PostgreSQL",
+        "Aumenta exponencialmente el riesgo de sufrir inconsistencias en los datos",
+        "Se inhabilitan los índices de tipo Hash",
+        "Se prohíbe el uso de la cláusula LIMIT"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 91,
+      "pregunta": "En el ámbito de la seguridad, ¿qué comando SQL se utiliza explícitamente para otorgar permisos específicos a un usuario o rol sobre objetos de la base de datos?",
+      "opciones": [
+        "REVOKE",
+        "GRANT",
+        "DENY",
+        "CHECK_USER"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 92,
+      "pregunta": "En el ámbito de la seguridad, ¿qué comando SQL se utiliza explícitamente para quitar permisos otorgados previamente a un usuario o rol?",
+      "opciones": [
+        "GRANT",
+        "REMOVE PERMISSIONS",
+        "REVOKE",
+        "DELETE FROM USER"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 93,
+      "pregunta": "¿Qué es un Rol en la gestión de seguridad de bases de datos?",
+      "opciones": [
+        "Una clave primaria auto-incremental compuesta",
+        "Un conjunto de permisos predefinido que puede ser asignado de forma masiva a varios usuarios para facilitar la administración",
+        "Una auditoría automática en tiempo de ejecución",
+        "El tipo de dato utilizado para guardar números de tarjetas de crédito"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 94,
+      "pregunta": "¿Qué diferencia existe entre una copia de seguridad Completa y una Incremental?",
+      "opciones": [
+        "La completa respalda toda la base de datos (datos, esquemas); la incremental guarda únicamente los cambios desde la última copia",
+        "La incremental es destructiva y la completa es sólo de lectura",
+        "La completa se guarda en la nube y la incremental sólo en memoria de intercambio",
+        "Ninguna, ambas realizan exactamente la misma operación de clonación de hardware"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 95,
+      "pregunta": "¿Cuál de las siguientes es una buena práctica recomendada para las copias de seguridad (Backups)?",
+      "opciones": [
+        "Realizarlas de forma manual una vez al año",
+        "Automatizarlas, utilizar almacenamiento externo y realizar pruebas periódicas de restauración",
+        "Almacenarlas en la misma partición de disco donde opera el DBMS",
+        "Evitarlas para no degradar el rendimiento diario de la CPU"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 96,
+      "pregunta": "¿Qué diferencia hay entre la encriptación de datos 'en reposo' y 'en tránsito'?",
+      "opciones": [
+        "En reposo protege datos almacenados físicamente; en tránsito protege los datos mientras se transfieren por la red",
+        "En reposo aplica sólo a bases de datos apagadas permanentemente",
+        "En tránsito es exclusiva para números enteros de tipo SERIAL",
+        "No representan conceptos válidos en seguridad informática de bases de datos"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 97,
+      "pregunta": "¿Qué objetivo persigue el proceso de Auditoría de una base de datos relacional?",
+      "opciones": [
+        "Duplicar el espacio de las tablas de facturación",
+        "Registrar de forma fehaciente las actividades para rastrear accesos, modificaciones y detectar operaciones sospechosas",
+        "Garantizar que no existan dependencias parciales respecto de claves compuestas",
+        "Calcular promedios masivos utilizando funciones trigonométricas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 98,
+      "pregunta": "En la práctica resuelta de la Clase 5, para buscar usuarios cuyo nombre contenga la letra 'a' sin importar si es mayúscula o minúscula, ¿qué operador específico se utiliza?",
+      "opciones": [
+        "LIKE",
+        "ILIKE",
+        "IN PATTERN",
+        "MATCH_CASE"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 99,
+      "pregunta": "En PostgreSQL, la expresión 'EXTRACT(YEAR FROM AGE(CURRENT_DATE, fecha_nacimiento))' se utiliza con el fin de:",
+      "opciones": [
+        "Modificar de forma permanente la fecha del sistema operativo",
+        "Calcular de forma dinámica la edad actual de un cliente basándose en su fecha de nacimiento",
+        "Validar que el cliente pertenezca a la Primera Forma Normal",
+        "Crear un índice compuesto de tipo Hash"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 100,
+      "pregunta": "La función ROW_NUMBER() combinada con 'OVER (PARTITION BY ... ORDER BY ...)' pertenece al grupo de las llamadas:",
+      "opciones": [
+        "Funciones de agregación simples",
+        "Funciones ventana (Window Functions)",
+        "Constraints lógicas de validación",
+        "Subconsultas de fila escalares"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 101,
+      "pregunta": "¿Cuáles son los dos objetivos principales del proceso técnico de Normalización?",
+      "opciones": [
+        "Optimizar el hardware y formatear las tablas débiles",
+        "Eliminar la redundancia (datos repetidos) y proteger la integridad de la información evitando anomalías",
+        "Encriptar datos sensibles en reposo y tránsito",
+        "Implementar roles de seguridad mediante GRANT y REVOKE"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 102,
+      "pregunta": "¿Qué es una anomalía de inserción en una base de datos no normalizada?",
+      "opciones": [
+        "No poder cargar un dato legítimo porque se carece de otro complementario (ej. no poder cargar un curso si no tiene alumnos asignados)",
+        "Sufrir retrasos de respuesta en el comando SELECT por falta de hardware",
+        "Escribir incorrectamente la sintaxis de un comando DML",
+        "La pérdida total de información por fallos en el disco rígido"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 103,
+      "pregunta": "¿Qué problema describe una anomalía de actualización?",
+      "opciones": [
+        "El servidor rechaza copias de seguridad incrementales",
+        "Si un dato (ej. dirección de un cliente) está repetido en 20 filas y cambia, hay que modificar las 20; si una se olvida, la base de datos miente",
+        "No se puede utilizar el operador ILIKE de manera concurrente",
+        "Se inhabilitan automáticamente todas las claves foráneas de la tabla"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 104,
+      "pregunta": "Una anomalía de eliminación ocurre cuando:",
+      "opciones": [
+        "Al intentar borrar un esquema lógico se borra la base de datos completa",
+        "Al borrar un registro (ej. una venta) se pierde accidentalmente y de manera colateral información única (ej. la dirección del cliente)",
+        "El comando EXPLAIN arroja un costo de CPU igual a cero",
+        "Se quitan permisos de acceso mediante la instrucción REVOKE"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 105,
+      "pregunta": "Si en una tabla relacional un atributo no clave depende sólo de una PARTE de una clave primaria compuesta, estamos ante una:",
+      "opciones": [
+        "Dependencia transitiva",
+        "Dependencia funcional parcial",
+        "Violación flagrante de la 1FN",
+        "Restricción CHECK no válida"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 106,
+      "pregunta": "Para que una tabla pueda ser evaluada en los términos de la Segunda Forma Normal (2FN), ¿cuál es el requisito de partida obligatorio?",
+      "opciones": [
+        "Estar en la Tercera Forma Normal (3FN)",
+        "Haber sido desnormalizada previamente",
+        "Estar en la Primera Forma Normal (1FN)",
+        "Poseer al menos un atributo derivable con trazo discontinuo"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 107,
+      "pregunta": "Para que una tabla cumpla estrictamente con la Tercera Forma Normal (3FN), debe:",
+      "opciones": [
+        "Estar en 2FN y haber eliminado por completo las dependencias transitivas entre atributos no clave",
+        "Contener únicamente grupos repetitivos de tipo multivaluado",
+        "Prescindir de restricciones PRIMARY KEY",
+        "Almacenar exclusivamente datos de tipo binario BYTEA"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 108,
+      "pregunta": "En el Minimundo de la base de datos de la plataforma fintech presentada, ¿qué atributos posee la tabla 'usuario' según su DDL?",
+      "opciones": [
+        "num_cuenta, tipo_cuenta, saldo_inicial",
+        "cod_usuario, nombre_usuario, email_usuario, direccion_usuario",
+        "transaccion_id, fecha, monto_transaccion",
+        "id_cliente, nombre_cliente, direccion, fecha_nacimiento"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 109,
+      "pregunta": "En la tabla 'cuenta' de la base Fintech, el campo 'cod_usuario' está definido como INTEGER REFERENCES usuario(cod_usuario). Esto indica que es una:",
+      "opciones": [
+        "Clave Primaria Compuesta",
+        "Clave Foránea (Foreign Key)",
+        "Restricción UNIQUE anidada",
+        "Función ventana predefinida"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 110,
+      "pregunta": "En la tabla de la base de datos Fintech llamada 'transaccion', ¿qué campos actúan como claves foráneas hacia la tabla 'cuenta'?",
+      "opciones": [
+        "transaccion_id y cod_usuario",
+        "num_cuenta_origen y num_cuenta_destino",
+        "monto_transaccion y tipo_transaccion",
+        "Ninguno, las transacciones no se relacionan con las cuentas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 111,
+      "pregunta": "El tipo de dato NUMERIC(15, 2) asignado a la columna 'saldo_final' indica:",
+      "opciones": [
+        "Un número entero que acepta hasta 15 dígitos únicamente",
+        "Un número decimal con un máximo total de 15 dígitos (precisión), de los cuales 2 corresponden a la parte decimal (escala)",
+        "Un número binario encriptado de longitud fija",
+        "Un formato de fecha y hora abreviado"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 112,
+      "pregunta": "En los ejercicios de práctica de la Fintech, el operador '<>' se utiliza con el fin de indicar la condición:",
+      "opciones": [
+        "Mayor o igual a",
+        "Diferente de / Distinto de",
+        "Menor o igual a",
+        "Igual aproximado por patrón"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 113,
+      "pregunta": "En el modelo lógico planteado en 'Practica_SQL.pdf', ¿cuál es la clave primaria compuesta de la tabla 'presentacion'?",
+      "opciones": [
+        "id_producto y precio_presentacion",
+        "id_producto y nombre_presentacion",
+        "nombre_presentacion y color",
+        "Únicamente id_producto como clave primaria indexada"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 114,
+      "pregunta": "¿Qué sentencia SQL elimina por completo la estructura y los datos de una tabla llamada 'presentacion' de forma definitiva?",
+      "opciones": [
+        "DELETE FROM presentacion;",
+        "DROP TABLE presentacion;",
+        "ALTER TABLE presentacion REMOVE;",
+        "CLEAR TABLE presentacion;"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 115,
+      "pregunta": "En la primera etapa del ciclo de vida de una base de datos (Análisis), ¿cuáles son los elementos clave a relevar según el diagrama circular?",
+      "opciones": [
+        "Diseño Lógico y Físico",
+        "Requerimientos y Objetivos",
+        "Pruebas y Mantenimiento",
+        "Calidad y Generación de datos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 116,
+      "pregunta": "Si un analista de datos determina que la regla de negocio exige almacenar múltiples números de teléfono para un mismo cliente, el concepto correspondiente en el diagrama ER es:",
+      "opciones": [
+        "Un atributo atómico ordinario",
+        "Un atributo multivaluado (representado por un óvalo de doble línea)",
+        "Una relación unaria binaria",
+        "Una especialización de nivel inferior"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 117,
+      "pregunta": "Dentro del diagrama circular del ciclo de vida de una base de datos, la etapa de 'CAPTURA' engloba:",
+      "opciones": [
+        "Diseño conceptual y lógico",
+        "Generación de datos y Calidad de datos",
+        "Pruebas y Mantenimiento",
+        "CREATE DATABASE y CREATE SCHEMA"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 118,
+      "pregunta": "¿Qué función matemática de SQL se utiliza para redondear un número con decimales a una cantidad específica de decimales?",
+      "opciones": [
+        "ABS()",
+        "ROUND()",
+        "CEIL()",
+        "FLOOR()"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 119,
+      "pregunta": "En una subconsulta de columna, el resultado devuelto por la consulta interna consiste en:",
+      "opciones": [
+        "Un solo valor escalar único",
+        "Una columna con varios valores posibles",
+        "Una tabla de múltiples columnas y múltiples filas",
+        "Una fila única con múltiples atributos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 120,
+      "pregunta": "La consulta 'SELECT * FROM producto WHERE id_producto IN (SELECT id_producto FROM presentacion WHERE precio_presentacion > 5.00);' hace uso de una:",
+      "opciones": [
+        "Subconsulta en la cláusula WHERE",
+        "Expresión de tabla común (CTE) explicativa",
+        "Función ventana combinada con GROUP BY",
+        "Desnormalización física del esquema l_clientes"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 121,
+      "pregunta": "¿Cuál es el orden lógico estándar de ejecución de las cláusulas en una consulta de selección?",
+      "opciones": [
+        "SELECT -> FROM -> WHERE -> ORDER BY",
+        "FROM -> WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY",
+        "ORDER BY -> LIMIT -> SELECT -> FROM",
+        "SELECT -> ORDER BY -> LIMIT -> WHERE"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 122,
+      "pregunta": "Si intentamos ejecutar una función de agregación en la cláusula WHERE de una consulta simple (ej. WHERE SUM(monto) > 1000), ¿qué sucede?",
+      "opciones": [
+        "El motor lo ejecuta filtrando las filas individuales",
+        "Se produce un error, ya que no se permiten funciones de agregación en WHERE (se debe usar HAVING o una subconsulta)",
+        "PostgreSQL ignora la línea de forma automática",
+        "Se transforma internamente en un índice de tipo B-Tree"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 123,
+      "pregunta": "¿Cuál de las siguientes afirmaciones sobre la clave primaria es CORRECTA?",
+      "opciones": [
+        "Una tabla puede tener múltiples claves primarias independientes",
+        "Garantiza la unicidad del registro completo y no puede contener ningún valor nulo",
+        "Permite valores duplicados si la columna es de tipo entero auto-incremental",
+        "Se define únicamente mediante la restricción FOREIGN KEY"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 124,
+      "pregunta": "El concepto de 'Minimundo' en el contexto de diseño de bases de datos hace referencia a:",
+      "opciones": [
+        "La base de datos del sistema operativo del servidor",
+        "La parte específica de la empresa o mundo real que es de interés representar en la base de datos",
+        "Una tabla relacional que viola todas las formas normales",
+        "Un tipo de encriptación simplificado de contraseñas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 125,
+      "pregunta": "Gráficamente, un tipo de entidad regular (entidad fuerte) se dibuja como:",
+      "opciones": [
+        "Un óvalo con trazo continuo",
+        "Un rectángulo con trazo continuo",
+        "Un rombo de trazo doble",
+        "Un triángulo invertido"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 126,
+      "pregunta": "En el modelo Entidad-Relación, los roles o tipos de correspondencia de una relación binaria (1:1, 1:N, M:N) se denominan en forma global:",
+      "opciones": [
+        "Grado de la relación",
+        "Razón de cardinalidad",
+        "Restricciones de atomicidad transitiva",
+        "Especializaciones jerárquicas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 127,
+      "pregunta": "Si un empleado puede administrar como máximo UN departamento, y un departamento es administrado por un ÚNICO empleado, la relación 'ADMINISTRA' posee una razón de cardinalidad de:",
+      "opciones": [
+        "1 a N",
+        "1 a 1",
+        "M a N",
+        "N a 1"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 128,
+      "pregunta": "Si un departamento controla una cierta cantidad de proyectos, pero cada proyecto pertenece a un solo departamento, la cardinalidad de la relación 'CONTROLA' entre Departamento y Proyecto es:",
+      "opciones": [
+        "1 a 1",
+        "1 a N",
+        "M a N",
+        "N a M"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 129,
+      "pregunta": "Si un empleado puede trabajar en varios proyectos, y un proyecto puede contar con la participación de múltiples empleados, la relación 'TRABAJA_EN' tiene una cardinalidad de:",
+      "opciones": [
+        "1 a 1",
+        "1 a N",
+        "M a N",
+        "N a 1"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 130,
+      "pregunta": "En el caso de relaciones con cardinalidad M:N (muchos a muchos), como 'TRABAJA_EN', los atributos propios de la relación (ej. 'Horas' semanales de trabajo):",
+      "opciones": [
+        "Se deben colocar obligatoriamente en la entidad fuerte",
+        "Se asocian directamente al rombo de la relación en el modelo conceptual",
+        "Se eliminan por violar la atomicidad de los datos",
+        "Se transforman de inmediato en atributos derivables discretos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 131,
+      "pregunta": "Cuando pasamos del Diseño Conceptual al Diseño Lógico, una relación de cardinalidad M:N con atributos propios (ej. relación 'TRABAJA_EN' con atributo 'Horas'):",
+      "opciones": [
+        "Se elimina por completo del modelo relacional",
+        "Se convierte en una nueva tabla independiente cuya clave primaria suele ser compuesta por las claves de las entidades participantes",
+        "Se absorbe dentro de la tabla de la entidad de menor peso",
+        "Se modela utilizando una restricción CHECK global"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 132,
+      "pregunta": "En el ejemplo de normalización de una factura simplificada, la columna 'Productos' inicial que contenía '35: Peras, 37: Uvas' violaba abiertamente la directiva de:",
+      "opciones": [
+        "Integridad referencial de claves foráneas",
+        "Atomicidad de los valores de la celda (1FN)",
+        "Dependencia transitiva de la 3FN",
+        "Encriptación en tránsito segura"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 133,
+      "pregunta": "¿Qué ocurre si una tabla posee filas idénticas duplicadas en su totalidad?",
+      "opciones": [
+        "Cumple de manera óptima con la 1FN",
+        "Viola la 1FN, ya que cada registro debe ser único y contar con una clave primaria identificadora",
+        "Es un requisito mandatorio para aplicar índices Hash",
+        "Mejora la velocidad de procesamiento del comando SELECT"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 134,
+      "pregunta": "Si un atributo no clave como 'NombreCliente' depende únicamente de 'CodigoCliente', y la clave primaria de la tabla original es compuesta por ('NumeroFactura' + 'CodigoProducto'), se está ante una violación de la:",
+      "opciones": [
+        "Primera Forma Normal (1FN)",
+        "Segunda Forma Normal (2FN)",
+        "Tercera Forma Normal (3FN)",
+        "Cuarta Forma Normal (4FN)"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 135,
+      "pregunta": "Al resolver la 2FN en el ejemplo de facturas, la estructura original se dividió en múltiples tablas. ¿Cuáles de las siguientes se crearon para eliminar dependencias parciales?",
+      "opciones": [
+        "Tabla de Facturas, Tabla de Clientes, Tabla de Productos y Tabla de Detalles de Facturas",
+        "Únicamente una tabla desnormalizada global con índices B-Tree",
+        "Dos vistas lógicas sin persistencia física en disco",
+        "Una tabla unaria recursiva"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 136,
+      "pregunta": "Si en la tabla 'Clientes' resultante de la 2FN se detecta que 'Provincia' depende funcionalmente de 'Ciudad', y 'Ciudad' depende de 'CodigoCliente', se evidencia una:",
+      "opciones": [
+        "Dependencia parcial inofensiva",
+        "Dependencia transitiva (violación de la 3FN)",
+        "Violación de atomicidad de nivel 1",
+        "Restricción de participación parcial total"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 137,
+      "pregunta": "Para solucionar la dependencia transitiva observada en la tabla de clientes ('Provincia' -> 'Ciudad' -> 'CodigoCliente'), el proceso técnico dicta:",
+      "opciones": [
+        "Añadir más columnas de texto redundantes",
+        "Separar esos atributos en una nueva tabla (ej. Tabla de Ciudades con CiudadID, Ciudad y Provincia)",
+        "Eliminar la columna CiudadID del motor de base de datos",
+        "Aplicar una encriptación en reposo simétrica"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 138,
+      "pregunta": "¿Qué palabra clave de SQL se utiliza para renombrar temporalmente una columna o tabla en una consulta para mejorar su claridad (ej. SELECT nombre AS cliente_nombre)?",
+      "opciones": [
+        "LIKE",
+        "AS",
+        "IN",
+        "WITH"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 139,
+      "pregunta": "¿Cuál de las siguientes opciones representa una consulta válida para obtener transacciones cuyo monto sea estrictamente mayor a 5000?",
+      "opciones": [
+        "SELECT * FROM transaccion WHERE monto_transaccion > 5000;",
+        "SELECT * FROM transaccion HAVING monto_transaccion > 5000;",
+        "GET ALL FROM transaccion FILTER 5000;",
+        "SELECT transaccion_id WHERE monto_transaccion IS 5000;"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 140,
+      "pregunta": "¿Qué valor especial devuelve una consulta en las columnas de la tabla derecha en un LEFT JOIN si no hay correspondencia de ID?",
+      "opciones": [
+        "0 (cero numérico)",
+        "NULL (valor nulo)",
+        "Una cadena vacía ''",
+        "Arroja un error de clave foránea"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 141,
+      "pregunta": "Si ejecutamos 'SELECT COUNT(*) FROM usuario;', el resultado obtenido será:",
+      "opciones": [
+        "La lista completa de todos los nombres de usuarios",
+        "Un número entero que representa la cantidad total de filas registradas en la tabla 'usuario'",
+        "Un error crítico por no incluir la cláusula GROUP BY",
+        "La suma acumulada de los códigos de usuario"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 142,
+      "pregunta": "La consulta 'SELECT tipo_cuenta, SUM(saldo_final) FROM cuenta GROUP BY tipo_cuenta;' devolverá:",
+      "opciones": [
+        "El saldo máximo de una sola cuenta corriente",
+        "La sumatoria total de los saldos finales agrupada de forma independiente para cada tipo de cuenta existente",
+        "Un error de ejecución por omitir la restricción HAVING",
+        "La lista de usuarios ordenados alfabéticamente"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 143,
+      "pregunta": "En el diseño de la base Fintech, ¿cuál es el propósito del campo 'transaccion_id SERIAL PRIMARY KEY'?",
+      "opciones": [
+        "Actuar como clave foránea vinculada de forma directa a la tabla de usuarios",
+        "Identificar de manera única e inequívoca cada registro de transacción mediante un entero auto-incremental",
+        "Almacenar el tipo de operación realizada (depósito o retiro)",
+        "Limitar el número de filas de la tabla a un rango preestablecido"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 144,
+      "pregunta": "Si deseamos obtener los registros de cuentas cuyo saldo final se encuentre en el rango de 4000 a 8000 de manera inclusiva, ¿cuál es la sintaxis ideal?",
+      "opciones": [
+        "WHERE saldo_final > 4000 AND saldo_final < 8000",
+        "WHERE saldo_final BETWEEN 4000 AND 8000",
+        "WHERE saldo_final IN (4000, 8000)",
+        "WHERE saldo_final LIKE '4000%8000'"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 145,
+      "pregunta": "La restricción 'NOT NULL' aplicada a la columna 'nombre_usuario' en la creación de tablas asegura que:",
+      "opciones": [
+        "El nombre de usuario no pueda repetirse bajo ninguna circunstancia",
+        "Sea obligatorio ingresar un valor de texto al insertar un nuevo usuario",
+        "El motor asigne el valor por defecto 'Juan Pérez' ante omisiones",
+        "La columna se indexe de forma automática como estructura B-Tree"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 146,
+      "pregunta": "¿Qué comando DDL se ejecuta si se desea agregar una nueva columna llamada 'telefono' a una tabla existente llamada 'usuario'?",
+      "opciones": [
+        "UPDATE TABLE usuario ADD COLUMN telefono VARCHAR(20);",
+        "ALTER TABLE usuario ADD COLUMN telefono VARCHAR(20);",
+        "INSERT INTO usuario COLUMN telefono VARCHAR(20);",
+        "MODIFY TABLE usuario APPEND telefono;"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 147,
+      "pregunta": "En un diagrama Entidad-Relación, ¿cómo se representa gráficamente una Relación entre dos entidades?",
+      "opciones": [
+        "Mediante un rectángulo de trazo continuo",
+        "Mediante un rombo conectado por líneas a las entidades correspondientes",
+        "Mediante un óvalo con texto subrayado",
+        "Mediante una elipse discontinua"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 148,
+      "pregunta": "Cuando una entidad de nivel inferior hereda de manera automática todos los atributos de una entidad superior, se está aplicando el principio de:",
+      "opciones": [
+        "Herencia de atributos en una Especialización/Generalización",
+        "Dependencia transitiva inversa",
+        "Normalización atómica estricta",
+        "Integridad referencial foránea"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 149,
+      "pregunta": "Si en la tabla 'usuario' de la Fintech el campo 'email_usuario' posee la constraint UNIQUE, ¿qué sucede si intentamos insertar dos registros con el mismo correo exacto?",
+      "opciones": [
+        "El motor almacena ambos registros duplicados sin advertencias",
+        "El motor de base de datos arroja un error de violación de restricción de unicidad y cancela la operación",
+        "El segundo registro sobrescribe automáticamente al primero",
+        "El valor duplicado se transforma de inmediato en un valor NULL"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 150,
+      "pregunta": "¿Cuál de las siguientes opciones describe el uso óptimo de una subconsulta escalar en el filtrado de datos?",
+      "opciones": [
+        "Comparar una columna con un único valor de resumen dinámico devuelto por la consulta interna (ej. WHERE precio > (SELECT AVG...))",
+        "Combinar de manera desnormalizada más de 50 tablas de producción",
+        "Reemplazar por completo el uso de la cláusula FROM",
+        "Otorgar permisos de lectura masivos mediante instrucciones GRANT"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 151,
+      "pregunta": "Al definir una clave primaria compuesta en SQL (PRIMARY KEY conteniendo más de una columna), la sintaxis correcta al final del CREATE TABLE es:",
+      "opciones": [
+        "PRIMARY KEY (columna1) AND PRIMARY KEY (columna2)",
+        "CONSTRAINT nombre_pk PRIMARY KEY (columna1, columna2)",
+        "columna1 PK, columna2 PK",
+        "ALTER PRIMARY KEY MERGE (columna1, columna2)"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 152,
+      "pregunta": "¿Qué ocurre si ejecutamos una consulta con la instrucción DELETE sin especificar una cláusula WHERE?",
+      "opciones": [
+        "El motor borra únicamente la primera fila de la tabla",
+        "El motor elimina de forma permanente todas las filas de la tabla",
+        "La consulta arroja un error sintáctico obligatorio",
+        "Se realiza una copia de seguridad incremental automática"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 153,
+      "pregunta": "En un índice de tipo B-Tree, el tiempo necesario para localizar un registro en búsquedas directas:",
+      "opciones": [
+        "Crece en forma lineal directa respecto a la cantidad total de registros",
+        "Se reduce notablemente gracias a una estructura de árbol balanceado de búsqueda eficiente",
+        "Depende exclusivamente del uso de la restricción CHECK",
+        "Es exactamente igual a no contar con ningún índice creado"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 154,
+      "pregunta": "El operador lógico 'NOT' se utiliza en la cláusula WHERE con el fin de:",
+      "opciones": [
+        "Multiplicar los valores numéricos de una columna",
+        "Invertir por completo el valor de verdad de la condición lógica especificada",
+        "Forzar la aparición de valores nulos",
+        "Ordenar los registros alfabéticamente por nombre"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 155,
+      "pregunta": "La función de agregación AVG() puede aplicarse legítimamente sobre columnas de tipo de dato:",
+      "opciones": [
+        "VARCHAR y TEXT de longitud ilimitada",
+        "Numéricos (como INTEGER, NUMERIC, FLOAT)",
+        "Booleanos únicamente (TRUE o FALSE)",
+        "Cualquier tipo de dato sin restricciones"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 156,
+      "pregunta": "Si un modelo entidad-relación conceptual presenta una relación ternaria, esto implica que participan simultáneamente:",
+      "opciones": [
+        "Exactamente una única entidad consigo misma de forma recursiva",
+        "Tres tipos de entidades distintos en la misma asociación",
+        "Un número ilimitado de atributos multivaluados",
+        "Tres esquemas de bases de datos distribuidas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 157,
+      "pregunta": "El proceso técnico de normalización garantiza:",
+      "opciones": [
+        "Que los servidores físicos consuman menos energía eléctrica",
+        "Una estructura de datos sólida, libre de anomalías de modificación y redundancias injustificadas",
+        "La automatización completa del desarrollo de aplicaciones cliente",
+        "El cifrado asimétrico obligatorio de contraseñas de usuarios"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 158,
+      "pregunta": "En el Diseño Físico, la instrucción 'CREATE DATABASE' pertenece al grupo de comandos de tipo:",
+      "opciones": [
+        "DML",
+        "DDL",
+        "DCL",
+        "TCL"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 159,
+      "pregunta": "La constraint de tipo 'CHECK (monto_transaccion > 0)' aplicada a una columna numérica garantiza que:",
+      "opciones": [
+        "Solo se guarden valores positivos estrictos en dicho campo",
+        "El sistema bloquee la inserción de valores de tipo flotante REAL",
+        "La columna sea tratada de inmediato como una clave primaria externa",
+        "El saldo se auto-incremente en cada confirmación de registro"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 160,
+      "pregunta": "Para realizar una búsqueda de texto insensible a mayúsculas o minúsculas en motores que no soportan ILIKE, se suele combinar de forma alternativa:",
+      "opciones": [
+        "La función LOWER() o UPPER() aplicada a la columna junto con el operador LIKE estándar",
+        "El operador BETWEEN junto con caracteres comodín de porcentaje",
+        "Una subconsulta de tabla con restricciones FOREIGN KEY",
+        "Una expresión de tabla común (CTE) recursiva"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 161,
+      "pregunta": "En una relación binaria 1:N (uno a muchos), la clave primaria de la entidad del lado '1' se traslada a la tabla del lado 'N' en carácter de:",
+      "opciones": [
+        "Atributo derivable temporal",
+        "Clave Foránea (Foreign Key)",
+        "Clave parcial con trazo discontinuo",
+        "Restricción UNIQUE obligatoria"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 162,
+      "pregunta": "La redundancia controlada de datos en un entorno de producción:",
+      "opciones": [
+        "Se aplica a ciegas sin considerar los riesgos de inconsistencia",
+        "Es una decisión de arquitectura de diseño (Desnormalización) enfocada puramente en optimizar el tiempo de lectura",
+        "Se logra únicamente eliminando los esquemas lógicos",
+        "Es obligatoria para cumplir con la Tercera Forma Normal (3FN)"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 163,
+      "pregunta": "El comando 'REVOKE ALL PRIVILEGES ON TABLE usuario FROM rol_liquidador;' realiza la acción de:",
+      "opciones": [
+        "Otorgar permisos completos de lectura al rol especificado",
+        "Retirar de forma absoluta todos los permisos sobre la tabla 'usuario' al rol indicado",
+        "Eliminar físicamente la tabla 'usuario' de la base de datos",
+        "Suspender el acceso al esquema de forma incremental temporal"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 164,
+      "pregunta": "En una base de datos relacional, un campo cuyo valor es único e identifica de forma unívoca a una fila se conoce formalmente como:",
+      "opciones": [
+        "Clave Foránea",
+        "Clave Primaria (Primary Key)",
+        "Atributo Multivaluado",
+        "Tupla transitiva"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 165,
+      "pregunta": "Si un modelo conceptual presenta una entidad débil, ésta obligatoriamente se vincula con su entidad fuerte a través de una relación de tipo:",
+      "opciones": [
+        "Débil o identificadora",
+        "Unaria recursiva",
+        "Ternaria de grado máximo",
+        "Especialización disjunta"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 166,
+      "pregunta": "¿Qué tipo de dato numérico de PostgreSQL proporciona precisión exacta y se recomienda para cálculos monetarios en plataformas Fintech?",
+      "opciones": [
+        "REAL",
+        "NUMERIC (o DECIMAL)",
+        "FLOAT",
+        "DOUBLE PRECISION"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 167,
+      "pregunta": "En la consulta 'SELECT * FROM cuenta ORDER BY saldo_final DESC LIMIT 3;', ¿qué registros se obtienen?",
+      "opciones": [
+        "Las tres cuentas con los saldos finales más bajos de la tabla",
+        "Las tres cuentas que registran los saldos finales más altos de la tabla",
+        "Tres cuentas seleccionadas al azar por el motor de la base de datos",
+        "Todas las cuentas de tipo corriente ordenadas alfabéticamente"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 168,
+      "pregunta": "El proceso técnico de normalización se enfoca de manera primordial en el diseño de qué nivel del ciclo de vida:",
+      "opciones": [
+        "Diseño Físico",
+        "Diseño Lógico (Estructura de Tablas)",
+        "Análisis de Requerimientos Iniciales",
+        "Captura y Generación de Datos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 169,
+      "pregunta": "Si una tabla relacional cuenta con una clave primaria simple (un solo atributo) y cumple con la 1FN, automáticamente se encuentra en:",
+      "opciones": [
+        "Segunda Forma Normal (2FN)",
+        "Tercera Forma Normal (3FN)",
+        "Forma Normal de Boyce-Codd",
+        "Ninguna, debe desnormalizarse primero"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 170,
+      "pregunta": "En la sintaxis estándar de una consulta estructurada, ¿cuál de las siguientes opciones es la correcta para realizar un filtrado por coincidencia exacta de texto?",
+      "opciones": [
+        "WHERE columna LIKE '%texto%'",
+        "WHERE columna = 'texto'",
+        "WHERE columna IN ('%texto')",
+        "WHERE columna BETWEEN 'texto' AND 'texto'"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 171,
+      "pregunta": "¿Qué representa la sigla DBMS en la administración de datos?",
+      "opciones": [
+        "Database Management System (Sistema de Gestión de Bases de Datos)",
+        "Data Binary Monitor Structure",
+        "Distributed Backup Memory Storage",
+        "Digital Base Mapping Standard"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 172,
+      "pregunta": "Gráficamente, la jerarquía de una Especialización se detalla utilizando una línea que une la entidad superior con un símbolo de:",
+      "opciones": [
+        "Un rombo con doble contorno continuo",
+        "Un triángulo invertido con la leyenda 'ES'",
+        "Un óvalo de trazo discontinuo oblicuo",
+        "Un rectángulo de esquinas redondeadas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 173,
+      "pregunta": "Al implementar el comando 'CREATE TABLE', la constraint 'UNIQUE' aplicada a una columna permite la inserción de:",
+      "opciones": [
+        "Valores duplicados indefinidos si son enteros",
+        "Un solo valor único por fila, admitiendo opcionalmente la presencia de valores nulos (NULL)",
+        "Únicamente valores autoincrementales de tipo SERIAL",
+        "Cadenas de texto que cumplan con un patrón LIKE específico"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 174,
+      "pregunta": "¿Qué comando DML se encarga de realizar la inserción efectiva de datos de prueba en las tablas de PostgreSQL?",
+      "opciones": [
+        "ALTER TABLE INSERT",
+        "INSERT INTO",
+        "UPDATE ROWS VALUE",
+        "CREATE TABLE DATA"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 175,
+      "pregunta": "En un entorno Fintech, para resguardar la confidencialidad de datos muy sensibles como las contraseñas, se debe aplicar obligatoriamente:",
+      "opciones": [
+        "Una restricción UNIQUE simple",
+        "Procesos de Encriptación o Hashing seguro",
+        "La Segunda Forma Normal de manera estricta",
+        "Un índice secundario de tipo B-Tree"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 176,
+      "pregunta": "Si combinamos dos tablas con LEFT JOIN y deseamos filtrar únicamente aquellas filas de la tabla izquierda que NO poseen correspondencia en la tabla derecha, añadimos en el WHERE:",
+      "opciones": [
+        "WHERE tabla_derecha.id IS NULL",
+        "WHERE tabla_derecha.id = 0",
+        "WHERE tabla_derecha.id <> UNIQUE",
+        "WHERE tabla_derecha.id LIKE '%'"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 177,
+      "pregunta": "La función de agregación SUM() calcula de forma directa:",
+      "opciones": [
+        "El promedio aritmético de las filas de la consulta",
+        "La suma total acumulada de los valores numéricos pertenecientes a una columna",
+        "La cantidad de celdas que contienen strings en mayúsculas",
+        "El identificador único de tipo UUID de los registros"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 178,
+      "pregunta": "Dentro de la arquitectura del ciclo de vida de una base de datos, la fase encargada de definir el motor concreto (ej. PostgreSQL) y escribir el código DDL se denomina:",
+      "opciones": [
+        "Diseño Conceptual",
+        "Diseño Físico",
+        "Diseño Lógico",
+        "Análisis de Requerimientos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 179,
+      "pregunta": "Si un atributo multivaluado como 'Color' de un coche posee valores como {rojo, negro} para un mismo registro en el modelo relacional puro sin normalizar, se genera un conflicto de:",
+      "opciones": [
+        "Integridad referencial foránea",
+        "Atomicidad de los datos (violación de 1FN)",
+        "Dependencia funcional transitiva",
+        "Permisos de seguridad mediante roles"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 180,
+      "pregunta": "El comando 'CREATE SCHEMA gestion_clientes;' produce el siguiente efecto físico en la base de datos:",
+      "opciones": [
+        "Elimina las tablas obsoletas del sistema",
+        "Crea un espacio o contenedor lógico para organizar objetos relacionales como tablas y vistas",
+        "Asigna permisos de administrador a todos los usuarios de la red",
+        "Realiza un backup incremental inmediato"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 181,
+      "pregunta": "La restricción de integridad referencial se rompe de forma inmediata si:",
+      "opciones": [
+        "Se inserta un número flotante en un campo de tipo INTEGER",
+        "Se registra en una tabla un valor en una columna clave foránea que no existe como clave primaria en la tabla de referencia",
+        "Se omiten los paréntesis en una condición compuesta con AND y OR",
+        "Se limita la cantidad de registros devueltos mediante un LIMIT"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 182,
+      "pregunta": "Para ordenar de manera explícita los resultados de un SELECT de forma alfabética inversa (Z a A) según la columna 'nombre_usuario', agregamos:",
+      "opciones": [
+        "ORDER BY nombre_usuario ASC",
+        "ORDER BY nombre_usuario DESC",
+        "SORT BY nombre_usuario REVERSE",
+        "GROUP BY nombre_usuario INVERSE"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 183,
+      "pregunta": "¿Qué tipo de subconsulta es aquella que puede retornar una estructura completa de datos equivalente a una tabla virtual persistente en el FROM externo?",
+      "opciones": [
+        "Subconsulta de fila única",
+        "Subconsulta de columna escalar",
+        "Subconsulta de tabla",
+        "Constraint CHECK anidada"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 184,
+      "pregunta": "La definición formal: 'Regla explícita que aplica sobre una tabla con el fin de asegurar la integridad y validez de su información' corresponde a:",
+      "opciones": [
+        "Un alias de columna de texto",
+        "Una Constraint (Restricción)",
+        "Un plan de optimización de hardware",
+        "Un índice B-Tree balanceado"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 185,
+      "pregunta": "En un diagrama Entidad-Relación, la presencia de una línea doble conectando un rectángulo con un rombo denota:",
+      "opciones": [
+        "Participación parcial de la entidad",
+        "Participación total de la entidad en dicha relación",
+        "Que la relación posee grado unario recursivo",
+        "Que los atributos de la relación son derivables"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 186,
+      "pregunta": "El operador lógico 'OR' produce un valor de verdad VERDADERO en una condición de filtrado de la cláusula WHERE si:",
+      "opciones": [
+        "Absolutamente todas las condiciones evaluadas son verdaderas",
+        "Al menos una de las condiciones especificadas resulta verdadera",
+        "Ninguna de las condiciones resulta verdadera",
+        "La columna evaluada contiene valores estrictamente no nulos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 187,
+      "pregunta": "Para conocer el valor numérico más bajo registrado en la columna 'saldo_inicial' de la tabla de cuentas de la Fintech, recurrimos a:",
+      "opciones": [
+        "SUM(saldo_inicial)",
+        "MIN(saldo_inicial)",
+        "MAX(saldo_inicial)",
+        "AVG(saldo_inicial)"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 188,
+      "pregunta": "En el desarrollo lógico del ciclo de vida, ¿qué significa que una tabla sufra de anomalías de modificación de datos de forma recurrente?",
+      "opciones": [
+        "Que el motor de la base de datos se detiene por falta de hardware",
+        "Que la base de datos presenta fallos de diseño estructural que arriesgan la consistencia de los datos ante inserciones, actualizaciones o bajas",
+        "Que las sentencias DDL se escribieron sin usar mayúsculas",
+        "Que los índices de tipo Hash están corrompidos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 189,
+      "pregunta": "Si un atributo no clave en una tabla relacional normalizada depende indirectamente de la clave primaria a través de otro atributo no clave, se está violando de forma directa la:",
+      "opciones": [
+        "Primera Forma Normal (1FN)",
+        "Segunda Forma Normal (2FN)",
+        "Tercera Forma Normal (3FN)",
+        "Integridad de tipo de dato SERIAL"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 190,
+      "pregunta": "La consulta SQL: 'SELECT * FROM usuario WHERE direccion_usuario LIKE 'Calle%';' obtendrá:",
+      "opciones": [
+        "Únicamente los usuarios cuya dirección contenga la palabra 'Calle' en cualquier posición intermedia",
+        "Aquellos usuarios cuya dirección comience exactamente con el término 'Calle'",
+        "Todos los usuarios registrados en el esquema sin importar su dirección",
+        "Un error de compilación por falta de comodines obligatorios de guión bajo"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 191,
+      "pregunta": "El tipo de copia de seguridad que respalda la base de datos completa de manera integral se conoce como:",
+      "opciones": [
+        "Backup Incremental",
+        "Backup Completo (o Total)",
+        "Cifrado en reposo simétrico",
+        "Auditoría DDL persistente"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 192,
+      "pregunta": "La cláusula obligatoria 'ON' que acompaña a cualquier variante de JOIN sirve con el fin de especificar:",
+      "opciones": [
+        "Las condiciones de agrupamiento de filas para agregaciones",
+        "Las columnas comunes que sirven de puente para emparejar de forma correcta los registros de las tablas relacionadas",
+        "El orden alfabético de salida de los datos seleccionados",
+        "Los límites de filas devueltas por segundo en el servidor"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 193,
+      "pregunta": "¿Qué función matemática de base de datos se encarga de calcular el valor absoluto de un número?",
+      "opciones": [
+        "ROUND()",
+        "ABS()",
+        "CEIL()",
+        "FLOOR()"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 194,
+      "pregunta": "En un diagrama relacional físico, una clave foránea (FK) se dibuja explícitamente para:",
+      "opciones": [
+        "Auto-incrementar el índice de la tabla de forma asíncrona",
+        "Representar y materializar de forma concreta la relación existente entre dos tablas relacionales",
+        "Indicar que la columna acepta valores de tipo binario BYTEA",
+        "Forzar la desnormalización completa del esquema de clientes"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 195,
+      "pregunta": "Si definimos una expresión de tabla común (CTE) con el alias 'promedio_saldos', podemos invocarla legítimamente:",
+      "opciones": [
+        "En cualquier parte del código de la misma consulta SQL justo después de su definición con WITH",
+        "Exclusivamente en un comando CREATE DATABASE independiente",
+        "Únicamente dentro de una constraint de validación de tipo CHECK",
+        "En otras consultas ejecutadas al día siguiente en el servidor"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 196,
+      "pregunta": "El comando de control de acceso de seguridad 'GRANT SELECT, INSERT ON gestion_clientes.usuario TO rol_operador;' realiza la acción de:",
+      "opciones": [
+        "Quitar todos los accesos previos al rol de operador",
+        "Conceder permisos exclusivos de consulta e inserción sobre la tabla de usuarios al rol de operador",
+        "Crear un nuevo usuario administrador en PostgreSQL",
+        "Encriptar la tabla de usuarios en reposo de forma transparente"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 197,
+      "pregunta": "La restricción 'PRIMARY KEY' asegura de forma nativa a nivel del motor relacional que los datos de la columna clave:",
+      "opciones": [
+        "Sean siempre cadenas de texto de tipo VARCHAR de longitud fija",
+        "Sean únicos en toda la tabla y no admitan valores indeterminados o nulos under any circumstance",
+        "Se almacenen encriptados mediante algoritmos simétricos avanzados",
+        "Pertenezcan obligatoriamente a una entidad de tipo débil"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 198,
+      "pregunta": "Al diseñar un modelo de datos conceptual, los atributos de una entidad se grafican mediante:",
+      "opciones": [
+        "Rectángulos de borde continuo grueso",
+        "Óvalos o elipses conectados a la entidad mediante líneas",
+        "Rombos con letras en mayúsculas",
+        "Triángulos invertidos con la leyenda 'CONSTRAINTS'"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 199,
+      "pregunta": "Si un analista requiere resguardar los datos mientras viajan por la red pública entre la aplicación cliente y la base de datos Fintech, debe activar:",
+      "opciones": [
+        "Encriptación en reposo",
+        "Encriptación en tránsito (o movimiento)",
+        "La Primera Forma Normal de manera estricta",
+        "Un índice secundario balanceado de tipo Hash"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 200,
+      "pregunta": "El operador de conjunto 'IN' de SQL es lógicamente equivalente a encadenar múltiples comparaciones de igualdad utilizando el operador lógico:",
+      "opciones": [
+        "AND",
+        "OR",
+        "NOT",
+        "BETWEEN"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 201,
+      "pregunta": "¿Qué describe conceptualmente la Segunda Forma Normal (2FN) respecto a las claves compuestas?",
+      "opciones": [
+        "Permite celdas con listas de valores si son del mismo tipo",
+        "Elimina las dependencias parciales, exigiendo que todo atributo no clave dependa de la clave primaria completa",
+        "Fuerza a que todos los atributos sean strings",
+        "Exige la eliminación completa de claves foráneas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 202,
+      "pregunta": "En la tabla de la Fintech llamada 'cuenta', ¿cuál es la clave primaria definida en el DDL?",
+      "opciones": [
+        "cod_usuario",
+        "num_cuenta",
+        "tipo_cuenta",
+        "saldo_final"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 203,
+      "pregunta": "Si una consulta contiene 'WHERE saldo_final > 2000 AND tipo_cuenta <> 'Ahorros'', ¿qué cuentas serán excluidas de los resultados?",
+      "opciones": [
+        "Cuentas con saldo menor a 2000 únicamente",
+        "Cuentas de tipo 'Ahorros' y cuentas con saldo menor o igual a 2000",
+        "Todas las cuentas corrientes",
+        "Ninguna, la sintaxis del operador es inválida"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 204,
+      "pregunta": "En un diagrama ER, ¿cómo se diferencia gráficamente un atributo multivaluado de uno normal?",
+      "opciones": [
+        "El multivaluado es un óvalo con línea discontinua",
+        "El multivaluado es un óvalo con doble línea concéntrica",
+        "El multivaluado es un rectángulo regular",
+        "No existe distinción gráfica alguna"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 205,
+      "pregunta": "En el ciclo de vida de una base de datos, la fase en la cual se definen los requerimientos de los usuarios y los objetivos generales del sistema es:",
+      "opciones": [
+        "Diseño Lógico",
+        "Análisis",
+        "Implementación",
+        "Captura"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 206,
+      "pregunta": "En la terminología formal de bases de datos relacionales, una cabecera de columna recibe el nombre técnico de:",
+      "opciones": [
+        "Tupla",
+        "Atributo",
+        "Relación",
+        "Dominio"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 207,
+      "pregunta": "¿Qué comando SQL de tipo DDL se utiliza para definir un nuevo contenedor lógico u objeto organizador llamado esquema?",
+      "opciones": [
+        "CREATE DATABASE",
+        "CREATE SCHEMA",
+        "CREATE TABLE",
+        "CREATE CONSTRAINT"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 208,
+      "pregunta": "La restricción que impide explícitamente el ingreso de valores duplicados en una columna, pero permite la existencia de valores nulos se denomina:",
+      "opciones": [
+        "PRIMARY KEY",
+        "UNIQUE",
+        "NOT NULL",
+        "CHECK"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 209,
+      "pregunta": "En PostgreSQL, ¿cuál es el tipo de dato recomendado para números enteros auto-incrementales en claves primarias simples?",
+      "opciones": [
+        "INTEGER",
+        "SERIAL",
+        "NUMERIC",
+        "BIGINT"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 210,
+      "pregunta": "¿Qué comando DML se debe emplear para modificar registros ya existentes dentro de una tabla relacional?",
+      "opciones": [
+        "INSERT INTO",
+        "UPDATE",
+        "DELETE FROM",
+        "ALTER TABLE"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 211,
+      "pregunta": "¿Qué carácter comodín de la cláusula LIKE representa exactamente un solo carácter en una búsqueda por patrones de texto?",
+      "opciones": [
+        "%",
+        "_",
+        "*",
+        "?"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 212,
+      "pregunta": "La operación JOIN que devuelve únicamente las filas que presentan coincidencias exactas en ambas tablas vinculadas se conoce como:",
+      "opciones": [
+        "LEFT JOIN",
+        "INNER JOIN",
+        "RIGHT JOIN",
+        "FULL OUTER JOIN"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 213,
+      "pregunta": "¿Qué función de agregación calcula el promedio de los valores de una columna de tipo numérico?",
+      "opciones": [
+        "SUM()",
+        "AVG()",
+        "COUNT()",
+        "MIN()"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 214,
+      "pregunta": "Para filtrar los resultados basados en una función de agregación después de realizar un agrupamiento de datos, se debe emplear la cláusula:",
+      "opciones": [
+        "WHERE",
+        "HAVING",
+        "ORDER BY",
+        "LIMIT"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 215,
+      "pregunta": "¿Con qué comando DDL se inicia la definición de una expresión de tabla común (CTE) temporal en SQL Avanzado?",
+      "opciones": [
+        "CREATE",
+        "WITH",
+        "SELECT",
+        "EXPLAIN"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 216,
+      "pregunta": "Los índices de tipo B-Tree son estructuras balanceadas de búsqueda optimizadas principalmente con el fin de mejorar el rendimiento en operaciones de:",
+      "opciones": [
+        "Escritura (INSERT/UPDATE)",
+        "Lectura y consulta (SELECT)",
+        "Eliminación física (DROP)",
+        "Encriptación en tránsito"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 217,
+      "pregunta": "En la gestión de seguridad de PostgreSQL, ¿qué comando se encarga de retirar permisos de acceso específicos sobre una tabla a un rol determinado?",
+      "opciones": [
+        "GRANT",
+        "REVOKE",
+        "DENY",
+        "DELETE PERMISSION"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 218,
+      "pregunta": "Una copia de seguridad que respalda exclusivamente las modificaciones y cambios producidos desde la última copia guardada se denomina:",
+      "opciones": [
+        "Copia Completa",
+        "Copia Incremental",
+        "Auditoría de Inserción",
+        "Encriptación en reposo"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 219,
+      "pregunta": "El proceso técnico que convierte la información sensible en un formato ilegible para prevenir accesos no autorizados se conoce como:",
+      "opciones": [
+        "Normalización",
+        "Encriptación",
+        "Auditoría",
+        "Desnormalización"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 220,
+      "pregunta": "El proceso técnico de registrar todas las actividades y accesos a datos sensibles para rastrear acciones sospechosas se denomina:",
+      "opciones": [
+        "Encriptación en tránsito",
+        "Auditoría",
+        "Optimización de consultas",
+        "Generalización"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 221,
+      "pregunta": "Si un analista de datos observa un rombo con doble contorno continuo en un diagrama ER, esto indica que la relación es de tipo:",
+      "opciones": [
+        "Relación unaria recursiva",
+        "Relación débil (asociada a una entidad débil)",
+        "Relación ternaria de grado 3",
+        "Especialización jerárquica disjunta"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 222,
+      "pregunta": "¿Qué tipo de anomalía ocurre si al borrar una orden de compra se elimina también la única dirección física existente de un proveedor en el sistema?",
+      "opciones": [
+        "Anomalía de Inserción",
+        "Anomalía de Eliminación",
+        "Anomalía de Actualización",
+        "Violación de clave foránea"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 223,
+      "pregunta": "En la solución del ejercicio práctico de la Clase 6, ¿en qué tabla quedó registrado el campo 'CiudadID' como clave foránea para cumplir con la 3FN?",
+      "opciones": [
+        "Tabla de Facturas",
+        "Tabla de Clientes",
+        "Tabla de Productos",
+        "Tabla de Detalles de Factura"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 224,
+      "pregunta": "Dada la expresión 'WHERE email_usuario NOT LIKE '%@correo.com'', ¿cuál de los siguientes correos electrónicos será ADMITIDO por el filtro?",
+      "opciones": [
+        "juan@correo.com",
+        "maria@email.com",
+        "pedro@correo.com.ar",
+        "Todos los anteriores"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 225,
+      "pregunta": "En el modelo físico del archivo 'Practica_SQL.pdf', ¿cuál es el tipo de dato asignado al campo de fecha de un pedido?",
+      "opciones": [
+        "VARCHAR(50)",
+        "DATE",
+        "TIMESTAMP WITH TIME ZONE",
+        "INTEGER"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 226,
+      "pregunta": "La definición conceptual: 'Una cosa u objeto en el mundo real que es distinguible de todos los demás objetos' corresponde formalmente a:",
+      "opciones": [
+        "Un Atributo",
+        "Una Entidad",
+        "Una Relación",
+        "Un Dominio de datos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 227,
+      "pregunta": "Si representamos en un diagrama ER la entidad 'Alumno' derivada de 'Persona' con atributos particulares como 'Promedio', estamos realizando una:",
+      "opciones": [
+        "Generalización",
+        "Especialización",
+        "Normalización en 3FN",
+        "Asociación unaria recursiva"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 228,
+      "pregunta": "En el modelo relacional puro, ¿qué es lo que define el tipo de dato y el conjunto de valores posibles admisibles para una columna?",
+      "opciones": [
+        "La Tupla",
+        "El Dominio",
+        "El Esquema",
+        "La Clave Primaria"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 229,
+      "pregunta": "¿Qué comando del lenguaje DDL se encarga de instanciar la estructura lógica de una tabla especificando sus restricciones?",
+      "opciones": [
+        "CREATE DATABASE",
+        "CREATE TABLE",
+        "CREATE SCHEMA",
+        "ALTER TABLE"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 230,
+      "pregunta": "La restricción CHECK aplicada a una columna de base de datos relacional sirve para:",
+      "opciones": [
+        "Establecer un valor predeterminado por omisión",
+        "Verificar que los valores de la columna cumplan una condición lógica específica",
+        "Garantizar la integridad referencial externa",
+        "Impedir de forma absoluta el ingreso de valores nulos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 231,
+      "pregunta": "¿Cuál es la sintaxis nativa de PostgreSQL correcta para agregar un nuevo registro a la tabla de usuarios?",
+      "opciones": [
+        "ADD ROW INTO usuario VALUES (...);",
+        "INSERT INTO usuario (columnas) VALUES (valores);",
+        "UPDATE usuario SET DATA = (valores);",
+        "CREATE RECORD IN usuario VALUES (...);"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 232,
+      "pregunta": "Para limpiar por completo los datos de una tabla sin eliminar la definición de sus columnas del esquema relacional, usamos el comando DML:",
+      "opciones": [
+        "DROP TABLE",
+        "DELETE FROM nombre_tabla;",
+        "REMOVE TABLE",
+        "ALTER TABLE CLEAR"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 233,
+      "pregunta": "El operador de comparación estándar de SQL utilizado para denotar desigualdad o diferencia entre dos valores es:",
+      "opciones": [
+        "!=",
+        "<>",
+        "Ambas opciones (A y B) son correctas y aceptadas en motores como PostgreSQL",
+        "None of the above"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 234,
+      "pregunta": "¿Qué tipo de JOIN relacional se encarga de retornar todos los registros de la tabla de la derecha y las filas correspondientes de la izquierda?",
+      "opciones": [
+        "LEFT JOIN",
+        "RIGHT JOIN",
+        "INNER JOIN",
+        "FULL OUTER JOIN"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 235,
+      "pregunta": "¿Qué valor arroja de forma resumida la función de agregación MAX() al aplicarse sobre una columna de tipo numérico?",
+      "opciones": [
+        "La cantidad de celdas no vacías de la columna",
+        "El valor numérico más alto registrado en dicha columna",
+        "El promedio ponderado de los registros indexados",
+        "La suma total de las claves primarias"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 236,
+      "pregunta": "En SQL Avanzado, una subconsulta que arroja como resultado un único valor elemental compuesto por una fila y una columna se define como:",
+      "opciones": [
+        "Subconsulta de fila",
+        "Subconsulta escalar",
+        "Subconsulta de tabla",
+        "Expresión de tabla común (CTE)"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 237,
+      "pregunta": "La optimización de consultas a través del análisis brindado por el comando EXPLAIN busca principalmente regular:",
+      "opciones": [
+        "El tiempo de respuesta y el uso eficiente de recursos de CPU, memoria y disco",
+        "La cantidad de caracteres permitidos en las columnas de tipo TEXT",
+        "El proceso de asignación de roles mediante sentencias GRANT",
+        "El cumplimiento formal de la Primera Forma Normal"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 238,
+      "pregunta": "En seguridad de datos, el concepto de cifrado de contraseñas o números de tarjetas de crédito almacenados en discos físicos corresponde a:",
+      "opciones": [
+        "Encriptación en tránsito",
+        "Encriptación en reposo",
+        "Auditoría relacional",
+        "Normalización de la 3FN"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 239,
+      "pregunta": "En la solución brindada para la práctica de la Clase 5, ¿cuál es el comando utilizado para limitar el resultado del SELECT a sólo las 3 primeras filas?",
+      "opciones": [
+        "LIMIT 3",
+        "TOP 3Rows",
+        "ROWNUM <= 3",
+        "FIRST 3"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 240,
+      "pregunta": "En el modelo jerárquico relacional de especialización de la Clase 3, la entidad de nivel superior 'Persona' comparte con sus niveles inferiores:",
+      "opciones": [
+        "Únicamente los índices de tipo Hash",
+        "Sus atributos comunes compartidos (ej. id_persona, nombre y apellido)",
+        "Las restricciones de tipo CHECK de saldo final",
+        "Ningún elemento, las entidades operan de forma aislada"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 241,
+      "pregunta": "En el modelo relacional formal, el encabezado o nombre descriptivo asignado a una tabla se conoce técnicamente como:",
+      "opciones": [
+        "Tupla",
+        "Relación",
+        "Atributo",
+        "Dominio"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 242,
+      "pregunta": "La restricción de integridad UNIQUE aplicada a una columna de tipo de datos texto de longitud variable (VARCHAR) garantiza:",
+      "opciones": [
+        "Que no se puedan ingresar cadenas de texto en minúsculas",
+        "La imposibilidad de registrar valores repetidos idénticos en esa columna específica de la tabla",
+        "Que el campo se comporte como entero auto-incremental SERIAL",
+        "La indexación balanceada forzosa en estructuras B-Tree"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 243,
+      "pregunta": "Para filtrar registros numéricos que se encuentran comprendidos estrictamente dentro de un rango determinado inclusive, empleamos el operador de conjunto:",
+      "opciones": [
+        "IN",
+        "BETWEEN",
+        "LIKE",
+        "MATCH"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 244,
+      "pregunta": "La operación combinatoria LEFT JOIN garantiza de forma absoluta la devolución de:",
+      "opciones": [
+        "Únicamente los registros con claves duplicadas en la tabla derecha",
+        "Todas las filas de la tabla declarada a la izquierda del comando JOIN",
+        "Sólo aquellas filas con correspondencia exacta en ambos extremos",
+        "Las vistas lógicas indexadas sin persistencia en disco"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 245,
+      "pregunta": "¿Qué función de agregación determina la cantidad de filas que cumplen con una condición lógica dentro de un SELECT?",
+      "opciones": [
+        "SUM()",
+        "COUNT()",
+        "AVG()",
+        "MAX()"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 246,
+      "pregunta": "La optimización de bases de datos mediante la creación y mantenimiento estratégico de índices balanceados (B-Tree) impacta de forma directa en:",
+      "opciones": [
+        "La reducción drástica de tiempos de consulta en búsquedas y lecturas",
+        "El aumento inmediato de velocidad en comandos de inserción masiva",
+        "La eliminación física de dependencias transitivas de la 3FN",
+        "La asignación automática de privilegios de seguridad"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 247,
+      "pregunta": "En seguridad de la información, el comando SQL formal que se encarga de inhabilitar privilegios otorgados previamente a un rol es:",
+      "opciones": [
+        "GRANT",
+        "REVOKE",
+        "DENY PRIVILEGES",
+        "DELETE ROLE"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 248,
+      "pregunta": "El modelado conceptual basado en diagramas Entidad-Relación (ER) se sitúa dentro de qué etapa del ciclo de vida de bases de datos:",
+      "opciones": [
+        "Análisis de requerimientos preliminares",
+        "Diseño Conceptual",
+        "Diseño Lógico relacional",
+        "Implementación física SQL"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 249,
+      "pregunta": "Una tabla relacional incumple de forma flagrante con la Primera Forma Normal (1FN) si se observa que:",
+      "opciones": [
+        "Posee una única clave primaria de tipo SERIAL",
+        "Contiene celdas compuestas con múltiples valores o listas en su interior violating la atomicidad",
+        "Tiene más de 5 claves foráneas apuntando al exterior",
+        "Se encuentra almacenada dentro de un esquema lógico en PostgreSQL"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 250,
+      "pregunta": "El objetivo fundamental del proceso de normalización hasta la 3FN es:",
+      "opciones": [
+        "Aumentar el consumo de hardware y CPU del servidor relacional",
+        "Eliminar redundancias injustificadas y prevenir anomalías destructivas de inserción, actualización y borrado de datos",
+        "Forzar el uso exclusivo de subconsultas correlacionadas escalares",
+        "Automatizar las copias de seguridad incrementales nocturnas"
+      ],
+      "respuesta_correcta": 1
+    }
+  ]
+}
