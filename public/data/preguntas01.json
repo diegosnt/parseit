@@ -1,0 +1,2610 @@
+{
+  "materia": "Tall. Gest. Proy. Dig.",
+  "titulo": "Unidades 1,2,3,4",
+  "duracion": 120,
+  "preguntas_para_aprobar": 175,
+  "fecha": "2026-05-20",
+  "version": "1.0",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué significa la palabra 'Cynefin' en galés?",
+      "opciones": [
+        "Complejidad",
+        "Hábitat",
+        "Dominio",
+        "Entorno"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Quién creó el modelo Cynefin y en qué año?",
+      "opciones": [
+        "Peter Drucker en 1990",
+        "Dave Snowden en 1999",
+        "Jeff Sutherland en 2001",
+        "Ken Schwaber en 1995"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Cuántos dominios tiene el modelo Cynefin?",
+      "opciones": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 4,
+      "pregunta": "En el dominio Simple del modelo Cynefin, las decisiones se basan en:",
+      "opciones": [
+        "Buenas prácticas",
+        "Mejores prácticas",
+        "Experimentación",
+        "Acción inmediata"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 5,
+      "pregunta": "En el dominio Complicado del modelo Cynefin, ¿qué tipo de prácticas se aplican?",
+      "opciones": [
+        "Mejores prácticas",
+        "Prácticas novedosas",
+        "Buenas prácticas",
+        "Prácticas emergentes"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 6,
+      "pregunta": "En el dominio Complejo de Cynefin, las soluciones emergen a través de:",
+      "opciones": [
+        "La aplicación de normas estrictas",
+        "La intervención de expertos",
+        "La experimentación",
+        "La acción inmediata"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 7,
+      "pregunta": "¿Cuál es la característica principal del dominio Caótico en el modelo Cynefin?",
+      "opciones": [
+        "La relación causa-efecto es obvia",
+        "Requiere análisis de expertos",
+        "No hay una relación clara entre causa y efecto",
+        "La situación es predecible"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 8,
+      "pregunta": "¿Cuándo se aplica el dominio del Desorden en Cynefin?",
+      "opciones": [
+        "Cuando la situación es completamente caótica",
+        "Cuando no está claro en cuál de los otros dominios se encuentra la situación",
+        "Cuando hay múltiples expertos en desacuerdo",
+        "Cuando el proyecto está en crisis"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 9,
+      "pregunta": "En el dominio Caótico de Cynefin, la acción prioritaria es:",
+      "opciones": [
+        "Analizar en detalle antes de actuar",
+        "Consultar expertos inmediatamente",
+        "Actuar rápidamente para estabilizar la situación",
+        "Experimentar con soluciones iterativas"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 10,
+      "pregunta": "¿En qué dominio de Cynefin se trabaja con 'prácticas emergentes'?",
+      "opciones": [
+        "Simple",
+        "Complicado",
+        "Complejo",
+        "Caótico"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 11,
+      "pregunta": "¿En qué dominio de Cynefin se trabaja con 'prácticas novedosas'?",
+      "opciones": [
+        "Simple",
+        "Complicado",
+        "Complejo",
+        "Caótico"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 12,
+      "pregunta": "La relación causa-efecto en el dominio Complicado de Cynefin:",
+      "opciones": [
+        "Es obvia y directa",
+        "Solo puede percibirse retrospectivamente",
+        "Requiere análisis y la intervención de expertos",
+        "No existe"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 13,
+      "pregunta": "En el dominio Simple de Cynefin, ¿cuáles son las restricciones?",
+      "opciones": [
+        "Sin restricciones",
+        "Restricciones que se permiten",
+        "Restricciones rígidas",
+        "Restricciones que se gestionan"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 14,
+      "pregunta": "El uso de protocolos de seguridad estándar como HTTPS y AES-256 en una billetera virtual se ubica en el dominio Cynefin:",
+      "opciones": [
+        "Complicado",
+        "Complejo",
+        "Caótico",
+        "Simple (Obvio)"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 15,
+      "pregunta": "El cumplimiento de normativas KYC, AML y PCI-DSS en una billetera virtual se ubica en el dominio Cynefin:",
+      "opciones": [
+        "Simple",
+        "Complicado",
+        "Complejo",
+        "Caótico"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 16,
+      "pregunta": "El diseño de UX para aumentar la confianza de usuarios en una billetera virtual se ubica en el dominio Cynefin:",
+      "opciones": [
+        "Simple",
+        "Complicado",
+        "Complejo",
+        "Caótico"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 17,
+      "pregunta": "Un fraude masivo o hackeo de cuentas en una billetera virtual se ubica en el dominio Cynefin:",
+      "opciones": [
+        "Simple",
+        "Complicado",
+        "Complejo",
+        "Caótico"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 18,
+      "pregunta": "¿Qué pregunta clave ayuda a identificar si un problema pertenece al dominio Simple de Cynefin?",
+      "opciones": [
+        "¿Es una crisis sin precedentes?",
+        "¿El problema es incierto y cambia constantemente?",
+        "¿El problema tiene una solución clara y probada?",
+        "¿Requiere análisis o experiencia especializada?"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 19,
+      "pregunta": "Según el gráfico de Cynefin de la cátedra, el eje horizontal representa:",
+      "opciones": [
+        "Conocimiento sobre el Requerimiento",
+        "Herramientas / Recursos",
+        "Nivel de Complejidad",
+        "Tiempo de respuesta"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 20,
+      "pregunta": "Según el gráfico de Cynefin de la cátedra, el eje vertical representa:",
+      "opciones": [
+        "Herramientas / Recursos",
+        "Nivel de incertidumbre",
+        "Conocimiento sobre el Requerimiento",
+        "Velocidad de decisión"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 21,
+      "pregunta": "¿Qué significa la sigla VUCA?",
+      "opciones": [
+        "Volatility, Uncertainty, Complexity, Ambiguity",
+        "Vision, Understanding, Clarity, Agility",
+        "Velocity, Unpredictability, Chaos, Agility",
+        "Variability, Uncertainty, Confusion, Adaptability"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 22,
+      "pregunta": "¿Cuál de las siguientes NO es una dimensión del modelo VUCA?",
+      "opciones": [
+        "Volatilidad",
+        "Complejidad",
+        "Fragilidad",
+        "Ambigüedad"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 23,
+      "pregunta": "La 'Volatilidad' en el modelo VUCA hace referencia a:",
+      "opciones": [
+        "Falta de claridad en la información",
+        "Cambios rápidos e inesperados",
+        "Interacción de múltiples factores",
+        "Falta de previsibilidad sobre el futuro"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 24,
+      "pregunta": "La 'Incertidumbre' en el modelo VUCA hace referencia a:",
+      "opciones": [
+        "Cambios rápidos e inesperados",
+        "Interacción de múltiples factores",
+        "Falta de previsibilidad sobre el futuro",
+        "Falta de claridad en la información"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 25,
+      "pregunta": "La 'Complejidad' en el modelo VUCA hace referencia a:",
+      "opciones": [
+        "Falta de previsibilidad sobre el futuro",
+        "Interacción de múltiples factores",
+        "Cambios rápidos e inesperados",
+        "Falta de claridad en la información"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 26,
+      "pregunta": "La 'Ambigüedad' en el modelo VUCA hace referencia a:",
+      "opciones": [
+        "Cambios rápidos e inesperados",
+        "Falta de previsibilidad sobre el futuro",
+        "Interacción de múltiples factores",
+        "Falta de claridad en la información"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 27,
+      "pregunta": "¿Cuál es una estrategia recomendada para hacer frente a la Volatilidad en el desarrollo de una billetera virtual?",
+      "opciones": [
+        "Contratar un equipo legal de compliance",
+        "Lanzar un MVP y mejorarlo con base en datos de uso",
+        "Realizar pruebas A/B de funcionalidades",
+        "Diversificar los ingresos del negocio"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 28,
+      "pregunta": "¿Cuál es una estrategia recomendada para hacer frente a la Incertidumbre en el desarrollo de una billetera virtual?",
+      "opciones": [
+        "Utilizar microservicios y APIs abiertas",
+        "Implementar pruebas piloto y alianzas antes del lanzamiento masivo",
+        "Diseñar una UX intuitiva y accesible",
+        "Monitorear tendencias tecnológicas continuamente"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 29,
+      "pregunta": "¿Cuál es una estrategia para enfrentar la Complejidad en una billetera virtual según el análisis VUCA?",
+      "opciones": [
+        "Implementar programas beta con usuarios",
+        "Definir una propuesta de valor clara y diferencial",
+        "Conformar equipos multidisciplinarios con diseñadores UX, ingenieros de seguridad y especialistas fintech",
+        "Lanzar un MVP iterativo"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 30,
+      "pregunta": "¿Cuál es una estrategia para enfrentar la Ambigüedad en una billetera virtual según el análisis VUCA?",
+      "opciones": [
+        "Implementar arquitecturas escalables de microservicios",
+        "Aplicar Design Thinking y entrevistas con usuarios",
+        "Contratar equipos de compliance legal",
+        "Implementar servidores distribuidos para redundancia"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 31,
+      "pregunta": "Según el análisis VUCA, ¿qué riesgo representa la volatilidad del entorno para una billetera virtual?",
+      "opciones": [
+        "Riesgo de sanciones por incumplimiento normativo",
+        "Lo que hoy es innovador puede quedar obsoleto rápidamente",
+        "Dificultad para diferenciarse de la competencia",
+        "Baja adopción por parte de los usuarios"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 32,
+      "pregunta": "¿Cuál de los siguientes es un beneficio reconocido del análisis VUCA?",
+      "opciones": [
+        "Eliminar la incertidumbre del entorno",
+        "Garantizar el éxito del proyecto",
+        "Facilitar una mejor toma de decisiones",
+        "Predecir con exactitud el comportamiento del mercado"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 33,
+      "pregunta": "¿En qué ámbitos es útil aplicar el análisis VUCA?",
+      "opciones": [
+        "Solo en proyectos tecnológicos",
+        "Solo en organizaciones gubernamentales",
+        "En negocios, liderazgo, planificación estratégica y gestión de crisis",
+        "Solo en startups y empresas fintech"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 34,
+      "pregunta": "¿Qué significa la sigla BANI?",
+      "opciones": [
+        "Brittle, Agile, Nonlinear, Innovative",
+        "Brittle, Anxious, Nonlinear, Incomprehensible",
+        "Bold, Anxious, Networked, Incomprehensible",
+        "Brittle, Adaptive, Nonlinear, Intelligent"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 35,
+      "pregunta": "¿Cuál es la relación entre VUCA y BANI?",
+      "opciones": [
+        "Son modelos completamente independientes y sin relación",
+        "BANI reemplaza completamente a VUCA sin mantener ningún concepto",
+        "BANI es una evolución de VUCA que se adapta mejor a entornos de incertidumbre extrema",
+        "VUCA es una evolución posterior de BANI"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 36,
+      "pregunta": "¿A qué dimensión de VUCA corresponde 'Brittle' en el modelo BANI?",
+      "opciones": [
+        "Uncertainty",
+        "Complexity",
+        "Ambiguity",
+        "Volatility"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 37,
+      "pregunta": "¿A qué dimensión de VUCA corresponde 'Anxious' en el modelo BANI?",
+      "opciones": [
+        "Volatility",
+        "Uncertainty",
+        "Complexity",
+        "Ambiguity"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 38,
+      "pregunta": "¿A qué dimensión de VUCA corresponde 'Nonlinear' en el modelo BANI?",
+      "opciones": [
+        "Volatility",
+        "Uncertainty",
+        "Complexity",
+        "Ambiguity"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 39,
+      "pregunta": "¿A qué dimensión de VUCA corresponde 'Incomprehensible' en el modelo BANI?",
+      "opciones": [
+        "Volatility",
+        "Uncertainty",
+        "Complexity",
+        "Ambiguity"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 40,
+      "pregunta": "La 'Fragilidad' (Brittle) en el modelo BANI, aplicada a una billetera virtual, implica principalmente:",
+      "opciones": [
+        "Desconfianza de los usuarios hacia las fintechs",
+        "Riesgo de ciberataques, dependencia de infraestructuras y posibles interrupciones regulatorias",
+        "Dificultad para interpretar regulaciones cambiantes",
+        "Competencia con múltiples actores del mercado"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 41,
+      "pregunta": "La 'Ansiedad' (Anxious) en el modelo BANI, aplicada a una billetera virtual, implica principalmente:",
+      "opciones": [
+        "Riesgo de ciberataques directos",
+        "Preocupación de usuarios por privacidad de datos y desconfianza en fintechs nuevas",
+        "Dificultad para predecir el crecimiento del negocio",
+        "Regulaciones complejas difíciles de interpretar"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 42,
+      "pregunta": "La 'No linealidad' (Nonlinear) en el modelo BANI implica que:",
+      "opciones": [
+        "Los sistemas digitales son frágiles y pueden colapsar",
+        "Eventos impredecibles pueden tener efectos desproporcionados en el negocio",
+        "La información del entorno es difícil de comprender",
+        "Los usuarios sienten miedo frente a nuevas tecnologías"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 43,
+      "pregunta": "La 'Incomprensibilidad' (Incomprehensible) en el modelo BANI, aplicada a una billetera virtual, se relaciona con:",
+      "opciones": [
+        "El riesgo de ciberataques sofisticados",
+        "La desconfianza de los usuarios",
+        "Regulaciones que varían constantemente y son difíciles de interpretar",
+        "La fragilidad de la infraestructura tecnológica"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 44,
+      "pregunta": "¿Cuál es una estrategia recomendada para enfrentar la Fragilidad (Brittle) en BANI?",
+      "opciones": [
+        "Realizar entrevistas constantes con usuarios",
+        "Implementar seguridad de alto nivel, redundancia y planes de contingencia",
+        "Lanzar campañas de alfabetización financiera digital",
+        "Diseñar la billetera con múltiples escenarios normativos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 45,
+      "pregunta": "¿Cuál es una estrategia recomendada para enfrentar la Ansiedad (Anxious) en BANI?",
+      "opciones": [
+        "Implementar microservicios escalables",
+        "Utilizar inteligencia artificial para anticipar tendencias",
+        "Comunicación clara y transparente sobre protección de datos",
+        "Aplicar análisis en tiempo real con big data"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 46,
+      "pregunta": "¿Cuál es una estrategia recomendada para enfrentar la No linealidad (Nonlinear) en BANI?",
+      "opciones": [
+        "Contratar equipos de compliance legal",
+        "Realizar estudios constantes con usuarios reales",
+        "Diseñar infraestructura modular y adaptable, diversificar mercados",
+        "Obtener certificaciones de seguridad reconocidas"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 47,
+      "pregunta": "¿Cuál es una estrategia recomendada para enfrentar la Incomprensibilidad (Incomprehensible) en BANI?",
+      "opciones": [
+        "Implementar cifrado y autenticación multifactor",
+        "Servidores distribuidos para evitar caídas del sistema",
+        "Aprendizaje continuo, escucha activa y flexibilidad regulatoria",
+        "Campañas de alfabetización financiera para usuarios"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 48,
+      "pregunta": "Según el análisis BANI, ¿cuál es el principal impacto de un fallo de seguridad en una billetera virtual?",
+      "opciones": [
+        "Incremento de costos operativos",
+        "Pérdida de la confianza del usuario",
+        "Multas regulatorias inmediatas",
+        "Reducción de la velocidad de transacciones"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 49,
+      "pregunta": "Según el análisis BANI, la baja adopción de una billetera virtual puede deberse principalmente a:",
+      "opciones": [
+        "Altos costos de infraestructura",
+        "Que los usuarios no se sientan seguros al usarla",
+        "Falta de funcionalidades avanzadas",
+        "Competencia de bancos tradicionales con mejores tasas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 50,
+      "pregunta": "¿Cuál es la conclusión del análisis BANI aplicado a una billetera virtual?",
+      "opciones": [
+        "El éxito depende exclusivamente de la tecnología utilizada",
+        "Se debe seguir un camino fijo y predefinido de desarrollo",
+        "La billetera debe ser resiliente, generar confianza, adaptarse rápido y comprender mejor el entorno",
+        "La clave está solo en el cumplimiento normativo"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 51,
+      "pregunta": "¿Qué significa 'gestionar' según la cátedra?",
+      "opciones": [
+        "Ejecutar tareas técnicas de programación y desarrollo",
+        "Planificar, coordinar, supervisar y llevar a cabo actividades para alcanzar un objetivo de manera eficiente",
+        "Controlar los costos y tiempos de un proyecto",
+        "Supervisar al equipo de trabajo para que cumpla sus tareas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 52,
+      "pregunta": "¿En qué consiste la Gestión de Proyectos Digitales?",
+      "opciones": [
+        "Solo en el desarrollo de código y aplicaciones",
+        "En el proceso de planificar, ejecutar y monitorear proyectos que involucran tecnologías digitales",
+        "En la administración exclusiva de recursos financieros del proyecto",
+        "En la gestión del equipo de programadores"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 53,
+      "pregunta": "¿Cuál es la primera etapa de un proyecto según la cátedra?",
+      "opciones": [
+        "Planificación",
+        "Ejecución",
+        "Estudio Previo o Demanda",
+        "Seguimiento"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 54,
+      "pregunta": "¿Qué se realiza durante la etapa de Planificación de un proyecto?",
+      "opciones": [
+        "Se implementa el producto final y se realizan pruebas",
+        "Se refinan las tareas en función del framework definido y se establece cómo comenzar el desarrollo",
+        "Se supervisa el progreso del proyecto respecto del plan inicial",
+        "Se evalúa el rendimiento y se documentan lecciones aprendidas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 55,
+      "pregunta": "¿Qué ocurre durante la etapa de Ejecución de un proyecto?",
+      "opciones": [
+        "Se definen los objetivos y se identifican los recursos necesarios",
+        "Se refinan las tareas y se define el framework",
+        "Se crean los entregables, se realizan pruebas y se gestionan recursos",
+        "Se evalúa el rendimiento y se documentan lecciones aprendidas"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 56,
+      "pregunta": "¿Qué implica la etapa de Seguimiento en un proyecto?",
+      "opciones": [
+        "Entregar el producto final al cliente",
+        "Supervisar el progreso respecto del plan inicial y realizar ajustes para mantener alcance, presupuesto y plazo",
+        "Definir los objetivos y recursos del proyecto",
+        "Implementar las funcionalidades planificadas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 57,
+      "pregunta": "¿Qué incluye la etapa de Cierre de un proyecto?",
+      "opciones": [
+        "La definición de objetivos y cronograma",
+        "La implementación real y pruebas del producto",
+        "La evaluación del rendimiento, documentación de lecciones aprendidas y entrega de resultados",
+        "La supervisión del progreso y ajuste de desviaciones"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 58,
+      "pregunta": "¿Cuántas etapas tiene un proyecto según la cátedra?",
+      "opciones": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 59,
+      "pregunta": "¿Cuál de los siguientes es un beneficio de la Gestión de Proyectos para las organizaciones?",
+      "opciones": [
+        "Eliminar todos los riesgos del proyecto",
+        "Garantizar que no existan cambios de alcance",
+        "Mejora la alineación estratégica con los objetivos de la organización",
+        "Asegurar que el equipo nunca cometa errores"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 60,
+      "pregunta": "¿Cuál es el foco principal de la Gestión de Proyectos según la cátedra?",
+      "opciones": [
+        "Desarrollar el mayor número de funcionalidades posible",
+        "Garantizar que los proyectos se entreguen con éxito, dentro del presupuesto y en el plazo establecido",
+        "Minimizar el equipo de trabajo para reducir costos",
+        "Maximizar la cantidad de sprints de desarrollo"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 61,
+      "pregunta": "¿Cuál de los siguientes recursos administra la gestión de proyectos?",
+      "opciones": [
+        "Solo recursos financieros",
+        "Solo recursos humanos y tecnológicos",
+        "Recursos humanos, financieros, tecnológicos y materiales",
+        "Solo recursos materiales y tecnológicos"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 62,
+      "pregunta": "¿Qué beneficio de la gestión de proyectos se relaciona con la revisión y documentación de lecciones aprendidas?",
+      "opciones": [
+        "Entrega a Tiempo",
+        "Mejora la Calidad",
+        "Aprendizaje y Mejora continua",
+        "Satisfacción del cliente"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 63,
+      "pregunta": "¿Qué beneficio de la gestión de proyectos permite mantener un alto nivel de calidad en los entregables?",
+      "opciones": [
+        "Control adecuado",
+        "Entrega a tiempo",
+        "Alineación estratégica",
+        "Aprendizaje continuo"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 64,
+      "pregunta": "La 'Gestión de riesgos' en la etapa de Seguimiento implica:",
+      "opciones": [
+        "Eliminar todos los riesgos antes de iniciar el proyecto",
+        "Identificar y gestionar los riesgos que podrían afectar al proyecto",
+        "Ignorar los riesgos menores para no retrasar la ejecución",
+        "Delegar todos los riesgos al cliente o usuario final"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 65,
+      "pregunta": "Según la cátedra, ¿cuál es la nota promedio requerida para aprobar la materia?",
+      "opciones": [
+        "6 o superior",
+        "7 o superior",
+        "8 o superior",
+        "5 o superior"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 66,
+      "pregunta": "¿Cuántas clases tiene el taller según el programa de la materia?",
+      "opciones": [
+        "12 clases",
+        "14 clases",
+        "16 clases",
+        "18 clases"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 67,
+      "pregunta": "¿Qué porcentaje de asistencia se requiere en la materia?",
+      "opciones": [
+        "60%",
+        "70%",
+        "75%",
+        "80%"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 68,
+      "pregunta": "¿Cuánto tiempo tiene el grupo para exponer el Trabajo Práctico?",
+      "opciones": [
+        "5 a 10 minutos",
+        "10 a 20 minutos",
+        "20 a 30 minutos",
+        "30 a 45 minutos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 69,
+      "pregunta": "¿Qué se exige respecto a la participación del grupo en la presentación del Trabajo Práctico?",
+      "opciones": [
+        "Solo el líder del grupo debe exponer",
+        "Al menos la mitad del grupo debe exponer",
+        "Todos los alumnos deben exponer durante la presentación",
+        "Es a libre elección de cada integrante"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 70,
+      "pregunta": "¿Cuál de las siguientes herramientas NO es sugerida por la cátedra para la presentación del Trabajo Práctico?",
+      "opciones": [
+        "PowerPoint",
+        "Canva",
+        "Prezi",
+        "Excel"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 71,
+      "pregunta": "Según el modelo Cynefin, el dominio Simple tiene como proceso: Creación de sentido → Categorización → Respuesta. ¿Cuál es el equivalente en el dominio Complejo?",
+      "opciones": [
+        "Acción → Creación de sentido → Respuesta",
+        "Creación de sentido → Análisis → Respuesta",
+        "Sondeo → Creación de sentido → Respuesta",
+        "Categorización → Análisis → Respuesta"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 72,
+      "pregunta": "Según el modelo Cynefin, ¿cuál es el proceso para el dominio Complicado?",
+      "opciones": [
+        "Sondeo → Creación de sentido → Respuesta",
+        "Acción → Creación de sentido → Respuesta",
+        "Creación de sentido → Categorización → Respuesta",
+        "Creación de sentido → Análisis → Respuesta"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 73,
+      "pregunta": "Según el modelo Cynefin, ¿cuál es el proceso para el dominio Caótico?",
+      "opciones": [
+        "Creación de sentido → Análisis → Respuesta",
+        "Sondeo → Creación de sentido → Respuesta",
+        "Acción → Creación de sentido → Respuesta",
+        "Creación de sentido → Categorización → Respuesta"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 74,
+      "pregunta": "¿Cuál de las siguientes afirmaciones sobre el modelo Cynefin es correcta?",
+      "opciones": [
+        "En el dominio Simple, se permiten todas las restricciones",
+        "En el dominio Caótico, se aplican buenas prácticas existentes",
+        "En el dominio Complicado, se gestionan las restricciones",
+        "En el dominio Complejo, se aplican restricciones rígidas"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 75,
+      "pregunta": "¿Cuál es la acción recomendada en el dominio Simple de Cynefin cuando hay bajo conocimiento sobre el requerimiento?",
+      "opciones": [
+        "Experimentar y aprender",
+        "Velocidad y automatización",
+        "Consultar expertos especializados",
+        "Actuar de inmediato para contener la situación"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 76,
+      "pregunta": "¿Cuál es la acción recomendada en el dominio Complejo de Cynefin?",
+      "opciones": [
+        "Velocidad y automatización",
+        "Buenas prácticas, procesos y procedimientos",
+        "Prácticas ágiles e iteración incremental",
+        "Ideas y soluciones emergentes"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 77,
+      "pregunta": "En el dominio Caótico de Cynefin, ¿qué tipo de soluciones se necesitan?",
+      "opciones": [
+        "Mejores prácticas establecidas",
+        "Buenas prácticas y procesos",
+        "Ideas y soluciones emergentes",
+        "Iteración incremental con prácticas ágiles"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 78,
+      "pregunta": "¿Qué permite hacer al equipo de proyecto el modelo Cynefin en contextos ágiles?",
+      "opciones": [
+        "Eliminar la incertidumbre del proyecto",
+        "Comprender la complejidad y lidiar con situaciones complejas y caóticas",
+        "Predecir con exactitud el resultado del proyecto",
+        "Evitar la necesidad de retroalimentación continua"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 79,
+      "pregunta": "¿Cuál de las siguientes características NO promueve el modelo Cynefin en la gestión de proyectos?",
+      "opciones": [
+        "Adaptabilidad",
+        "Flexibilidad",
+        "Retroalimentación continua",
+        "Planificación rígida e inamovible"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 80,
+      "pregunta": "Según el análisis VUCA aplicado a la billetera virtual, ¿qué tecnologías emergentes generan volatilidad?",
+      "opciones": [
+        "Solo cambios en las regulaciones gubernamentales",
+        "Blockchain, inteligencia artificial y pagos digitales",
+        "Fusiones de empresas fintech exclusivamente",
+        "Cambios en preferencias de los consumidores únicamente"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 81,
+      "pregunta": "Según el análisis VUCA, ¿cuál es una fuente de Incertidumbre para una billetera virtual?",
+      "opciones": [
+        "Evolución de blockchain e inteligencia artificial",
+        "Mercado altamente competitivo con múltiples actores",
+        "Regulaciones gubernamentales en constante cambio sobre pagos digitales",
+        "Diferentes interpretaciones sobre necesidades del usuario"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 82,
+      "pregunta": "Según el análisis VUCA, ¿cuál es una fuente de Complejidad para una billetera virtual?",
+      "opciones": [
+        "Movimientos en la industria fintech y fusiones",
+        "Dudas sobre la aceptación del producto por parte del público",
+        "Integración con múltiples sistemas financieros y cumplimiento de normativas de protección",
+        "Falta de claridad en modelos de monetización sostenibles"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 83,
+      "pregunta": "Según el análisis VUCA, ¿cuál es una fuente de Ambigüedad para una billetera virtual?",
+      "opciones": [
+        "Evolución tecnológica con blockchain e IA",
+        "Regulaciones gubernamentales cambiantes",
+        "Integración con múltiples sistemas bancarios",
+        "Mercado altamente competitivo y falta de claridad en modelos de monetización"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 84,
+      "pregunta": "¿Qué tipo de arquitectura se recomienda para hacer frente a la volatilidad en una billetera virtual?",
+      "opciones": [
+        "Arquitectura monolítica tradicional",
+        "Arquitectura escalable con microservicios y APIs abiertas",
+        "Arquitectura serverless exclusivamente",
+        "Arquitectura basada en blockchain obligatoriamente"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 85,
+      "pregunta": "¿Qué es un MVP en el contexto del desarrollo ágil de una billetera virtual?",
+      "opciones": [
+        "Maximum Viable Product: el producto con todas las funcionalidades posibles",
+        "Most Valuable Process: el proceso más valioso del desarrollo",
+        "Minimum Viable Product: versión mínima funcional del producto para aprender con datos reales",
+        "Multi-Version Platform: plataforma con múltiples versiones simultáneas"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 86,
+      "pregunta": "¿Cuál es la conclusión del análisis VUCA aplicado a una billetera virtual?",
+      "opciones": [
+        "La clave está únicamente en la seguridad tecnológica",
+        "El modelo VUCA permite anticipar riesgos y desarrollar una billetera resiliente, adaptable y competitiva",
+        "El éxito depende de seguir estrictamente las mejores prácticas del mercado",
+        "La volatilidad del mercado hace imposible planificar a largo plazo"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 87,
+      "pregunta": "¿Cuál de los siguientes es un ejemplo de situación que pertenece al dominio Caótico de Cynefin en el contexto de una billetera virtual?",
+      "opciones": [
+        "Diseño de una interfaz de usuario intuitiva",
+        "Elección de arquitectura tecnológica",
+        "Colapso del sistema en producción o hackeo masivo",
+        "Configuración de pasarelas de pago con documentación clara"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 88,
+      "pregunta": "¿Cuál de los siguientes es un ejemplo del dominio Complicado de Cynefin en el contexto de una billetera virtual?",
+      "opciones": [
+        "Uso de protocolos estándar como HTTPS",
+        "Elección de arquitectura tecnológica o cumplimiento normativo en distintos países",
+        "Pruebas A/B para validar usabilidad",
+        "Respuesta ante un ataque de ciberseguridad"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 89,
+      "pregunta": "¿Cuál de las siguientes es una práctica del dominio Complejo de Cynefin en el contexto de una billetera virtual?",
+      "opciones": [
+        "Aplicar regulaciones ya establecidas como KYC",
+        "Configurar pasarelas de pago con documentación estándar",
+        "Implementar pruebas A/B y ajustar con feedback real de usuarios",
+        "Actuar de inmediato ante una crisis de seguridad"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 90,
+      "pregunta": "¿Cuál de las siguientes preguntas ayuda a ubicar un problema en el dominio Complejo de Cynefin?",
+      "opciones": [
+        "¿El problema tiene una solución clara y probada?",
+        "¿Hay solución pero requiere análisis especializado?",
+        "¿El problema es incierto y cambia constantemente?",
+        "¿Es una crisis o problema sin precedentes que requiere acción inmediata?"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 91,
+      "pregunta": "Según la cátedra, ¿cuál de las siguientes situaciones corresponde al dominio del Desorden en Cynefin en el contexto de una billetera virtual?",
+      "opciones": [
+        "Un hackeo masivo que requiere respuesta inmediata",
+        "Diseño de UX para mejorar confianza del usuario",
+        "Diferentes áreas del equipo tienen visiones distintas sobre prioridades e incertidumbre sobre la estrategia de monetización",
+        "Aplicación de protocolos de encriptación estándar"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 92,
+      "pregunta": "¿Cuál es el beneficio de ubicar un producto digital en un cuadrante del modelo Cynefin?",
+      "opciones": [
+        "Garantizar el éxito del proyecto eliminando riesgos",
+        "Entender mejor su nivel de complejidad y tomar decisiones estratégicas adecuadas",
+        "Definir automáticamente el framework de desarrollo a utilizar",
+        "Reemplazar la necesidad de análisis de riesgos tradicional"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 93,
+      "pregunta": "Según la cátedra, si un producto se ubica en el dominio Complicado de Cynefin, ¿qué implica?",
+      "opciones": [
+        "Que se debe experimentar e iterar constantemente",
+        "Que se necesita análisis y expertos para abordarlo",
+        "Que hay una solución simple y directa disponible",
+        "Que debe actuarse de inmediato sin análisis previo"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 94,
+      "pregunta": "¿Qué error común advierte el modelo Cynefin en la gestión de proyectos?",
+      "opciones": [
+        "Usar demasiados expertos para problemas simples",
+        "Intentar resolver un problema complejo con soluciones rígidas o sobreanalizar uno que ya tiene una mejor práctica clara",
+        "Aplicar metodologías ágiles en todos los contextos sin excepción",
+        "Delegar la toma de decisiones únicamente a expertos técnicos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 95,
+      "pregunta": "¿Cómo se asignan eficientemente los recursos según las recomendaciones del modelo Cynefin?",
+      "opciones": [
+        "Siempre buscar expertos independientemente del dominio",
+        "Automatizar solo en caos, experimentar en lo simple",
+        "Si es simple, automatizar; si es complicado, buscar expertos; si es complejo, invertir en pruebas con usuarios",
+        "Priorizar la velocidad en todos los dominios por igual"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 96,
+      "pregunta": "¿Qué rol cumple el modelo Cynefin en la transformación cultural o digital de las organizaciones?",
+      "opciones": [
+        "Sirve exclusivamente para gestión de crisis",
+        "Es útil para comprender contextos y tomar decisiones estratégicas en esos procesos de transformación",
+        "Solo aplica en organizaciones del sector tecnológico",
+        "Reemplaza completamente las metodologías ágiles"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 97,
+      "pregunta": "Según el análisis BANI, ¿qué certificaciones y alianzas se recomiendan para una billetera virtual frente a la dimensión 'Anxious'?",
+      "opciones": [
+        "Certificaciones ISO de gestión de calidad",
+        "Certificaciones de seguridad y asociaciones con entidades confiables para generar credibilidad",
+        "Certificaciones de metodologías ágiles como SAFe o Scrum",
+        "Alianzas exclusivamente con otras fintechs del sector"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 98,
+      "pregunta": "Según el análisis BANI, ¿qué herramienta tecnológica se recomienda para hacer frente a la No linealidad (Nonlinear)?",
+      "opciones": [
+        "Blockchain para todas las transacciones",
+        "Inteligencia artificial y big data para anticipar tendencias en tiempo real",
+        "Autenticación multifactor para todos los usuarios",
+        "Microservicios para separar funcionalidades del backend"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 99,
+      "pregunta": "¿Cuál de los siguientes factores NO genera Fragilidad (Brittle) en una billetera virtual según BANI?",
+      "opciones": [
+        "Riesgo de ciberataques y filtraciones de datos",
+        "Dependencia de infraestructuras digitales que pueden fallar",
+        "Preocupación de los usuarios por la privacidad de sus datos",
+        "Posibles interrupciones por cambios regulatorios"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 100,
+      "pregunta": "¿Cuál de las siguientes afirmaciones integra correctamente los tres modelos vistos (VUCA, BANI, Cynefin)?",
+      "opciones": [
+        "Los tres modelos son equivalentes y siempre llevan a las mismas conclusiones estratégicas",
+        "VUCA y BANI describen características del entorno mientras que Cynefin clasifica los dominios del problema para orientar la toma de decisiones",
+        "Cynefin reemplaza a VUCA y BANI para el análisis de contextos digitales",
+        "BANI es solo aplicable a proyectos de ciberseguridad mientras que VUCA es para proyectos de UX"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 101,
+      "pregunta": "¿Cuál es la responsabilidad principal del Project Manager en un proyecto digital?",
+      "opciones": [
+        "Planificación, ejecución y seguimiento del proyecto",
+        "Gestionar únicamente el presupuesto del proyecto",
+        "Desarrollar el código del producto digital"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 102,
+      "pregunta": "¿Cuál de los siguientes NO es un rol típico en proyectos digitales?",
+      "opciones": [
+        "Delivery Manager",
+        "Gerente de Riesgos",
+        "Gerente de Producción Industrial"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 103,
+      "pregunta": "¿Qué son los KPIs en el contexto de la gestión de proyectos digitales?",
+      "opciones": [
+        "Indicadores Clave de Desempeño",
+        "Kits de Planificación Integrada",
+        "Conocimientos Prácticos de Implementación"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 104,
+      "pregunta": "Según el material, ¿cuál es el propósito principal de los datos en la gestión de proyectos?",
+      "opciones": [
+        "Aumentar el número de reuniones del equipo",
+        "Proporcionar una base objetiva para la toma de decisiones y seguimiento del progreso",
+        "Reemplazar la necesidad de un Project Manager"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 105,
+      "pregunta": "¿Qué herramienta de gestión de proyectos pertenece a Microsoft?",
+      "opciones": [
+        "Jira Software",
+        "Trello",
+        "Microsoft Project (Plan 3)"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 106,
+      "pregunta": "¿Cuál de las siguientes es una dinámica de gestión de proyectos?",
+      "opciones": [
+        "Daily Stand-up",
+        "Evaluación de costos fijos",
+        "Análisis de rentabilidad anual"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 107,
+      "pregunta": "¿Qué es un Producto Digital?",
+      "opciones": [
+        "Un bien físico producido con tecnología avanzada",
+        "Un bien o servicio que se crea, distribuye y consume en formato electrónico o digital",
+        "Cualquier producto vendido a través de una tienda física"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 108,
+      "pregunta": "¿Cuál de los siguientes es un ejemplo de producto digital?",
+      "opciones": [
+        "Un automóvil eléctrico",
+        "Un libro electrónico (e-book)",
+        "Una prenda de ropa fabricada con robots"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 109,
+      "pregunta": "¿Cuál es una ventaja de los productos digitales para la empresa?",
+      "opciones": [
+        "Requieren grandes inversiones en materias primas",
+        "Tienen alto costo de distribución física",
+        "Poseen escalabilidad: se pueden vender a clientes ilimitados sin costos adicionales significativos"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 110,
+      "pregunta": "¿Cuál de las siguientes es una ventaja de los productos digitales para el cliente?",
+      "opciones": [
+        "Requieren envío físico con tiempos de espera",
+        "Acceso inmediato después de la compra",
+        "Siempre son más caros que sus versiones físicas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 111,
+      "pregunta": "¿A qué siglo corresponde la Industria 1.0?",
+      "opciones": [
+        "Siglo XIX",
+        "Siglo XX",
+        "Siglo XVIII"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 112,
+      "pregunta": "¿Cuál es la definición de un Negocio NO Digital?",
+      "opciones": [
+        "Empresas que operan principalmente en el mundo físico sin depender de tecnologías en línea",
+        "Empresas que usan computadoras pero no tienen sitio web",
+        "Empresas que venden productos físicos a través de e-commerce"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 113,
+      "pregunta": "¿Cuál de los siguientes es un ejemplo de negocio NO digital?",
+      "opciones": [
+        "Netflix",
+        "Spotify",
+        "Una explotación agrícola"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 114,
+      "pregunta": "¿Qué modelo de negocio digital ofrece una versión básica gratuita junto con características premium pagas?",
+      "opciones": [
+        "Modelo de suscripción",
+        "Modelo freemium",
+        "Modelo de afiliados"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 115,
+      "pregunta": "¿Cuál es un ejemplo de plataforma de tipo Marketplace mencionada en el material?",
+      "opciones": [
+        "Netflix y Spotify",
+        "Airbnb y Uber",
+        "Microsoft 365 y Salesforce"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 116,
+      "pregunta": "¿Cuál de las siguientes es una característica de los negocios digitales?",
+      "opciones": [
+        "Operan solo en horario comercial",
+        "Pueden funcionar 24x7",
+        "Requieren presencia física obligatoria para atender clientes"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 117,
+      "pregunta": "Según Roger D. en 'The Digital Transformation Playbook', ¿qué es una plataforma?",
+      "opciones": [
+        "Un software de gestión empresarial",
+        "Un negocio que crea valor facilitando interacciones directas entre dos o más tipos distintos de clientes",
+        "Una red social corporativa para gestión interna"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 118,
+      "pregunta": "¿Cuál es la diferencia clave entre el modelo de industria tradicional y el modelo de plataforma?",
+      "opciones": [
+        "La industria tradicional facilita interacciones entre múltiples partes",
+        "La plataforma crea productos para sus clientes directamente",
+        "La industria tradicional controla los medios de producción; la plataforma facilita el acceso directo a productos o servicios"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 119,
+      "pregunta": "¿Qué es el 'Efecto de Red' en el modelo de plataforma?",
+      "opciones": [
+        "La capacidad de la plataforma de funcionar sin conexión a internet",
+        "Que a medida que se unen más usuarios, la plataforma se vuelve más valiosa",
+        "La velocidad de la red utilizada por la plataforma"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 120,
+      "pregunta": "¿Cuál es una debilidad del modelo de plataforma?",
+      "opciones": [
+        "No puede llegar a mercados globales",
+        "Dependencia tecnológica: cualquier fallo técnico impacta la operación",
+        "No permite fusionarse con otros modelos de negocio"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 121,
+      "pregunta": "¿Qué responde la MISIÓN de una organización?",
+      "opciones": [
+        "¿Qué aspira a lograr la empresa a largo plazo?",
+        "¿Por qué existe la empresa y qué hace?",
+        "¿Cuál es la contribución social de la empresa al planeta?"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 122,
+      "pregunta": "¿En qué se diferencia la VISIÓN de la MISIÓN?",
+      "opciones": [
+        "La visión se centra en lo que la empresa hace actualmente; la misión en el futuro",
+        "La visión se enfoca en metas a largo plazo; la misión describe el presente de la organización",
+        "La visión es para uso interno; la misión es para comunicar a los clientes"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 123,
+      "pregunta": "¿Qué pregunta responde el PROPÓSITO de una organización?",
+      "opciones": [
+        "¿Qué hace la empresa hoy?",
+        "¿Cuánto quiere crecer la empresa?",
+        "¿Por qué existe la empresa y cuál es su contribución significativa a la sociedad?"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 124,
+      "pregunta": "¿Qué modelo de negocio digital utilizan empresas como SaaS (Software as a Service)?",
+      "opciones": [
+        "Publicidad en línea",
+        "Acceso a software a través de una suscripción",
+        "Contenido generado por usuarios"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 125,
+      "pregunta": "¿Cuál de las siguientes herramientas se mencionan como herramienta de gestión de proyectos en el material?",
+      "opciones": [
+        "AutoCAD y Photoshop",
+        "Notion y Monday.com",
+        "Excel y Word únicamente"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 126,
+      "pregunta": "¿Qué aspecto evalúa la 'Evaluación del Alcance' como métrica de gestión de proyectos?",
+      "opciones": [
+        "Si el equipo trabaja horas extra",
+        "Si el alcance del proyecto se mantiene dentro de los límites definidos o si hay cambios y cuál es su impacto",
+        "La satisfacción del cliente con el producto final"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 127,
+      "pregunta": "¿Cuál es un beneficio del modelo de plataforma en cuanto a recursos?",
+      "opciones": [
+        "Requiere mayor infraestructura física que el modelo tradicional",
+        "Permite conectar directamente proveedores con consumidores, reduciendo costos de intermediación",
+        "Limita la cantidad de proveedores que pueden participar"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 128,
+      "pregunta": "¿Cuál es una característica de los productos digitales respecto al impacto ambiental?",
+      "opciones": [
+        "Generan más residuos que los productos físicos",
+        "Su distribución no requiere materiales físicos ni envíos, por lo que puede tener menor impacto ambiental",
+        "Consumen más energía que los productos físicos en toda su cadena"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 129,
+      "pregunta": "¿Qué modelo de negocio digital describe plataformas como Facebook e Instagram donde los usuarios crean y comparten contenido?",
+      "opciones": [
+        "Modelo de datos (DaaS)",
+        "Plataforma de contenido generado por usuarios (UGC)",
+        "Modelo freemium"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 130,
+      "pregunta": "Según el material, ¿cuál es la clave para el éxito de un negocio digital?",
+      "opciones": [
+        "Tener la mayor cantidad de empleados posible",
+        "Entender a la audiencia objetivo, ofrecer un valor genuino y aprovechar las tecnologías digitales de manera efectiva",
+        "Copiar el modelo de negocio de los competidores más exitosos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 131,
+      "pregunta": "¿Cómo se define un cliente en el contexto organizacional?",
+      "opciones": [
+        "Una persona, empresa u organización que adquiere bienes o servicios de otro individuo, empresa u organización",
+        "Un individuo que utiliza directamente el producto o servicio sin adquirirlo",
+        "Una persona que interactúa exclusivamente a través de medios digitales"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 132,
+      "pregunta": "¿Qué distingue al Cliente Digital del cliente tradicional?",
+      "opciones": [
+        "Que adquiere bienes únicamente en tiendas físicas",
+        "Que realiza transacciones comerciales o interactúa con una empresa principalmente a través de medios digitales y tecnologías en línea",
+        "Que no tiene relación con redes sociales ni tecnología"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 133,
+      "pregunta": "¿Cuáles son los tres pasos para trabajar orientados al cliente?",
+      "opciones": [
+        "Segmentar, publicitar y vender",
+        "Conocer a las personas, elegir a los clientes potenciales y crear propuestas",
+        "Investigar, desarrollar y lanzar el producto"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 134,
+      "pregunta": "¿Cuáles son los criterios sociodemográficos utilizados para seleccionar grupos de personas en las organizaciones?",
+      "opciones": [
+        "Gustos, preferencias, hobbies y comportamiento de compra",
+        "Sexo, generación, regionalización, estado civil y nivel socioeconómico",
+        "Edad, profesión, ingresos y tipo de dispositivo utilizado"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 135,
+      "pregunta": "¿Por qué lo sociodemográfico no es suficiente para segmentar clientes?",
+      "opciones": [
+        "Porque los datos demográficos son difíciles de obtener",
+        "Porque dos personas con las mismas características demográficas pueden tener comportamientos completamente distintos",
+        "Porque las organizaciones no cuentan con herramientas para recopilarlo"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 136,
+      "pregunta": "¿Qué es el Grupo Objetivo o Target?",
+      "opciones": [
+        "El grupo de empleados de una empresa que diseña el producto",
+        "El grupo específico de personas hacia quienes una empresa dirige sus esfuerzos de marketing y ventas, con mayor probabilidad de interesarse en el producto",
+        "El conjunto de inversores que financian el desarrollo de un producto"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 137,
+      "pregunta": "¿Qué aspecto del cliente digital incluye valores, intereses, personalidad y estilo de vida?",
+      "opciones": [
+        "Demografía",
+        "Comportamiento de compra",
+        "Psicografía"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 138,
+      "pregunta": "¿Qué es el Mapa de Empatía?",
+      "opciones": [
+        "Un diagrama de flujo que describe los procesos internos de una empresa",
+        "Un formato que busca describir al cliente ideal analizando seis aspectos relacionados a los sentimientos del ser humano",
+        "Una herramienta para analizar la competencia en el mercado"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 139,
+      "pregunta": "¿Cuáles son las seis dimensiones que analiza el Mapa de Empatía?",
+      "opciones": [
+        "Edad, género, ingresos, educación, ocupación y ubicación",
+        "Objetivos, frustraciones, marcas, canales, personalidad y bio",
+        "Qué ve, qué escucha, qué piensa y siente, qué habla y hace, cuáles son sus dolores y cuáles son sus necesidades"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 140,
+      "pregunta": "En el Mapa de Empatía, ¿qué representa la dimensión '¿Qué escucha?'?",
+      "opciones": [
+        "Únicamente los sonidos del entorno físico del cliente",
+        "Las influencias de diversas fuentes como amigos, jefe y personas influyentes sobre el cliente",
+        "Los podcasts y músicas que consume el cliente"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 141,
+      "pregunta": "¿Qué se entiende por 'dolores' en el Mapa de Empatía?",
+      "opciones": [
+        "Los problemas de salud que afectan al cliente",
+        "Las dudas, miedos, frustraciones y obstáculos que debe superar para consumir el producto",
+        "Los gastos económicos asociados a la compra"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 142,
+      "pregunta": "¿Cuál es una de las utilidades principales del Mapa de Empatía?",
+      "opciones": [
+        "Definir el precio de venta del producto",
+        "Guiar al equipo en adquirir una mentalidad centrada en el cliente y crear una experiencia de usuario uniforme",
+        "Establecer los plazos de entrega del proyecto"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 143,
+      "pregunta": "¿Qué es una Proto-Buyer Persona?",
+      "opciones": [
+        "Un cliente real identificado mediante encuestas directas",
+        "Una representación ficticia y detallada de un grupo específico de usuarios que comparten características, comportamientos y necesidades similares, basada en fuentes indirectas",
+        "Un documento legal que describe los derechos del consumidor"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 144,
+      "pregunta": "¿Cuándo se recomienda usar la técnica de Proto-Buyer Persona?",
+      "opciones": [
+        "Cuando se cuenta con un presupuesto amplio para investigación de usuarios",
+        "Cuando no hay recursos para llevar a cabo investigaciones directas sobre los usuarios",
+        "Solo en empresas con más de 500 empleados"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 145,
+      "pregunta": "¿Cuál de los siguientes es un propósito de la Proto-Buyer Persona?",
+      "opciones": [
+        "Calcular el retorno de inversión de campañas de marketing",
+        "Mejorar la experiencia del usuario al comprender sus expectativas y preferencias para diseñar interfaces más intuitivas",
+        "Establecer los costos de producción del producto"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 146,
+      "pregunta": "Según Peter Senge, ¿qué es el Pensamiento Sistémico?",
+      "opciones": [
+        "Una metodología para dividir proyectos en tareas pequeñas y secuenciales",
+        "Una disciplina para ver el todo en lugar de las partes, ver patrones de cambio y comprender la interconexión sutil que le da al sistema vivo su carácter único",
+        "Un conjunto de herramientas para gestionar equipos remotos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 147,
+      "pregunta": "¿Cuál de las siguientes es una característica de las organizaciones entendidas como Sistemas Complejos Adaptativos?",
+      "opciones": [
+        "La jerarquía rígida y el liderazgo top-down",
+        "La adaptabilidad ante cambios del contexto y la entrega de valor frecuente",
+        "La especialización individual y el trabajo en silos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 148,
+      "pregunta": "¿Cuál es una característica de la organización ágil según el artículo de Steve Denning?",
+      "opciones": [
+        "Está enfocada hacia sí misma y defiende las ventajas existentes",
+        "Tiene mentalidad fija y se enfoca en generar para los accionistas",
+        "Está enfocada hacia el afuera, tiene mentalidad de crecimiento y entrega valor para el cliente"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 149,
+      "pregunta": "¿Cuál es la diferencia principal entre la organización burocrática y la organización ágil?",
+      "opciones": [
+        "La organización burocrática usa tecnología avanzada y la ágil no",
+        "La organización burocrática tiene estructura jerárquica top-down con alta especialización, mientras la ágil tiene redarquía, mayor autonomía y es cross-funcional",
+        "La organización ágil tiene más empleados que la burocrática"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 150,
+      "pregunta": "¿Qué establece la Ley de la Centralidad del Cliente?",
+      "opciones": [
+        "Que el cliente siempre tiene razón y debe ser compensado ante cualquier reclamo",
+        "Que crear un proceso de negocios en torno a las necesidades del cliente significa actuar proactivamente, con foco permanente en ofrecerle valor",
+        "Que el área de atención al cliente debe tener el mayor presupuesto de la empresa"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 151,
+      "pregunta": "¿Por qué 'el cliente es lo primero' puede ser solo un eslogan en organizaciones burocráticas?",
+      "opciones": [
+        "Porque no tienen área de marketing",
+        "Porque si para responder a las necesidades del cliente dependen de elementos que no se comunican entre sí, o su objetivo se reduce a generar ganancias, el foco real no está en el cliente",
+        "Porque los empleados no están capacitados para atender clientes"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 152,
+      "pregunta": "¿Qué establece la Ley del Equipo Pequeño en organizaciones ágiles?",
+      "opciones": [
+        "Que los equipos deben tener menos de 3 personas para ser eficientes",
+        "Que el trabajo debe realizarse en pequeños equipos autónomos multifuncionales que trabajen en ciclos cortos, obteniendo feedback continuo del cliente",
+        "Que cada empleado trabaja de forma individual sin coordinación"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 153,
+      "pregunta": "¿Qué es la Ley de la Red en el contexto ágil?",
+      "opciones": [
+        "La normativa que regula el uso de internet en las empresas",
+        "El principio que permite a toda la organización ser ágil, conformando una red fluida y transparente de equipos de alto desempeño enfocados en ofrecer valor al cliente",
+        "Un estándar de conectividad para equipos remotos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 154,
+      "pregunta": "¿Qué es un Stakeholder?",
+      "opciones": [
+        "Un empleado de nivel gerencial de una organización",
+        "Una persona, grupo u organización que afecta o puede verse afectado por las acciones de una organización",
+        "Un proveedor externo de tecnología"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 155,
+      "pregunta": "¿Cuál es la diferencia entre Cliente y Usuario como tipos de Stakeholder?",
+      "opciones": [
+        "Son sinónimos y se usan indistintamente en todas las industrias",
+        "El cliente adquiere el producto, mientras que el usuario lo utiliza directamente; en algunas industrias pueden ser la misma persona",
+        "El cliente paga más y el usuario paga menos por el mismo producto"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 156,
+      "pregunta": "¿Cuál es el rol del Patrocinador (Sponsor) como Stakeholder?",
+      "opciones": [
+        "Diseñar la interfaz visual del producto",
+        "Proveer recursos y apoyo para el proyecto, siendo el Stakeholder ante quien todos deben rendir cuentas al final",
+        "Gestionar el equipo de desarrollo día a día"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 157,
+      "pregunta": "¿Por qué es importante identificar a los Stakeholders en un proyecto?",
+      "opciones": [
+        "Para aumentar el presupuesto disponible del proyecto",
+        "Para conocer los grupos de interés involucrados, entender con quién asociarse, dar visibilidad de avances y tener claros los riesgos y oportunidades",
+        "Para reducir la cantidad de reuniones del equipo"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 158,
+      "pregunta": "En la matriz de Intereses y Poderes de Stakeholders, ¿cómo se debe tratar a un stakeholder con alto poder y alto interés?",
+      "opciones": [
+        "Monitorear sin empeñar mucho esfuerzo",
+        "Mantener informados",
+        "Mantener cerca y gestionar en mayor grado (Promotores)"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 159,
+      "pregunta": "¿Cuál es una responsabilidad de los Stakeholders en un proyecto ágil?",
+      "opciones": [
+        "Escribir el código de la aplicación",
+        "Proveer visión, objetivos y lineamientos, y brindar feedback frecuente con un alto nivel de engagement con el equipo",
+        "Diseñar el logo y la identidad visual del producto"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 160,
+      "pregunta": "¿Qué representa el cuadrante 'Indiferentes' en la matriz de Stakeholders?",
+      "opciones": [
+        "Stakeholders con alto poder y alto interés en la organización",
+        "Stakeholders con bajo poder y bajo interés, ante quienes se recomienda monitorear sin empeñar mucho esfuerzo",
+        "Stakeholders con alto interés pero bajo poder, a quienes se debe mantener informados"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 161,
+      "pregunta": "¿Qué es el 'Viaje del cliente'?",
+      "opciones": [
+        "El camino que recorre un cliente a lo largo de los diferentes puntos de contacto con las organizaciones",
+        "El proceso interno de desarrollo de un producto digital",
+        "La estrategia de precios que aplica una empresa para atraer clientes"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 162,
+      "pregunta": "¿Cuál es el objetivo principal del mapa de Viaje del cliente?",
+      "opciones": [
+        "Reducir los costos de producción del producto",
+        "Capturar y mejorar la experiencia del cliente en cada punto de contacto",
+        "Definir el stack tecnológico del equipo de desarrollo"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 163,
+      "pregunta": "¿Qué permite identificar el Viaje del cliente?",
+      "opciones": [
+        "Los costos de infraestructura del producto",
+        "Los roles necesarios dentro del equipo de desarrollo",
+        "Puntos fuertes y áreas de mejora para optimizar marketing, ventas y atención al cliente"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 164,
+      "pregunta": "En el ejemplo del restaurant presentado en clase, ¿cuáles son las etapas del Viaje del cliente?",
+      "opciones": [
+        "Reserva, llegada, pedido, pago y reseña online",
+        "Entrada al local, atención de camareros, elegir mesa, ver la carta, elegir platos, comer y pagar",
+        "Publicidad, visita, consumo y fidelización"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 165,
+      "pregunta": "¿Qué herramienta se utiliza para definir y comunicar de forma clara la visión de un producto digital en entornos ágiles?",
+      "opciones": [
+        "El Diagrama de Gantt",
+        "El Product Vision Board",
+        "El Mapa de Empatía"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 166,
+      "pregunta": "¿Quién es el autor del Product Vision Board mencionado en la presentación?",
+      "opciones": [
+        "Jeff Sutherland",
+        "Roman Pichler",
+        "Ken Schwaber"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 167,
+      "pregunta": "¿Cuáles son las cuatro secciones principales del canvas del Product Vision Board?",
+      "opciones": [
+        "Visión, Target Group, Needs, Product y Business Goals",
+        "Problema, Solución, Métricas y Ventaja Competitiva",
+        "Objetivo, Equipo, Tecnología y Presupuesto"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 168,
+      "pregunta": "En el Product Vision Board, ¿qué representa la sección 'Vision'?",
+      "opciones": [
+        "Los indicadores clave de rendimiento del producto",
+        "Una frase corta y significativa que describe lo que el producto quiere ser y resultar",
+        "El segmento de clientes al que se dirige el producto"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 169,
+      "pregunta": "En el Product Vision Board, ¿qué se coloca en la sección 'Product'?",
+      "opciones": [
+        "Las metas, objetivos y valor percibido del negocio",
+        "Las necesidades detectadas por el grupo objetivo",
+        "Todas las características que satisfacen necesidades, resuelven problemas o generan valor para el grupo objetivo"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 170,
+      "pregunta": "¿Para qué sirve el Product Vision Board en la gestión de proyectos digitales?",
+      "opciones": [
+        "Solo para presentaciones al cliente externo",
+        "Para alinear stakeholders, guiar el alcance funcional, ayudar a definir el MVP y servir como norte durante el desarrollo",
+        "Únicamente para documentar el presupuesto del proyecto"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 171,
+      "pregunta": "¿Qué significan las siglas KPI?",
+      "opciones": [
+        "Key Product Indicators",
+        "Key Performance Indicators",
+        "Key Project Insights"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 172,
+      "pregunta": "¿Qué son los KPI?",
+      "opciones": [
+        "Medidas cuantificables utilizadas para evaluar el desempeño de un producto o empresa en relación con sus objetivos y metas",
+        "Reuniones periódicas del equipo ágil para revisar el sprint",
+        "Documentos de requerimientos funcionales del producto"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 173,
+      "pregunta": "¿De qué depende la elección de los KPI según el material de clase?",
+      "opciones": [
+        "Del tamaño del equipo de desarrollo",
+        "De la naturaleza del producto, el mercado y las metas específicas que se persiguen",
+        "Del presupuesto disponible para el proyecto"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 174,
+      "pregunta": "¿Cuál de los siguientes es un ejemplo de KPI mencionado en clase?",
+      "opciones": [
+        "Número de sprints completados en el trimestre",
+        "Retención de clientes: tasas de abandono y retención para evaluar si los clientes continúan usando el producto",
+        "Cantidad de user stories definidas en el backlog"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 175,
+      "pregunta": "¿Qué significan las siglas OKR?",
+      "opciones": [
+        "Operational Key Results",
+        "Objectives and Key Results",
+        "Organizational Knowledge Repository"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 176,
+      "pregunta": "¿Cuál es la principal diferencia entre OKR y KPI según la clase?",
+      "opciones": [
+        "Los OKR se usan solo en startups y los KPI en empresas grandes",
+        "Los OKR se centran en el proceso y cómo se logran los resultados, mientras que los KPI documentan resultados como valores medibles",
+        "Los KPI son cualitativos y los OKR son cuantitativos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 177,
+      "pregunta": "¿Cuáles son los dos componentes de un OKR?",
+      "opciones": [
+        "Objetivo (O) y Resultados Clave (KR)",
+        "Objetivo (O) y KPI asociados",
+        "Output (O) y Key Risks (KR)"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 178,
+      "pregunta": "¿Cómo debe ser el Objetivo (O) dentro de un OKR?",
+      "opciones": [
+        "Técnico, detallado y centrado en actividades operativas",
+        "Inspirador, cualitativo y alineado con la visión y estrategia del producto",
+        "Numérico, acotado y fácilmente alcanzable en una semana"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 179,
+      "pregunta": "¿Cómo deben ser los Resultados Clave (KR) dentro de un OKR?",
+      "opciones": [
+        "Cualitativos y orientados a describir el proceso de trabajo",
+        "Cuantificables, medibles y orientados a la acción",
+        "Subjetivos y basados en la percepción del equipo"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 180,
+      "pregunta": "Según la clase, ¿con qué frecuencia deben revisarse y actualizarse los OKR?",
+      "opciones": [
+        "Solo al inicio y al final del proyecto",
+        "Periódicamente, para asegurar que sigan siendo relevantes y ajustar estrategias si es necesario",
+        "Una vez al año durante la planificación anual"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 181,
+      "pregunta": "¿Qué son los Objetivos SMART mencionados en relación a los OKR?",
+      "opciones": [
+        "Objetivos que se definen de forma Específica, Medible, Alcanzable, Relevante y con Tiempo definido",
+        "Objetivos definidos por inteligencia artificial para maximizar la eficiencia",
+        "Objetivos establecidos únicamente por la alta dirección de la empresa"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 182,
+      "pregunta": "¿Qué tres acciones clave se mencionan para averiguar qué quiere el cliente y cuánto está dispuesto a pagar?",
+      "opciones": [
+        "Diseñar, prototipar y testear",
+        "Investigar, escuchar y analizar",
+        "Planificar, ejecutar y evaluar"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 183,
+      "pregunta": "Al elegir las características de un producto, ¿cuál de los siguientes aspectos debe considerarse según la clase?",
+      "opciones": [
+        "Solo las preferencias del equipo de desarrollo",
+        "Viabilidad técnica, viabilidad económica, necesidades del cliente y diferenciación en el mercado",
+        "Únicamente el costo de desarrollo sin considerar la experiencia del usuario"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 184,
+      "pregunta": "¿Qué implica la 'Viabilidad técnica' al definir características de un producto?",
+      "opciones": [
+        "Analizar el costo de desarrollo, producción y mantenimiento de las características",
+        "Asegurar que las características sean factibles técnicamente y evaluar si se tiene capacidad para implementarlas",
+        "Verificar que el producto cumpla con las regulaciones legales del mercado"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 185,
+      "pregunta": "¿Qué rol en el equipo de desarrollo se encarga de representar al usuario y priorizar el backlog del producto?",
+      "opciones": [
+        "Scrum Master",
+        "Product Owner",
+        "QA"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 186,
+      "pregunta": "¿Qué roles de equipo se mencionan en la clase como parte de un equipo de desarrollo digital?",
+      "opciones": [
+        "CEO, CFO, COO y CTO",
+        "Arquitecto de Software, Product Owner, Scrum Master, DevOps, UX/UI, Project Manager y QA",
+        "Analista, Programador Junior y Programador Senior"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 187,
+      "pregunta": "¿Qué representa la matriz de Impacto/Esfuerzo utilizada para evaluar tecnologías?",
+      "opciones": [
+        "Un cuadrante que clasifica tecnologías según su costo de licencia y facilidad de instalación",
+        "Un cuadrante que divide las opciones en: alto impacto/poco esfuerzo, alto impacto/mucho esfuerzo, bajo impacto/poco esfuerzo y bajo impacto/mucho esfuerzo",
+        "Un gráfico que mide la popularidad de las tecnologías en el mercado laboral"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 188,
+      "pregunta": "En el ejemplo del Product Vision Board para una fintech, ¿cuál es la visión declarada?",
+      "opciones": [
+        "Crear la app de pagos más rápida de América Latina para usuarios corporativos",
+        "Democratizar el acceso a servicios financieros simples, rápidos y seguros para personas no bancarizadas en LATAM",
+        "Desarrollar una plataforma de inversiones para jóvenes profesionales bancarizados"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 189,
+      "pregunta": "¿Qué significa CFR en el contexto del marco OKR presentado en clase?",
+      "opciones": [
+        "Control, Forecast y Reporting",
+        "Conversaciones, Feedback y Reconocimiento",
+        "Ciclo, Frecuencia y Revisión"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 190,
+      "pregunta": "Según el material, el desarrollo de productos es un proceso iterativo. ¿Qué implica esto?",
+      "opciones": [
+        "Que todas las características deben estar presentes desde la primera versión del producto",
+        "Que el producto no necesita actualizaciones una vez lanzado al mercado",
+        "Que puede lanzarse una versión inicial con características clave y luego agregar características adicionales en actualizaciones futuras"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 191,
+      "pregunta": "¿Cuál es la definición correcta de Agilidad?",
+      "opciones": [
+        "Conjunto de prácticas centradas en la flexibilidad, colaboración, iteración continua y entrega de valor al cliente",
+        "Metodología de planificación exhaustiva al inicio del proyecto con requerimientos fijos",
+        "Un proceso secuencial y predictivo para gestionar proyectos de software"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 192,
+      "pregunta": "¿Cuáles son los cuatro valores del Manifiesto Ágil según la presentación?",
+      "opciones": [
+        "Documentación, procesos, contratos y planificación",
+        "Individuos e interacciones, software funcional, colaboración con el cliente y respuesta al cambio",
+        "Velocidad, calidad, costo y tiempo"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 193,
+      "pregunta": "Según el Manifiesto Ágil, ¿con qué frecuencia se debe entregar software funcional?",
+      "opciones": [
+        "Una vez al año, al finalizar el proyecto completo",
+        "Cada seis meses como mínimo",
+        "Entre dos semanas y dos meses, con preferencia al período más corto posible"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 194,
+      "pregunta": "¿Cuál es el principio ágil número 7 del Manifiesto Ágil?",
+      "opciones": [
+        "La simplicidad es esencial",
+        "El software funcionando es la medida principal de progreso",
+        "Los equipos auto-organizados producen las mejores arquitecturas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 195,
+      "pregunta": "¿Cuáles son los tres pilares del Empirismo en Scrum?",
+      "opciones": [
+        "Velocidad, calidad y entrega",
+        "Transparencia, Inspección y Adaptación",
+        "Planificación, ejecución y revisión"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 196,
+      "pregunta": "En el contexto de la ejecución Predictiva (Waterfall), ¿qué elementos son FIJOS?",
+      "opciones": [
+        "Costo y cronograma",
+        "Los requerimientos",
+        "La calidad del producto"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 197,
+      "pregunta": "En la Gestión Ágil (proceso iterativo e incremental), ¿qué es NEGOCIABLE?",
+      "opciones": [
+        "El costo y el cronograma",
+        "La calidad del producto",
+        "Los requerimientos (alcance)"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 198,
+      "pregunta": "¿Cómo define la Guía Scrum a este framework?",
+      "opciones": [
+        "Un proceso rígido para gestionar proyectos de software con roles fijos",
+        "Un marco de trabajo ligero que ayuda a personas, equipos y organizaciones a generar valor a través de soluciones adaptables para problemas complejos",
+        "Una metodología de documentación exhaustiva para equipos de desarrollo"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 199,
+      "pregunta": "¿Cuáles son los cinco valores de Scrum?",
+      "opciones": [
+        "Velocidad, calidad, eficiencia, productividad y adaptación",
+        "Coraje, Foco, Compromiso, Respeto y Franqueza",
+        "Transparencia, inspección, adaptación, empirismo e iteración"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 200,
+      "pregunta": "¿Cuáles son los tres roles principales en un equipo Scrum?",
+      "opciones": [
+        "Gerente de Proyecto, Desarrolladores y Testers",
+        "Scrum Master, Product Owner y Equipo de Desarrollo",
+        "Líder Técnico, Analista y Programador"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 201,
+      "pregunta": "¿Cuál es la principal responsabilidad del Product Owner?",
+      "opciones": [
+        "Facilitar los eventos de Scrum y remover impedimentos del equipo",
+        "Escribir el código y realizar las pruebas del producto",
+        "Maximizar el valor del producto resultante del trabajo del equipo Scrum"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 202,
+      "pregunta": "¿Quién es la única persona con poder para cancelar un Sprint?",
+      "opciones": [
+        "El Scrum Master",
+        "El Product Owner",
+        "Cualquier miembro del Equipo de Desarrollo"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 203,
+      "pregunta": "¿Cómo se describe correctamente al Product Owner?",
+      "opciones": [
+        "Es un comité de personas que representan a los stakeholders",
+        "Es una persona, no un comité",
+        "Es el líder técnico del equipo de desarrollo"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 204,
+      "pregunta": "¿Cuál es el rol del Scrum Master en relación a la organización?",
+      "opciones": [
+        "Controlar el presupuesto y los recursos del proyecto",
+        "Liderar, capacitar y mentorear a la organización en su adopción de Scrum",
+        "Definir los requerimientos del producto junto a los stakeholders"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 205,
+      "pregunta": "¿Cuáles son los tres artefactos de Scrum?",
+      "opciones": [
+        "Daily Scrum, Sprint Review y Retrospectiva",
+        "Incremento, Product Backlog y Sprint Backlog",
+        "Épicas, Historias de Usuario y Tareas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 206,
+      "pregunta": "¿Cuántos eventos (ceremonias) tiene Scrum?",
+      "opciones": [
+        "Tres: Planificación, Daily Scrum y Retrospectiva",
+        "Cuatro: Planificación, Daily, Review y Retrospectiva",
+        "Cinco, incluyendo el Sprint como contenedor de los demás"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 207,
+      "pregunta": "¿Qué es la Definition of Done (DoD)?",
+      "opciones": [
+        "Lista de criterios para que un ítem pueda ingresar al Sprint Backlog",
+        "Conjunto de criterios que deben cumplirse para que un elemento de trabajo se considere completado y listo para entregar al cliente",
+        "El plan de trabajo que el equipo define al inicio de cada Sprint"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 208,
+      "pregunta": "¿Qué es la Definition of Ready (DoR)?",
+      "opciones": [
+        "Criterios para considerar que el producto final está terminado",
+        "Métricas que mide el Scrum Master para evaluar al equipo",
+        "Lista de criterios que deben cumplirse antes de que un elemento pueda incluirse en el Sprint Backlog"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 209,
+      "pregunta": "¿Cuál es el formato típico de una Historia de Usuario?",
+      "opciones": [
+        "Como [tipo de usuario], quiero [funcionalidad], para [beneficio]",
+        "El sistema debe [funcionalidad] cuando [condición]",
+        "Tarea: [nombre], Responsable: [persona], Fecha límite: [fecha]"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 210,
+      "pregunta": "¿Qué significa el acrónimo INVEST para las Historias de Usuario?",
+      "opciones": [
+        "Integrada, Necesaria, Validada, Estructurada, Simple, Técnica",
+        "Independiente, Negociable, Valiosa, Estimable, Pequeña, Testeable",
+        "Iterativa, Numerada, Verificable, Específica, Secuencial, Temporal"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 211,
+      "pregunta": "¿Qué son las Épicas en Scrum?",
+      "opciones": [
+        "Actividades técnicas concretas asignadas a desarrolladores individuales",
+        "Grandes bloques de funcionalidades o requerimientos que representan una visión amplia de una necesidad del negocio",
+        "Reuniones de planificación al inicio de cada release"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 212,
+      "pregunta": "¿Qué es un MVP (Producto Mínimo Viable)?",
+      "opciones": [
+        "El producto final con todas sus funcionalidades completas",
+        "Versión mínima del producto que permite obtener feedback real de los usuarios con la menor inversión posible",
+        "El desarrollador más valioso del equipo Scrum"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 213,
+      "pregunta": "¿Qué mide la Velocity en Scrum?",
+      "opciones": [
+        "La velocidad de escritura de código por desarrollador",
+        "El tiempo que tarda cada Daily Scrum",
+        "La cantidad de trabajo completado en un Sprint, normalmente en puntos de historia"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 214,
+      "pregunta": "¿Para qué se utiliza el Burndown Chart?",
+      "opciones": [
+        "Para registrar las horas trabajadas por cada miembro del equipo",
+        "Para mostrar el progreso del trabajo restante y medir velocidad y proyecciones",
+        "Para documentar los impedimentos removidos por el Scrum Master"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 215,
+      "pregunta": "Según la presentación, ¿qué caracteriza a la ejecución Empírica frente a la Predictiva?",
+      "opciones": [
+        "Requerimientos estables, planificación exhaustiva y equipos altamente especializados",
+        "Variabilidad en requerimientos, aprendizaje y error inherentes, equipos cross-funcionales y apertura a los cambios",
+        "Restricción sobre los cambios y cultura alineada a modelos tradicionales"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 216,
+      "pregunta": "¿Cuál de los siguientes es uno de los principios ágiles sobre comunicación?",
+      "opciones": [
+        "La documentación exhaustiva es el método más eficiente de comunicar información",
+        "El método más eficiente y efectivo de comunicar información al equipo es la conversación cara a cara",
+        "El correo electrónico garantiza trazabilidad y es preferible a cualquier otra comunicación"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 217,
+      "pregunta": "¿Cuándo se realiza la Sprint Retrospectiva?",
+      "opciones": [
+        "Al inicio de cada Sprint para planificar las tareas",
+        "Diariamente durante el Sprint junto al Daily Scrum",
+        "Al final del Sprint para que el equipo analice la forma de trabajo y mejora continua"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 218,
+      "pregunta": "¿Cuál es la duración típica de un Sprint en Scrum?",
+      "opciones": [
+        "Entre 1 y 4 semanas",
+        "Exactamente 30 días calendario",
+        "Entre 3 y 6 meses dependiendo del proyecto"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 219,
+      "pregunta": "¿Qué quiere decir 'Ser Ágil' (Being Agile) a diferencia de 'Hacer Ágil' (Doing Agile)?",
+      "opciones": [
+        "Usar herramientas como Jira y Confluence para gestionar el trabajo",
+        "Aplicar únicamente prácticas de Scrum como Daily Scrum y Sprints",
+        "Internalizar el mindset ágil con sus valores y principios, no solo aplicar prácticas superficialmente"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 220,
+      "pregunta": "¿Quiénes formalizaron el framework Scrum a partir del estudio de Takeuchi y Nonaka?",
+      "opciones": [
+        "Kent Beck y Ward Cunningham en 1999",
+        "Jeff Sutherland y Ken Schwaber en 1994",
+        "Henry Gantt y Edward Deming en 1931"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 221,
+      "pregunta": "¿En qué se centra principalmente la metodología Kanban?",
+      "opciones": [
+        "En la gestión visual y el control del flujo de trabajo",
+        "En la estimación matemática estricta y fija del tiempo de entrega",
+        "En la eliminación total de las reuniones de revisión de equipo"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 222,
+      "pregunta": "¿Cuál es el origen histórico de la metodología Kanban?",
+      "opciones": [
+        "El sistema de producción de Toyota",
+        "Un modelo académico de la Universidad de Tokio",
+        "Las agencias de desarrollo de software en Silicon Valley"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 223,
+      "pregunta": "¿Qué traducción aproximada tiene el término de origen japonés 'Kanban'?",
+      "opciones": [
+        "Tarjeta visual o tablero visual",
+        "Flujo continuo de manufactura",
+        "Incremento de valor a corto plazo"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 224,
+      "pregunta": "¿Cuál es la función principal de las tarjetas en un sistema Kanban?",
+      "opciones": [
+        "Representar unidades de trabajo o elementos de trabajo",
+        "Indicar las métricas financieras globales de la organización",
+        "Reemplazar de manera definitiva el uso de herramientas digitales"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 225,
+      "pregunta": "¿Qué significan las siglas WIP en el contexto de Kanban?",
+      "opciones": [
+        "Trabajo en curso (Work in Progress / Work in Process)",
+        "Planificación Integral de Canales (Whole Integration Plan)",
+        "Puntos de Historia Ponderados (Weighted Item Points)"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 226,
+      "pregunta": "¿Cuál es uno de los objetivos principales de limitar el WIP en cada etapa?",
+      "opciones": [
+        "Optimizar la eficiencia, reducir cuellos de botella y minimizar el desperdicio",
+        "Garantizar que todos los miembros del equipo realicen tareas idénticas",
+        "Incrementar arbitrariamente la complejidad estimada del Product Backlog"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 227,
+      "pregunta": "En un Tablero Kanban, ¿qué representan típicamente las columnas?",
+      "opciones": [
+        "Las diferentes etapas del proceso de trabajo",
+        "Los roles específicos de cada integrante del equipo",
+        "Las distintas métricas de calidad del software"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 228,
+      "pregunta": "¿Qué información relevante suele contener una tarjeta Kanban?",
+      "opciones": [
+        "Descripción del trabajo, prioridad y estado actual",
+        "Métricas de ROI histórico y caso de negocio previo",
+        "Código fuente completo y criterios de aceptación técnicos extendidos"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 229,
+      "pregunta": "¿Cómo funciona un 'Pull System' (sistema de extracción) en Kanban?",
+      "opciones": [
+        "El trabajo se retira en función de la capacidad de las etapas del proceso, en lugar de empujarlo",
+        "El Product Owner empuja el trabajo de manera constante sin importar el estado del tablero",
+        "Las tareas se asignan automáticamente de derecha a izquierda basándose únicamente en la prioridad"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 230,
+      "pregunta": "Según la relación conceptual de Kanban, ¿cuál es el efecto de tener menos trabajo en el proceso (WIP)?",
+      "opciones": [
+        "Conduce a un flujo más rápido y a un menor tiempo de entrega",
+        "Provoca un aumento inmediato en el tiempo de entrega y retrasos",
+        "Disminuye la flexibilidad y cancela el principio de mejora continua"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 231,
+      "pregunta": "¿Qué se debe hacer como primer paso en la implementación de Kanban?",
+      "opciones": [
+        "Comprender completamente el proceso de desarrollo actual, identificando etapas y tareas",
+        "Establecer límites de WIP numéricos sin analizar la capacidad del equipo",
+        "Escribir las historias de usuario bajo el modelo INVEST obligatoriamente"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 232,
+      "pregunta": "Al implementar Kanban inicialmente, ¿dónde se deben colocar las tareas existentes?",
+      "opciones": [
+        "En su ubicación actual en el proceso para brindar una instantánea visual",
+        "Todas en la primera columna de 'Qué hacer' borrando su estado anterior",
+        "En una lista de espera externa hasta que se defina la velocidad del equipo"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 233,
+      "pregunta": "¿Cuál es la definición de 'Tiempo de ciclo' (Cycle Time) en Kanban?",
+      "opciones": [
+        "El período desde que una tarjeta entra en el flujo de trabajo hasta que se completa y entrega",
+        "El tiempo total empleado en las reuniones de revisión regulares del tablero",
+        "La iteración predefinida en la cual se miden los bugs por su severidad"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 234,
+      "pregunta": "En la evaluación del rendimiento, ¿qué representa la 'Velocidad'?",
+      "opciones": [
+        "La cantidad de trabajo que un equipo puede completar en una iteración o período predefinido",
+        "La rapidez con la que se mueve una única tarjeta de la primera a la última columna",
+        "La tasa de disminución de errores críticos reportados por los clientes"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 235,
+      "pregunta": "¿Cómo se define la 'Calidad del trabajo' en el marco del rendimiento Kanban?",
+      "opciones": [
+        "La capacidad de entregar elementos de trabajo sin errores o defectos significativos",
+        "El número total de puntos de historia acumulados al principio de la lista",
+        "La conformidad exacta con el presupuesto inicial planteado en el caso de negocio"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 236,
+      "pregunta": "Dentro del proceso y entregables clave, ¿cuáles forman parte de la etapa de 'Discovery + Inception'?",
+      "opciones": [
+        "Identificación de persona, Diseño del Journey y Product Vision Board",
+        "Análisis previo del caso de negocio y Delivery final únicamente",
+        "Despliegue de infraestructura en la nube y corrección de bugs"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 237,
+      "pregunta": "¿A qué deben alinearse principalmente la identificación y priorización de requisitos?",
+      "opciones": [
+        "Tanto a la estrategia como a los objetivos de negocio",
+        "Exclusivamente a las opiniones técnicas del equipo de desarrollo",
+        "Al número de columnas que se hayan diseñado en el tablero físico"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 238,
+      "pregunta": "Si un comité u organización desea cambiar la prioridad de un componente de la lista del Product Backlog, ¿cómo debe realizarlo?",
+      "opciones": [
+        "Por medio del Product Owner, cuyas elecciones deben ser respetadas",
+        "Modificando directamente el Tablero Kanban sin avisar al equipo",
+        "A través de un Spike de investigación técnica obligatoria"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 239,
+      "pregunta": "¿Qué acrónimo describe las características esenciales de un backlog refinado?",
+      "opciones": [
+        "DEEP (Detallado apropiadamente, Estimado, Emergente, Priorizado)",
+        "INVEST (Independiente, Negociable, Valiosa, Estimable, Pequeña, Verificable)",
+        "MOSCOW (Must, Should, Could, Won't)"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 240,
+      "pregunta": "¿Cómo está ordenado el trabajo en un Product Backlog según sus características?",
+      "opciones": [
+        "Según la prioridad de cada elemento, ubicando los más importantes al principio",
+        "De forma cronológica inversa según la fecha de creación de la historia de usuario",
+        "Agrupando las historias puramente técnicas al principio y los defectos al final"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 241,
+      "pregunta": "¿Qué es una Historia de Usuario en el desarrollo ágil?",
+      "opciones": [
+        "Una breve descripción de una funcionalidad deseada, contada desde la perspectiva del usuario final",
+        "Un documento formal de especificaciones técnicas requeridas para la base de datos",
+        "Una macro-hipótesis financiera utilizada para justificar el lanzamiento de una startup"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 242,
+      "pregunta": "¿Cuál es el formato estándar de la declaración de una Historia de Usuario?",
+      "opciones": [
+        "Como <tipo de usuario>, Quiero <funcionalidad>, Para <beneficio>",
+        "Dado <contexto>, Cuando <acción>, Entonces <resultado esperado>",
+        "Must <obligatorio>, Should <deseable>, Could <posible>"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 243,
+      "pregunta": "¿Cuál es el formato comúnmente utilizado para redactar los Criterios de Aceptación?",
+      "opciones": [
+        "Dado <contexto>, Cuando <acción>, Entonces <resultado esperado>",
+        "Como <tipo de usuario>, Quiero <funcionalidad>, Para <beneficio>",
+        "Card <tarjeta>, Conversación <detalles>, Confirmación <esperado>"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 244,
+      "pregunta": "¿Cuáles son las llamadas '3 C' que deben conformar una Historia de Usuario?",
+      "opciones": [
+        "Card (tarjeta), Conversación y Confirmación",
+        "Contexto, Comportamiento y Conclusión",
+        "Calidad, Complejidad y Cronograma"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 245,
+      "pregunta": "Según el modelo INVEST, ¿qué características debe poseer una Historia de Usuario?",
+      "opciones": [
+        "Independencia, Negociable, Valiosa, Estimable, Pequeña y Verificable",
+        "Detallada de forma apropiada, Estimada, Emergente y Priorizada",
+        "Interconectada, Numérica, Visual, Estable, Progresiva y Financiada"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 246,
+      "pregunta": "¿Qué es un 'Spike' en el contexto de los tipos de Historias de Usuario?",
+      "opciones": [
+        "Una historia de investigación que responde a una pregunta para reducir riesgos y facilitar estimaciones",
+        "Un error o bug crítico en el desarrollo que debe ser priorizado por su severidad",
+        "Una historia de diseño enfocada puramente en las interfaces de usuario finales"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 247,
+      "pregunta": "En la jerarquía del refinamiento ágil, ¿cuál es el sentido correcto del aumento del nivel de detalle?",
+      "opciones": [
+        "De Épicas a Historias de usuario, y luego a Tareas",
+        "De Tareas a Historias de usuario, y finalmente a Épicas",
+        "De Criterios de aceptación a Features, y de ahí a la Visión del Producto"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 248,
+      "pregunta": "¿Cómo se define una 'Épica' en el marco de SAFe?",
+      "opciones": [
+        "Una idea grande de negocio o tecnología que requiere mucho tiempo, recursos, planificación y un MVP para validar su valor",
+        "Una funcionalidad pequeña que puede completarse íntegramente dentro de los límites de un único sprint",
+        "Un conjunto de tareas técnicas asignadas exclusivamente a un desarrollador senior"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 249,
+      "pregunta": "¿Qué es una 'Feature' en comparación con una Épica e Historia de Usuario?",
+      "opciones": [
+        "Una funcionalidad más chica que una épica pero más grande que una historia, completable en un Program Increment (PI)",
+        "La línea de enfoque estratégico a largo plazo que no se subdivide bajo ninguna circunstancia",
+        "El sinónimo técnico de un defecto o bug priorizado según su impacto operativo"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 250,
+      "pregunta": "¿En qué consiste la técnica de priorización MoSCoW?",
+      "opciones": [
+        "Dividir las funcionalidades en cuatro categorías llamadas Must, Should, Could y Won't",
+        "Clasificar los atributos de los productos únicamente en atractivos, normales y básicos",
+        "Crear una matriz que consolide lo importante y lo urgente evaluando la opinión del negocio"
+      ],
+      "respuesta_correcta": 0
+    }
+  ]
+}
