@@ -402,9 +402,85 @@ body {
     font-weight: 500;
 }
 
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
 .main-footer p {
     font-size: 0.75rem;
     opacity: 0.8;
+}
+
+.btn-qr {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.65rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.btn-qr:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.qr-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.qr-overlay.hidden {
+    display: none;
+}
+
+.qr-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 1.25rem;
+    padding: 2rem;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.3);
+    animation: qr-in 0.2s ease;
+}
+
+@keyframes qr-in {
+    from { opacity: 0; transform: scale(0.92); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+.qr-image {
+    width: 240px;
+    height: 240px;
+    border-radius: 0.75rem;
+    display: block;
+}
+
+.qr-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0;
 }
 
 .meta-item strong {

@@ -17,6 +17,7 @@ Aplicación web para rendir exámenes interactivos, deployada en Cloudflare Page
 - **Feedback Activo**: El botón de progreso pulsa visualmente cuando el examen está listo para ser entregado.
 - **Footer Dinámico**: Visualización de metadatos del examen (versión, fecha, materia) directamente en el pie de página.
 - **Estandarización**: Todos los archivos de datos ahora siguen el patrón `preguntas00X.json`.
+- **QR Modal**: Botón en el footer que muestra el QR de la página en un overlay con blur y animación de entrada.
 
 ## Estructura
 
@@ -81,3 +82,4 @@ scripts/                # Scripts de validación y build
 - **Offline-First**: Funciona sin conexión gracias al Service Worker.
 - **Anti-Cache**: Invalida el cache del edge automáticamente con timestamps.
 - **Gamificación**: Confeti al aprobar y feedback visual (shake) al fallar.
+- **QR de acceso rápido**: Modal con overlay y blur, se cierra con click fuera o `Escape`.

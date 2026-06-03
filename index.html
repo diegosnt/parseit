@@ -100,10 +100,40 @@
             <div id="examen-metadatos" class="meta-container-footer">
                 <!-- Se llenará dinámicamente -->
             </div>
-            <p>&copy; 2026 ParseIt - Sistema de Evaluación (v9)</p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ParseIt - Sistema de Evaluación (v9)</p>
+                <button id="btn-qr" class="btn-qr" aria-label="Mostrar QR de la página">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="3" height="3"></rect>
+                    </svg>
+                    QR
+                </button>
+            </div>
         </div>
     </footer>
 
+    <div id="qr-overlay" class="qr-overlay hidden" role="dialog" aria-modal="true" aria-label="QR Code">
+        <div class="qr-modal">
+            <img src="/qr.png" alt="QR Code para acceder a ParseIt" class="qr-image">
+            <p class="qr-label">Escaneá para abrir ParseIt</p>
+        </div>
+    </div>
+
+    <script>
+        const qrOverlay = document.getElementById('qr-overlay');
+        document.getElementById('btn-qr').addEventListener('click', () => {
+            qrOverlay.classList.remove('hidden');
+        });
+        qrOverlay.addEventListener('click', (e) => {
+            if (e.target === qrOverlay) qrOverlay.classList.add('hidden');
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') qrOverlay.classList.add('hidden');
+        });
+    </script>
     <script src="vendor/choices.min.js"></script>
     <script src="vendor/confetti.browser.min.js"></script>
     <script src="src/app.js" type="module"></script>
