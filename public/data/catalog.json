@@ -1,22 +1,7 @@
 [
   {
-    "id": "preguntas01",
-    "materia": "Tall. Gest. Proy. Dig.",
-    "titulo": "Unidades 1,2,3,4"
-  },
-  {
-    "id": "preguntas02",
-    "materia": "Bases de Datos",
-    "titulo": "Evaluación Integral"
-  },
-  {
-    "id": "preguntas03",
-    "materia": "Análisis de Datos I",
-    "titulo": "Primer Parcial"
-  },
-  {
-    "id": "preguntas04",
-    "materia": "Gest.de Sist.de Información",
-    "titulo": "Uni. 1 y 2"
+    "id": "preguntas_01",
+    "materia": "GSI",
+    "titulo": "Uni. 3 y 4"
   }
 ]

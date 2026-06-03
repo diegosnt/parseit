@@ -1,0 +1,1880 @@
+{
+  "materia": "GSI",
+  "titulo": "Uni. 3 y 4",
+  "duracion": 90,
+  "preguntas_para_aprobar": 150,
+  "fecha": "2026-06-02",
+  "version": "1.0",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Por qué las organizaciones no obtienen beneficios importantes de su inversión en TI?",
+      "opciones": [
+        "Porque la tecnología es muy costosa",
+        "Porque simplemente automatizan lo que ya hacen sin repensar sus procesos",
+        "Porque los empleados no saben usar la tecnología",
+        "Porque Internet no ofrece oportunidades reales de negocio"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Qué modelo de negocio en Internet concentra información sobre productos y servicios de varios proveedores en un punto central?",
+      "opciones": [
+        "Tienda virtual",
+        "Corredores de información",
+        "Concentrador de mercado",
+        "Proveedor de contenido"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Cuál de los siguientes es un ejemplo del modelo de negocio 'Subasta inversa'?",
+      "opciones": [
+        "Amazon vendiendo productos directamente",
+        "Los consumidores presentan una oferta a varios proveedores a un precio especificado por el comprador",
+        "Una empresa que vende software como servicio",
+        "Un marketplace que conecta compradores y vendedores"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Qué tipo de e-commerce describe el comercio entre empresas, como entre un minorista y su distribuidor?",
+      "opciones": [
+        "B2C",
+        "C2C",
+        "B2B",
+        "G2B"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Cuál es el ejemplo que representa al modelo B2C?",
+      "opciones": [
+        "eBay entre usuarios",
+        "Amazon vendiendo a consumidores finales",
+        "Una empresa pagando sueldos a sus empleados online",
+        "El gobierno cobrando impuestos por internet"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 6,
+      "pregunta": "El modelo C2C en e-commerce se caracteriza por:",
+      "opciones": [
+        "Transacciones entre empresas y gobierno",
+        "Una empresa vendiendo a sus empleados",
+        "Relaciones comerciales entre usuarios finales a través de una red",
+        "Una empresa vendiendo software por suscripción"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 7,
+      "pregunta": "¿Qué modelo de revenue se basa en vender servicios o software a otros negocios mediante una licencia de uso único?",
+      "opciones": [
+        "Suscripción",
+        "SaaS",
+        "Enterprise",
+        "Freemium"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 8,
+      "pregunta": "Netflix y Amazon Prime son ejemplos de qué modelo de revenue:",
+      "opciones": [
+        "Enterprise",
+        "Suscripción",
+        "Transaccional",
+        "Marketplace"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 9,
+      "pregunta": "¿Qué diferencia al modelo SaaS del modelo de Suscripción?",
+      "opciones": [
+        "SaaS vende hardware y suscripción vende software",
+        "SaaS es gratuito y suscripción es pago",
+        "SaaS es una variación de suscripción donde se paga para acceder a un servicio en la nube",
+        "No hay diferencias, son el mismo modelo"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 10,
+      "pregunta": "PayPal es un ejemplo de qué modelo de revenue:",
+      "opciones": [
+        "Marketplace",
+        "SaaS",
+        "Transaccional",
+        "Freemium"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 11,
+      "pregunta": "Uber, Airbnb y eBay son ejemplos del modelo de revenue:",
+      "opciones": [
+        "Freemium",
+        "E-commerce",
+        "Marketplace",
+        "Open Source"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 12,
+      "pregunta": "¿En qué consiste el modelo 'Bait and Hook' dentro del modelo de venta de hardware?",
+      "opciones": [
+        "Vender hardware a precio muy alto con garantía extendida",
+        "Vender el hardware inicial a precio reducido y luego cobrar por los consumibles necesarios",
+        "Ofrecer hardware gratuito con publicidad integrada",
+        "Vender hardware con software incluido"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 13,
+      "pregunta": "Google Drive y Spotify son ejemplos de qué modelo de revenue:",
+      "opciones": [
+        "Open Source",
+        "SaaS",
+        "Freemium",
+        "Suscripción"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 14,
+      "pregunta": "¿Qué es la Inteligencia de Negocios (BI)?",
+      "opciones": [
+        "Un software de gestión de empleados",
+        "La combinación de tecnología, herramientas y procesos que transforman datos en información y conocimiento para una estrategia comercial",
+        "Un sistema de pago en línea para negocios",
+        "Un tipo de red social empresarial"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 15,
+      "pregunta": "¿Qué significa ETL en la arquitectura de Inteligencia de Negocios?",
+      "opciones": [
+        "Enterprise Technology Layer",
+        "Electronic Transfer Link",
+        "Extract, Transform, Load (Extraer, Transformar, Cargar)",
+        "Embedded Technology Language"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 16,
+      "pregunta": "¿Qué término se usa para describir conjuntos de datos con volúmenes tan grandes que están más allá de la capacidad de un DBMS común para capturar, almacenar y analizar?",
+      "opciones": [
+        "Data Warehouse",
+        "Big Data",
+        "Cloud Storage",
+        "Data Mining"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 17,
+      "pregunta": "¿Cuál de los siguientes es un ejemplo de análisis DESCRIPTIVO?",
+      "opciones": [
+        "Predecir ventas del próximo trimestre usando machine learning",
+        "Recomendar acciones para evitar la pérdida de un cliente",
+        "Analizar el historial de ventas pasadas de una empresa multinacional por países",
+        "Calcular la probabilidad de que un cliente haga clic en un anuncio"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 18,
+      "pregunta": "El análisis PREDICTIVO se basa principalmente en:",
+      "opciones": [
+        "Resumir y describir datos históricos",
+        "Proporcionar recomendaciones de acciones específicas",
+        "Utilizar aprendizaje automático para predecir posibles escenarios futuros",
+        "Crear dashboards interactivos"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 19,
+      "pregunta": "¿Cuál de los siguientes es un ejemplo de análisis PRESCRIPTIVO?",
+      "opciones": [
+        "Analizar las ventas del año pasado",
+        "Una compañía telefónica que sugiere optimizar servicios o ajustar precios para evitar la pérdida de un cliente",
+        "Predecir cuántos usuarios visitarán la web mañana",
+        "Crear un gráfico de barras con los resultados trimestrales"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 20,
+      "pregunta": "¿Qué herramienta de BI es conocida por ser una plataforma de inteligencia empresarial de Microsoft?",
+      "opciones": [
+        "Tableau",
+        "QlikView",
+        "Power BI",
+        "SAP BusinessObjects"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 21,
+      "pregunta": "Hadoop es una herramienta de Big Data que se caracteriza por:",
+      "opciones": [
+        "Ser un motor de procesamiento en tiempo real",
+        "Ser una plataforma de código abierto para almacenamiento y procesamiento de grandes cantidades de datos",
+        "Ser una base de datos relacional",
+        "Ser una herramienta de visualización de datos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 22,
+      "pregunta": "¿Qué es el Machine Learning?",
+      "opciones": [
+        "Un tipo de base de datos no relacional",
+        "Un subcampo de la inteligencia artificial que permite a las máquinas aprender sin ser explícitamente programadas",
+        "Una herramienta de visualización de datos empresariales",
+        "Un lenguaje de programación para análisis estadístico"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 23,
+      "pregunta": "¿Cuál de los siguientes es un problema de CLASIFICACIÓN en machine learning?",
+      "opciones": [
+        "Predecir el precio de una casa",
+        "Estimar las ventas del próximo mes",
+        "Detección de correo basura ('spam')",
+        "Calcular la temperatura del día siguiente"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 24,
+      "pregunta": "En el aprendizaje supervisado, los algoritmos trabajan con:",
+      "opciones": [
+        "Datos sin etiquetas para explorar patrones",
+        "Datos etiquetados para encontrar una función que asigne etiquetas de salida correctas",
+        "Retroalimentación del entorno para aprender por ensayo y error",
+        "Datos en tiempo real de sensores IoT"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 25,
+      "pregunta": "El aprendizaje NO supervisado se caracteriza porque:",
+      "opciones": [
+        "Usa datos etiquetados para entrenamiento",
+        "Aprende mediante recompensas y castigos",
+        "No dispone de datos etiquetados para el entrenamiento y tiene carácter exploratorio",
+        "Requiere un experto humano que codifique reglas lógicas"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 26,
+      "pregunta": "¿En qué se basa el aprendizaje por REFUERZO?",
+      "opciones": [
+        "En datos etiquetados previamente por expertos",
+        "En encontrar grupos o clústeres en datos no etiquetados",
+        "En mejorar la respuesta del modelo usando un proceso de retroalimentación (ensayo-error)",
+        "En reglas lógicas programadas explícitamente"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 27,
+      "pregunta": "¿Qué es un ERP (Enterprise Resource Planning)?",
+      "opciones": [
+        "Un sistema de gestión de relaciones con clientes",
+        "Un sistema integrado que gestiona los procesos de negocio centrales de una empresa como finanzas, RRHH y cadena de suministro",
+        "Una plataforma de comercio electrónico",
+        "Un sistema de gestión de proyectos ágiles"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 28,
+      "pregunta": "¿Cuál de los siguientes NO es un beneficio clave del ERP?",
+      "opciones": [
+        "Mayor productividad",
+        "Informes acelerados",
+        "Reducción total de empleados",
+        "Agilidad mejorada"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 29,
+      "pregunta": "¿Cuál es la función principal del módulo de Finanzas en un ERP?",
+      "opciones": [
+        "Gestionar las redes sociales de la empresa",
+        "Gestionar el libro mayor, cuentas por pagar y cobrar, y generar informes financieros",
+        "Controlar el inventario de productos",
+        "Administrar los procesos de contratación de personal"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 30,
+      "pregunta": "¿Qué es el SCM (Supply Chain Management)?",
+      "opciones": [
+        "Un sistema para gestionar relaciones con clientes",
+        "La gestión del flujo de bienes, datos y finanzas desde la adquisición de materias primas hasta la entrega del producto final",
+        "Un software para análisis de datos empresariales",
+        "Una plataforma de comercio electrónico B2B"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 31,
+      "pregunta": "¿Qué es el CRM (Customer Relationship Management)?",
+      "opciones": [
+        "Un sistema de planificación de recursos empresariales",
+        "Una estrategia para gestionar todas las relaciones e interacciones de una empresa con sus clientes",
+        "Un sistema de gestión de la cadena de suministro",
+        "Una plataforma para gestionar proyectos de TI"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 32,
+      "pregunta": "¿Cuál de las siguientes es una característica de un CRM?",
+      "opciones": [
+        "Gestión de inventarios de almacén",
+        "Planificación de producción manufacturera",
+        "Gestión de leads para convertir clientes potenciales en compradores",
+        "Control de nómina y beneficios de empleados"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 33,
+      "pregunta": "¿Qué es la Transformación Digital?",
+      "opciones": [
+        "La simple automatización de procesos existentes con tecnología",
+        "Un proceso de reorientar una compañía hacia el uso de tecnologías emergentes, implicando cambio cultural, organizacional y tecnológico",
+        "La implementación de un nuevo sistema ERP en la empresa",
+        "La creación de un sitio web corporativo"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 34,
+      "pregunta": "¿Cuántas fases tiene el proceso de Transformación Digital según las clases?",
+      "opciones": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 35,
+      "pregunta": "¿Cuál es la primera fase de la Transformación Digital?",
+      "opciones": [
+        "Análisis",
+        "Transición",
+        "Identificación",
+        "Ejecución"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 36,
+      "pregunta": "En la fase de OPTIMIZACIÓN de la Transformación Digital:",
+      "opciones": [
+        "Se investigan las tecnologías del sector",
+        "Se ponen en juego las capacidades internas",
+        "Se empiezan a obtener beneficios reales y se optimizan los recursos",
+        "Se miden y evalúan las tecnologías implementadas"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 37,
+      "pregunta": "¿Cuáles son los 4 pilares de la Transformación Digital?",
+      "opciones": [
+        "Finanzas, Marketing, Producción y Logística",
+        "Empodera empleados, Optimiza operaciones, Involucra clientes y Transforma el producto",
+        "Nube, IA, IoT y Blockchain",
+        "BPM, BPR, TQM y ERP"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 38,
+      "pregunta": "Gartner es conocida principalmente por sus análisis llamados:",
+      "opciones": [
+        "Cuadros de mando y tableros de control",
+        "Magic Quadrant (Cuadrante Mágico) y Hype Cycle (Ciclo de sobre expectación)",
+        "Balanced Scorecard y KPIs empresariales",
+        "FODA y PESTEL"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 39,
+      "pregunta": "En el Magic Quadrant de Gartner, los 'Líderes' son aquellos que:",
+      "opciones": [
+        "Solo entienden hacia dónde se dirige el mercado pero no pueden ejecutar bien",
+        "Se enfocan en un segmento pequeño y no innovan",
+        "Se desempeñan bien según la visión actual del mercado y están bien posicionados para el futuro",
+        "Dominan un gran segmento pero no entienden hacia dónde va el mercado"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 40,
+      "pregunta": "En el Magic Quadrant, los 'Visionarios' se caracterizan por:",
+      "opciones": [
+        "Ejecutar bien y tener visión de mercado completa",
+        "Entender hacia dónde se dirige el mercado pero con capacidad de ejecución limitada",
+        "Dominar un gran segmento del mercado actual",
+        "Centrarse exitosamente en un nicho pequeño"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 41,
+      "pregunta": "El Hype Cycle de Gartner tiene 5 fases. ¿Cuál es la fase donde el interés se desvanece porque los experimentos e implementaciones no se cumplen?",
+      "opciones": [
+        "Pico de expectativas sobredimensionadas",
+        "Rampa de consolidación",
+        "Abismo de desilusión",
+        "Meseta de productividad"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 42,
+      "pregunta": "¿Cuál es la última fase del Hype Cycle de Gartner?",
+      "opciones": [
+        "Rampa de consolidación",
+        "Abismo de desilusión",
+        "Pico de expectativas sobredimensionadas",
+        "Meseta de productividad"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 43,
+      "pregunta": "¿Qué es el BPM (Business Process Management)?",
+      "opciones": [
+        "Un rediseño radical de los procesos de negocio",
+        "Una disciplina organizativa que permite analizar todos los procesos de una empresa de forma total e individual para detectar ineficiencias",
+        "Un método de gestión de calidad total",
+        "Un sistema de planificación de recursos empresariales"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 44,
+      "pregunta": "¿Qué es el BPR (Business Process Reengineering)?",
+      "opciones": [
+        "La mejora gradual y continua de procesos existentes",
+        "El rediseño de aspectos fundamentales de los procesos de negocio buscando mejoras dramáticas en costo, calidad, servicio y velocidad",
+        "La automatización de tareas repetitivas con robots de software",
+        "La gestión de relaciones con clientes mediante tecnología"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 45,
+      "pregunta": "¿Cuál es el objetivo principal del TQM (Total Quality Management)?",
+      "opciones": [
+        "Reducir costos de producción a corto plazo",
+        "Automatizar todos los procesos de la empresa",
+        "Que todos los colaboradores aseguren y tomen conciencia de la calidad en cada sector de la organización",
+        "Implementar tecnología de punta en todos los departamentos"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 46,
+      "pregunta": "Los 4 pasos del TQM son:",
+      "opciones": [
+        "Analizar, Diseñar, Implementar, Evaluar",
+        "Plan, Do, Check, Act",
+        "Identificar, Mejorar, Controlar, Optimizar",
+        "Definir, Medir, Analizar, Mejorar"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 47,
+      "pregunta": "¿Qué es la Nube (Cloud Computing)?",
+      "opciones": [
+        "Un sistema de almacenamiento físico en la empresa",
+        "Servidores accesibles a través de Internet junto con el software y bases de datos que corren en ellos, sin necesidad de gestionar servidores físicos",
+        "Una red privada interna de la empresa",
+        "Un tipo de software de escritorio"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 48,
+      "pregunta": "¿Qué tecnología hace posible la informática en la nube?",
+      "opciones": [
+        "Blockchain",
+        "Internet de las cosas (IoT)",
+        "Virtualización",
+        "Realidad aumentada"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 49,
+      "pregunta": "¿Cuál de las siguientes es una característica de la nube llamada 'Elasticidad rápida'?",
+      "opciones": [
+        "Los recursos se cobran según el uso real",
+        "Los recursos se pueden suministrar, incrementar o reducir con rapidez para satisfacer la demanda cambiante",
+        "Los usuarios pueden obtener herramientas computacionales por su propia cuenta",
+        "Los recursos se agrupan para dar servicio a varios usuarios"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 50,
+      "pregunta": "¿Qué significa IaaS en computación en nube?",
+      "opciones": [
+        "Intelligence as a Service",
+        "Information as a Service",
+        "Infrastructure as a Service",
+        "Integration as a Service"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 51,
+      "pregunta": "¿Cuál es la diferencia entre IaaS y PaaS?",
+      "opciones": [
+        "IaaS provee infraestructura virtual y PaaS provee una plataforma completa para desarrollar aplicaciones",
+        "IaaS es más costoso y PaaS es más barato",
+        "IaaS es para pequeñas empresas y PaaS para grandes corporaciones",
+        "No hay diferencia, son sinónimos"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 52,
+      "pregunta": "FaaS (Function as a Service) también se conoce como:",
+      "opciones": [
+        "Cloud privado",
+        "Informática sin servidor (serverless computing)",
+        "Plataforma como servicio",
+        "Software como servicio"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 53,
+      "pregunta": "¿Qué tipo de nube está totalmente dedicada a una sola organización?",
+      "opciones": [
+        "Nube pública",
+        "Nube híbrida",
+        "Multinube",
+        "Nube privada"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 54,
+      "pregunta": "¿Qué es la 'tenencia múltiple' en el contexto de la nube pública?",
+      "opciones": [
+        "Una empresa que usa múltiples proveedores de nube",
+        "Diferentes empresas comparten servidores individuales mediante máquinas virtuales",
+        "Una nube que combina servicios públicos y privados",
+        "El proceso de migrar datos de un servidor a otro"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 55,
+      "pregunta": "¿Qué es el IoT (Internet of Things)?",
+      "opciones": [
+        "Una plataforma de comercio electrónico para dispositivos móviles",
+        "El proceso que permite conectar los elementos físicos cotidianos al Internet, desde bombillas hasta dispositivos médicos",
+        "Un protocolo de seguridad para redes empresariales",
+        "Un sistema de gestión de contenidos web"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 56,
+      "pregunta": "Los dispositivos IoT pertenecen a dos categorías principales:",
+      "opciones": [
+        "Activos y pasivos",
+        "Digitales y analógicos",
+        "Interruptores (envían instrucciones) y sensores (recopilan y envían datos)",
+        "Públicos y privados"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 57,
+      "pregunta": "¿Qué es la Realidad Aumentada (AR)?",
+      "opciones": [
+        "Una tecnología que crea un entorno completamente virtual donde el usuario está inmerso",
+        "Una tecnología que provee una vista del mundo real cuyos elementos están aumentados con imágenes virtuales generadas por computadora",
+        "Un sistema de almacenamiento de datos en la nube",
+        "Un tipo de inteligencia artificial para reconocimiento de imágenes"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 58,
+      "pregunta": "¿Qué diferencia a la Realidad Virtual (VR) de la Realidad Aumentada (AR)?",
+      "opciones": [
+        "VR es más costosa que AR",
+        "En VR el usuario está inmerso en un entorno completamente simulado; en AR las imágenes virtuales se fusionan con el mundo real",
+        "AR usa cascos y VR usa gafas especiales",
+        "VR es para entretenimiento y AR solo para uso médico"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 59,
+      "pregunta": "¿Qué es el RPA (Robotic Process Automation)?",
+      "opciones": [
+        "Un tipo de robot físico para manufactura",
+        "Una tecnología de automatización que usa robots de software (bots) para realizar tareas manuales y repetitivas que consumen tiempo",
+        "Un sistema de inteligencia artificial para toma de decisiones",
+        "Un protocolo de comunicación para dispositivos IoT"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 60,
+      "pregunta": "¿Cuál es la diferencia entre RPA asistida y no asistida?",
+      "opciones": [
+        "La RPA asistida es más rápida que la no asistida",
+        "La RPA no asistida trabaja sin participación humana; la asistida trabaja con humanos en tareas que no pueden automatizarse completamente",
+        "La RPA asistida usa IA y la no asistida usa reglas simples",
+        "No hay diferencias sustanciales entre ambas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 61,
+      "pregunta": "¿Qué es el Blockchain?",
+      "opciones": [
+        "Un tipo de base de datos relacional centralizada",
+        "Un registro digital descentralizado de transacciones compartidas entre una red, inmutable, que usa tecnología de contabilidad distribuida",
+        "Un sistema de gestión de contenidos para sitios web",
+        "Una plataforma de comercio electrónico descentralizada"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 62,
+      "pregunta": "¿Qué es un 'hash' en el contexto de Blockchain?",
+      "opciones": [
+        "Un tipo de moneda digital",
+        "Un nodo de la red blockchain",
+        "La firma digital de cada bloque, una serie de números y letras que actúa como código matemático secreto",
+        "El proceso de validación de transacciones"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 63,
+      "pregunta": "¿Cuál de los siguientes es un beneficio del Blockchain?",
+      "opciones": [
+        "Mayor centralización del control de datos",
+        "Menos transparencia en las transacciones",
+        "Trazabilidad: los datos inalterables permiten seguimiento en cadenas de suministro complejas",
+        "Mayor dependencia de intermediarios"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 64,
+      "pregunta": "¿Cuál es el tipo de Blockchain más aceptado actualmente para los negocios?",
+      "opciones": [
+        "Blockchain público",
+        "Blockchain privado",
+        "Blockchain semiprivado",
+        "Blockchain de consorcio"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 65,
+      "pregunta": "Bitcoin y Ethereum son ejemplos de:",
+      "opciones": [
+        "Blockchain privado",
+        "Blockchain de consorcio",
+        "Blockchain público",
+        "Blockchain semiprivado"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 66,
+      "pregunta": "En el contexto de métricas digitales, ¿qué es el CTR?",
+      "opciones": [
+        "Customer Transaction Rate - tasa de transacciones por cliente",
+        "Click Through Rate - cantidad de clics obtenidos respecto al número de impresiones",
+        "Content Transfer Rate - velocidad de transferencia de contenido web",
+        "Conversion Tracking Report - reporte de conversiones de ventas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 67,
+      "pregunta": "¿Qué es el 'Engagement' en métricas de redes sociales?",
+      "opciones": [
+        "La cantidad total de seguidores de una cuenta",
+        "El número de personas que han visto una publicación",
+        "El nivel de compromiso que tiene un usuario con una publicación, incluyendo likes, comentarios y compartidos",
+        "El costo por clic en publicidad en redes sociales"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 68,
+      "pregunta": "¿Qué es el CAC (Costo de Adquisición de Clientes)?",
+      "opciones": [
+        "El beneficio total que produce un cliente durante toda la relación con la marca",
+        "Los costos asociados a las acciones para convencer al usuario de comprar un producto o servicio",
+        "El porcentaje de clientes que abandonan la empresa en un período",
+        "El costo de cada clic en campañas de Google Ads"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 69,
+      "pregunta": "¿Qué es el 'Lifetime Value' en marketing digital?",
+      "opciones": [
+        "El costo de adquirir un nuevo cliente",
+        "La tasa de retención de clientes en un año",
+        "El beneficio que ha producido un cliente durante todo el tiempo que duró la relación con la marca",
+        "El valor promedio de cada pedido en un ecommerce"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 70,
+      "pregunta": "¿Qué mide la 'Tasa de rebote' en Email Marketing?",
+      "opciones": [
+        "El porcentaje de usuarios que abren los emails",
+        "La cantidad de usuarios que se dan de baja del newsletter",
+        "Las direcciones de email que no existen o son inválidas",
+        "El número de clics en los enlaces del email"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 71,
+      "pregunta": "¿Qué modelo de e-commerce describe las transacciones del 'Gobierno Electrónico' entre gobierno y personas o empresas?",
+      "opciones": [
+        "B2B",
+        "B2E",
+        "C2C",
+        "G2C y G2B"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 72,
+      "pregunta": "¿Cuál de los siguientes es un ejemplo del modelo de negocio 'Proveedor de contenido' en Internet?",
+      "opciones": [
+        "Amazon vendiendo productos físicos",
+        "Un blog con anuncios que genera ingresos por publicidad o venta de datos",
+        "Uber conectando conductores con pasajeros",
+        "PayPal cobrando comisiones por transacciones"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 73,
+      "pregunta": "¿Qué tipo de análisis de datos se basa en el estudio del pasado para describir eventos que han ocurrido?",
+      "opciones": [
+        "Prescriptivo",
+        "Predictivo",
+        "Descriptivo",
+        "Exploratorio"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 74,
+      "pregunta": "Apache Spark es una herramienta de Big Data que permite:",
+      "opciones": [
+        "Crear dashboards de visualización interactivos",
+        "El análisis en tiempo real y el procesamiento batch de grandes cantidades de datos",
+        "Gestionar bases de datos relacionales a escala",
+        "Automatizar procesos de negocio repetitivos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 75,
+      "pregunta": "¿Cuál de los siguientes es un ejemplo de problema de REGRESIÓN en machine learning?",
+      "opciones": [
+        "Clasificar emails como spam o no spam",
+        "Agrupar clientes por comportamiento de compra",
+        "Predecir cuánto va a usar un cliente un determinado servicio",
+        "Detectar si una imagen contiene un gato o un perro"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 76,
+      "pregunta": "Los sistemas expertos basados en reglas usan el modelo:",
+      "opciones": [
+        "If-then (si-entonces)",
+        "Input-output-feedback",
+        "Supervised-unsupervised-reinforcement",
+        "Extract-transform-load"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 77,
+      "pregunta": "¿Por qué decayeron los sistemas expertos basados en reglas?",
+      "opciones": [
+        "Porque eran demasiado rápidos y eficientes",
+        "Por sus limitaciones: costosos de desarrollar, poco flexibles y con fallas ante problemas fuera de su conocimiento codificado",
+        "Porque el hardware disponible era demasiado avanzado para ellos",
+        "Porque fueron reemplazados por blockchain"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 78,
+      "pregunta": "Las Redes Neuronales (NN) son un subconjunto del Machine Learning inspiradas en:",
+      "opciones": [
+        "La arquitectura de los computadores modernos",
+        "Los algoritmos de búsqueda en internet",
+        "El cerebro humano, modelando relaciones complejas mediante capas de nodos",
+        "Los sistemas de bases de datos relacionales"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 79,
+      "pregunta": "¿Qué es la IA Generativa?",
+      "opciones": [
+        "Una IA que solo puede clasificar datos existentes",
+        "Un área de la IA que crea contenido nuevo como texto, imágenes, audio y video",
+        "Un sistema de reglas lógicas para toma de decisiones automáticas",
+        "Una herramienta para optimizar bases de datos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 80,
+      "pregunta": "¿Cuál de las siguientes herramientas es apropiada para análisis de datos y machine learning?",
+      "opciones": [
+        "Adobe Photoshop y Illustrator",
+        "R y Python",
+        "WordPress y Joomla",
+        "Trello y Asana"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 81,
+      "pregunta": "¿Qué proceso de la SCM gestiona un producto desde su ideación hasta su fabricación, servicio y fin de vida útil?",
+      "opciones": [
+        "Planificación de la cadena de suministro",
+        "Gestión de logística",
+        "Gestión del ciclo de vida del producto (PLM)",
+        "Procurement"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 82,
+      "pregunta": "¿Qué es 'Procurement' en el contexto de SCM?",
+      "opciones": [
+        "El proceso de transporte y almacenamiento de mercaderías",
+        "El proceso de adquirir materiales, bienes y servicios para cumplir necesidades de negocio garantizando calidad y precio justo",
+        "La gestión del ciclo de vida completo de los productos",
+        "El proceso de monitoreo y control de fabricación"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 83,
+      "pregunta": "¿Cuál es el objetivo general de la SCM?",
+      "opciones": [
+        "Maximizar las ganancias de los accionistas a corto plazo",
+        "Mejorar la eficiencia, calidad, productividad y la satisfacción del cliente",
+        "Reducir la cantidad de empleados en la cadena de producción",
+        "Centralizar todas las operaciones en una sola ubicación geográfica"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 84,
+      "pregunta": "¿Cuántos módulos principales se mencionan para el ERP en las clases?",
+      "opciones": [
+        "5",
+        "7",
+        "9",
+        "12"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 85,
+      "pregunta": "El módulo de 'Gestión de activos empresariales' en ERP/SCM ayuda a:",
+      "opciones": [
+        "Gestionar las cuentas bancarias de la empresa",
+        "Administrar y mantener activos físicos como robótica de fábrica y flotas, mejorando eficiencia y tiempo productivo",
+        "Controlar el inventario de productos terminados",
+        "Gestionar las relaciones con los clientes finales"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 86,
+      "pregunta": "En el Magic Quadrant de Gartner, los 'Jugadores de nicho' se caracterizan por:",
+      "opciones": [
+        "Tener gran visión de mercado pero poca capacidad de ejecución",
+        "Desempeñarse bien hoy pero sin comprensión del futuro del mercado",
+        "Centrarse exitosamente en un segmento pequeño o estar dispersos sin innovar por encima de la media",
+        "Liderar el mercado actual y futuro"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 87,
+      "pregunta": "¿Cuál de los siguientes ejemplos ilustra el uso de Blockchain en cadena de suministro?",
+      "opciones": [
+        "Una empresa que usa blockchain para gestionar su nómina",
+        "El seguimiento de alimentos perecederos desde la granja hasta la mesa mediante códigos QR registrados en blockchain",
+        "Un banco que usa blockchain para procesar tarjetas de crédito",
+        "Una empresa que usa blockchain para almacenar fotos de empleados"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 88,
+      "pregunta": "¿Cuál es una característica clave del BPR que lo diferencia del BPM?",
+      "opciones": [
+        "El BPR es una mejora continua e incremental mientras el BPM es un rediseño radical",
+        "El BPR implica un rediseño radical y mejoras dramáticas, mientras el BPM es una disciplina de análisis y mejora continua",
+        "El BPR se enfoca en tecnología y el BPM en procesos humanos",
+        "No hay diferencias significativas entre ambos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 89,
+      "pregunta": "¿Qué significa 'tráfico orgánico' en métricas de SEO?",
+      "opciones": [
+        "El tráfico generado por campañas de publicidad paga",
+        "Los visitantes que llegan al sitio web a través de redes sociales",
+        "El tráfico que llega al sitio web sin utilizar campañas pagas, posicionado naturalmente en buscadores",
+        "Los visitantes que llegan por recomendación directa de otros usuarios"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 90,
+      "pregunta": "En métricas de Google Ads, el QS (Quality Score) se basa en:",
+      "opciones": [
+        "El presupuesto total de la campaña",
+        "El CTR para medir el nivel de calidad del anuncio",
+        "El número total de impresiones del anuncio",
+        "La duración de la campaña publicitaria"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 91,
+      "pregunta": "¿Qué son los NoSQL en el contexto de Big Data?",
+      "opciones": [
+        "Un lenguaje de consulta alternativo al SQL estándar",
+        "Una familia de bases de datos diseñadas para manejar grandes cantidades de datos no estructurados y semi-estructurados",
+        "Un tipo de servidor de almacenamiento en la nube",
+        "Una herramienta de visualización de datos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 92,
+      "pregunta": "¿Cuál es el primer paso para realizar un análisis predictivo según las clases?",
+      "opciones": [
+        "Crear el modelo de inteligencia artificial",
+        "Evaluar la confiabilidad del modelo",
+        "Definir lo que se quiere pronosticar",
+        "Determinar la información base para las predicciones"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 93,
+      "pregunta": "¿Qué tipo de nube combina nubes públicas y privadas, pudiendo incluir servidores heredados en entorno local?",
+      "opciones": [
+        "Multinube",
+        "Nube de consorcio",
+        "Nube híbrida",
+        "Nube comunitaria"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 94,
+      "pregunta": "¿Qué es el 'Alcance' como métrica de redes sociales?",
+      "opciones": [
+        "El número de clics en los enlaces publicados",
+        "El nivel de compromiso de los usuarios con las publicaciones",
+        "El número de personas que han visto una publicación, incluyendo usuarios que no son parte de la comunidad digital",
+        "El costo por cada visualización de un anuncio"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 95,
+      "pregunta": "¿Cuál de los siguientes es un beneficio de un CRM para las empresas?",
+      "opciones": [
+        "Reduce el número de empleados necesarios",
+        "Mayor retención de clientes mediante servicio personalizado y analíticas en tiempo real",
+        "Elimina la necesidad de atención al cliente humana",
+        "Automatiza la producción manufacturera"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 96,
+      "pregunta": "¿En qué fase de la Transformación Digital se mide y evalúa qué tecnologías y estrategias son más beneficiosas para la empresa?",
+      "opciones": [
+        "Identificación",
+        "Transición",
+        "Ejecución",
+        "Optimización"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 97,
+      "pregunta": "¿Qué rol juega el IoT en la transformación del mundo físico?",
+      "opciones": [
+        "Transforma el mundo físico en un enorme sistema de información mediante la conectividad de dispositivos",
+        "Reemplaza a los trabajadores humanos en las fábricas",
+        "Permite la compra y venta de productos digitales en línea",
+        "Facilita el almacenamiento de datos en la nube"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 98,
+      "pregunta": "Según las clases, ¿cuál es el modelo de Blockchain más centralizado y útil principalmente para entornos sandbox?",
+      "opciones": [
+        "Blockchain público",
+        "Blockchain de consorcio",
+        "Blockchain semiprivado",
+        "Blockchain privado"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 99,
+      "pregunta": "¿Qué herramienta de BI permite a los usuarios crear dashboards y reportes interactivos de visualización de datos?",
+      "opciones": [
+        "Hadoop",
+        "Tableau",
+        "Apache Storm",
+        "NoSQL"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 100,
+      "pregunta": "¿Cuál es el objetivo del análisis prescriptivo según las clases?",
+      "opciones": [
+        "Resumir datos históricos para entender el pasado",
+        "Predecir eventos futuros basándose en datos históricos",
+        "Combinar predicción y optimización para proporcionar recomendaciones sobre acciones específicas a tomar",
+        "Crear visualizaciones de datos para presentar a directivos"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 101,
+      "pregunta": "¿Qué significa B2E en el contexto del e-commerce?",
+      "opciones": [
+        "Business to Employees - una empresa que realiza transacciones comerciales con sus empleados",
+        "Business to E-commerce - empresas que venden exclusivamente en línea",
+        "Business to Events - empresas que venden servicios para eventos",
+        "Business to Education - empresas del sector educativo"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 102,
+      "pregunta": "¿Cuál de las siguientes afirmaciones sobre la IA Generativa es correcta?",
+      "opciones": [
+        "Solo puede trabajar con texto, no con imágenes ni audio",
+        "No tiene limitaciones éticas conocidas",
+        "Es una área de la IA que crea contenido nuevo y tiene entre sus limitaciones los costos computacionales elevados y riesgos éticos como la generación de contenido falso",
+        "Es un subcampo de la computación en nube"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 103,
+      "pregunta": "¿Cuál de las siguientes es una característica del análisis descriptivo?",
+      "opciones": [
+        "Predice comportamientos futuros de clientes",
+        "Utiliza estadísticas (máximo, mínimo, promedio, mediana) y gráficos para resumir eventos pasados",
+        "Recomienda acciones para optimizar resultados",
+        "Usa machine learning para identificar tendencias"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 104,
+      "pregunta": "¿Cuál de los siguientes es un objetivo del BPM según las clases?",
+      "opciones": [
+        "Reducir al mínimo la cantidad de procesos en la empresa",
+        "Crear flujos de trabajo más manejables, productivos y rentables",
+        "Eliminar la participación humana en todos los procesos",
+        "Implementar blockchain en todos los departamentos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 105,
+      "pregunta": "¿Cuál es la fase del BPR donde se evalúan alternativas de diseño de procesos?",
+      "opciones": [
+        "Primera fase: Identificar y documentar actividades del proceso",
+        "Segunda fase: Identificar procesos para la mejora",
+        "Tercera fase: Evaluación de alternativas de diseño de procesos",
+        "Cuarta fase: Implementación del nuevo proceso"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 106,
+      "pregunta": "¿Cuál de los siguientes NO es uno de los cinco principios del TQM?",
+      "opciones": [
+        "Optimización continua",
+        "Acciones enfocadas al cliente",
+        "Reducción máxima de personal",
+        "Mejora continua de cada proceso"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 107,
+      "pregunta": "¿Qué módulo ERP ayuda a las empresas a adquirir los materiales y servicios que necesitan para fabricar sus productos?",
+      "opciones": [
+        "Módulo de Ventas",
+        "Módulo de Fabricación",
+        "Módulo de Abastecimiento y Compras",
+        "Módulo de Servicio"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 108,
+      "pregunta": "¿Qué es la 'Tasa de abandono del carrito' en métricas de e-commerce?",
+      "opciones": [
+        "El porcentaje de usuarios que se dan de baja del newsletter",
+        "El porcentaje de compradores que abandonan su visita luego de haber añadido productos al carrito",
+        "La cantidad de usuarios que abandonan la página de inicio",
+        "El porcentaje de pedidos cancelados después de la compra"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 109,
+      "pregunta": "¿Cuál de los siguientes es una ventaja del Blockchain relacionada con la eliminación de intermediarios?",
+      "opciones": [
+        "Hace los procesos más lentos pero más seguros",
+        "Requiere más intermediarios para validar transacciones",
+        "Reduce la dependencia de intermediarios externos, haciendo procesos más eficientes y con menos tarifas de transacción",
+        "Centraliza el control de todas las transacciones en un único nodo"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 110,
+      "pregunta": "¿Qué es la 'Indexación' en el contexto de métricas SEO?",
+      "opciones": [
+        "El proceso de pagar por aparecer en los primeros resultados de Google",
+        "La cantidad de URLs pertenecientes al dominio que Google puede mostrar en sus resultados",
+        "El número de palabras clave que usa el sitio web",
+        "La velocidad de carga de las páginas del sitio"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 111,
+      "pregunta": "¿Cuál de los siguientes es un tipo de implementación en la nube donde se alquilan recursos de múltiples proveedores externos simultáneamente?",
+      "opciones": [
+        "Nube privada",
+        "Nube híbrida",
+        "Nube pública",
+        "Multinube"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 112,
+      "pregunta": "Las Redes Neuronales tienen una estructura compuesta por:",
+      "opciones": [
+        "Módulos, plugins y extensiones",
+        "Capas de entrada, capas ocultas y capas de salida",
+        "Nodos master, slave y worker",
+        "Bloques, cadenas y hashes"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 113,
+      "pregunta": "¿Cuál es la relación entre Machine Learning (ML) e Inteligencia Artificial (IA)?",
+      "opciones": [
+        "Son conceptos completamente distintos sin relación",
+        "La IA es una rama del ML",
+        "El ML es una rama de la IA; todas las soluciones de ML son soluciones de IA",
+        "Son sinónimos que se usan indistintamente"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 114,
+      "pregunta": "¿Cuál es la diferencia entre una 'Tienda virtual' y un 'Marketplace' como modelo de negocio en internet?",
+      "opciones": [
+        "No hay diferencias; son modelos equivalentes",
+        "La tienda virtual vende bienes físicos o servicios directamente; el marketplace pone en contacto a dos partes que participan en una transacción",
+        "La tienda virtual es solo para servicios digitales; el marketplace para bienes físicos",
+        "La tienda virtual requiere suscripción; el marketplace es gratuito"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 115,
+      "pregunta": "¿Qué es el 'Autoservicio bajo demanda' como característica de la nube?",
+      "opciones": [
+        "El proveedor de nube gestiona todos los recursos por el cliente",
+        "Los consumidores pueden obtener herramientas computacionales como tiempo de servidor o almacenamiento por su propia cuenta sin intervención humana del proveedor",
+        "Los recursos se incrementan automáticamente cuando hay mayor demanda",
+        "El servicio está disponible las 24 horas del día"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 116,
+      "pregunta": "En el contexto de Machine Learning, ¿qué significa que un modelo sea 'consistente y constantemente evaluado'?",
+      "opciones": [
+        "Que el modelo nunca cambia una vez entrenado",
+        "Que el modelo se actualiza cada día con nuevos datos",
+        "Que para asegurar la confiabilidad del análisis predictivo, el modelo debe ser monitoreado y revisado regularmente",
+        "Que el modelo usa siempre el mismo conjunto de datos"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 117,
+      "pregunta": "¿Cuál de las siguientes es una aplicación actual del aprendizaje por refuerzo según las clases?",
+      "opciones": [
+        "Detección de spam en correos electrónicos",
+        "Creación de dashboards de visualización de datos",
+        "Reconocimiento facial, diagnósticos médicos y clasificación de secuencias de ADN",
+        "Gestión de inventarios en tiempo real"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 118,
+      "pregunta": "¿Cuál de los siguientes modelos de servicio en la nube se compara con 'alquilar una casa'?",
+      "opciones": [
+        "IaaS",
+        "PaaS",
+        "FaaS",
+        "SaaS"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 119,
+      "pregunta": "¿Qué característica del Blockchain garantiza que ninguna computadora controla los datos individualmente?",
+      "opciones": [
+        "La encriptación asimétrica",
+        "La naturaleza descentralizada y distribuida: todos tienen una copia que se actualiza automáticamente y las modificaciones deben ser verificadas por todos los usuarios de la red",
+        "El uso de contraseñas de alta complejidad",
+        "La autenticación de dos factores"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 120,
+      "pregunta": "¿Cuál de los siguientes es un beneficio de la SCM relacionado con los costos?",
+      "opciones": [
+        "Aumenta los costos de producción para mejorar la calidad",
+        "El uso de analíticas predictivas ayuda a eliminar las costosas 'conjeturas', reduciendo despilfarros y riesgo de escasez",
+        "Centraliza todos los costos en un único departamento",
+        "Elimina completamente la necesidad de proveedores externos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 121,
+      "pregunta": "¿Cuántos pasos principales tiene el proceso de rediseño BPR según las clases?",
+      "opciones": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 122,
+      "pregunta": "¿Cuál de los siguientes NO es un tipo de dato que genera el Big Data según las clases?",
+      "opciones": [
+        "Tráfico web",
+        "Datos de transacciones bancarias físicas en papel",
+        "Mensajes de redes sociales (tweets, mensajes de estado)",
+        "Datos generados por sensores de máquinas (IoT industrial)"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 123,
+      "pregunta": "¿Cuál es el rol de la Inteligencia Artificial en el análisis prescriptivo?",
+      "opciones": [
+        "Solo almacena datos históricos para consultas futuras",
+        "Se pone al servicio de la estrategia de manera más dinámica, indicando los mejores caminos a seguir y el posible impacto de diferentes variables",
+        "Reemplaza completamente a los gerentes en la toma de decisiones",
+        "Genera informes automáticos de ventas mensuales"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 124,
+      "pregunta": "¿Qué es el 'Posicionamiento orgánico' en métricas SEO?",
+      "opciones": [
+        "El posicionamiento de anuncios pagados en Google",
+        "El nivel de popularidad en redes sociales",
+        "Los contenidos y páginas que se logran posicionar sin utilizar campañas pagas, mostrando el nivel de dominio ante Google",
+        "El porcentaje de usuarios que visitan el sitio directamente"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 125,
+      "pregunta": "¿Cuál de las siguientes afirmaciones sobre el ERP es correcta según las clases?",
+      "opciones": [
+        "El ERP solo gestiona el módulo financiero de las empresas",
+        "A veces descrito como 'el sistema nervioso central de una empresa', brinda automatización, integración e inteligencia esenciales para ejecutar eficientemente todas las operaciones cotidianas",
+        "El ERP reemplaza completamente al CRM y al SCM",
+        "Solo las grandes corporaciones pueden implementar un ERP"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 126,
+      "pregunta": "¿Cuál de los siguientes es un ejemplo de modelo de negocio 'Open Source'?",
+      "opciones": [
+        "Netflix cobrando suscripción mensual",
+        "Red Hat cobrando suscripciones premium y servicios asociados con su software de código abierto",
+        "Apple vendiendo iPhones a precio premium",
+        "Google Ads cobrando por clics en anuncios"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 127,
+      "pregunta": "Según las clases, ¿para qué sirven las métricas en una empresa digital?",
+      "opciones": [
+        "Solo para informar a los accionistas sobre el rendimiento de la empresa",
+        "Son indicadores que permiten saber qué tan cerca o lejos se está de las metas generales y sirven para conocer el ROI de ciertas acciones",
+        "Exclusivamente para medir el tráfico web de la empresa",
+        "Para reemplazar la intuición de los gerentes en la toma de decisiones"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 128,
+      "pregunta": "¿Qué es el 'Engagement' en el contexto de las métricas de Inbound Marketing?",
+      "opciones": [
+        "El costo de adquirir cada nuevo cliente",
+        "El nivel de compromiso del usuario con una publicación, incluyendo likes, comentarios y compartidos",
+        "El porcentaje de conversión de visitantes en clientes",
+        "El número de usuarios que se suscriben al newsletter"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 129,
+      "pregunta": "¿Cuáles son las tres técnicas principales para evaluar alternativas en el BPR?",
+      "opciones": [
+        "Análisis FODA, Porter y Benchmarking",
+        "Lluvia de ideas, modificación de diseños existentes y uso de puntos de referencia",
+        "Entrevistas, encuestas y observación directa",
+        "Mapeo de procesos, simulación y prototipado"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 130,
+      "pregunta": "¿Qué herramienta tecnológica permite usar código o funciones que se ejecutan solo cuando son necesarios, sin gestionar servidores?",
+      "opciones": [
+        "IaaS",
+        "PaaS",
+        "SaaS",
+        "FaaS (Function as a Service / Serverless)"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 131,
+      "pregunta": "¿Cuál es un ejemplo de aplicación del Blockchain en Recursos Humanos?",
+      "opciones": [
+        "Automatizar el proceso de nómina mediante smart contracts",
+        "Un blockchain que registra niveles de educación, certificaciones, historial de empleo y calificaciones para que RR.HH. verifique credenciales más eficientemente",
+        "Usar blockchain para gestionar turnos y horarios de empleados",
+        "Almacenar fotos y datos personales de empleados de forma segura"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 132,
+      "pregunta": "¿Qué elemento del análisis descriptivo permite ver la evolución de ventas o los beneficios de una empresa de forma visual?",
+      "opciones": [
+        "Estadísticas como máximo y mínimo",
+        "Tablas de datos",
+        "Gráficos (barras, líneas, circulares)",
+        "Informes de texto estructurados"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 133,
+      "pregunta": "¿Cuáles son los cuatro puntos de enfoque generales en cualquier negocio con presencia en Internet para métricas?",
+      "opciones": [
+        "SEO, SEM, SMM y Email Marketing",
+        "Nivel de ingresos, registros de usuarios en la web, compromiso de los usuarios y fidelización de la audiencia",
+        "Adquisición, Activación, Retención y Referencia",
+        "Tráfico, Conversión, Satisfacción y Lealtad"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 134,
+      "pregunta": "¿Cuál de los siguientes es un módulo de ERP dedicado a I+D e ingeniería?",
+      "opciones": [
+        "Proporciona herramientas para diseño y desarrollo de productos, gestión del ciclo de vida del producto (PLM) y cumplimiento regulatorio",
+        "Gestiona las cuentas por pagar y cobrar",
+        "Controla el inventario y la logística de entrega",
+        "Administra los recursos humanos y la nómina"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 135,
+      "pregunta": "¿Cuál es una diferencia clave entre la Realidad Virtual (VR) y la Realidad Aumentada (AR) en términos de la posición del usuario?",
+      "opciones": [
+        "En VR el usuario está ubicado en el mundo físico real; en AR el usuario está inmerso en un entorno completamente simulado",
+        "En AR el usuario está ubicado en el mundo físico real y las imágenes virtuales se fusionan con la vista real; en VR el usuario está inmerso en una simulación completa",
+        "Ambas ubican al usuario en entornos completamente virtuales",
+        "Ambas combinan elementos del mundo real con elementos virtuales de la misma manera"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 136,
+      "pregunta": "¿Cuál es el objetivo principal de la seguridad informática?",
+      "opciones": [
+        "Eliminar todos los sistemas de información obsoletos",
+        "Mantener la Integridad, Disponibilidad, Privacidad, Control y Autenticidad de la información",
+        "Garantizar el acceso libre a la información para todos los usuarios",
+        "Reducir el costo de los sistemas de hardware y software"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 137,
+      "pregunta": "¿Cuál de los siguientes NO es un objetivo de la seguridad informática?",
+      "opciones": [
+        "Minimizar y gestionar los riesgos y detectar posibles amenazas",
+        "Garantizar la adecuada utilización de los recursos del sistema",
+        "Permitir el acceso público irrestricto a toda la información",
+        "Limitar las pérdidas y lograr la adecuada recuperación ante incidentes"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 138,
+      "pregunta": "La seguridad del hardware en sistemas de información se enfoca en:",
+      "opciones": [
+        "Proteger al software de crackers y vulnerabilidades",
+        "Proteger los elementos físicos de cualquier daño, incluyendo SAI y cortafuegos",
+        "Evitar que los datos sean modificados o robados en la red",
+        "Cifrar la información confidencial almacenada en bases de datos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 139,
+      "pregunta": "¿Cuál de los siguientes es un componente de seguridad de red?",
+      "opciones": [
+        "Sistemas de alimentación ininterrumpida (SAI)",
+        "Desbordamiento de buffer",
+        "Redes privadas virtuales (VPN) y Sistemas de prevención de intrusos (IPS)",
+        "Gestión de privilegios de usuario"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 140,
+      "pregunta": "¿Cuál es el pilar de seguridad informática que asegura que solo el personal autorizado accede a la información que le corresponde?",
+      "opciones": [
+        "Disponibilidad",
+        "Integridad",
+        "Confidencialidad",
+        "Autenticidad"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 141,
+      "pregunta": "¿Cuál de las siguientes medidas corresponde al pilar de Integridad de la información?",
+      "opciones": [
+        "Balanceadores de tráfico para minimizar el impacto de ataques DDoS",
+        "Cifrado de información confidencial",
+        "Sitio de contingencia (DRP)",
+        "Monitorear la red para descubrir posibles intrusos y realizar auditorías"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 142,
+      "pregunta": "El pilar de Disponibilidad en seguridad informática se garantiza mediante:",
+      "opciones": [
+        "Autenticación de usuarios y gestión de privilegios",
+        "Balanceadores de tráfico, copias de seguridad y sitios de contingencia (DRP)",
+        "Monitoreo de red y sistemas de control de cambios",
+        "Cifrado de información y auditorías de sistemas"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 143,
+      "pregunta": "¿Cuál de las siguientes características describe correctamente la Autenticidad de la información?",
+      "opciones": [
+        "La información no se pierde ni está comprometida",
+        "Solo el personal autorizado puede acceder a la información",
+        "La información requerida es válida y utilizable en tiempo, forma y distribución",
+        "Los usuarios autorizados deciden cuándo y cómo permitir el acceso"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 144,
+      "pregunta": "Según la clasificación de la información, ¿qué tipo puede ser visualizada por cualquier persona?",
+      "opciones": [
+        "Información sensitiva",
+        "Información crítica",
+        "Información privada",
+        "Información pública"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 145,
+      "pregunta": "La información es considerada 'Crítica' cuando:",
+      "opciones": [
+        "Solo puede ser conocida por quienes la procesan",
+        "Es un activo con valor en sí misma",
+        "Es indispensable para garantizar la continuidad operativa",
+        "Puede ser visualizada por cualquier persona"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 146,
+      "pregunta": "¿Qué tipo de control de seguridad incluye la segregación de funciones, políticas por escrito y supervisión?",
+      "opciones": [
+        "Controles de aplicación",
+        "Controles generales",
+        "Controles de hardware",
+        "Controles administrativos"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 147,
+      "pregunta": "Los controles de entrada, procesamiento y salida son parte de:",
+      "opciones": [
+        "Controles generales",
+        "Controles de aplicación",
+        "Controles administrativos",
+        "Controles de hardware"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 148,
+      "pregunta": "Los mecanismos de seguridad preventivos se caracterizan porque:",
+      "opciones": [
+        "Determinan el momento exacto en que ocurre un ataque",
+        "Ayudan a mitigar los efectos de un evento bloqueando IPs sospechosas",
+        "Implementan mecanismos que los usuarios no pueden anular, evitando o disminuyendo el impacto de ataques",
+        "Solo se activan después de que ocurre un incidente de seguridad"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 149,
+      "pregunta": "¿Cuál de los siguientes es un ejemplo de mecanismo de seguridad DETECTIVO?",
+      "opciones": [
+        "Actualización del sistema operativo y antivirus",
+        "Bloqueo de direcciones IP sospechosas",
+        "Tecnología CAPTCHA y alertas sobre intentos fallidos de acceso",
+        "Cifrar información confidencial en reposo"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 150,
+      "pregunta": "¿Cuál de los siguientes es un ejemplo de mecanismo de seguridad CORRECTIVO?",
+      "opciones": [
+        "Uso de cortafuegos y contraseñas",
+        "Implementación de CAPTCHA en formularios web",
+        "Bloqueo de acciones sospechosas y de direcciones IP para corregir brechas de seguridad",
+        "Actualización periódica del software antivirus"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 151,
+      "pregunta": "¿En qué consisten las cinco dimensiones morales de la era de la información según el modelo conceptual de ética en TI?",
+      "opciones": [
+        "Seguridad, privacidad, integridad, disponibilidad y autenticidad",
+        "Propiedad, Acceso, Control, Calidad de vida y Responsabilidad",
+        "Hardware, software, redes, datos y personas",
+        "Cumplimiento, auditoría, riesgo, gobernanza y ética"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 152,
+      "pregunta": "La dimensión moral de 'Acceso' en la era de la información se refiere principalmente a:",
+      "opciones": [
+        "Los derechos de autor y patentes sobre tecnología",
+        "El espionaje y la vigilancia masiva por parte de empresas tecnológicas",
+        "La brecha digital y la responsabilidad de garantizar igualdad de oportunidades para acceder a la tecnología",
+        "El impacto de la tecnología en la salud y bienestar de las personas"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 153,
+      "pregunta": "¿Cuál de las siguientes tendencias tecnológicas intensifica las preocupaciones éticas porque permite encontrar gran cantidad de información personal detallada sobre individuos?",
+      "opciones": [
+        "La duplicación de la capacidad de cómputo",
+        "Los adelantos en el trabajo con redes",
+        "Los adelantos en las técnicas de extracción de datos de bases de datos grandes",
+        "La reducción en los costos de almacenamiento"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 154,
+      "pregunta": "¿Cuál de los siguientes es un dilema ético de la Tecnología de Información relacionado con la privacidad laboral?",
+      "opciones": [
+        "El uso de algoritmos para reconocimiento facial en espacios públicos",
+        "La reducción de personal mediante tecnología de información",
+        "Las compañías que afirman tener derecho a monitorear el correo electrónico de sus empleados por ser dueñas de las instalaciones",
+        "El rastreo de teléfonos celulares sin consentimiento del usuario"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 155,
+      "pregunta": "¿Cuál de los siguientes aspectos forma parte de la responsabilidad ética en TI relacionada con el desarrollo de software?",
+      "opciones": [
+        "Maximizar las ganancias de los accionistas a corto plazo",
+        "Evitar la discriminación algorítmica y garantizar transparencia y equidad en los algoritmos",
+        "Reducir el número de empleados mediante automatización",
+        "Implementar únicamente tecnologías de bajo costo"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 156,
+      "pregunta": "El cumplimiento normativo en una organización implica:",
+      "opciones": [
+        "Elegir discrecionalmente qué normas aplicar según convenga",
+        "Adherirse y satisfacer los criterios y condiciones establecidos por una autoridad reguladora o legislación específica",
+        "Solo cumplir con los estándares voluntarios de calidad ISO",
+        "Aplicar únicamente las normas exigidas por los clientes en sus contratos"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 157,
+      "pregunta": "¿Cuáles pueden ser las consecuencias del incumplimiento normativo para una organización?",
+      "opciones": [
+        "Mayor competitividad y reducción de costos operativos",
+        "Aumento de la confianza de los clientes y más oportunidades comerciales",
+        "Sanciones legales, multas, pérdida de reputación y daño a las relaciones con clientes",
+        "Ninguna consecuencia significativa si el incumplimiento es menor"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 158,
+      "pregunta": "¿Para qué se implanta generalmente el estándar ISO 9001 en una organización?",
+      "opciones": [
+        "Para establecer un sistema de gestión de seguridad de la información",
+        "Para demostrar capacidad de ofrecer productos y servicios que satisfagan requisitos de clientes y cumplir con la legalidad vigente",
+        "Para gestionar los servicios de tecnología de la información",
+        "Para evaluar la calidad del software según características como funcionalidad y confiabilidad"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 159,
+      "pregunta": "¿Qué norma ISO establece los requisitos para un Sistema de Gestión de Seguridad de la Información (SGSI)?",
+      "opciones": [
+        "ISO/IEC 9001",
+        "ISO/IEC 20000",
+        "ISO/IEC 25000",
+        "ISO/IEC 27001"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 160,
+      "pregunta": "La norma ISO/IEC 20000 se enfoca en:",
+      "opciones": [
+        "El estándar para el ciclo de vida del software",
+        "Los requisitos para la gestión de servicios de TI, proporcionando directrices para planificar, implementar y mejorar dichos servicios",
+        "La evaluación de la calidad del software incluyendo funcionalidad y confiabilidad",
+        "Los requisitos para un sistema de gestión de calidad general"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 161,
+      "pregunta": "¿Qué norma ISO es conocida como la serie SQuaRE y define modelos para la evaluación de la calidad del software?",
+      "opciones": [
+        "ISO/IEC 12207",
+        "ISO/IEC 20000",
+        "ISO/IEC 25000",
+        "ISO/IEC 27001"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 162,
+      "pregunta": "¿Cuál norma ISAE se centra en la auditoría de controles internos en una organización que presta servicios a terceros?",
+      "opciones": [
+        "ISAE 3000",
+        "ISAE 3002",
+        "ISAE 3402",
+        "ISAE 3410"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 163,
+      "pregunta": "La norma ISAE 3000 se utiliza para:",
+      "opciones": [
+        "Auditar controles en organizaciones que prestan servicios de outsourcing",
+        "Evaluar la confiabilidad e integridad de la información en informes no financieros como informes de sostenibilidad y cumplimiento",
+        "Auditar los controles de seguridad de la información en una organización",
+        "Evaluar controles en el diseño y desarrollo de sistemas de información"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 164,
+      "pregunta": "¿Cuál es la diferencia entre la seguridad de software y la seguridad de red?",
+      "opciones": [
+        "La seguridad de software protege el hardware; la seguridad de red protege los datos en tránsito",
+        "La seguridad de software protege al software de vulnerabilidades como errores de implementación y desbordamiento de buffer; la seguridad de red protege los datos y evita su modificación o robo mediante VPN e IPS",
+        "Ambas son equivalentes y se pueden usar indistintamente",
+        "La seguridad de red solo se aplica en empresas grandes; la seguridad de software en todas las organizaciones"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 165,
+      "pregunta": "¿Cuál de las siguientes tendencias tecnológicas reduce los costos de trasladar y acceder a grandes cantidades de datos, abriendo la posibilidad de invadir la privacidad a escala inimaginable?",
+      "opciones": [
+        "La duplicación de la capacidad de cómputo",
+        "Los adelantos en técnicas de almacenamiento de datos",
+        "Los adelantos en el trabajo con redes",
+        "Los adelantos en extracción de datos de bases de datos grandes"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 166,
+      "pregunta": "El Control sobre la información, como característica de la seguridad informática, permite:",
+      "opciones": [
+        "Garantizar que los datos no sean alterados por personas no autorizadas",
+        "Asegurar que la información esté siempre disponible para quien la necesita",
+        "Asegurar que solo los usuarios autorizados puedan decidir cuándo y cómo permitir el acceso a la información",
+        "Definir que la información requerida es válida y utilizable en tiempo y forma"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 167,
+      "pregunta": "Según la responsabilidad social y sostenibilidad en TI, las organizaciones deben:",
+      "opciones": [
+        "Maximizar el uso de recursos tecnológicos independientemente del impacto ambiental",
+        "Minimizar la huella de carbono, adoptar prácticas de desarrollo sostenible y promover igualdad de oportunidades en tecnología",
+        "Centrarse exclusivamente en el cumplimiento legal y normativo",
+        "Tercerizar todas las operaciones para reducir su responsabilidad social"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 168,
+      "pregunta": "¿Qué valor se protege principalmente mediante el pilar de Privacidad o Confidencialidad de la información?",
+      "opciones": [
+        "Que la información esté siempre disponible para quien la necesite",
+        "Que el contenido de la información permanezca inalterado",
+        "Que la información solo sea conocida por las personas autorizadas",
+        "Que la información sea válida y utilizable en tiempo, forma y distribución"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 169,
+      "pregunta": "¿Por qué el valor de la información suele no valorarse adecuadamente en muchas organizaciones?",
+      "opciones": [
+        "Porque la información siempre puede recuperarse fácilmente",
+        "Debido a su intangibilidad, lo que hace difícil asignarle un valor concreto",
+        "Porque la información nunca es crítica para la continuidad operativa",
+        "Porque toda la información es de acceso público por defecto"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 170,
+      "pregunta": "La norma ISO/IEC 12207 establece:",
+      "opciones": [
+        "Los requisitos para gestión de servicios de TI",
+        "El estándar para el ciclo de vida del software, definiendo procesos para desarrollar, operar y mantener sistemas de software",
+        "Un sistema de gestión de seguridad de la información",
+        "Técnicas para la evaluación de la calidad del software"
+      ],
+      "respuesta_correcta": 1
+    }
+  ]
+}
