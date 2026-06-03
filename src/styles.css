@@ -564,6 +564,33 @@ body {
 /* Utilities */
 .hidden { display: none !important; }
 
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%       { transform: translateX(-8px); }
+    40%       { transform: translateX(8px); }
+    60%       { transform: translateX(-5px); }
+    80%       { transform: translateX(5px); }
+}
+
+.shake-effect {
+    animation: shake 0.5s ease;
+}
+
+.failure-vignette {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    box-shadow: inset 0 0 80px 20px rgba(239, 68, 68, 0.45);
+    animation: vignette-fade 2.5s ease forwards;
+}
+
+@keyframes vignette-fade {
+    0%   { opacity: 1; }
+    60%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
 @keyframes fadeInSlide {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
