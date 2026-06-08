@@ -1,0 +1,292 @@
+{
+  "materia": "GS",
+  "titulo": "Segundo Parcial",
+  "duracion": 60,
+  "preguntas_para_aprobar": 13,
+  "fecha": "2023-06-12",
+  "version": "1.0",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "Si trabaja en una empresa de venta de software empaquetado, ¿Qué modelo de ecommerce implementaría?",
+      "opciones": [
+        "Corredores de información",
+        "Entrega Digital de Productos",
+        "Tienda Virtual",
+        "Proveedor de servicios en Línea",
+        "Proveedor de contenido",
+        "Concentrador de Mercado"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "pregunta": "Seleccione una de las ventajas del uso de un sistema CRM en una organización:",
+      "opciones": [
+        "Todas las anteriores",
+        "Disminuir las tasas de retención de clientes.",
+        "Mayor productividad del desarrollo de software.",
+        "Disminuir la cuota de gasto de los clientes.",
+        "Mejorar la experiencia del cliente."
+      ],
+      "respuesta_correcta": 4
+    },
+    {
+      "id": 3,
+      "pregunta": "\"En el método de Gestión de Calidad los directores y la alta gerencia son los que deben trabajar en conjunto para lograr la satisfacción del cliente\" ¿Verdadero o Falso?",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Cuál es la principal diferencia entre RPA no asistida y RPA asistida?",
+      "opciones": [
+        "RPA no asistida trabaja con humanos, mientras que RPA asistida interactúa con sistemas informáticos",
+        "RPA no asistida trabaja con humanos, mientras que RPA asistida no requiere participación humana",
+        "RPA no asistida interactúa con sistemas informáticos, mientras que RPA asistida trabaja con humanos",
+        "RPA no asistida no requiere participación humana, mientras que RPA asistida trabaja con humanos"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Cuál es una de las aplicaciones de las redes neurales en medicina?",
+      "opciones": [
+        "Pronosticar el desempeño de equidades",
+        "Realizar un seguimiento de los alimentos en la cadena de suministro.",
+        "Diagnosticar enfermedades como la epilepsia y el Alzheimer.",
+        "Detectar fraudes con tarjetas de crédito."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 6,
+      "pregunta": "¿Qué característica hace que el blockchain sea difícil de hackear?",
+      "opciones": [
+        "El uso de redes neurales para su funcionamiento.",
+        "El cifrado de los datos con claves privadas.",
+        "La descentralización y la tecnología de contabilidad distribuida.",
+        "La transparencia de la información almacenada en bloques."
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 7,
+      "pregunta": "¿Qué medida es importante para determinar el retorno de la inversión (ROI) del marketing en el contexto del Inbound Marketing?",
+      "opciones": [
+        "Nivel de satisfacción del cliente",
+        "Tasa de conversión",
+        "Cantidad de visitas en el sitio web",
+        "Porcentaje de crecimiento de la marca"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 8,
+      "pregunta": "¿Cuál de los siguientes no es un objetivo de la seguridad informática?",
+      "opciones": [
+        "Limitar las pérdidas en caso de un incidente de seguridad",
+        "Minimizar y gestionar los riesgos",
+        "Garantizar el correcto funcionamiento de las aplicaciones",
+        "Cumplir con el Marco Legal"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 9,
+      "pregunta": "¿Qué característica de la información asegura que su contenido permanezca inalterado a menos que sea modificado por personal autorizado?",
+      "opciones": [
+        "Privacidad o confidencialidad de la información",
+        "Disponibilidad u operatividad de la información",
+        "Integridad de la información"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 10,
+      "pregunta": "¿Qué tipo de mecanismo de seguridad informática ayuda a mitigar o disminuir los efectos de un evento que afecta a los sistemas?",
+      "opciones": [
+        "Mecanismos correctivos",
+        "Mecanismos detectivos",
+        "Mecanismos preventivos"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 11,
+      "pregunta": "¿Cuál es una dimensión moral de la era de la información que se refiere a los derechos de propiedad intelectual y cuestiones relacionadas con la piratería y la privacidad?",
+      "opciones": [
+        "Todas las anteriores",
+        "Control",
+        "Calidad de Vida",
+        "Acceso",
+        "Propiedad"
+      ],
+      "respuesta_correcta": 4
+    },
+    {
+      "id": 12,
+      "pregunta": "¿Qué aspecto clave de la responsabilidad ética en tecnología de la información implica garantizar la seguridad de la información y protegerse contra amenazas de ciberseguridad?",
+      "opciones": [
+        "Ninguna de las anteriores",
+        "Ética en el desarrollo de software y tecnología",
+        "Seguridad de la información",
+        "Responsabilidad social y sostenibilidad",
+        "Privacidad y protección de datos"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 13,
+      "pregunta": "¿Qué norma ISO establece los requisitos para un sistema de gestión de seguridad de la información?",
+      "opciones": [
+        "ISO/IEC 27001",
+        "ISO/IEC 25000",
+        "ISO/IEC 20000",
+        "ISO/IEC 12207"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 14,
+      "pregunta": "¿Cuál es la principal característica del Internet de las cosas (IoT)?",
+      "opciones": [
+        "La conectividad de objetos físicos al Internet.",
+        "La posibilidad de aprender idiomas y realizar tareas físicas",
+        "La capacidad de automatizar tareas de seguridad en las empresas.",
+        "La emulación de la experiencia humana y la toma de decisiones.",
+        "Todas las anteriores"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 15,
+      "pregunta": "¿Qué tipo de tareas puede manejar la tecnología de automatización robótica de procesos (RPA)?",
+      "opciones": [
+        "Tareas manuales y repetitivas",
+        "Tareas físicas y manuales.",
+        "Tareas creativas y estratégicas.",
+        "Tareas intelectuales y complejas"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 16,
+      "pregunta": "¿Qué métrica te ayuda a determinar la cantidad de personas que han visto una publicación en redes sociales, incluyendo a usuarios que no son parte de tu comunidad digital?",
+      "opciones": [
+        "Engagement",
+        "Alcance",
+        "Ninguna de las anteriores",
+        "Tasa de apertura",
+        "CTR"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 17,
+      "pregunta": "¿Qué tipo de seguridad informática se encarga de proteger los elementos físicos de cualquier daño?",
+      "opciones": [
+        "Seguridad del hardware",
+        "Todas las anteriores",
+        "Seguridad de red",
+        "Seguridad del software"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 18,
+      "pregunta": "¿Qué aspecto clave de la responsabilidad ética en tecnología de la información implica proteger la privacidad y los datos de los clientes y usuarios?",
+      "opciones": [
+        "Todas las anteriores",
+        "Responsabilidad social y sostenibilidad",
+        "Seguridad de la información",
+        "Ética en el desarrollo de software y tecnología",
+        "Privacidad y protección de datos"
+      ],
+      "respuesta_correcta": 4
+    },
+    {
+      "id": 19,
+      "pregunta": "En una empresa de venta de electrodomésticos, ¿por qué tipo de Ecommerce se generará la mayor cantidad de ventas?",
+      "opciones": [
+        "G2C",
+        "B2C",
+        "B2E",
+        "B2B",
+        "C2C",
+        "G2B"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 20,
+      "pregunta": "En una empresa que vende contenido digital, ¿cuál sería el modelo de revenue más apropiado?",
+      "opciones": [
+        "Suscripción",
+        "SaaS",
+        "Enterprise",
+        "Transaccional",
+        "Comercio Electrónico",
+        "Marketplace"
+      ],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 21,
+      "pregunta": "La siguiente definición, ¿a qué tipo de análisis de datos se refiere?: \"Enfoque que analiza los datos históricos para predecir los resultados futuros\"",
+      "opciones": [
+        "Análisis Descriptivo",
+        "Análisis Prescriptivo",
+        "Análisis Predictivo"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 22,
+      "pregunta": "¿Cuál es el tipo de aplicación empresarial que utilizaría para gestionar un producto a lo largo de todo su ciclo de vida?",
+      "opciones": [
+        "CRM",
+        "Ninguna de las anteriores",
+        "SCM",
+        "ERP"
+      ],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 23,
+      "pregunta": "¿Qué modelo de servicio en la nube elegiría para alojar las aplicaciones que desarrolla dentro de la empresa?",
+      "opciones": [
+        "FaaS",
+        "IaaS",
+        "SaaS",
+        "PaaS",
+        "DaaS"
+      ],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 24,
+      "pregunta": "¿Cuál de las siguientes afirmaciones es Falsa?",
+      "opciones": [
+        "La nube privada es cuando está dedicada a una organización",
+        "Se denomina Nube híbrida cuando se utilizan servicios de nube pública de dos o más proveedores externos",
+        "La nube pública es un servicio gestionado por un proveedor externo que puede incluir servidores en uno o varios centros de datos",
+        "La nube pública es más económica que la nube privada"
+      ],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 25,
+      "pregunta": "¿Qué son los robots de software utilizados en la automatización de procesos de negocio conocida como RPA?",
+      "opciones": [
+        "Robots físicos que realizan tareas manuales.",
+        "Robots virtuales que realizan tareas manuales",
+        "Robots que interactúan con sistemas informáticos."
+      ],
+      "respuesta_correcta": 1
+    }
+  ]
+}
