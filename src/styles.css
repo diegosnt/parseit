@@ -729,6 +729,15 @@ body {
     color: #fbbf24;
 }
 
+.guide-icon-wrapper.green {
+    background-color: #f0fdf4;
+    color: #16a34a;
+}
+[data-theme="dark"] .guide-icon-wrapper.green {
+    background-color: rgba(34, 197, 94, 0.15);
+    color: #4ade80;
+}
+
 .guide-info {
     flex-grow: 1;
     min-width: 0;

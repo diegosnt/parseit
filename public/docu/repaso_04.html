@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GSI — Resumen de Estudio · Clases 6, 7 y 10</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --teal-50: #E1F5EE; --teal-200: #5DCAA5; --teal-600: #0F6E56; --teal-800: #085041;
+    --purple-50: #EEEDFE; --purple-200: #AFA9EC; --purple-600: #534AB7; --purple-800: #3C3489;
+    --coral-50: #FAECE7; --coral-200: #F0997B; --coral-600: #993C1D; --coral-800: #712B13;
+    --blue-50: #E6F1FB; --blue-200: #85B7EB; --blue-600: #185FA5; --blue-800: #0C447C;
+    --amber-50: #FAEEDA; --amber-200: #EF9F27; --amber-600: #854F0B; --amber-800: #633806;
+    --gray-50: #F1EFE8; --gray-100: #D3D1C7; --gray-400: #888780; --gray-700: #444441;
+    --bg: #F7F6F2;
+    --surface: #FFFFFF;
+    --border: rgba(60,55,50,0.1);
+    --text: #1C1B18;
+    --text-muted: #6B6A65;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  /* ─── HEADER ─── */
+  header {
+    background: var(--text);
+    color: #fff;
+    padding: 3rem 2.5rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    right: -60px; top: -60px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    right: 80px; top: 40px;
+    width: 150px; height: 150px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+  }
+  .header-label {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 10px;
+  }
+  header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 400;
+    line-height: 1.15;
+    color: #fff;
+    margin-bottom: 0.75rem;
+  }
+  header p {
+    color: rgba(255,255,255,0.55);
+    font-size: 14px;
+    max-width: 480px;
+  }
+  .header-meta {
+    display: flex;
+    gap: 8px;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .header-tag {
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.04em;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2.5rem;
+    display: flex;
+    gap: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  nav::-webkit-scrollbar { display: none; }
+  .nav-btn {
+    background: none;
+    border: none;
+    padding: 1rem 1.25rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: color .2s, border-color .2s;
+  }
+  .nav-btn:hover { color: var(--text); }
+  .nav-btn.active-teal { color: var(--teal-600); border-bottom-color: var(--teal-200); }
+  .nav-btn.active-purple { color: var(--purple-600); border-bottom-color: var(--purple-200); }
+  .nav-btn.active-amber { color: var(--amber-600); border-bottom-color: var(--amber-200); }
+
+  /* ─── LAYOUT ─── */
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 5rem;
+  }
+
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; animation: fadeIn .25s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* ─── CLASE BADGE ─── */
+  .clase-intro {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .clase-number {
+    font-family: 'DM Serif Display', serif;
+    font-size: 4rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .clase-number.teal { color: var(--teal-200); }
+  .clase-number.purple { color: var(--purple-200); }
+  .clase-intro-text h2 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+  }
+  .clase-intro-text p { color: var(--text-muted); font-size: 14px; }
+
+  /* ─── SECTION ─── */
+  .section { margin-bottom: 2.5rem; }
+  .section-title {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ─── CARDS ─── */
+  .grid { display: grid; gap: 10px; }
+  .grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .grid-3 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.1rem 1.25rem;
+    transition: box-shadow .2s;
+  }
+  .card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
+  .card h4 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .card p, .card ul { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+  .card ul { padding-left: 1rem; }
+  .card ul li { margin-bottom: 2px; }
+
+  /* Card accent variants */
+  .card-teal { border-left: 3px solid var(--teal-200); }
+  .card-purple { border-left: 3px solid var(--purple-200); }
+  .card-coral { border-left: 3px solid var(--coral-200); }
+  .card-blue { border-left: 3px solid var(--blue-200); }
+  .card-amber { border-left: 3px solid var(--amber-200); }
+
+  /* ─── PILLS ─── */
+  .pill-row { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+  .pill {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.02em;
+  }
+  .p-teal { background: var(--teal-50); color: var(--teal-800); }
+  .p-purple { background: var(--purple-50); color: var(--purple-800); }
+  .p-coral { background: var(--coral-50); color: var(--coral-800); }
+  .p-blue { background: var(--blue-50); color: var(--blue-800); }
+  .p-amber { background: var(--amber-50); color: var(--amber-800); }
+
+  /* ─── ACCORDION ─── */
+  .accordion { margin-bottom: 8px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--surface); }
+  .accordion summary {
+    list-style: none;
+    padding: 1rem 1.25rem;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    transition: background .15s;
+  }
+  .accordion summary::-webkit-details-marker { display: none; }
+  .accordion summary:hover { background: var(--bg); }
+  .accordion summary::after {
+    content: '+';
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--text-muted);
+    flex-shrink: 0;
+  }
+  .accordion[open] summary::after { content: '−'; }
+  .accordion .acc-body {
+    padding: 0 1.25rem 1.1rem;
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+  }
+  .accordion .acc-body strong { color: var(--text); font-weight: 500; }
+
+  /* ─── QUIZ ─── */
+  .quiz-section { margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem; }
+  .quiz-section h3 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem;
+  }
+  .quiz-section .quiz-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 1.5rem; }
+  .quiz-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 10px;
+  }
+  .quiz-q { font-size: 14px; font-weight: 500; margin-bottom: 12px; }
+  .quiz-options { display: flex; flex-direction: column; gap: 7px; }
+  .quiz-opt {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.65rem 1rem;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all .15s;
+    text-align: left;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+  }
+  .quiz-opt:hover { background: var(--gray-50); }
+  .quiz-opt.correct { background: var(--teal-50); border-color: var(--teal-200); color: var(--teal-800); font-weight: 500; }
+  .quiz-opt.wrong { background: var(--coral-50); border-color: var(--coral-200); color: var(--coral-800); }
+  .quiz-opt:disabled { cursor: default; }
+  .quiz-feedback { font-size: 12px; margin-top: 8px; padding: 8px 12px; border-radius: 8px; display: none; }
+  .quiz-feedback.correct { background: var(--teal-50); color: var(--teal-600); display: block; }
+  .quiz-feedback.wrong { background: var(--coral-50); color: var(--coral-600); display: block; }
+  .quiz-score {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    display: none;
+  }
+  .score-num { font-family: 'DM Serif Display', serif; font-size: 2.5rem; }
+  .score-num.teal { color: var(--teal-600); }
+  .score-num.purple { color: var(--purple-600); }
+
+  /* ─── GLOSSARY ─── */
+  .gloss-list { list-style: none; }
+  .gloss-item {
+    display: flex;
+    gap: 1rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .gloss-term {
+    font-weight: 500;
+    flex-shrink: 0;
+    width: 120px;
+    color: var(--text);
+  }
+  .gloss-def { color: var(--text-muted); }
+
+  /* ─── TIMELINE ─── */
+  .timeline { position: relative; padding-left: 2rem; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px; top: 8px; bottom: 8px;
+    width: 2px;
+    background: var(--border);
+  }
+  .tl-item {
+    position: relative;
+    margin-bottom: 1.25rem;
+  }
+  .tl-dot {
+    position: absolute;
+    left: -2rem;
+    top: 4px;
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    border: 2px solid var(--surface);
+    background: var(--gray-100);
+  }
+  .tl-dot.teal { background: var(--teal-200); }
+  .tl-dot.purple { background: var(--purple-200); }
+  .tl-dot.coral { background: var(--coral-200); }
+  .tl-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); }
+  .tl-text { font-size: 14px; font-weight: 500; margin: 2px 0 4px; }
+  .tl-sub { font-size: 13px; color: var(--text-muted); }
+
+  /* responsive */
+  @media (max-width: 600px) {
+    header { padding: 2rem 1.25rem 2rem; }
+    main { padding: 2rem 1.25rem 4rem; }
+    nav { padding: 0 0.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-label">UNICABA · Gestión de Sistemas de Información</div>
+  <h1>Resumen<br>de Estudio</h1>
+  <p>Material interactivo de las clases 6, 7 y 10. Revisá los conceptos, expandí las secciones y poné a prueba tus conocimientos.</p>
+  <div class="header-meta">
+    <span class="header-tag">Clase 6 — Unidad 3</span>
+    <span class="header-tag">Clase 7 — Unidad 3</span>
+    <span class="header-tag">Clase 10 — Unidad 4</span>
+    <span class="header-tag">Quiz de autoevaluación</span>
+    <span class="header-tag">Glosario</span>
+  </div>
+</header>
+
+<nav>
+  <button class="nav-btn active-teal" onclick="switchTab('clase6', this)">Clase 6 — E-Commerce, BI &amp; ML</button>
+  <button class="nav-btn" onclick="switchTab('clase7', this)">Clase 7 — Transform. Digital &amp; Tech</button>
+  <button class="nav-btn" onclick="switchTab('clase10', this)">Clase 10 — Seguridad &amp; Ética</button>
+  <button class="nav-btn" onclick="switchTab('quiz', this)">Quiz</button>
+  <button class="nav-btn" onclick="switchTab('glosario', this)">Glosario</button>
+</nav>
+
+<main>
+
+  <!-- ══════════════════════════════════════════
+       CLASE 6
+  ══════════════════════════════════════════ -->
+  <div id="clase6" class="tab-panel active">
+
+    <div class="clase-intro">
+      <div class="clase-number teal">6</div>
+      <div class="clase-intro-text">
+        <h2>Unidad 3 — Uso de los SI en el mundo de los negocios</h2>
+        <p>E-Commerce · Modelos de Revenue · Business Intelligence · Big Data · Machine Learning · ERP · SCM · CRM</p>
+      </div>
+    </div>
+
+    <!-- E-COMMERCE -->
+    <div class="section">
+      <div class="section-title">E-Commerce y modelos de negocio</div>
+      <div class="grid grid-2">
+        <div class="card card-teal">
+          <h4>Modelos de negocio en Internet</h4>
+          <ul>
+            <li><strong>Tienda virtual</strong>: vende bienes físicos o servicios online</li>
+            <li><strong>Concentrador de mercado</strong>: agrega ofertas de varios proveedores</li>
+            <li><strong>Corredor de información</strong>: ofrece precios y disponibilidad</li>
+            <li><strong>Corredor de transacciones</strong>: su objetivo es cerrar la venta</li>
+            <li><strong>Cámara de compensación electrónica</strong>: subastas con precios variables</li>
+            <li><strong>Subasta inversa</strong>: el comprador fija el precio</li>
+            <li><strong>Entrega digital</strong>: software, multimedia, productos digitales</li>
+            <li><strong>Proveedor de contenido</strong>: ingresos por acceso o publicidad</li>
+            <li><strong>Proveedor de servicios online</strong>: soporte a hardware/software</li>
+          </ul>
+        </div>
+        <div class="card card-teal">
+          <h4>Tipos de E-Commerce</h4>
+          <p>Clasificación según quiénes participan en la transacción:</p>
+          <div class="pill-row">
+            <span class="pill p-teal">B2C — empresa a consumidor</span>
+            <span class="pill p-purple">B2B — empresa a empresa</span>
+            <span class="pill p-coral">C2C — consumidor a consumidor</span>
+            <span class="pill p-blue">B2E — empresa a empleados</span>
+            <span class="pill p-amber">G2C y G2B — gobierno a ciudadanos/empresas</span>
+          </div>
+          <p style="margin-top:10px;font-size:12px;color:var(--text-muted)">Ej. B2C: Amazon · B2B: proveedor-minorista · C2C: emarket.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- REVENUE MODELS -->
+    <div class="section">
+      <div class="section-title">Modelos de Revenue</div>
+      <div class="grid grid-3">
+        <details class="accordion">
+          <summary>Enterprise</summary>
+          <div class="acc-body">Vende servicios o software a otras empresas mediante <strong>licencia de uso único</strong>. Alta facturación pero ciclos de venta largos. Ej.: Oracle, KPMG, SAP.</div>
+        </details>
+        <details class="accordion">
+          <summary>Suscripción</summary>
+          <div class="acc-body">El cliente paga de forma <strong>recurrente</strong> (mensual/anual) para acceder al producto. Si deja de pagar, pierde acceso. Ej.: Netflix, Amazon Prime, Spotify.</div>
+        </details>
+        <details class="accordion">
+          <summary>SaaS</summary>
+          <div class="acc-body">Variación de suscripción: el software se entrega <strong>como servicio en la nube</strong>. Sin instalación local. Ej.: Salesforce, Zoom, Dropbox.</div>
+        </details>
+        <details class="accordion">
+          <summary>Transaccional</summary>
+          <div class="acc-body">Ingresos por <strong>comisión por operación</strong>. Habitual en fintech y banca. El negocio crece con el volumen de transacciones. Ej.: PayPal, MercadoPago.</div>
+        </details>
+        <details class="accordion">
+          <summary>Marketplace</summary>
+          <div class="acc-body">Conecta <strong>dos partes</strong> (comprador y vendedor). La plataforma cobra una comisión. Ej.: Uber, Airbnb, eBay, MercadoLibre.</div>
+        </details>
+        <details class="accordion">
+          <summary>Freemium</summary>
+          <div class="acc-body">Producto básico <strong>gratis</strong>, funciones avanzadas de pago. La conversión de gratuito a pago es la clave. Ej.: Spotify, Google Drive, LinkedIn.</div>
+        </details>
+        <details class="accordion">
+          <summary>Modelo de Anuncios / Datos</summary>
+          <div class="acc-body">Servicio gratuito financiado por <strong>publicidad o venta de datos</strong> de usuarios. Ej.: Instagram, Twitter/X, blogs con AdSense.</div>
+        </details>
+        <details class="accordion">
+          <summary>Venta de Hardware</summary>
+          <div class="acc-body">Vende productos físicos. Variante <strong>Bait &amp; Hook</strong>: hardware barato + consumibles caros (Ej.: impresoras y cartuchos). Ej.: Apple, Samsung, Sony.</div>
+        </details>
+        <details class="accordion">
+          <summary>Open Source</summary>
+          <div class="acc-body">Software de libre acceso. Ingresos por <strong>suscripciones Premium y servicios</strong> asociados. Ej.: Red Hat, WordPress.</div>
+        </details>
+      </div>
+    </div>
+
+    <!-- BI Y BIG DATA -->
+    <div class="section">
+      <div class="section-title">Business Intelligence y Big Data</div>
+      <div class="grid grid-2">
+        <div class="card card-blue">
+          <h4>Inteligencia de Negocios (BI)</h4>
+          <p>Combinación de tecnología, herramientas y procesos que transforman <strong>datos → información → conocimiento → estrategia</strong>.</p>
+          <p style="margin-top:8px">Arquitectura típica:</p>
+          <div class="pill-row">
+            <span class="pill p-blue">Fuentes de datos</span>
+            <span class="pill p-blue">ETL</span>
+            <span class="pill p-blue">Repositorio</span>
+            <span class="pill p-blue">Acceso / Análisis</span>
+          </div>
+          <p style="margin-top:10px;font-size:12px"><strong>Herramientas:</strong> Tableau, Power BI, QlikView, IBM Cognos, SAP BusinessObjects</p>
+        </div>
+        <div class="card card-purple">
+          <h4>Big Data</h4>
+          <p>Conjuntos de datos con volúmenes tan grandes que superan la capacidad de un DBMS convencional. Pueden ser <strong>estructurados o no estructurados</strong>.</p>
+          <p style="margin-top:8px">Fuentes: tráfico web, redes sociales, sensores IoT, e-commerce.</p>
+          <p style="margin-top:8px;font-size:12px"><strong>Herramientas:</strong> Hadoop, Apache Spark, NoSQL, Apache Flink, Apache Storm</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ANÁLISIS -->
+    <div class="section">
+      <div class="section-title">Tipos de análisis de datos</div>
+      <div class="grid grid-3">
+        <div class="card card-teal">
+          <h4>🔍 Descriptivo</h4>
+          <p><em>"¿Qué pasó?"</em> — Estudia el <strong>pasado</strong>. Usa estadísticas, gráficos y tablas para resumir eventos ocurridos.</p>
+          <p style="margin-top:8px;font-size:12px">Recursos: máx/mín, promedio, mediana, cuartiles, desviación estándar, barras, circulares, tablas de saldos.</p>
+        </div>
+        <div class="card card-blue">
+          <h4>📈 Predictivo</h4>
+          <p><em>"¿Qué podría pasar?"</em> — Usa <strong>ML y estadística</strong> para anticipar escenarios futuros basados en datos históricos.</p>
+          <p style="margin-top:8px;font-size:12px">Pasos: definir qué predecir → elegir datos → construir modelo → validar → predecir.</p>
+        </div>
+        <div class="card card-coral">
+          <h4>⚡ Prescriptivo</h4>
+          <p><em>"¿Qué debería hacer?"</em> — Combina predicción y <strong>optimización</strong> para recomendar acciones concretas.</p>
+          <p style="margin-top:8px;font-size:12px">Ej.: compañía telefónica detecta baja en uso → recomienda ajuste de precios o mejora del servicio.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MACHINE LEARNING -->
+    <div class="section">
+      <div class="section-title">Machine Learning</div>
+      <div class="card" style="margin-bottom:10px">
+        <h4>Definición</h4>
+        <p>Subcampo de la IA que desarrolla algoritmos para que las máquinas <strong>aprendan sin ser explícitamente programadas</strong>. Se crea un modelo, se entrena con datos y se generan predicciones.</p>
+        <p style="margin-top:8px;font-size:12px">Tipos de problemas: <span class="pill p-teal">Clasificación (spam)</span> <span class="pill p-purple">Clustering (recomendaciones)</span> <span class="pill p-coral">Regresión (predicción de valores)</span></p>
+      </div>
+      <div class="grid grid-3">
+        <details class="accordion">
+          <summary>Aprendizaje Supervisado</summary>
+          <div class="acc-body">Trabaja con <strong>datos etiquetados</strong>. Busca la función que asigna la etiqueta correcta a cada entrada. Aprende de un histórico.
+          <br><br>Ej.: detector de spam — analiza remitente, asunto, destinatarios → etiqueta "spam" o "no spam".</div>
+        </details>
+        <details class="accordion">
+          <summary>Aprendizaje No Supervisado</summary>
+          <div class="acc-body">Sin datos de salida conocidos. Solo se tienen <strong>datos de entrada</strong>. El algoritmo busca estructura y patrones por sí solo. Carácter exploratorio.
+          <br><br>Ej.: clustering de clientes para campañas de marketing segmentadas.</div>
+        </details>
+        <details class="accordion">
+          <summary>Aprendizaje por Refuerzo</summary>
+          <div class="acc-body">Aprende por <strong>ensayo-error con retroalimentación</strong> del entorno. No es supervisado (sin etiquetas) ni no supervisado (hay recompensa esperada).
+          <br><br>Usos actuales: reconocimiento facial, diagnósticos médicos, clasificación de ADN.</div>
+        </details>
+      </div>
+    </div>
+
+    <!-- APLICACIONES EMPRESARIALES -->
+    <div class="section">
+      <div class="section-title">Aplicaciones empresariales</div>
+      <details class="accordion" open>
+        <summary>ERP — Enterprise Resource Planning</summary>
+        <div class="acc-body">
+          <p>Integra todos los <strong>procesos centrales</strong> de una empresa: finanzas, RRHH, fabricación, cadena de suministro, ventas, compras. Es el "sistema nervioso central" de la organización.</p>
+          <p style="margin-top:10px"><strong>6 beneficios clave:</strong></p>
+          <ul style="margin-top:6px;font-size:13px;color:var(--text-muted);padding-left:1rem">
+            <li>Mayor productividad — automatiza procesos centrales</li>
+            <li>Información estratégica más profunda — elimina silos</li>
+            <li>Informes acelerados — financieros y de negocio en tiempo real</li>
+            <li>Reduce el riesgo — cumplimiento regulatorio</li>
+            <li>IT más simple — base de datos única compartida</li>
+            <li>Agilidad mejorada — respuesta rápida a oportunidades</li>
+          </ul>
+          <p style="margin-top:10px"><strong>Módulos comunes:</strong> Finanzas · RRHH · Abastecimiento · Ventas · Fabricación · Supply Chain · Servicio · I+D · Activos empresariales</p>
+        </div>
+      </details>
+      <details class="accordion">
+        <summary>SCM — Supply Chain Management</summary>
+        <div class="acc-body">
+          <p>Gestión del flujo de <strong>bienes, datos y finanzas</strong> desde materias primas hasta el cliente final. Incluye: abastecimiento, diseño, producción, almacenamiento, envío y distribución.</p>
+          <p style="margin-top:10px"><strong>Procesos principales:</strong></p>
+          <ul style="margin-top:6px;font-size:13px;color:var(--text-muted);padding-left:1rem">
+            <li>Planificación de la demanda y el suministro</li>
+            <li>Gestión del ciclo de vida del producto (PLM)</li>
+            <li>Procurement — adquisición de materiales y servicios</li>
+            <li>Logística — transporte y almacenamiento</li>
+            <li>Gestión de ejecución de fabricación (MES)</li>
+            <li>Gestión de activos empresariales (EAM)</li>
+          </ul>
+          <p style="margin-top:10px"><strong>Beneficios:</strong> Mayor productividad · Menos costos · Mayor agilidad · Mejor calidad · Mejor servicio · Mayor transparencia</p>
+        </div>
+      </details>
+      <details class="accordion">
+        <summary>CRM — Customer Relationship Management</summary>
+        <div class="acc-body">
+          <p>Estrategia para gestionar todas las <strong>relaciones e interacciones</strong> con clientes potenciales y existentes. Va más allá del software: abarca procesos para anticipar necesidades y personalizar campañas.</p>
+          <p style="margin-top:10px"><strong>Características clave:</strong> Gestión de contactos · Gestión de interacciones (360°) · Gestión de leads · Automatización de flujos · Analíticas · Integraciones</p>
+          <p style="margin-top:10px"><strong>Beneficios:</strong> Mejor experiencia de cliente · Mayor retención · Más ingresos por ventas · Mayor eficiencia de procesos · Mejor colaboración</p>
+        </div>
+      </details>
+    </div>
+
+  </div><!-- /clase6 -->
+
+
+  <!-- ══════════════════════════════════════════
+       CLASE 7
+  ══════════════════════════════════════════ -->
+  <div id="clase7" class="tab-panel">
+
+    <div class="clase-intro">
+      <div class="clase-number" style="color:var(--amber-200)">7</div>
+      <div class="clase-intro-text">
+        <h2>Unidad 3 — Transformación Digital y Herramientas Tecnológicas</h2>
+        <p>Transformación Digital · Gartner (Magic Quadrant & Hype Cycle) · BPM · BPR · TQM · Cloud · IA · IoT · RPA · Blockchain · Métricas Digitales</p>
+      </div>
+    </div>
+
+    <!-- TRANSFORMACIÓN DIGITAL -->
+    <div class="section">
+      <div class="section-title">Transformación Digital</div>
+      <div class="card card-amber" style="margin-bottom:10px">
+        <h4>Definición</h4>
+        <p>Proceso de cambio <strong>cultural, organizacional y tecnológico</strong> que implica repensar una organización de arriba a abajo. No se trata solo de aplicar tecnología, sino de darle un sentido estratégico en beneficio de la organización.</p>
+        <div class="pill-row" style="margin-top:10px">
+          <span class="pill p-amber">Empodera a sus empleados</span>
+          <span class="pill p-amber">Optimiza sus operaciones</span>
+          <span class="pill p-amber">Involucra a sus clientes</span>
+          <span class="pill p-amber">Transforma su producto</span>
+        </div>
+      </div>
+      <div class="grid grid-2">
+        <div class="card">
+          <h4>5 Fases de la Transformación Digital</h4>
+          <ul>
+            <li><strong>Identificación</strong> — ¿Qué tecnologías existen? ¿Qué usan los competidores?</li>
+            <li><strong>Análisis</strong> — ¿Cómo puede responder el negocio? ¿Quiénes liderarán?</li>
+            <li><strong>Transición</strong> — Poner en juego capacidades internas y vínculos externos.</li>
+            <li><strong>Ejecución</strong> — Medir y evaluar tecnologías y estrategias.</li>
+            <li><strong>Optimización</strong> — Obtener beneficios reales y optimizar recursos.</li>
+          </ul>
+        </div>
+        <div class="card card-amber">
+          <h4>4 Pilares</h4>
+          <ul>
+            <li>Empodera a sus empleados</li>
+            <li>Optimiza sus operaciones</li>
+            <li>Involucra a sus clientes</li>
+            <li>Transforma su producto</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- GARTNER -->
+    <div class="section">
+      <div class="section-title">Herramientas Gartner</div>
+      <div class="grid grid-2">
+        <div class="card card-blue">
+          <h4>Magic Quadrant — Cuadrante Mágico</h4>
+          <p style="margin-bottom:8px">Ejes: <strong>Integridad de la visión</strong> (horizontal) vs. <strong>Habilidad de ejecución</strong> (vertical).</p>
+          <ul>
+            <li><strong>Líderes:</strong> buen desempeño actual y bien posicionados para el futuro</li>
+            <li><strong>Visionarios:</strong> entienden el futuro del mercado, pero ejecución limitada</li>
+            <li><strong>Retadores/Aspirantes:</strong> buen desempeño hoy, sin visión clara del futuro</li>
+            <li><strong>Jugadores de nicho:</strong> éxito en un segmento pequeño, sin innovación destacada</li>
+          </ul>
+        </div>
+        <div class="card card-coral">
+          <h4>Hype Cycle — Ciclo de Sobreexpectación</h4>
+          <p style="margin-bottom:8px">Curva de 5 fases que representa la madurez y adopción de tecnologías:</p>
+          <ul>
+            <li><strong>1. Lanzamiento</strong> — pruebas de concepto, sin productos utilizables aún</li>
+            <li><strong>2. Pico de expectativas</strong> — hype máximo, éxitos y fracasos</li>
+            <li><strong>3. Abismo de desilusión</strong> — el interés cae; sobreviven quienes mejoran</li>
+            <li><strong>4. Rampa de consolidación</strong> — se entienden los beneficios reales; proyectos piloto</li>
+            <li><strong>5. Meseta de productividad</strong> — adopción generalizada, valor comprobado</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- BPM / BPR / TQM -->
+    <div class="section">
+      <div class="section-title">Gestión de Procesos de Negocio</div>
+      <details class="accordion" open>
+        <summary>BPM — Business Process Management</summary>
+        <div class="acc-body">
+          <p>Disciplina organizativa para analizar <strong>todos los procesos</strong> de la empresa, detectar ineficiencias y cuellos de botella.</p>
+          <p style="margin-top:8px"><strong>Objetivos:</strong> procesar grandes volúmenes de información, diseñar modelos digitales, alertar sobre ineficiencias, crear flujos más productivos y rentables.</p>
+          <p style="margin-top:10px"><strong>Ciclo de Vida BPM:</strong></p>
+          <p style="margin-top:4px;font-size:13px;color:var(--text-muted)">Definición → Planificación Estratégica → Análisis y Modelización → Diseño BPM → Implementación → Automatización e Integración → Monitorización → Evaluación → Optimización → (reinicia)</p>
+        </div>
+      </details>
+      <details class="accordion">
+        <summary>BPR — Business Process Reengineering</summary>
+        <div class="acc-body">
+          <p>Rediseño <strong>radical y fundamental</strong> de los procesos de negocio para lograr mejoras <em>dramáticas</em> en costo, calidad, servicio y velocidad. Se centra en los procesos del cliente, no en jerarquías funcionales.</p>
+          <p style="margin-top:10px"><strong>4 Elementos clave:</strong></p>
+          <ul style="font-size:13px;color:var(--text-muted);padding-left:1rem;margin-top:4px">
+            <li>Replanteamiento fundamental</li>
+            <li>Rediseño radical</li>
+            <li>Mejoras dramáticas (decenas o cientos de porcentaje)</li>
+            <li>Medidas críticas: costo, calidad, servicio, velocidad</li>
+          </ul>
+          <p style="margin-top:10px"><strong>Pasos:</strong></p>
+          <ol style="font-size:13px;color:var(--text-muted);padding-left:1.2rem;margin-top:4px">
+            <li>Identificar y documentar actividades (mapeo de procesos)</li>
+            <li>Identificar procesos a mejorar (sistema de puntuación)</li>
+            <li>Evaluar alternativas de diseño (lluvia de ideas, benchmarking)</li>
+          </ol>
+        </div>
+      </details>
+      <details class="accordion">
+        <summary>TQM — Total Quality Management</summary>
+        <div class="acc-body">
+          <p>Filosofía de gestión donde <strong>todos los colaboradores</strong> aseguran y toman conciencia de la calidad, orientada al éxito a largo plazo desde la satisfacción del cliente.</p>
+          <p style="margin-top:10px"><strong>5 Principios:</strong> optimización continua · acciones enfocadas al cliente · visión estratégica · mejora continua de procesos · unión de equipos.</p>
+          <p style="margin-top:10px"><strong>Ciclo PDCA:</strong></p>
+          <ul style="font-size:13px;color:var(--text-muted);padding-left:1rem;margin-top:4px">
+            <li><strong>Plan</strong> — analizar el problema e investigar</li>
+            <li><strong>Do</strong> — plantear soluciones</li>
+            <li><strong>Check</strong> — comparar antes y después para evaluar mejoras</li>
+            <li><strong>Act</strong> — registrar resultados y enfrentar nuevos problemas</li>
+          </ul>
+          <p style="margin-top:10px;font-size:12px"><strong>8 dimensiones:</strong> Enfoque en el cliente · Liderazgo · Participación del personal · Enfoque basado en procesos · Enfoque de sistema · Mejora continua · Enfoque basado en hechos · Relaciones con proveedores.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- HERRAMIENTAS TECNOLÓGICAS -->
+    <div class="section">
+      <div class="section-title">Herramientas tecnológicas — Cloud</div>
+      <div class="card" style="margin-bottom:10px">
+        <h4>Nube / Cloud Computing</h4>
+        <p>Servidores accesibles vía Internet, posible gracias a la <strong>virtualización</strong>. 5 características: autoservicio bajo demanda, acceso ubicuo, agrupamiento de recursos, elasticidad rápida, servicio medido.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="card card-blue">
+          <h4>Modelos de servicio</h4>
+          <ul>
+            <li><strong>IaaS</strong> — Infraestructura virtual (servidores, storage). Ej.: Amazon EC2, Azure VMs</li>
+            <li><strong>PaaS</strong> — Plataforma para desarrollar apps. Ej.: Google App Engine, Heroku</li>
+            <li><strong>SaaS</strong> — Apps listas en la nube. Ej.: Office 365, Gmail</li>
+            <li><strong>FaaS</strong> — Funciones ejecutadas por eventos. Ej.: AWS Lambda, Azure Functions</li>
+          </ul>
+        </div>
+        <div class="card card-teal">
+          <h4>Tipos de implementación</h4>
+          <ul>
+            <li><strong>Privada</strong> — dedicada a una sola organización</li>
+            <li><strong>Pública</strong> — compartida (multitenancy)</li>
+            <li><strong>Híbrida</strong> — combinación de pública y privada</li>
+            <li><strong>Multinube</strong> — varios proveedores públicos simultáneos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- IA -->
+    <div class="section">
+      <div class="section-title">Inteligencia Artificial — Evolución histórica</div>
+      <div class="grid grid-2">
+        <details class="accordion">
+          <summary>1. Sistemas Expertos (1960s–1980s)</summary>
+          <div class="acc-body">Modelo <strong>si-entonces (if-then)</strong>. Conocimiento codificado por expertos humanos. Decayeron por ser costosos, poco flexibles y fallar ante situaciones no previstas.</div>
+        </details>
+        <details class="accordion">
+          <summary>2. Machine Learning</summary>
+          <div class="acc-body">Identifica patrones en grandes conjuntos de datos. Permite aprender, predecir, clasificar y segmentar.
+          <br><br><strong>Tipos:</strong> Supervisado (datos etiquetados) · No supervisado · Por refuerzo (recompensas).
+          <br><br><strong>Predicciones:</strong> Clasificación (categoría) vs. Regresión (valor numérico continuo).</div>
+        </details>
+        <details class="accordion">
+          <summary>3. Redes Neuronales</summary>
+          <div class="acc-body">Subconjunto de ML inspirado en el cerebro humano. Capas de nodos: <strong>entrada → ocultas → salida</strong>. Impulsadas por GPUs y grandes datasets. Útiles para reconocimiento de voz, imágenes y texto.
+          <br><br><em>Analogía: ML clásico = calculadora. Redes neuronales = computadora avanzada que encuentra patrones complejos.</em></div>
+        </details>
+        <details class="accordion">
+          <summary>4. IA Generativa (2014–presente)</summary>
+          <div class="acc-body">Crea contenido nuevo: texto, imágenes, audio, video. No solo clasifica o predice, sino que <strong>genera resultados creativos</strong>.
+          <br><br><strong>Limitaciones:</strong> alto costo computacional, riesgos éticos (deepfakes, desinformación).
+          <br><br><strong>Futuro:</strong> computación cuántica, fotónica, nuevos materiales, IA más ética y responsable.</div>
+        </details>
+      </div>
+    </div>
+
+    <!-- IoT / VR / AR / RPA -->
+    <div class="section">
+      <div class="section-title">Otras tecnologías clave</div>
+      <div class="grid grid-2">
+        <div class="card card-teal">
+          <h4>IoT — Internet of Things</h4>
+          <p>Conecta elementos físicos cotidianos a Internet. Los dispositivos son <strong>interruptores</strong> (envían instrucciones) o <strong>sensores</strong> (recopilan datos).</p>
+          <p style="margin-top:8px;font-size:12px">Aplicaciones: hogares inteligentes, salud, ciudades inteligentes, industria, retail, transporte, agricultura.</p>
+        </div>
+        <div class="card card-purple">
+          <h4>VR — Realidad Virtual</h4>
+          <p>Simulaciones generadas por computadora tan cercanas a la realidad que el usuario siente estar en ellas. Requiere casco y equipo con sensores.</p>
+          <p style="margin-top:8px;font-size:12px">Usos: diseño de vehículos (Ford), entrenamiento militar, medicina, entretenimiento.</p>
+        </div>
+        <div class="card card-coral">
+          <h4>AR — Realidad Aumentada</h4>
+          <p>Vista en vivo del mundo real <strong>aumentada</strong> con imágenes virtuales superpuestas. El usuario permanece en el mundo físico.</p>
+          <p style="margin-top:8px;font-size:12px">Usos: cirugía guiada, mantenimiento industrial, diseño de interiores, navegación. Estándar web: VRML.</p>
+        </div>
+        <div class="card card-blue">
+          <h4>RPA — Robotic Process Automation</h4>
+          <p>Automatización mediante <strong>bots de software</strong> que realizan tareas manuales, repetitivas y de gran volumen.</p>
+          <ul style="margin-top:8px;font-size:12px">
+            <li><strong>No asistida:</strong> opera sin intervención humana</li>
+            <li><strong>Asistida:</strong> trabaja junto al humano</li>
+          </ul>
+          <p style="margin-top:6px;font-size:12px">Efectos: calidad (elimina errores), velocidad (100× más rápido), eficiencia (30–75% mejora), libera al personal para trabajo de mayor valor.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOCKCHAIN -->
+    <div class="section">
+      <div class="section-title">Blockchain</div>
+      <div class="card card-amber" style="margin-bottom:10px">
+        <h4>Definición</h4>
+        <p>Registro digital <strong>descentralizado, distribuido e inmutable</strong> de transacciones. Cada bloque contiene un hash (firma digital). Modificar un bloque requiere modificar toda la cadena.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="card">
+          <h4>Cómo funciona (6 pasos)</h4>
+          <ol style="font-size:13px;color:var(--text-muted);padding-left:1.1rem">
+            <li>A inicia una transacción hacia B</li>
+            <li>La transacción se representa como un bloque</li>
+            <li>El bloque se transmite a todos los nodos</li>
+            <li>Los nodos validan que la transacción es válida</li>
+            <li>El bloque se añade a la cadena (registro permanente)</li>
+            <li>La transacción se completa</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h4>4 tipos de redes</h4>
+          <ul style="font-size:13px;color:var(--text-muted)">
+            <li><strong>Público:</strong> sin permiso, anónimo. Ej.: Bitcoin, Ethereum</li>
+            <li><strong>Semiprivado:</strong> una empresa gestiona el acceso</li>
+            <li><strong>Privado:</strong> controlado 100% por una organización</li>
+            <li><strong>Consorcio:</strong> gobernado por un grupo de empresas (el más aceptado en negocios)</li>
+          </ul>
+          <div class="pill-row" style="margin-top:8px">
+            <span class="pill p-teal">Transparencia</span>
+            <span class="pill p-teal">Seguridad</span>
+            <span class="pill p-teal">Sin intermediarios</span>
+            <span class="pill p-teal">Trazabilidad</span>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="margin-top:10px">
+        <h4>Casos de uso</h4>
+        <div class="pill-row">
+          <span class="pill p-amber">Cadena de suministro alimentaria</span>
+          <span class="pill p-amber">Sector público (registros y votación)</span>
+          <span class="pill p-amber">Energía P2P</span>
+          <span class="pill p-amber">RRHH (verificación de credenciales)</span>
+          <span class="pill p-amber">Finanzas (pagos sin intermediarios)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MÉTRICAS -->
+    <div class="section">
+      <div class="section-title">Métricas Digitales</div>
+      <div class="card" style="margin-bottom:10px">
+        <h4>¿Qué son las métricas?</h4>
+        <p>Indicadores que permiten saber qué tan cerca o lejos se está de las metas y conocer el <strong>ROI</strong> de las acciones. 4 enfoques generales: nivel de ingresos · registros de usuarios · compromiso de usuarios · fidelización.</p>
+      </div>
+      <div class="grid grid-2">
+        <details class="accordion">
+          <summary>Métricas de SEO</summary>
+          <div class="acc-body">
+            <ul style="font-size:13px;color:var(--text-muted)">
+              <li><strong>Indexación:</strong> cantidad de URLs que Google puede mostrar</li>
+              <li><strong>Ranking de palabras clave:</strong> posicionamiento y tráfico que atraen</li>
+              <li><strong>Enlaces externos:</strong> backlinks; determinan autoridad</li>
+              <li><strong>Posicionamiento orgánico:</strong> páginas posicionadas sin campañas pagas</li>
+              <li><strong>Tráfico orgánico y total:</strong> visitas orgánicas vs. total</li>
+            </ul>
+          </div>
+        </details>
+        <details class="accordion">
+          <summary>Métricas de Inbound Marketing</summary>
+          <div class="acc-body">
+            <ul style="font-size:13px;color:var(--text-muted)">
+              <li><strong>Tasa de conversión:</strong> usuarios que realizaron la acción esperada / total</li>
+              <li><strong>Fuentes de tráfico:</strong> origen de las visitas (orgánico, redes, email, pago)</li>
+              <li><strong>Leads:</strong> personas que dejan sus datos o descargan material</li>
+              <li><strong>LTV (Lifetime Value):</strong> beneficio total generado por un cliente</li>
+              <li><strong>CAC:</strong> Costo de Adquisición de Clientes</li>
+            </ul>
+          </div>
+        </details>
+        <details class="accordion">
+          <summary>Métricas de Redes Sociales</summary>
+          <div class="acc-body">
+            <ul style="font-size:13px;color:var(--text-muted)">
+              <li><strong>Alcance:</strong> personas que vieron una publicación (incluyendo no seguidores)</li>
+              <li><strong>Engagement:</strong> compromiso — likes, comentarios, compartidos, menciones</li>
+              <li><strong>CTR:</strong> clics obtenidos respecto al número de impresiones</li>
+            </ul>
+          </div>
+        </details>
+        <details class="accordion">
+          <summary>Métricas de Email Marketing</summary>
+          <div class="acc-body">
+            <ul style="font-size:13px;color:var(--text-muted)">
+              <li><strong>Tasa de apertura:</strong> personas que abren los emails</li>
+              <li><strong>Clics de apertura:</strong> clics únicos vs. tasa de apertura</li>
+              <li><strong>Conversiones esperadas:</strong> acción deseada completada</li>
+              <li><strong>Tasa de suscripción:</strong> usuarios nuevos tras una promoción</li>
+              <li><strong>Tasa de rebote:</strong> direcciones de email inexistentes</li>
+              <li><strong>Bajas:</strong> indica problemas de frecuencia o contenido</li>
+            </ul>
+          </div>
+        </details>
+        <details class="accordion">
+          <summary>Métricas de E-commerce</summary>
+          <div class="acc-body">
+            <ul style="font-size:13px;color:var(--text-muted)">
+              <li><strong>Tráfico web:</strong> cantidad de visitantes</li>
+              <li><strong>Coste de ventas:</strong> costo por producto vendido</li>
+              <li><strong>Tasa de abandono del carrito:</strong> compradores que no finalizan</li>
+              <li><strong>Valor del pedido medio:</strong> promedio de gasto por cliente</li>
+              <li><strong>Tasa de cancelación:</strong> clientes que dejan de comprar</li>
+              <li><strong>Satisfacción del cliente:</strong> medida mediante CRM</li>
+            </ul>
+          </div>
+        </details>
+        <details class="accordion">
+          <summary>Métricas de Google Ads</summary>
+          <div class="acc-body">
+            <ul style="font-size:13px;color:var(--text-muted)">
+              <li><strong>Impresiones y clics:</strong> impactos y clics por anuncio</li>
+              <li><strong>QS (Quality Score):</strong> nivel de calidad basado en CTR</li>
+              <li><strong>Costo por conversión:</strong> costo de convertir cada lead</li>
+              <li><strong>Posición media:</strong> posición promedio (ideal: dentro de los 7 primeros)</li>
+              <li><strong>CPC:</strong> Costo por Clic</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div><!-- /clase7 -->
+
+
+  <!-- ══════════════════════════════════════════
+       CLASE 10
+  ══════════════════════════════════════════ -->
+  <div id="clase10" class="tab-panel">
+
+    <div class="clase-intro">
+      <div class="clase-number purple">10</div>
+      <div class="clase-intro-text">
+        <h2>Unidad 4 — Seguridad, Ética y Cumplimiento</h2>
+        <p>Seguridad informática · Pilares CIA · Controles · Mecanismos · Ética TI · Certificaciones ISO e ISAE</p>
+      </div>
+    </div>
+
+    <!-- SEGURIDAD -->
+    <div class="section">
+      <div class="section-title">Seguridad en los sistemas de información</div>
+      <div class="card" style="margin-bottom:10px">
+        <h4>Definición</h4>
+        <p>Políticas, procedimientos y medidas técnicas para <strong>evitar acceso no autorizado</strong>, alteraciones, robos y daños físicos a los sistemas de información.</p>
+        <p style="margin-top:8px">Objetivo: mantener <span class="pill p-purple">Integridad</span> <span class="pill p-teal">Disponibilidad</span> <span class="pill p-coral">Privacidad</span> <span class="pill p-blue">Control</span> <span class="pill p-amber">Autenticidad</span></p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card card-purple">
+          <h4>Seguridad de Hardware</h4>
+          <p>Protege elementos físicos. Incluye SAI (sistemas de alimentación ininterrumpida), cortafuegos de hardware, control de acceso físico.</p>
+        </div>
+        <div class="card card-teal">
+          <h4>Seguridad de Software</h4>
+          <p>Protege contra vulnerabilidades: buffer overflow, errores de diseño, código inseguro, mal manejo de errores.</p>
+        </div>
+        <div class="card card-blue">
+          <h4>Seguridad de Red</h4>
+          <p>Múltiples capas: VPN, IPS, cortafuegos. Si una capa es comprometida, las demás siguen funcionando.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PILARES CIA -->
+    <div class="section">
+      <div class="section-title">Pilares de la seguridad — Tríada CIA</div>
+      <div class="grid grid-3">
+        <div class="card card-purple">
+          <h4>🔒 Confidencialidad</h4>
+          <p>Solo el personal autorizado accede a la información que le corresponde.</p>
+          <ul style="margin-top:8px">
+            <li>Autenticación de usuarios</li>
+            <li>Gestión de privilegios</li>
+            <li>Cifrado de información</li>
+          </ul>
+        </div>
+        <div class="card card-teal">
+          <h4>✅ Integridad</h4>
+          <p>La información no se pierde ni se compromete.</p>
+          <ul style="margin-top:8px">
+            <li>Monitoreo de red (detección de intrusos)</li>
+            <li>Políticas de auditoría</li>
+            <li>Sistemas de control de cambios</li>
+            <li>Copias de seguridad (backups)</li>
+          </ul>
+        </div>
+        <div class="card card-blue">
+          <h4>📡 Disponibilidad</h4>
+          <p>La información está siempre accesible para quien la necesita.</p>
+          <ul style="margin-top:8px">
+            <li>Balanceadores de tráfico (anti-DDoS)</li>
+            <li>Copias de seguridad</li>
+            <li>Sitio de contingencia (DRP)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARACTERÍSTICAS DE LA INFO -->
+    <div class="section">
+      <div class="section-title">Características de la información</div>
+      <div class="grid grid-2">
+        <div class="card">
+          <h4>Clasificación por acceso</h4>
+          <p><strong>Información pública:</strong> puede ser visualizada por cualquier persona.</p>
+          <p style="margin-top:6px"><strong>Información privada:</strong> solo accede un grupo selecto autorizado.</p>
+        </div>
+        <div class="card">
+          <h4>Propiedades de la información</h4>
+          <div class="pill-row">
+            <span class="pill p-coral">Crítica — indispensable para la continuidad</span>
+            <span class="pill p-purple">Valiosa — activo con valor propio</span>
+            <span class="pill p-teal">Sensitiva — solo quienes la procesan deben conocerla</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTROLES -->
+    <div class="section">
+      <div class="section-title">Tipos de controles</div>
+      <div class="grid grid-2">
+        <div class="card card-purple">
+          <h4>Controles generales</h4>
+          <ul>
+            <li>De implementación</li>
+            <li>De software</li>
+            <li>De hardware</li>
+            <li>De operaciones de computación</li>
+            <li>De seguridad de los datos</li>
+            <li>Administrativos: segregación de funciones, políticas escritas, supervisión</li>
+          </ul>
+        </div>
+        <div class="card card-teal">
+          <h4>Controles de aplicación</h4>
+          <ul>
+            <li><strong>Controles de entrada:</strong> validan los datos que ingresan al sistema</li>
+            <li><strong>Controles de procesamiento:</strong> aseguran que los datos se procesen correctamente</li>
+            <li><strong>Controles de salida:</strong> verifican que los resultados sean correctos y se distribuyan apropiadamente</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- MECANISMOS -->
+    <div class="section">
+      <div class="section-title">Tipos de mecanismos de seguridad</div>
+      <div class="grid grid-3">
+        <details class="accordion">
+          <summary>Preventivos</summary>
+          <div class="acc-body">Implementan controles que los usuarios <strong>no pueden anular</strong>. La mayoría de los ataques se pueden evitar aplicándolos.
+          <br><br>Ejemplos: actualizaciones del sistema, antivirus, cortafuegos, contraseñas fuertes, accesos remotos seguros, cifrado de datos en reposo.</div>
+        </details>
+        <details class="accordion">
+          <summary>Correctivos</summary>
+          <div class="acc-body">Ayudan a <strong>mitigar o disminuir los efectos</strong> de un evento de seguridad ya ocurrido, corrigiendo brechas.
+          <br><br>Ejemplos: bloqueo de direcciones IP, bloqueo de acciones sospechosas, parcheo de vulnerabilidades.</div>
+        </details>
+        <details class="accordion">
+          <summary>Detectivos</summary>
+          <div class="acc-body"><strong>Identifican el momento</strong> en que ocurre un ataque monitoreando el sistema. No evitan el ataque, pero alertan para actuar.
+          <br><br>Ejemplos: CAPTCHA, alertas por intentos fallidos, monitoreo de actividad irregular.</div>
+        </details>
+      </div>
+    </div>
+
+    <!-- ÉTICA -->
+    <div class="section">
+      <div class="section-title">Desafíos éticos y sociales de la TI</div>
+      <div class="card" style="margin-bottom:10px">
+        <h4>Fundamentos éticos</h4>
+        <p>La ética son los <strong>principios morales</strong> que guían la conducta de los agentes libres. La TI genera dilemas éticos porque crea oportunidades de intenso cambio social y puede amenazar distribuciones de poder, riqueza, derechos y obligaciones.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="card card-purple">
+          <h4>5 dimensiones morales de la era de la información</h4>
+          <ul>
+            <li><strong>Propiedad:</strong> derechos de autor, patentes, piratería</li>
+            <li><strong>Acceso:</strong> brecha digital, igualdad de oportunidades</li>
+            <li><strong>Control:</strong> quién tiene autoridad sobre la TI</li>
+            <li><strong>Calidad de vida:</strong> impacto en salud, seguridad, privacidad</li>
+            <li><strong>Responsabilidad:</strong> asumir consecuencias de las decisiones</li>
+          </ul>
+        </div>
+        <div class="card card-coral">
+          <h4>Dilemas éticos frecuentes</h4>
+          <ul>
+            <li>Reducción de personal mediante tecnología</li>
+            <li>Monitoreo del correo electrónico corporativo</li>
+            <li>Videovigilancia y reconocimiento facial con algoritmos</li>
+            <li>Rastreo de celulares sin consentimiento del usuario</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card" style="margin-top:10px">
+        <h4>Tendencias tecnológicas que generan dilemas éticos</h4>
+        <ul style="font-size:13px;color:var(--text-muted);padding-left:1rem">
+          <li>Duplicación de capacidad de cómputo → mayor dependencia y vulnerabilidad de los sistemas</li>
+          <li>Bajos costos de almacenamiento → proliferación de bases de datos con información personal</li>
+          <li>Técnicas avanzadas de extracción de datos → hallazgo masivo de información detallada de individuos</li>
+          <li>Avances en redes → acceso remoto a grandes depósitos de datos, violación de privacidad a escala</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- RESPONSABILIDAD ÉTICA -->
+    <div class="section">
+      <div class="section-title">Responsabilidad ética en organizaciones de TI</div>
+      <div class="grid grid-2">
+        <div class="card card-teal">
+          <h4>Privacidad y protección de datos</h4>
+          <p>Proteger datos de clientes, obtener consentimiento para su recopilación, cumplir leyes de protección de datos.</p>
+        </div>
+        <div class="card card-purple">
+          <h4>Seguridad de la información</h4>
+          <p>Protección contra ciberataques, controles de acceso adecuados, auditorías de seguridad, cultura de seguridad organizacional.</p>
+        </div>
+        <div class="card card-coral">
+          <h4>Ética en desarrollo de software</h4>
+          <p>Evitar discriminación algorítmica, garantizar transparencia y equidad en los algoritmos, fomentar inclusión y diversidad.</p>
+        </div>
+        <div class="card card-blue">
+          <h4>Responsabilidad social y cumplimiento</h4>
+          <p>Minimizar huella de carbono, adoptar prácticas sostenibles, cumplir marcos legales (protección de datos, propiedad intelectual, comercio electrónico).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CERTIFICACIONES -->
+    <div class="section">
+      <div class="section-title">Certificaciones ISO</div>
+      <div class="grid grid-2">
+        <details class="accordion">
+          <summary>ISO 9001 — Gestión de Calidad (SGC)</summary>
+          <div class="acc-body">Estándar internacional para establecer un <strong>Sistema de Gestión de Calidad</strong>. Aplicable a cualquier organización (autónomo, empresa, ONG).
+          <br><br>Se implanta para: demostrar capacidad de cumplir requisitos del cliente y aumentar su satisfacción mediante procesos mejorables.</div>
+        </details>
+        <details class="accordion">
+          <summary>ISO/IEC 12207 — Ciclo de vida del software</summary>
+          <div class="acc-body">Define los <strong>procesos y actividades</strong> necesarios para desarrollar, operar y mantener sistemas de software a lo largo de su ciclo de vida completo.</div>
+        </details>
+        <details class="accordion">
+          <summary>ISO/IEC 20000 — Gestión de servicios TI</summary>
+          <div class="acc-body">Establece requisitos para <strong>gestionar servicios de TI</strong> con alto nivel de calidad. Cubre planificación, implementación, monitoreo y mejora continua.</div>
+        </details>
+        <details class="accordion">
+          <summary>ISO/IEC 25000 — Calidad del software (SQuaRE)</summary>
+          <div class="acc-body">Serie de normas para <strong>evaluar la calidad del software</strong>: funcionalidad, confiabilidad, usabilidad, eficiencia y mantenibilidad.</div>
+        </details>
+        <details class="accordion">
+          <summary>ISO/IEC 27001 — Seguridad de la Información (SGSI)</summary>
+          <div class="acc-body">Establece un <strong>Sistema de Gestión de Seguridad de la Información</strong> (SGSI). Abarca seguridad física y lógica. Proporciona directrices para identificar, evaluar y tratar riesgos de seguridad.</div>
+        </details>
+      </div>
+
+      <div class="section-title" style="margin-top:2rem">Certificaciones ISAE</div>
+      <div class="grid grid-2">
+        <details class="accordion">
+          <summary>ISAE 3402 — Controles internos</summary>
+          <div class="acc-body">Auditoría de <strong>controles internos</strong> en organizaciones que prestan servicios a terceros. Evalúa la efectividad de los controles.</div>
+        </details>
+        <details class="accordion">
+          <summary>ISAE 3000 — Informes no financieros</summary>
+          <div class="acc-body">Aseguramiento de información en <strong>informes no financieros</strong>: sostenibilidad, cumplimiento normativo, seguridad de la información.</div>
+        </details>
+        <details class="accordion">
+          <summary>ISAE 3401 — Outsourcing / externalización</summary>
+          <div class="acc-body">Evalúa y audita controles en organizaciones que <strong>prestan servicios de outsourcing</strong> a clientes. Proporciona confianza en calidad y seguridad.</div>
+        </details>
+        <details class="accordion">
+          <summary>ISAE 3002 — Seguridad de TI</summary>
+          <div class="acc-body">Aseguramiento de <strong>controles de seguridad de la información</strong>. Garantiza la protección adecuada de activos y la mitigación de riesgos.</div>
+        </details>
+        <details class="accordion">
+          <summary>ISAE 3410 — Calidad de sistemas de información</summary>
+          <div class="acc-body">Audita controles en el <strong>diseño, desarrollo, implementación y mantenimiento</strong> de sistemas de información.</div>
+        </details>
+      </div>
+    </div>
+
+  </div><!-- /clase10 -->
+
+
+  <!-- ══════════════════════════════════════════
+       QUIZ
+  ══════════════════════════════════════════ -->
+  <div id="quiz" class="tab-panel">
+    <div class="clase-intro">
+      <div class="clase-number teal" style="font-size:3rem">?</div>
+      <div class="clase-intro-text">
+        <h2>Autoevaluación</h2>
+        <p>Seleccioná la respuesta correcta en cada pregunta. Al terminar podés ver tu puntaje.</p>
+      </div>
+    </div>
+
+    <div id="quiz-questions"></div>
+
+    <button onclick="submitQuiz()" style="margin-top:1rem;padding:0.75rem 2rem;background:var(--text);color:#fff;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;cursor:pointer;">
+      Ver resultado
+    </button>
+
+    <div class="quiz-score" id="quiz-score">
+      <div class="score-num" id="score-num">0/10</div>
+      <div>
+        <p style="font-weight:500;font-size:15px" id="score-msg">Buen intento</p>
+        <p style="font-size:13px;color:var(--text-muted)" id="score-sub">Repasá las secciones correspondientes.</p>
+      </div>
+    </div>
+  </div><!-- /quiz -->
+
+
+  <!-- ══════════════════════════════════════════
+       GLOSARIO
+  ══════════════════════════════════════════ -->
+  <div id="glosario" class="tab-panel">
+    <div class="clase-intro">
+      <div class="clase-number" style="color:var(--gray-100);font-size:3rem">A→Z</div>
+      <div class="clase-intro-text">
+        <h2>Glosario de términos</h2>
+        <p>Conceptos clave de las clases 6 y 10 de Gestión de Sistemas de Información.</p>
+      </div>
+    </div>
+
+    <ul class="gloss-list">
+      <li class="gloss-item"><span class="gloss-term">BI</span><span class="gloss-def">Business Intelligence: combinación de tecnología y procesos para transformar datos en conocimiento estratégico.</span></li>
+      <li class="gloss-item"><span class="gloss-term">Big Data</span><span class="gloss-def">Conjuntos de datos de volumen tan grande que superan la capacidad de un DBMS convencional para capturar, almacenar y analizar.</span></li>
+      <li class="gloss-item"><span class="gloss-term">B2B / B2C</span><span class="gloss-def">Business to Business / Business to Consumer: tipos de e-commerce según quiénes realizan la transacción.</span></li>
+      <li class="gloss-item"><span class="gloss-term">CIA</span><span class="gloss-def">Tríada de seguridad: Confidencialidad, Integridad y Disponibilidad (Availability). Pilares fundamentales de la seguridad informática.</span></li>
+      <li class="gloss-item"><span class="gloss-term">CRM</span><span class="gloss-def">Customer Relationship Management: estrategia y sistema para gestionar relaciones con clientes, anticipar sus necesidades y personalizar la interacción.</span></li>
+      <li class="gloss-item"><span class="gloss-term">DDoS</span><span class="gloss-def">Distributed Denial of Service: ataque que satura un servicio con tráfico masivo para dejarlo inoperativo.</span></li>
+      <li class="gloss-item"><span class="gloss-term">DRP</span><span class="gloss-def">Disaster Recovery Plan / Sitio de contingencia: plan y recursos para restaurar operaciones tras un incidente grave.</span></li>
+      <li class="gloss-item"><span class="gloss-term">EAM</span><span class="gloss-def">Enterprise Asset Management: gestión y mantenimiento de activos físicos en toda la cadena de suministro.</span></li>
+      <li class="gloss-item"><span class="gloss-term">ERP</span><span class="gloss-def">Enterprise Resource Planning: sistema integrado que gestiona todos los procesos centrales de una empresa (finanzas, RRHH, fabricación, SCM, etc.).</span></li>
+      <li class="gloss-item"><span class="gloss-term">ETL</span><span class="gloss-def">Extract, Transform, Load: proceso de extracción, transformación y carga de datos hacia un repositorio central (Data Warehouse).</span></li>
+      <li class="gloss-item"><span class="gloss-term">Freemium</span><span class="gloss-def">Modelo de revenue que combina acceso gratuito básico con funciones premium de pago. Ej.: Spotify, Google Drive.</span></li>
+      <li class="gloss-item"><span class="gloss-term">IPS</span><span class="gloss-def">Intrusion Prevention System: sistema que detecta y bloquea activamente intentos de intrusión en la red.</span></li>
+      <li class="gloss-item"><span class="gloss-term">ISAE</span><span class="gloss-def">International Standard on Assurance Engagements: normas para auditoría y aseguramiento de servicios e información (3000, 3402, 3401, etc.).</span></li>
+      <li class="gloss-item"><span class="gloss-term">ISO/IEC 27001</span><span class="gloss-def">Norma internacional para implementar un Sistema de Gestión de Seguridad de la Información (SGSI).</span></li>
+      <li class="gloss-item"><span class="gloss-term">Machine Learning</span><span class="gloss-def">Subcampo de la IA que permite a las máquinas aprender de datos sin ser explícitamente programadas para cada tarea.</span></li>
+      <li class="gloss-item"><span class="gloss-term">Marketplace</span><span class="gloss-def">Plataforma que conecta compradores y vendedores, cobrando comisión por cada transacción. Ej.: Airbnb, eBay.</span></li>
+      <li class="gloss-item"><span class="gloss-term">MES</span><span class="gloss-def">Manufacturing Execution System: gestión de ejecución de fabricación, monitorea y controla procesos productivos.</span></li>
+      <li class="gloss-item"><span class="gloss-term">NoSQL</span><span class="gloss-def">Familia de bases de datos diseñadas para manejar grandes volúmenes de datos no estructurados o semi-estructurados.</span></li>
+      <li class="gloss-item"><span class="gloss-term">PLM</span><span class="gloss-def">Product Lifecycle Management: gestión de un producto a lo largo de todo su ciclo de vida (ideación → fin de vida).</span></li>
+      <li class="gloss-item"><span class="gloss-term">Procurement</span><span class="gloss-def">Proceso de adquisición de materiales, bienes y servicios garantizando calidad y precio justo para el negocio.</span></li>
+      <li class="gloss-item"><span class="gloss-term">SAI / UPS</span><span class="gloss-def">Sistema de Alimentación Ininterrumpida: protege equipos ante cortes de energía eléctrica.</span></li>
+      <li class="gloss-item"><span class="gloss-term">SaaS</span><span class="gloss-def">Software as a Service: software entregado como servicio en la nube, accedido mediante suscripción. Ej.: Salesforce, Zoom.</span></li>
+      <li class="gloss-item"><span class="gloss-term">SCM</span><span class="gloss-def">Supply Chain Management: gestión del flujo de bienes, datos y finanzas desde materias primas hasta el cliente final.</span></li>
+      <li class="gloss-item"><span class="gloss-term">SGC</span><span class="gloss-def">Sistema de Gestión de Calidad: conjunto de políticas, procesos y procedimientos documentados para asegurar calidad (base de ISO 9001).</span></li>
+      <li class="gloss-item"><span class="gloss-term">SGSI</span><span class="gloss-def">Sistema de Gestión de Seguridad de la Información: marco para identificar, gestionar y mitigar riesgos de seguridad (base de ISO 27001).</span></li>
+      <li class="gloss-item"><span class="gloss-term">TQM</span><span class="gloss-def">Total Quality Management: filosofía de gestión donde todos los colaboradores son responsables de la calidad, orientada a la satisfacción del cliente a largo plazo mediante el ciclo PDCA.</span></li>
+      <li class="gloss-item"><span class="gloss-term">Transform. Digital</span><span class="gloss-def">Proceso de cambio cultural, organizacional y tecnológico que implica repensar una organización de arriba a abajo para adaptarla al mundo actual, con sentido estratégico.</span></li>
+      <li class="gloss-item"><span class="gloss-term">VPN</span><span class="gloss-def">Virtual Private Network: red privada virtual que cifra el tráfico y protege la comunicación sobre redes públicas.</span></li>
+      <li class="gloss-item"><span class="gloss-term">VR</span><span class="gloss-def">Realidad Virtual: simulaciones generadas por computadora tan inmersivas que el usuario siente estar en una situación real. Requiere casco y equipo con sensores.</span></li>
+      <li class="gloss-item"><span class="gloss-term">Hype Cycle</span><span class="gloss-def">Herramienta Gartner que representa la madurez y adopción de tecnologías en 5 fases: lanzamiento, pico de expectativas, abismo de desilusión, rampa de consolidación y meseta de productividad.</span></li>
+      <li class="gloss-item"><span class="gloss-term">IaaS / PaaS / FaaS</span><span class="gloss-def">Modelos de servicio Cloud: IaaS = infraestructura virtual, PaaS = plataforma para desarrollar apps, FaaS = funciones ejecutadas por eventos. Complementan a SaaS (apps listas en la nube).</span></li>
+      <li class="gloss-item"><span class="gloss-term">IoT</span><span class="gloss-def">Internet of Things: conecta elementos físicos cotidianos a Internet mediante interruptores (envían instrucciones) y sensores (recopilan datos). Transforma el mundo físico en un sistema de información.</span></li>
+      <li class="gloss-item"><span class="gloss-term">Magic Quadrant</span><span class="gloss-def">Herramienta Gartner que posiciona competidores en dos ejes: integridad de la visión (horizontal) y habilidad de ejecución (vertical), generando 4 cuadrantes: Líderes, Visionarios, Retadores y Nicho.</span></li>
+      <li class="gloss-item"><span class="gloss-term">PDCA</span><span class="gloss-def">Ciclo de mejora continua del TQM: Plan (analizar) → Do (solucionar) → Check (evaluar) → Act (registrar y continuar).</span></li>
+      <li class="gloss-item"><span class="gloss-term">RPA</span><span class="gloss-def">Robotic Process Automation: automatización de tareas manuales y repetitivas mediante bots de software. Tipos: no asistida (autónoma) y asistida (junto al humano).</span></li>
+    </ul>
+  </div><!-- /glosario -->
+
+</main>
+
+<script>
+  const quizData = [
+    {
+      q: "¿Cuál de los siguientes modelos de e-commerce describe la transacción entre una empresa minorista y sus clientes finales?",
+      opts: ["B2B", "C2C", "B2C", "G2B"],
+      correct: 2,
+      exp: "B2C (Business to Consumer) es el modelo entre empresa y consumidor final. Ej.: Amazon."
+    },
+    {
+      q: "Netflix y Amazon Prime son ejemplos del modelo de revenue llamado:",
+      opts: ["Enterprise", "Marketplace", "Freemium", "Suscripción"],
+      correct: 3,
+      exp: "El modelo de Suscripción implica pago recurrente para acceder al producto."
+    },
+    {
+      q: "En la arquitectura de Business Intelligence, el proceso ETL significa:",
+      opts: ["Evaluate, Transform, Load", "Extract, Transfer, Link", "Extract, Transform, Load", "Encode, Transfer, List"],
+      correct: 2,
+      exp: "ETL = Extract, Transform, Load: extracción de datos de fuentes, transformación y carga al repositorio central."
+    },
+    {
+      q: "El análisis prescriptivo se diferencia del predictivo porque:",
+      opts: ["Solo analiza datos del pasado", "Predice futuros eventos sin recomendar acciones", "Combina predicción y optimización para recomendar qué hacer", "Es menos avanzado que el descriptivo"],
+      correct: 2,
+      exp: "El prescriptivo va más allá de predecir: recomienda acciones específicas para lograr resultados deseados."
+    },
+    {
+      q: "El aprendizaje por refuerzo en Machine Learning se basa en:",
+      opts: ["Datos etiquetados con salidas conocidas", "Ensayo-error con retroalimentación del entorno", "Solo datos de entrada sin etiquetas", "Reglas programadas explícitamente"],
+      correct: 1,
+      exp: "El aprendizaje por refuerzo aprende observando el entorno y recibiendo feedback (recompensas) por sus acciones."
+    },
+    {
+      q: "La tríada CIA de seguridad informática se refiere a:",
+      opts: ["Control, Integridad, Autenticación", "Confidencialidad, Integridad, Disponibilidad", "Control, Integridad, Disponibilidad", "Confidencialidad, Información, Autenticidad"],
+      correct: 1,
+      exp: "CIA = Confidencialidad (solo acceso autorizado), Integridad (datos no alterados) y Disponibilidad (siempre accesible)."
+    },
+    {
+      q: "Un cortafuegos (firewall) pertenece a la categoría de mecanismo de seguridad:",
+      opts: ["Correctivo", "Detectivo", "Preventivo", "Auditivo"],
+      correct: 2,
+      exp: "Los mecanismos preventivos (antivirus, firewalls, contraseñas) buscan evitar que los ataques ocurran."
+    },
+    {
+      q: "¿Qué norma ISO establece los requisitos para un Sistema de Gestión de Seguridad de la Información (SGSI)?",
+      opts: ["ISO 9001", "ISO/IEC 25000", "ISO/IEC 20000", "ISO/IEC 27001"],
+      correct: 3,
+      exp: "ISO/IEC 27001 establece el SGSI: identifica, evalúa y trata riesgos de seguridad de la información."
+    },
+    {
+      q: "¿Cuál de las 5 dimensiones morales de la era de la información se refiere a la brecha digital?",
+      opts: ["Propiedad", "Acceso", "Control", "Responsabilidad"],
+      correct: 1,
+      exp: "La dimensión de Acceso abarca la brecha digital y la responsabilidad de garantizar igualdad de oportunidades tecnológicas."
+    },
+    {
+      q: "El modelo de revenue 'Bait and Hook' es una variante del modelo de:",
+      opts: ["Suscripción", "SaaS", "Venta de Hardware", "Marketplace"],
+      correct: 2,
+      exp: "Bait and Hook: hardware vendido barato para luego vender consumibles caros. Ej.: impresoras y cartuchos."
+    },
+    {
+      q: "En el Hype Cycle de Gartner, ¿en qué fase el interés cae y solo sobreviven los que mejoran sus productos?",
+      opts: ["Pico de expectativas sobredimensionadas", "Abismo de desilusión", "Rampa de consolidación", "Meseta de productividad"],
+      correct: 1,
+      exp: "El Abismo de desilusión es la fase 3: el interés declina y solo los que mejoran sus productos logran sobrevivir."
+    },
+    {
+      q: "¿Cuál es la diferencia fundamental entre BPM y BPR?",
+      opts: ["BPM rediseña radicalmente y BPR mejora de forma continua", "BPR rediseña radicalmente y BPM gestiona y optimiza procesos de forma continua", "Ambos son sinónimos de gestión de calidad", "BPM aplica solo a procesos de manufactura"],
+      correct: 1,
+      exp: "BPR implica rediseño radical para mejoras dramáticas; BPM es una disciplina de gestión y mejora continua de procesos."
+    },
+    {
+      q: "En el modelo de servicios Cloud, ¿qué modelo ofrece infraestructura virtual como servidores y almacenamiento?",
+      opts: ["SaaS", "PaaS", "FaaS", "IaaS"],
+      correct: 3,
+      exp: "IaaS (Infrastructure as a Service) provee infraestructura virtual: servidores, storage y red. Ej.: Amazon EC2, Azure VMs."
+    },
+    {
+      q: "¿Qué característica distingue al Blockchain de otras bases de datos?",
+      opts: ["Es centralizado y fácil de modificar", "Es descentralizado, distribuido e inmutable", "Solo funciona para criptomonedas", "Requiere un administrador central para validar transacciones"],
+      correct: 1,
+      exp: "Blockchain es descentralizado (sin autoridad central), distribuido (todos los nodos tienen copia) e inmutable (modificar un bloque requiere cambiar toda la cadena)."
+    },
+    {
+      q: "La métrica CAC en Inbound Marketing significa:",
+      opts: ["Coste de Anuncio por Clic", "Costo de Adquisición de Clientes", "Conversión de Acciones Comerciales", "Canal de Acceso al Cliente"],
+      correct: 1,
+      exp: "CAC = Costo de Adquisición de Clientes: cuánto cuesta obtener un nuevo cliente mediante los esfuerzos de marketing."
+    },
+    {
+      q: "La RPA no asistida se diferencia de la asistida porque:",
+      opts: ["Opera junto al humano, activada por interacción del usuario", "Opera sin intervención humana, activada por programación o condición", "Solo automatiza tareas de contabilidad", "Requiere supervisión constante de un técnico"],
+      correct: 1,
+      exp: "La RPA no asistida opera de forma autónoma, activada por programación o condición. La asistida trabaja junto al humano."
+    }
+  ];
+
+  function buildQuiz() {
+    const container = document.getElementById('quiz-questions');
+    quizData.forEach((item, i) => {
+      const card = document.createElement('div');
+      card.className = 'quiz-card';
+      card.innerHTML = `
+        <div class="quiz-q">${i+1}. ${item.q}</div>
+        <div class="quiz-options">
+          ${item.opts.map((o, j) => `
+            <button class="quiz-opt" onclick="selectOpt(${i}, ${j}, this)" id="opt-${i}-${j}">${o}</button>
+          `).join('')}
+        </div>
+        <div class="quiz-feedback" id="fb-${i}"></div>
+      `;
+      container.appendChild(card);
+    });
+  }
+
+  const userAnswers = {};
+
+  function selectOpt(qi, oi, btn) {
+    const opts = btn.parentElement.querySelectorAll('.quiz-opt');
+    opts.forEach(b => { b.classList.remove('correct','wrong'); });
+    userAnswers[qi] = oi;
+    btn.classList.add('correct');
+    const fb = document.getElementById(`fb-${qi}`);
+    fb.style.display = 'none';
+    fb.className = 'quiz-feedback';
+  }
+
+  function submitQuiz() {
+    let score = 0;
+    quizData.forEach((item, i) => {
+      const selected = userAnswers[i];
+      const fb = document.getElementById(`fb-${i}`);
+      const opts = document.querySelectorAll(`[id^="opt-${i}-"]`);
+      opts.forEach(b => b.disabled = true);
+      if (selected === undefined) {
+        fb.className = 'quiz-feedback wrong';
+        fb.textContent = 'Sin respuesta. ' + item.exp;
+        fb.style.display = 'block';
+        return;
+      }
+      if (selected === item.correct) {
+        score++;
+        fb.className = 'quiz-feedback correct';
+        fb.textContent = '✓ Correcto. ' + item.exp;
+      } else {
+        document.getElementById(`opt-${i}-${selected}`).classList.add('wrong');
+        document.getElementById(`opt-${i}-${item.correct}`).classList.add('correct');
+        fb.className = 'quiz-feedback wrong';
+        fb.textContent = '✗ Incorrecto. ' + item.exp;
+      }
+      fb.style.display = 'block';
+    });
+    const scoreEl = document.getElementById('quiz-score');
+    scoreEl.style.display = 'flex';
+    const num = document.getElementById('score-num');
+    num.textContent = `${score}/${quizData.length}`;
+    const pct = score / quizData.length;
+    if (pct >= 0.8) {
+      num.className = 'score-num teal';
+      document.getElementById('score-msg').textContent = '¡Excelente resultado!';
+      document.getElementById('score-sub').textContent = 'Dominás los conceptos de las clases 6, 7 y 10.';
+    } else if (pct >= 0.5) {
+      num.className = 'score-num';
+      document.getElementById('score-msg').textContent = 'Buen intento';
+      document.getElementById('score-sub').textContent = 'Repasá las secciones donde te equivocaste.';
+    } else {
+      num.className = 'score-num purple';
+      document.getElementById('score-msg').textContent = 'Seguí estudiando';
+      document.getElementById('score-sub').textContent = 'Volvé a leer el resumen con atención antes de rendirlo.';
+    }
+  }
+
+  function switchTab(id, btn) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-btn').forEach(b => { b.className = 'nav-btn'; });
+    document.getElementById(id).classList.add('active');
+    if (id === 'clase6') btn.className = 'nav-btn active-teal';
+    else if (id === 'clase7') btn.className = 'nav-btn active-amber';
+    else if (id === 'clase10') btn.className = 'nav-btn active-purple';
+    else btn.className = 'nav-btn active-teal';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  buildQuiz();
+</script>
+</body>
+</html>
