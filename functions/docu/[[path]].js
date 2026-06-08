@@ -1,28 +1,18 @@
 export async function onRequest(context) {
     const url = new URL(context.request.url);
+    let pathname = url.pathname;
 
-    // Try 1: original clean URL (ASSETS smart matching)
-    const r1 = await context.env.ASSETS.fetch(context.request);
-    const t1 = await r1.text();
+    // Si la ruta no termina en .html, le agregamos la extensión
+    if (!pathname.endsWith('.html')) {
+        pathname = pathname + '.html';
+    }
 
-    // Try 2: explicit .html path
-    const htmlPath = url.pathname.endsWith('.html') ? url.pathname : url.pathname + '.html';
-    const r2 = await context.env.ASSETS.fetch(new Request(new URL(htmlPath, url.origin).href));
-    const t2 = await r2.text();
+    const assetUrl = new URL(pathname, url.origin);
+    
+    // Al solicitar el archivo con extensión .html (que está excluido en _routes.json),
+    // ASSETS.fetch evitará ejecutar de nuevo la función, previniendo bucles infinitos
+    // y trayendo el archivo HTML estático real desde la carpeta de distribución.
+    const response = await context.env.ASSETS.fetch(new Request(assetUrl.toString(), context.request));
 
-    const body = [
-        'DIAGNOSTIC v2',
-        `path: ${url.pathname}`,
-        '',
-        `[try1] clean_url status=${r1.status} length=${t1.length}`,
-        `[try1] starts_with: ${t1.substring(0, 80).replace(/\n/g, ' ')}`,
-        '',
-        `[try2] html_path=${htmlPath} status=${r2.status} length=${t2.length}`,
-        `[try2] starts_with: ${t2.substring(0, 80).replace(/\n/g, ' ')}`,
-    ].join('\n');
-
-    return new Response(body, {
-        status: 200,
-        headers: { 'Content-Type': 'text/plain; charset=utf-8' },
-    });
+    return response;
 }
