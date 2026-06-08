@@ -1,4 +1,4 @@
-const CACHE_NAME = 'parseit-v9'; // Subimos a v9 para asegurar limpieza total
+const CACHE_NAME = 'parseit-v10';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -79,8 +79,8 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // 4. Index.html (Network-First)
-  if (url.pathname === '/' || url.pathname === '/index.html') {
+  // 4. Guías de estudio y Index.html (Network-First)
+  if (url.pathname === '/' || url.pathname === '/index.html' || url.pathname.startsWith('/docu/')) {
     event.respondWith(
       fetch(request)
         .then((response) => {
