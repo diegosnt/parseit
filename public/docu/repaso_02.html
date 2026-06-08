@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Estudio Avanzada: Transformación Digital</title>
+    <style>
+        :root {
+            --bg-deep: #0f172a;
+            --bg-surface: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --cyan-electric: #06b6d4;
+            --cyan-glow: #22d3ee;
+            --purple-accent: #a855f7;
+            --border-tech: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        /* Barra de progreso de lectura */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--cyan-electric), var(--purple-accent));
+            width: 0%;
+            z-index: 1000;
+            transition: width 0.1s;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: radial-gradient(circle at top, rgba(6, 182, 212, 0.15), transparent 70%);
+            border-bottom: 1px solid var(--border-tech);
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.3rem;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+            background: linear-gradient(to right, #ffffff, var(--cyan-glow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .alert-box {
+            background: rgba(34, 211, 238, 0.05);
+            border: 1px solid rgba(34, 211, 238, 0.2);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 35px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .alert-box .icon {
+            font-size: 1.5rem;
+            color: var(--cyan-glow);
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            color: var(--cyan-glow);
+            margin: 45px 0 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: "::";
+            color: var(--purple-accent);
+            font-family: monospace;
+        }
+
+        /* Los 4 Pilares */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .pillar-card {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-tech);
+            padding: 25px 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .pillar-card:hover {
+            border-color: var(--cyan-electric);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(6, 182, 212, 0.1);
+        }
+
+        .pillar-number {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: var(--purple-accent);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .pillar-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Tabla de Madurez Digital */
+        .tech-table-wrapper {
+            overflow-x: auto;
+            border-radius: 12px;
+            border: 1px solid var(--border-tech);
+            margin: 25px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--bg-surface);
+            text-align: left;
+        }
+
+        th, td {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-tech);
+        }
+
+        th {
+            background-color: rgba(15, 23, 42, 0.6);
+            color: var(--cyan-glow);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .phase-badge {
+            background: rgba(168, 85, 247, 0.15);
+            color: #d8b4fe;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* Acordeón / Pestañas de estudio */
+        .accordion-item {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-tech);
+            border-radius: 8px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            padding: 18px 20px;
+            background-color: rgba(30, 41, 59, 0.5);
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .accordion-header:hover {
+            background-color: rgba(6, 182, 212, 0.05);
+            color: var(--cyan-glow);
+        }
+
+        .accordion-content {
+            padding: 20px;
+            border-top: 1px solid var(--border-tech);
+            display: none;
+            background-color: rgba(15, 23, 42, 0.3);
+        }
+
+        .glosario-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 15px;
+        }
+
+        .glosario-term {
+            background: rgba(255,255,255,0.02);
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 3px solid var(--cyan-electric);
+        }
+
+        .glosario-term strong {
+            color: var(--cyan-glow);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 70px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-tech);
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="myBar" class="progress-bar"></div>
+
+    <div class="container">
+
+        <header>
+            <h1>Guía de Estudio Integral</h1>
+            <p>Sistemas de Información, Marcos Tecnológicos y Madurez Digital</p>
+        </header>
+
+        <div class="alert-box">
+            <div class="icon">⚡</div>
+            <div>
+                <strong>Enfoque de Análisis Estructural:</strong> La madurez digital no ocurre por accidente. Exige balancear equilibradamente los pilares del negocio con metodologías analíticas de mercado validadas a nivel global.
+            </div>
+        </div>
+
+        <h2>1. Cuatro Pilares Críticos de la Estrategia</h2>
+        <p style="color: var(--text-secondary);">Para estructurar un ecosistema digital robusto y con tracción, la organización debe sostenerse simultáneamente sobre cuatro áreas clave:</p>
+        
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <div class="pillar-number">Pilar 01</div>
+                <h3>Empoderamiento</h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">Capacitar a los empleados para optimizar la toma de decisiones autónoma.</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-number">Pilar 02</div>
+                <h3>Optimización</h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">Refinar los procesos operativos internos mediante automatización avanzada.</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-number">Pilar 03</div>
+                <h3>Involucramiento</h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">Establecer canales de conexión profundos y multicanal con los clientes.</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-number">Pilar 04</div>
+                <h3>Transformación</h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">Evolucionar los productos físicos hacia soluciones inteligentes de software.</p>
+            </div>
+        </div>
+
+
+        <h2>2. Camino Hacia la Madurez Digital (Las 5 Fases)</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 15px;">Matriz secuencial obligatoria para evaluar el avance estratégico y tecnológico institucional:</p>
+        
+        <div class="tech-table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Fase</th>
+                        <th>Descripción Operativa</th>
+                        <th>Propósito Estratégico</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="phase-badge">Fase 1</span></td>
+                        <td><strong>Identificación</strong></td>
+                        <td>Investigación exhaustiva del mercado tecnológico disponible y análisis de competidores directos.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="phase-badge">Fase 2</span></td>
+                        <td><strong>Análisis</strong></td>
+                        <td>Evaluación de viabilidad, detección de amenazas, oportunidades y definición formal de líderes de cambio.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="phase-badge">Fase 3</span></td>
+                        <td><strong>Transición</strong></td>
+                        <td>Ejecución inicial apalancada en capacidades internas y alianzas externas, priorizando el cambio de mentalidad.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="phase-badge">Fase 4</span></td>
+                        <td><strong>Ejecución</strong></td>
+                        <td>Medición en tiempo real y evaluación crítica de los indicadores de las estrategias ya implementadas.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="phase-badge">Fase 5</span></td>
+                        <td><strong>Optimización</strong></td>
+                        <td>Ajustes dinámicos continuos basados en métricas recolectadas para consolidar la madurez en el negocio.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <h2>3. Herramientas y Marcos Analíticos (Haz clic para estudiar)</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 20px;">Despliega los bloques inferiores para repasar las metodologías avanzadas de mercado de la firma Gartner y los conceptos de infraestructura:</p>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Metodología Gartner: Hype Cycle (Ciclo de Sobreexpectación)</span>
+                <span>+</span>
+            </div>
+            <div class="accordion-content">
+                <p>Gráfico y modelo teórico desarrollado por Gartner que mapea de forma precisa la evolución, madurez, adopción comercial y expectativas reales de una tecnología emergente a lo largo del tiempo.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Virtualización e Infraestructura Física frente a Cloud</span>
+                <span>+</span>
+            </div>
+            <div class="accordion-content">
+                <p><strong>Virtualización:</strong> Tecnología núcleo que permite ejecutar de forma aislada múltiples sistemas operativos o máquinas virtuales dentro de un único servidor físico de hardware, optimizando costos e infraestructura.</p>
+            </div>
+        </div>
+
+
+        <h2>4. Glosario de Conceptos Centrales de la Unidad</h2>
+        <div class="glosario-grid" style="margin-top: 20px;">
+            <div class="glosario-term">
+                <strong>BPM (Business Process Management)</strong>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Enfoque sistemático para identificar, modelar, automatizar y optimizar flujos de trabajo de manera iterativa.</p>
+            </div>
+            <div class="glosario-term">
+                <strong>BPR (Business Process Reengineering)</strong>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Rediseño radical y completo de procesos clave del negocio para alcanzar mejoras espectaculares y disruptivas de rendimiento.</p>
+            </div>
+            <div class="glosario-term">
+                <strong>TQM (Total Quality Management)</strong>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Filosofía corporativa enfocada en la calidad total y la satisfacción permanente del cliente mediante el compromiso de todos los empleados.</p>
+            </div>
+            <div class="glosario-term">
+                <strong>Machine Learning</strong>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Rama de la IA que faculta a los sistemas de cómputo para aprender y mejorar autónomamente a partir de datos históricos sin intervención humana directa.</p>
+            </div>
+            <div class="glosario-term">
+                <strong>FaaS / Serverless</strong>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Modelo de computación en la nube donde el código de software se ejecuta estrictamente en respuesta a eventos puntuales, optimizando costos por milisegundo de uso.</p>
+            </div>
+            <div class="glosario-term">
+                <strong>VRML (Virtual Reality Modeling Language)</strong>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Estándar técnico clásico de programación diseñado para el modelado estructurado de gráficos vectoriales interactivos 3D en la web.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Guía Técnica Autoevaluable - Diseñada para repasar conceptos críticos de la Unidad 3.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Lógica del Acordeón interactivo
+        function toggleAccordion(element) {
+            const content = element.nextElementSibling;
+            const symbol = element.querySelector('span:last-child');
+            
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                symbol.textContent = "+";
+                element.style.color = "var(--text-primary)";
+            } else {
+                content.style.display = "block";
+                symbol.textContent = "−";
+                element.style.color = "var(--cyan-glow)";
+            }
+        }
+
+        // Lógica de la barra de progreso de lectura superior
+        window.onscroll = function() { updateProgressBar() };
+
+        function updateProgressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Estudio: Gestión de Sistemas de Información en los Negocios</title>
+    <style>
+        :root {
+            --bg-deep: #0f172a;
+            --bg-surface: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --cyan-electric: #06b6d4;
+            --cyan-glow: #22d3ee;
+            --purple-accent: #a855f7;
+            --border-tech: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        /* Barra de progreso de lectura */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--cyan-electric), var(--purple-accent));
+            width: 0%;
+            z-index: 1000;
+            transition: width 0.1s;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: radial-gradient(circle at top, rgba(6, 182, 212, 0.15), transparent 70%);
+            border-bottom: 1px solid var(--border-tech);
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.3rem;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+            background: linear-gradient(to right, #ffffff, var(--cyan-glow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .alert-box {
+            background: rgba(34, 211, 238, 0.05);
+            border: 1px solid rgba(34, 211, 238, 0.2);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 35px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .alert-box .icon {
+            font-size: 1.5rem;
+            color: var(--cyan-glow);
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            color: var(--cyan-glow);
+            margin: 45px 0 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: "::";
+            color: var(--purple-accent);
+            font-family: monospace;
+        }
+
+        /* Grid de Modelos e Ingresos */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .pillar-card {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-tech);
+            padding: 25px 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .pillar-card:hover {
+            border-color: var(--cyan-electric);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(6, 182, 212, 0.1);
+        }
+
+        .pillar-number {
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: var(--purple-accent);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .pillar-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        /* Tabla de Modelos y Analítica */
+        .tech-table-wrapper {
+            overflow-x: auto;
+            border-radius: 12px;
+            border: 1px solid var(--border-tech);
+            margin: 25px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--bg-surface);
+            text-align: left;
+        }
+
+        th, td {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-tech);
+        }
+
+        th {
+            background-color: rgba(15, 23, 42, 0.6);
+            color: var(--cyan-glow);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .phase-badge {
+            background: rgba(6, 182, 212, 0.15);
+            color: var(--cyan-glow);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+
+        /* Acordeón / Cuestionario Interactivo */
+        .accordion-item {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-tech);
+            border-radius: 8px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            padding: 18px 20px;
+            background-color: rgba(30, 41, 59, 0.5);
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .accordion-header:hover {
+            background-color: rgba(6, 182, 212, 0.05);
+            color: var(--cyan-glow);
+        }
+
+        .accordion-content {
+            padding: 20px;
+            border-top: 1px solid var(--border-tech);
+            display: none;
+            background-color: rgba(15, 23, 42, 0.3);
+        }
+
+        /* Glosario */
+        .glosario-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 15px;
+        }
+
+        .glosario-term {
+            background: rgba(255,255,255,0.02);
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 3px solid var(--cyan-electric);
+        }
+
+        .glosario-term strong {
+            color: var(--cyan-glow);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 70px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-tech);
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="myBar" class="progress-bar"></div>
+
+    <div class="container">
+
+        <header>
+            <h1>Guía de Estudio: Sistemas de Información en los Negocios</h1>
+            <p>Modelos de Negocios, Analítica de Datos y Aplicaciones Empresariales Cores</p>
+        </header>
+
+        <div class="alert-box">
+            <div class="icon">💡</div>
+            <div>
+                <strong>Axioma Central de TI:</strong> Si las organizaciones simplemente automatizan lo que hacen hoy, desperdician gran parte del potencial de la TI[cite: 266]. Para obtener beneficios reales, deben repensar y rediseñan la forma en que producen, entregan y mantienen sus bienes y servicios[cite: 267].
+            </div>
+        </div>
+
+        <h2>1. Modelos de E-Commerce y Canales Digitales</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 15px;">Estructuras de interacción comercial transaccional en la red:</p>
+        
+        <div class="tech-table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Modelo</th>
+                        <th>Relación Comercial</th>
+                        <th>Descripción Específica del Documento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="phase-badge">B2C</span></td>
+                        <td><strong>Business to Consumer</strong></td>
+                        <td>Modelo de comercio donde una empresa minorista vende directamente a sus clientes finales[cite: 297].</td>
+                    </tr>
+                    <tr>
+                        <td><span class="phase-badge">B2B</span></td>
+                        <td><strong>Business to Business</strong></td>
+                        <td>Comercio realizado específicamente entre empresas, como un minorista y su distribuidor[cite: 296].</td>
+                    </tr>
+                    <tr>
+                        <td><span class="phase-badge">Intermediario</span></td>
+                        <td><strong>Corredor de Información</strong></td>
+                        <td>Se limita a ofrecer datos sobre productos, precios y disponibilidad para ayudar a compradores y vendedores a contactarse[cite: 268].</td>
+                    </tr>
+                    <tr>
+                        <td><span class="phase-badge">Intermediario</span></td>
+                        <td><strong>Corredor de Transacciones</strong></td>
+                        <td>Su actividad primaria es cerrar la transacción una vez que el comprador ha consultado las tarifas[cite: 269].</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <h2>2. Transformación de los Modelos de Ingresos</h2>
+        <p style="color: var(--text-secondary);">Análisis de estrategias avanzadas de monetización en entornos de negocio digitales:</p>
+        
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <div class="pillar-number">Mecánica de Venta</div>
+                <h3>Bait and Hook (Cebo y Anzuelo)</h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">Se vende un producto inicial de hardware a un precio artificialmente reducido (el cebo)[cite: 257, 270]. El beneficio se obtiene posteriormente cuando los consumidores compran obligatoriamente los consumibles a la misma empresa para que el hardware funcione (el anzuelo)[cite: 271].</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-number">Estrategia Mixta</div>
+                <h3>Freemium</h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">Modelo integral que ofrece un producto básico totalmente gratuito mientras reserva de forma exclusiva el contenido de alta calidad para una versión de pago[cite: 304].</p>
+            </div>
+        </div>
+
+
+        <h2>3. Inteligencia de Negocios (BI) y las Tres Categorías de Análisis</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 20px;">Cómo las organizaciones transforman la data masiva para blindar la toma de decisiones competitiva[cite: 251, 258]:</p>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>1. Análisis Descriptivo (Enfoque Histórico)</span>
+                <span>+</span>
+            </div>
+            <div class="accordion-content">
+                <p>Se centra específicamente en resumir el pasado para comprender y extraer patrones organizacionales históricos[cite: 259, 274].</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>2. Análisis Predictivo (Enfoque Futuro)</span>
+                <span>+</span>
+            </div>
+            <div class="accordion-content">
+                <p>Utiliza de manera combinada estadísticas avanzadas e Inteligencia Artificial para pronosticar eventos y escenarios futuros basados de forma estricta en datos históricos[cite: 259, 275].</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>3. Análisis Prescriptivo (Enfoque de Optimización)</span>
+                <span>+</span>
+            </div>
+            <div class="accordion-content">
+                <p>El nivel analítico más avanzado del negocio. Combina metodologías de predicción y optimización para recomendar acciones específicas y estratégicas[cite: 259, 276].</p>
+            </div>
+        </div>
+
+
+        <h2>4. Cuestionario de Repaso Interactivo (Haz clic para revelar respuestas)</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 20px;">Pon a prueba tus conocimientos antes del examen simulando preguntas reales del documento[cite: 253]:</p>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>¿Qué define al concepto de "Big Data" frente a las bases de datos relacionales tradicionales?</span>
+                <span>Revelar Respuesta</span>
+            </div>
+            <div class="accordion-content">
+                <p>Se refiere a conjuntos de datos con volúmenes tan masivos y formatos tan variados (estructurados y no estructurados) que superan por completo la capacidad de captura, almacenamiento y análisis de un DBMS común[cite: 258, 272]. A diferencia de los datos transaccionales, estos provienen de tráfico web, correos electrónicos, sensores y plataformas de redes sociales[cite: 273].</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>¿Cuál es el objetivo principal y de entrenamiento del Machine Learning?</span>
+                <span>Revelar Respuesta</span>
+            </div>
+            <div class="accordion-content">
+                <p>Su objetivo fundamental es crear modelos capaces de resolver tareas específicas permitiendo que las máquinas aprendan sin ser explícitamente programadas[cite: 260, 277]. Estos modelos se entrenan con grandes cantidades de datos para identificar patrones y realizar predicciones precisas[cite: 278].</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>¿Por qué se describe al ERP como el "sistema nervioso central de una empresa"?</span>
+                <span>Revelar Respuesta</span>
+            </div>
+            <div class="accordion-content">
+                <p>Se le denomina así porque brinda la automatización, integración e inteligencia esenciales para ejecutar la totalidad de las operaciones cotidianas de la firma[cite: 262, 281]. Al integrar de manera nativa procesos transversales como finanzas, RR.HH. y fabricación en un solo sistema, se convierte en la única fuente de verdad para la toma de decisiones estratégicas[cite: 282].</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>¿Cuál es el objetivo primordial de la Gestión de la Cadena de Suministro (SCM)?</span>
+                <span>Revelar Respuesta</span>
+            </div>
+            <div class="accordion-content">
+                <p>Su fin core es gestionar eficientemente el flujo integral de bienes, datos y finanzas desde la adquisición inicial de materias primas hasta la entrega final del producto terminado en manos del cliente[cite: 263, 283]. Busca maximizar la eficiencia, calidad, productividad y la satisfacción del consumidor[cite: 284].</p>
+            </div>
+        </div>
+
+
+        <h2>5. Glosario Técnico de la Unidad</h2>
+        <div class="glosario-grid" style="margin-top: 20px;">
+            <div class="glosario-term">
+                <strong>BI (Business Intelligence)</strong>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Combinación de tecnología y procesos para transformar datos en información y conocimiento estratégico[cite: 299].</p>
+            </div>
+            <div class="glosario-term">
+                <strong>Clustering</strong>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Tarea de Machine Learning enfocada en hallar agrupamientos de datos basados en similitudes para recomendaciones o segmentación[cite: 300].</p>
+            </div>
+            <div class="glosario-term">
+                <strong>CRM (Customer Relationship Management)</strong>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Estrategia y sistema para gestionar todas las interacciones de una empresa con clientes actuales y potenciales[cite: 301].</p>
+            </div>
+            <div class="glosario-term">
+                <strong>E-clearinghouses</strong>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Sistemas especializados de tipo subasta para productos cuyos precios y disponibilidad cambian constantemente[cite: 302].</p>
+            </div>
+            <div class="glosario-term">
+                <strong>Marketplace</strong>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Plataforma que pone en contacto a dos partes independientes para participar en una transacción de productos o servicios[cite: 306].</p>
+            </div>
+            <div class="glosario-term">
+                <strong>PLM (Product Lifecycle Management)</strong>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Proceso de gestión de un producto de principio a fin, cubriendo desde su ideación y diseño hasta su fabricación y reciclado[cite: 308].</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Recurso Académico de Alta Eficiencia - Diseñado exclusivamente en base a la Unidad 3 de Gestión de Sistemas de Información[cite: 312].</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Control de despliegue de los Acordeones (Preguntas y Analítica)
+        function toggleAccordion(element) {
+            const content = element.nextElementSibling;
+            const symbol = element.querySelector('span:last-child');
+            
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                if(symbol.textContent === "−") {
+                    symbol.textContent = "+";
+                }
+                element.style.color = "var(--text-primary)";
+            } else {
+                content.style.display = "block";
+                if(symbol.textContent === "+") {
+                    symbol.textContent = "−";
+                }
+                element.style.color = "var(--cyan-glow)";
+            }
+        }
+
+        // Control dinámico de la barra de lectura superior
+        window.onscroll = function() { updateProgressBar() };
+
+        function updateProgressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
+
+</body>
+</html>
