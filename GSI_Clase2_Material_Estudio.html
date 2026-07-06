@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GSI · Clase 2 — Gobierno de las TI y Estrategia</title>
+<style>
+  :root{
+    --tinta:#14213d;
+    --tinta-suave:#3d4a68;
+    --fondo:#f7f8fa;
+    --papel:#ffffff;
+    --acento:#0e7490;
+    --acento-claro:#e0f2f7;
+    --dato:#b45309;
+    --dato-claro:#fef3e2;
+    --correcto:#15803d;
+    --correcto-bg:#ecfdf3;
+    --incorrecto:#b91c1c;
+    --incorrecto-bg:#fef2f2;
+    --borde:#e3e6ec;
+    --radio:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",sans-serif;
+    background:var(--fondo);
+    color:var(--tinta);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  .contenedor{max-width:900px;margin:0 auto;padding:0 20px 80px}
+
+  header{padding:56px 0 8px;text-align:center}
+  .curso{
+    display:inline-block;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--acento);font-weight:700;border:1px solid var(--acento);
+    border-radius:999px;padding:5px 16px;margin-bottom:18px;
+  }
+  h1{font-size:clamp(1.7rem,4.5vw,2.5rem);font-weight:800;letter-spacing:-.02em;line-height:1.15}
+  header p.sub{color:var(--tinta-suave);margin-top:8px;font-size:.95rem}
+
+  nav.indice{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:26px 0 0}
+  nav.indice a{
+    font-size:.78rem;font-weight:700;text-decoration:none;color:var(--tinta-suave);
+    background:var(--papel);border:1px solid var(--borde);border-radius:999px;
+    padding:6px 14px;transition:all .15s;
+  }
+  nav.indice a:hover{color:var(--acento);border-color:var(--acento);background:var(--acento-claro)}
+
+  .idea-central{
+    margin:36px 0 12px;background:var(--papel);border:1px solid var(--borde);
+    border-radius:var(--radio);padding:32px 28px;box-shadow:0 4px 18px rgba(20,33,61,.06);
+  }
+  .flujo{
+    display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;
+    margin-bottom:20px;font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;
+  }
+  .flujo .nodo{border-radius:8px;padding:6px 14px}
+  .flujo .nodo.dato{background:var(--dato-claro);color:var(--dato)}
+  .flujo .nodo.si{background:var(--tinta);color:#fff}
+  .flujo .nodo.info{background:var(--acento-claro);color:var(--acento)}
+  .flujo .flecha{color:var(--tinta-suave);font-size:1.1rem}
+  .idea-central blockquote{
+    font-size:clamp(1.1rem,2.6vw,1.3rem);font-weight:600;text-align:center;line-height:1.55;
+  }
+  .idea-central blockquote em{color:var(--acento);font-style:normal}
+
+  section{margin-top:56px;scroll-margin-top:20px}
+  h2{
+    font-size:1.4rem;font-weight:800;letter-spacing:-.01em;
+    display:flex;align-items:center;gap:12px;margin-bottom:22px;
+  }
+  h2::before{content:"";width:26px;height:4px;background:var(--acento);border-radius:2px;flex-shrink:0}
+  h3.subtitulo{
+    font-weight:800;color:var(--acento);margin:28px 0 12px;
+    text-transform:uppercase;letter-spacing:.05em;font-size:.88rem;
+  }
+  p.parrafo{font-size:.95rem;color:var(--tinta-suave);margin-bottom:12px}
+  p.parrafo strong{color:var(--tinta)}
+
+  .glosario{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .termino{background:var(--papel);border:1px solid var(--borde);border-radius:var(--radio);padding:18px 20px}
+  .termino dt{font-weight:800;color:var(--acento);margin-bottom:4px;font-size:.98rem}
+  .termino dd{font-size:.9rem;color:var(--tinta-suave)}
+
+  .puntos{list-style:none}
+  .puntos li{
+    background:var(--papel);border:1px solid var(--borde);border-left:4px solid var(--acento);
+    border-radius:10px;padding:14px 18px;margin-bottom:12px;font-size:.94rem;color:var(--tinta-suave);
+  }
+  .puntos li strong{color:var(--tinta)}
+  .puntos.ambar li{border-left-color:var(--dato)}
+  .puntos.rojo li{border-left-color:var(--incorrecto)}
+  .puntos.verde li{border-left-color:var(--correcto)}
+
+  .tabla-wrap{overflow-x:auto;border-radius:var(--radio);border:1px solid var(--borde);margin-bottom:12px}
+  table{width:100%;border-collapse:collapse;background:var(--papel);font-size:.9rem}
+  th{
+    background:var(--tinta);color:#fff;text-align:left;padding:12px 16px;
+    font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;
+  }
+  td{padding:12px 16px;border-top:1px solid var(--borde);color:var(--tinta-suave);vertical-align:top}
+  td:first-child{font-weight:700;color:var(--tinta);white-space:nowrap}
+
+  /* Barras Gartner */
+  .barras{display:flex;flex-direction:column;gap:10px;margin:14px 0}
+  .barra{background:var(--papel);border:1px solid var(--borde);border-radius:10px;padding:10px 16px}
+  .barra .etiqueta{display:flex;justify-content:space-between;font-size:.87rem;font-weight:700;margin-bottom:6px}
+  .barra .etiqueta span:last-child{color:var(--acento)}
+  .barra .pista{height:8px;background:var(--fondo);border-radius:4px;overflow:hidden}
+  .barra .relleno{height:100%;background:linear-gradient(90deg,var(--acento),#22a7c4);border-radius:4px}
+
+  /* FODA grid */
+  .foda{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .foda .cuad{border-radius:var(--radio);padding:18px 20px;border:1px solid var(--borde)}
+  .foda h4{font-size:.95rem;margin-bottom:6px}
+  .foda p{font-size:.87rem;color:var(--tinta-suave)}
+  .foda .f{background:#eaf3fe}
+  .foda .d{background:#fdf6dd}
+  .foda .o{background:#e8f7f0}
+  .foda .a{background:#fdecea}
+  .foda .eje{font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--tinta-suave)}
+
+  /* Dimensiones (tarjetas) */
+  .dimensiones{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .dim{background:var(--papel);border:1px solid var(--borde);border-radius:var(--radio);padding:20px}
+  .dim .icono{font-size:1.6rem;margin-bottom:8px}
+  .dim h4{font-size:1rem;margin-bottom:8px;color:var(--acento)}
+  .dim p, .dim li{font-size:.87rem;color:var(--tinta-suave)}
+  .dim ul{list-style:none;margin-top:8px}
+  .dim li{padding-left:16px;position:relative;margin-bottom:6px}
+  .dim li::before{content:"›";position:absolute;left:0;color:var(--acento);font-weight:800}
+  .dim li strong{color:var(--tinta)}
+
+  .analogia{
+    background:linear-gradient(135deg,var(--tinta) 0%,#1e3a5f 100%);color:#eaf1f7;
+    border-radius:var(--radio);padding:30px 28px;position:relative;overflow:hidden;
+  }
+  .analogia::before{content:"🏦";position:absolute;right:-6px;top:-14px;font-size:6.5rem;opacity:.12}
+  .analogia h3{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:#8ecae6;margin-bottom:12px}
+  .analogia p{font-size:.96rem;line-height:1.75;margin-bottom:12px}
+  .analogia p:last-child{margin-bottom:0}
+  .analogia strong{color:#fff}
+
+  .pregunta{background:var(--papel);border:1px solid var(--borde);border-radius:var(--radio);padding:22px 24px;margin-bottom:20px}
+  .pregunta .num{font-size:.72rem;font-weight:800;letter-spacing:.14em;color:var(--acento);text-transform:uppercase}
+  .pregunta h3{font-size:1.02rem;margin:6px 0 16px;line-height:1.5}
+  .opciones{display:flex;flex-direction:column;gap:10px}
+  .opciones button{
+    font:inherit;font-size:.92rem;text-align:left;background:var(--fondo);
+    border:1.5px solid var(--borde);border-radius:10px;padding:12px 16px;cursor:pointer;
+    color:var(--tinta);transition:border-color .15s, background .15s, transform .1s;
+  }
+  .opciones button:hover:not(:disabled){border-color:var(--acento);background:var(--acento-claro)}
+  .opciones button:focus-visible{outline:3px solid var(--acento);outline-offset:2px}
+  .opciones button:active:not(:disabled){transform:scale(.985)}
+  .opciones button:disabled{cursor:default;opacity:.75}
+  .opciones button.correcta{background:var(--correcto-bg);border-color:var(--correcto);color:var(--correcto);font-weight:700;opacity:1}
+  .opciones button.incorrecta{background:var(--incorrecto-bg);border-color:var(--incorrecto);color:var(--incorrecto);opacity:1}
+  .feedback{display:none;margin-top:14px;border-radius:10px;padding:12px 16px;font-size:.88rem;line-height:1.6}
+  .feedback.ok{display:block;background:var(--correcto-bg);color:var(--correcto);border:1px solid #bbe5c8}
+  .feedback.mal{display:block;background:var(--incorrecto-bg);color:var(--incorrecto);border:1px solid #f3c6c6}
+  .feedback strong{display:block;margin-bottom:2px}
+  .puntaje{
+    display:none;text-align:center;background:var(--papel);border:2px solid var(--acento);
+    border-radius:var(--radio);padding:24px;margin-top:8px;
+  }
+  .puntaje.visible{display:block}
+  .puntaje .nota{font-size:2rem;font-weight:800;color:var(--acento)}
+  .puntaje button{
+    margin-top:14px;font:inherit;font-weight:700;background:var(--acento);color:#fff;
+    border:none;border-radius:10px;padding:10px 24px;cursor:pointer;
+  }
+  .puntaje button:hover{background:#0a5a70}
+
+  footer{margin-top:60px;text-align:center;font-size:.8rem;color:var(--tinta-suave)}
+
+  @media (max-width:720px){
+    .glosario{grid-template-columns:1fr}
+    .dimensiones{grid-template-columns:1fr}
+    .foda{grid-template-columns:1fr}
+    header{padding-top:40px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .opciones button{transition:none}
+  }
+</style>
+</head>
+<body>
+<div class="contenedor">
+
+  <header>
+    <span class="curso">GSI · Unidad 1 · Clase 2</span>
+    <h1>Gobierno de las TI y Estrategia</h1>
+    <p class="sub">Material de estudio ampliado — Licenciatura en Tecnologías Digitales · UNICABA</p>
+    <nav class="indice">
+      <a href="#glosario">Conceptos clave</a>
+      <a href="#gobierno">Gobierno de TI</a>
+      <a href="#directivos">Cargos directivos</a>
+      <a href="#cio">Rol del CIO</a>
+      <a href="#presentacion">Presentación y conflictos</a>
+      <a href="#estrategia">Estrategia</a>
+      <a href="#outsourcing">Outsourcing</a>
+      <a href="#porter">Porter y FODA</a>
+      <a href="#capex">CAPEX/OPEX</a>
+      <a href="#plan">Plan de SI</a>
+      <a href="#desempeno">Desempeño</a>
+      <a href="#decisiones">SI para decisiones</a>
+      <a href="#analogia">Analogía</a>
+      <a href="#quiz">Test</a>
+    </nav>
+  </header>
+
+  <!-- 1. IDEA CENTRAL -->
+  <div class="idea-central">
+    <div class="flujo" aria-hidden="true">
+      <span class="nodo dato">Estrategia de negocios</span>
+      <span class="flecha">⇄</span>
+      <span class="nodo si">Gobierno de TI</span>
+      <span class="flecha">⇄</span>
+      <span class="nodo info">Rentabilidad</span>
+    </div>
+    <blockquote>
+      El gobierno de las TI existe para <em>alinear la tecnología con los objetivos de negocio</em>: cuanto mejor sea esa alineación — liderada por el CIO mediante estrategia, decisiones de sourcing, presupuesto y gestión del talento — <em>mayor será la rentabilidad</em> de la empresa.
+    </blockquote>
+  </div>
+
+  <!-- 2. CONCEPTOS CLAVE -->
+  <section id="glosario">
+    <h2>Conceptos clave</h2>
+    <dl class="glosario">
+      <div class="termino">
+        <dt>Gobierno de TI</dt>
+        <dd>Conjunto de prácticas, procesos y estructuras para planificar, diseñar, implementar, operar y controlar las TI en una organización, asegurando su uso eficaz y eficiente para cumplir los objetivos.</dd>
+      </div>
+      <div class="termino">
+        <dt>CIO (Chief Information Officer)</dt>
+        <dd>Director de Sistemas de Información: responsable de toda la tecnología de la información de la organización. Dirige el departamento de sistemas.</dd>
+      </div>
+      <div class="termino">
+        <dt>CTO (Chief Technology Officer)</dt>
+        <dd>Director Tecnológico: responsable de la gestión diaria de las tecnologías de la información.</dd>
+      </div>
+      <div class="termino">
+        <dt>CSO / CISO</dt>
+        <dd>El CSO es responsable de la seguridad física y tecnológica de la empresa; el CISO garantiza específicamente la seguridad de la información.</dd>
+      </div>
+      <div class="termino">
+        <dt>Outsourcing</dt>
+        <dd>Subcontratación de personal por medio de una empresa externa que se dedica a encontrar talento y contratar personal para otras empresas.</dd>
+      </div>
+      <div class="termino">
+        <dt>SaaS (Software as a Service)</dt>
+        <dd>Servicios que ofrecen y proveen acceso al software de manera remota como un servicio basado en Web; se paga por suscripción o por transacción en lugar de comprar e instalar.</dd>
+      </div>
+      <div class="termino">
+        <dt>FODA</dt>
+        <dd>Herramienta para identificar Fortalezas, Oportunidades, Debilidades y Amenazas de una empresa o persona (internas: F/D; externas: O/A).</dd>
+      </div>
+      <div class="termino">
+        <dt>CapEx (Gastos de Capital)</dt>
+        <dd>Desembolsos para adquirir, mejorar o mantener bienes físicos de larga duración; activos tangibles que dan beneficios a lo largo del tiempo.</dd>
+      </div>
+      <div class="termino">
+        <dt>OpEx (Gastos Operativos)</dt>
+        <dd>Costos recurrentes y necesarios para el funcionamiento diario; no generan activos tangibles y se deducen en el mismo año en que se incurren.</dd>
+      </div>
+      <div class="termino">
+        <dt>Objetivo SMART</dt>
+        <dd>Objetivo Específico, Medible, Alcanzable, Relevante y Con plazo (Specific, Measurable, Achievable, Relevant, Time-bound).</dd>
+      </div>
+      <div class="termino">
+        <dt>Competencias</dt>
+        <dd>Conjunto de conocimientos (saber), habilidades (saber hacer) y actitudes (querer hacer) que permiten desempeñar correctamente una función o rol.</dd>
+      </div>
+      <div class="termino">
+        <dt>Feedback</dt>
+        <dd>Información que ayuda a mejorar el desempeño. Debe ser específico, oportuno, basado en hechos, orientado a mejorar y respetuoso. No es una crítica: es una herramienta de desarrollo.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- 3. GOBIERNO DE TI -->
+  <section id="gobierno">
+    <h2>Gobierno de las TI</h2>
+    <p class="parrafo">
+      El gobierno de TI es el <strong>conjunto de prácticas, procesos y estructuras</strong> que se utilizan para <strong>planificar, diseñar, implementar, operar y controlar</strong> las tecnologías de la información en una organización. Su <strong>objetivo principal</strong> es asegurar que las TI se utilicen de manera <strong>eficaz y eficiente</strong> para cumplir los objetivos de la organización.
+    </p>
+    <h3 class="subtitulo">Principales responsabilidades</h3>
+    <ul class="puntos">
+      <li><strong>Planificar</strong> y establecer estrategias para el uso de las TI en la organización.</li>
+      <li><strong>Diseñar y desarrollar</strong> sistemas de información que cumplan los requisitos de la organización.</li>
+      <li><strong>Implementar y operar</strong> sistemas de información de manera <strong>segura y eficiente</strong>.</li>
+      <li><strong>Controlar y supervisar</strong> el uso de las TI en la organización.</li>
+      <li><strong>Evaluar y mejorar continuamente</strong> los sistemas para garantizar que cumplan los requisitos.</li>
+    </ul>
+    <p class="parrafo">
+      Además, el gobierno de TI se asegura de <strong>cumplir con las regulaciones y normativas aplicables</strong>, como la <strong>privacidad y seguridad de los datos</strong>, para garantizar la conformidad con las leyes.
+    </p>
+  </section>
+
+  <!-- 4. CARGOS DIRECTIVOS -->
+  <section id="directivos">
+    <h2>Capacidades y funciones directivas</h2>
+    <h3 class="subtitulo">Siglas de los cargos directivos (C-Level)</h3>
+    <div class="tabla-wrap">
+      <table>
+        <thead><tr><th>Sigla</th><th>Cargo</th><th>Responsabilidad</th></tr></thead>
+        <tbody>
+          <tr><td>CEO</td><td>Chief Executive Officer — Director Ejecutivo</td><td>Es el responsable de la empresa.</td></tr>
+          <tr><td>COO</td><td>Chief Operating Officer — Director de Operaciones</td><td>Dirige las operaciones del negocio.</td></tr>
+          <tr><td>CFO</td><td>Chief Financial Officer — Director Financiero</td><td>Administra las finanzas de la organización.</td></tr>
+          <tr><td>CMO</td><td>Chief Marketing Officer — Director de Marketing</td><td>Conduce la estrategia de marketing.</td></tr>
+          <tr><td>CCO</td><td>Chief Communications Officer — Director de Comunicación</td><td>Gestiona la comunicación corporativa.</td></tr>
+          <tr><td>CIO</td><td>Chief Information Officer — Director de Sistemas de Información</td><td>Responsable de <strong>toda</strong> la tecnología de la información de la organización.</td></tr>
+          <tr><td>CTO</td><td>Chief Technology Officer — Director Tecnológico</td><td>Responsable de la <strong>gestión diaria</strong> de las tecnologías de la información.</td></tr>
+          <tr><td>CSO</td><td>Chief Security Officer</td><td>Responsable de la seguridad <strong>física y tecnológica</strong> de la empresa.</td></tr>
+          <tr><td>CISO</td><td>Chief Information Security Officer</td><td>Garantizar la <strong>seguridad de la información</strong> de la empresa.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subtitulo">Organigrama típico de una Gerencia de Sistemas</h3>
+    <p class="parrafo">Bajo el <strong>CIO</strong> se organizan cinco gerencias con sus equipos:</p>
+    <div class="dimensiones">
+      <div class="dim">
+        <h4>🖥️ Soporte Microinformática</h4>
+        <ul><li>Soporte PC/Notebooks</li><li>Soporte Telefonía</li></ul>
+      </div>
+      <div class="dim">
+        <h4>🧩 Soporte Aplicaciones</h4>
+        <ul><li>Analistas Funcionales</li><li>Especialistas</li></ul>
+      </div>
+      <div class="dim">
+        <h4>⚙️ Desarrollo</h4>
+        <ul><li>Analistas de Sistemas</li><li>Desarrolladores</li><li>Diseñadores</li></ul>
+      </div>
+      <div class="dim">
+        <h4>🌐 Infraestructura y Redes</h4>
+        <ul><li>Analista Comunicaciones</li><li>Administrador de servidores</li><li>DBA</li><li>Operaciones</li></ul>
+      </div>
+      <div class="dim">
+        <h4>🔒 Seguridad Informática</h4>
+        <ul><li>Analista SI</li><li>Cumplimiento</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. ROL DEL CIO -->
+  <section id="cio">
+    <h2>Rol del CIO</h2>
+    <p class="parrafo">
+      El <strong>departamento de sistemas de información</strong> es la <strong>unidad organizacional formal responsable de los servicios de tecnología de la información</strong>. Se encarga de dar mantenimiento al <strong>hardware, software, almacenamiento de datos y las redes</strong> que componen la infraestructura de TI. Consta de especialistas — <strong>programadores, analistas de sistemas, jefes de proyectos y gerentes de SI</strong> — y suele estar dirigido por un CIO.
+    </p>
+    <ul class="puntos">
+      <li><strong>Visión del CIO:</strong> liderar la <strong>innovación y la transformación digital</strong> en la empresa, asegurando la eficiencia y la competitividad a través de la tecnología.</li>
+      <li><strong>Misión del CIO:</strong> garantizar la <strong>disponibilidad, la seguridad y la eficiencia</strong> de los sistemas y procesos de TI para cumplir con los objetivos estratégicos de la empresa.</li>
+    </ul>
+
+    <h3 class="subtitulo">Ocho características que definen al CIO</h3>
+    <ul class="puntos">
+      <li><strong>Es un líder:</strong> con competencias (conocimiento y experiencia) y capacidades (analíticas, entendimiento, toma de decisiones, trabajo en equipo y sensibilidad social).</li>
+      <li><strong>Genera valor estratégico con la gestión de TI:</strong> desarrolla el sector con TI, alinea TI con la estrategia y hace planeación estratégica de TI.</li>
+      <li><strong>Hace parte de una red:</strong> comisiones nacionales digitales, CIO de nación, de sector, de entidades y de territorio.</li>
+      <li><strong>Actúa en varias estructuras:</strong> de la rama, del sector, del territorio, del comité directivo y de la oficina de TI.</li>
+      <li><strong>Está habilitado por un entorno:</strong> marco legal y normativo (externo e interno) y marco de alianzas estratégicas con industria, gobierno, academia, ONG y banca multilateral.</li>
+      <li><strong>Satisface las necesidades de la estrategia y acuerda servicios:</strong> acuerdos con stakeholders externos (ciudadanía, otras entidades) e internos (directivos, áreas).</li>
+      <li><strong>Gestiona recursos:</strong> humanos, técnicos, financieros, organizacionales y de información.</li>
+      <li><strong>Entiende el contexto y lo usa favorablemente:</strong> identifica barreras, dificultades y oportunidades, y establece iniciativas innovadoras y soluciones a problemas.</li>
+    </ul>
+
+    <h3 class="subtitulo">Roles gerenciales y sistemas de información de soporte</h3>
+    <div class="tabla-wrap">
+      <table>
+        <thead><tr><th>Categoría</th><th>Rol</th><th>Sistemas de soporte</th></tr></thead>
+        <tbody>
+          <tr><td rowspan="3">Interpersonales</td><td>Testaferro</td><td>Sistemas de telepresencia.</td></tr>
+          <tr><td>Líder</td><td>Telepresencia, redes sociales, Twitter.</td></tr>
+          <tr><td>Enlace</td><td>Teléfonos inteligentes, redes sociales.</td></tr>
+          <tr><td rowspan="3">De información</td><td>Centro nervioso</td><td>Sistemas de información gerencial, sistema de soporte para ejecutivos.</td></tr>
+          <tr><td>Diseminador</td><td>Correo electrónico, redes sociales.</td></tr>
+          <tr><td>Vocero</td><td>Webinarios, telepresencia.</td></tr>
+          <tr><td rowspan="4">De decisión</td><td>Emprendedor</td><td>No existe ninguno.</td></tr>
+          <tr><td>Manejador de disturbios</td><td>No existe ninguno.</td></tr>
+          <tr><td>Asignador de recursos</td><td>Inteligencia de negocios, sistema de soporte de decisiones.</td></tr>
+          <tr><td>Negociador</td><td>No existe ninguno.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="parrafo">Nota clave: para varios <strong>roles de decisión</strong> (emprendedor, manejador de disturbios, negociador) <strong>no existe ningún sistema de soporte</strong> — siguen dependiendo del criterio humano.</p>
+  </section>
+
+  <!-- 6. PRESENTACIÓN Y CONFLICTOS -->
+  <section id="presentacion">
+    <h2>Presentación a directores y gestión de conflictos</h2>
+    <h3 class="subtitulo">Cinco consejos para presentar a directores</h3>
+    <ul class="puntos">
+      <li><strong>Ir al grano:</strong> invertí menos tiempo del concedido. Ser conciso y tratar lo verdaderamente importante: <strong>resultados significativos, conclusiones, recomendaciones y llamada a la acción</strong>.</li>
+      <li><strong>Centrarse en el tema:</strong> si te pidieron el estado de la implantación de un sistema, encargate de eso <strong>antes</strong> de pasar a cualquier otro punto.</li>
+      <li><strong>Dejar claras las expectativas:</strong> avisá desde el principio que dedicarás los primeros cinco minutos al resumen y el resto del tiempo a la charla.</li>
+      <li><strong>Crear diapositivas resumen:</strong> un resumen breve y claro de los puntos clave al principio; el resto de las diapositivas sirven como <strong>apéndice</strong>.</li>
+      <li><strong>Ensayar:</strong> mostrá las diapositivas antes a alguien bueno en captar ideas a nivel ejecutivo que sirva de <strong>entrenador sincero</strong>.</li>
+    </ul>
+
+    <h3 class="subtitulo">Fuentes de conflicto que gestiona la Gerencia de Sistemas</h3>
+    <ul class="puntos ambar">
+      <li><strong>Satisfacer las demandas</strong> de las áreas usuarias y del negocio.</li>
+      <li><strong>Amenazas de seguridad</strong> constantes sobre los sistemas y los datos.</li>
+      <li><strong>Escasez de recursos calificados</strong> en el mercado de TI.</li>
+      <li><strong>Carga de trabajo</strong> del equipo.</li>
+      <li><strong>Transformación digital</strong> y la presión de cambio permanente.</li>
+    </ul>
+  </section>
+
+  <!-- 7. ESTRATEGIA -->
+  <section id="estrategia">
+    <h2>Estrategia: creación de valor y alineación TI–negocio</h2>
+    <h3 class="subtitulo">Creación de valor para clientes y accionistas</h3>
+    <p class="parrafo">
+      Los gerentes crean SI para <strong>dar servicio a los intereses de la empresa</strong>. Al mismo tiempo, la organización debe estar <strong>consciente y abierta a las influencias de los SI</strong> para beneficiarse de las nuevas tecnologías. Los gerentes necesitan comprender cómo los SI pueden <strong>cambiar la vida social y laboral</strong> en su empresa — y como gerente, <strong>vos serás quien decida qué sistemas se crean, qué van a realizar y cómo se implementarán</strong>.
+    </p>
+
+    <h3 class="subtitulo">La relación de dos vías entre organizaciones y TI</h3>
+    <p class="parrafo">
+      La relación entre las <strong>organizaciones</strong> y la <strong>tecnología de la información</strong> es <strong>compleja y de dos vías</strong>, mediada por muchos <strong>factores mediadores</strong>: el <strong>entorno</strong>, la <strong>cultura</strong>, la <strong>estructura</strong>, los <strong>procesos de negocios</strong>, las <strong>políticas</strong> y las <strong>decisiones gerenciales</strong> — incluyendo las decisiones que tomen <strong>o no</strong> los gerentes.
+    </p>
+
+    <h3 class="subtitulo">Alinear la TI con los objetivos de negocios</h3>
+    <ul class="puntos">
+      <li>Cuanto <strong>más éxito</strong> tenga una empresa para alinear la TI con sus objetivos de negocios, <strong>mayor será su rentabilidad</strong>.</li>
+      <li><strong>Solo una cuarta parte</strong> de las empresas logran una alineación entre la TI y los negocios.</li>
+      <li><strong>Casi la mitad de las ganancias</strong> de una empresa se pueden explicar por la alineación de la TI con los negocios.</li>
+      <li>Las empresas y gerentes exitosos <strong>comprenden lo que la TI puede hacer y cómo funciona</strong>, toman un <strong>rol activo</strong> para darle forma a su uso y <strong>miden su impacto</strong> sobre los ingresos y las ganancias.</li>
+    </ul>
+  </section>
+
+  <!-- 8. OUTSOURCING -->
+  <section id="outsourcing">
+    <h2>Decisiones estratégicas: Outsourcing y nube</h2>
+    <p class="parrafo">
+      La <strong>subcontratación de personal u outsourcing</strong> es la contratación de personal por medio de una <strong>empresa externa</strong>: empresas que se dedican a encontrar talento y contratar personal para otras empresas.
+    </p>
+
+    <h3 class="subtitulo">Ventajas</h3>
+    <ul class="puntos verde">
+      <li>Las organizaciones <strong>reducen costos y tiempo</strong> en la contratación, cuando desconocen los procesos de selección y reclutamiento.</li>
+      <li>Permite destinar un <strong>mayor presupuesto para incrementar la productividad</strong>.</li>
+      <li>Permite tener la mejor tecnología <strong>sin invertir en capacitación</strong> del personal propio.</li>
+      <li>Es de gran ayuda para <strong>integrar personal especializado</strong>.</li>
+      <li>Facilita la <strong>contratación de personal del extranjero</strong>.</li>
+      <li>Tiene <strong>procesos estandarizados</strong> que permiten encontrar perfiles afines en <strong>menor tiempo</strong>.</li>
+    </ul>
+
+    <h3 class="subtitulo">Desventajas</h3>
+    <ul class="puntos rojo">
+      <li>Si la empresa de subcontratación <strong>no cumple los lineamientos legales</strong>, se asumirá <strong>toda la responsabilidad</strong> de los trabajadores subcontratados.</li>
+      <li>El trabajador <strong>no pertenece estrictamente a la empresa</strong>, lo cual provoca una <strong>alta rotación de personal</strong>.</li>
+      <li>Los empleados tienen <strong>nulas oportunidades de promoción</strong> o falta de mayores prestaciones laborales.</li>
+    </ul>
+
+    <h3 class="subtitulo">Factores que aceleran la tendencia a delegar el desarrollo</h3>
+    <ul class="puntos">
+      <li><strong>Disponibilidad de recursos:</strong> recalentamiento del mercado, utilización parcial o subutilización de recursos especializados, y absorción de picos de trabajo.</li>
+      <li><strong>Entrenamiento</strong> del personal.</li>
+    </ul>
+
+    <h3 class="subtitulo">Principales preocupaciones de los gerentes de TI (Gartner)</h3>
+    <div class="barras">
+      <div class="barra"><div class="etiqueta"><span>Disponibilidad de recursos (perfiles)</span><span>43%</span></div><div class="pista"><div class="relleno" style="width:43%"></div></div></div>
+      <div class="barra"><div class="etiqueta"><span>Entrenamiento</span><span>42%</span></div><div class="pista"><div class="relleno" style="width:42%"></div></div></div>
+      <div class="barra"><div class="etiqueta"><span>Desarrollos Web</span><span>31%</span></div><div class="pista"><div class="relleno" style="width:31%"></div></div></div>
+      <div class="barra"><div class="etiqueta"><span>Estándares Tecnológicos</span><span>25%</span></div><div class="pista"><div class="relleno" style="width:25%"></div></div></div>
+      <div class="barra"><div class="etiqueta"><span>Tecnologías Emergentes</span><span>21%</span></div><div class="pista"><div class="relleno" style="width:21%"></div></div></div>
+    </div>
+
+    <h3 class="subtitulo">Con este contexto el outsourcing parece la decisión correcta, PERO…</h3>
+    <ul class="puntos ambar">
+      <li><strong>No entregues a un tercero</strong> algo que no entendés, que no podés medir, que no sabés administrar y donde no exista un <strong>caso de negocio</strong>.</li>
+      <li>Existen <strong>factores políticos y/o económicos</strong> que pueden forzar decisiones.</li>
+      <li><strong>No hay blancos y negros:</strong> se debe analizar cada caso y pensar en beneficios y riesgos.</li>
+    </ul>
+
+    <h3 class="subtitulo">Tipos de tercerización, contrato y desarrollo</h3>
+    <div class="tabla-wrap">
+      <table>
+        <thead><tr><th>Categoría</th><th>Opciones</th></tr></thead>
+        <tbody>
+          <tr><td>Tercerización</td><td>Body Shopping · Tercerización del mantenimiento · Tercerización de la operación y soporte · Desarrollo llave en mano · Compra e implementación de un paquete.</td></tr>
+          <tr><td>Contrato</td><td><strong>Global o Estratégico</strong> (transferencia completa de la función) · <strong>Parciales o Tácticos</strong> (algunas funciones, sistemas o proyectos) · <strong>Por Objetivo o Contrato</strong>.</td></tr>
+          <tr><td>Desarrollo</td><td><strong>BAU</strong> (repetitivo; estandarizado, documentado; fácilmente medible) · <strong>Proyectos</strong> (cambia el negocio — alto impacto; único, medido en meses; busca diferenciarse).</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subtitulo">Servicios y herramientas de software basados en la nube (SaaS)</h3>
+    <p class="parrafo">
+      El software basado en la nube y sus datos se alojan en <strong>poderosos servidores en centros de datos masivos</strong>, accesibles mediante <strong>Internet y un navegador Web estándar</strong>. Además de las herramientas gratuitas o de bajo costo, hay <strong>software empresarial</strong> disponible como servicio: en vez de comprar e instalar programas, las compañías suscriptoras <strong>rentan las funciones</strong>, pagando por <strong>suscripción o por transacción</strong>. A estos servicios se les conoce como <strong>software como servicio (SaaS)</strong> — por ejemplo, Google Workspace (Gmail, Meet, Docs) o Microsoft 365 (Word, Excel, PowerPoint, Outlook, OneDrive).
+    </p>
+  </section>
+
+  <!-- 9. PORTER Y FODA -->
+  <section id="porter">
+    <h2>Estrategia corporativa: Porter, estrategias competitivas y FODA</h2>
+
+    <h3 class="subtitulo">Modelo de fuerzas competitivas de Porter</h3>
+    <p class="parrafo">
+      La posición estratégica de la empresa y sus tácticas se determinan <strong>no solo por la competencia directa tradicional</strong>, sino también por otras <strong>cuatro fuerzas del entorno</strong> de la industria:
+    </p>
+    <ul class="puntos">
+      <li><strong>Competidores tradicionales:</strong> comparten el espacio de mercado, idean continuamente maneras más eficientes de producir, introducen nuevos productos y servicios, desarrollan sus marcas e <strong>imponen a sus clientes los costos de cambiar</strong>.</li>
+      <li><strong>Nuevos participantes en el mercado:</strong> en una economía libre siempre entran nuevas compañías (con barreras de entrada altas o bajas según la industria). Ventajas: no se encierran en viejas plantas, contratan trabajadores más jóvenes y motivados ("más hambrientos"), sin marcas desgastadas. Debilidades: dependen de <strong>financiamiento externo</strong>, tienen fuerza de trabajo <strong>menos experimentada</strong> y <strong>poco reconocimiento de marca</strong>.</li>
+      <li><strong>Productos y servicios sustitutos:</strong> existen en casi cualquier industria y las nuevas tecnologías crean sustitutos todo el tiempo (ej.: <strong>Uber, Spotify</strong>). Cuantos más sustitutos, <strong>menor control sobre los precios y menores márgenes de ganancia</strong>.</li>
+      <li><strong>Clientes:</strong> la rentabilidad depende de <strong>atraer y retener clientes</strong> y cobrar precios altos. El poder del cliente <strong>aumenta si puede cambiar con facilidad</strong> a un competidor.</li>
+      <li><strong>Proveedores:</strong> su poder de mercado impacta las ganancias, en especial si la empresa no puede subir sus precios a la par. <strong>Cuantos más proveedores diferentes</strong> tenga la empresa, <strong>mayor control</strong> ejerce sobre precio, calidad e itinerarios de entrega.</li>
+    </ul>
+
+    <h3 class="subtitulo">Cuatro estrategias competitivas básicas (SI vs. fuerzas competitivas)</h3>
+    <div class="tabla-wrap">
+      <table>
+        <thead><tr><th>Estrategia</th><th>Descripción</th></tr></thead>
+        <tbody>
+          <tr><td>Liderazgo de bajo costo</td><td>Usar los SI para producir productos y servicios a un precio más bajo que los competidores, al tiempo que se mejora la calidad y el nivel del servicio.</td></tr>
+          <tr><td>Diferenciación de productos</td><td>Usar los SI para diferenciar los productos, además de permitir nuevos servicios y artículos.</td></tr>
+          <tr><td>Enfoque en nichos de mercado</td><td>Usar los SI para permitir una estrategia enfocada en un solo nicho de mercado; especializarse.</td></tr>
+          <tr><td>Intimidad con clientes y proveedores</td><td>Usar los SI para desarrollar lazos sólidos y lealtad con clientes y proveedores.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subtitulo">FODA</h3>
+    <p class="parrafo">Herramienta para que empresas y personas identifiquen sus fortalezas, debilidades, oportunidades y amenazas:</p>
+    <div class="foda">
+      <div class="cuad f"><span class="eje">Interno · Útil</span><h4>Fortalezas</h4><p>Características que te dan una <strong>ventaja</strong> sobre los demás (ej.: clientela sólida, presencia web diversificada, reservas de efectivo).</p></div>
+      <div class="cuad d"><span class="eje">Interno · Perjudicial</span><h4>Debilidades</h4><p>Características que te dan una <strong>desventaja</strong> en relación a los demás (ej.: equipo de ventas sin experiencia, presencia débil en redes).</p></div>
+      <div class="cuad o"><span class="eje">Externo · Útil</span><h4>Oportunidades</h4><p>Tendencias o tecnologías que podés <strong>explotar</strong> para obtener una ventaja (ej.: expansión a nuevos mercados, adquisiciones).</p></div>
+      <div class="cuad a"><span class="eje">Externo · Perjudicial</span><h4>Amenazas</h4><p>Obstáculos que <strong>impiden tu crecimiento</strong> (ej.: competidores emergentes, falta de diferenciación, reglamentaciones del gobierno).</p></div>
+    </div>
+  </section>
+
+  <!-- 10. CAPEX / OPEX -->
+  <section id="capex">
+    <h2>CAPEX y OPEX</h2>
+    <div class="tabla-wrap">
+      <table>
+        <thead><tr><th>Concepto</th><th>Definición</th><th>Ejemplos</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>CapEx</td>
+            <td>Gastos de capital: desembolsos para <strong>adquirir, mejorar o mantener bienes físicos de larga duración</strong>. Suelen ser activos tangibles que proporcionan beneficios a lo largo del tiempo.</td>
+            <td>Compra de equipos, maquinaria, edificios, vehículos y cualquier inversión en activos que beneficie a la empresa a largo plazo.</td>
+          </tr>
+          <tr>
+            <td>OpEx</td>
+            <td>Gastos operativos: <strong>costos recurrentes y necesarios para el funcionamiento diario</strong>. No generan activos tangibles y se deducen en el mismo año en que se incurren.</td>
+            <td>Salarios y beneficios, alquiler de oficinas, servicios públicos, suministros, gastos de marketing, licencias, entre otros.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="parrafo">
+      Vinculación con la clase: el paso de comprar software (CapEx) a rentarlo como <strong>SaaS por suscripción</strong> (OpEx) es una decisión estratégica típica del gobierno de TI, y se refleja en el <strong>presupuesto anual de la Gerencia de IT</strong> — data center, servicios cloud, servicios profesionales, capacitaciones, enlaces, licenciamiento/soporte e insumos de microinformática.
+    </p>
+  </section>
+
+  <!-- 11. PLAN DE SI -->
+  <section id="plan">
+    <h2>Plan de Sistemas de Información</h2>
+    <p class="parrafo">El plan de SI se estructura en <strong>siete secciones</strong>:</p>
+    <ul class="puntos">
+      <li><strong>1. Propósito del plan:</strong> generalidades del contenido, organización de negocios actual y a futuro, procesos clave de negocios y estrategia gerencial.</li>
+      <li><strong>2. Fundamentos del plan de negocios estratégico:</strong> situación actual, organización de negocios actual, entornos cambiantes, principales objetivos del plan de negocios y plan estratégico de la empresa.</li>
+      <li><strong>3. Sistemas actuales:</strong> principales sistemas que dan soporte a las funciones y procesos, herramientas actuales de la infraestructura (<strong>hardware, software, bases de datos, telecomunicaciones e Internet</strong>), dificultades para cumplir los requerimientos y futuras demandas anticipadas.</li>
+      <li><strong>4. Nuevos desarrollos:</strong> nuevos proyectos de sistemas (descripciones, fundamentos de negocios, rol de las aplicaciones en la estrategia) y nuevas herramientas requeridas de infraestructura.</li>
+      <li><strong>5. Estrategia gerencial:</strong> planes de adquisición, hitos y sincronización, realineación organizacional, reorganización interna, controles gerenciales, iniciativas de capacitación y estrategia del personal.</li>
+      <li><strong>6. Plan de implementación:</strong> dificultades anticipadas en la implementación e informes del progreso.</li>
+      <li><strong>7. Requerimientos de presupuesto:</strong> requerimientos, ahorros potenciales, financiamiento y ciclo de adquisición.</li>
+    </ul>
+  </section>
+
+  <!-- 12. EVALUACIÓN DE DESEMPEÑO -->
+  <section id="desempeno">
+    <h2>Evaluación de desempeño</h2>
+    <p class="parrafo">
+      Es <strong>medir y mejorar el rendimiento de las personas</strong> en relación con <strong>objetivos y competencias</strong>. La premisa central: <strong>"lo que no se mide no se mejora"</strong>.
+    </p>
+
+    <h3 class="subtitulo">Objetivos</h3>
+    <p class="parrafo">
+      Un <strong>objetivo</strong> es un <strong>resultado que se desea alcanzar en el futuro</strong> mediante acciones o esfuerzos planificados. Sirven para: dar dirección, establecer prioridades, permitir medir resultados y <strong>alinear el trabajo de las personas con los objetivos de la organización</strong>.
+    </p>
+    <ul class="puntos">
+      <li>Deben ser <strong>SMART</strong>: <strong>S</strong>pecific (específico) · <strong>M</strong>easurable (medible) · <strong>A</strong>chievable (alcanzable) · <strong>R</strong>elevant (relevante) · <strong>T</strong>ime-bound (con plazo).</li>
+      <li>Ejemplo de la clase: <em>"Realizar reuniones quincenales con las áreas usuarias para revisar avances y necesidades durante el próximo semestre."</em></li>
+      <li>Las <strong>competencias</strong> combinan <strong>conocimientos</strong> (saber), <strong>habilidades</strong> (saber hacer) y <strong>actitudes</strong> (querer hacer).</li>
+    </ul>
+
+    <h3 class="subtitulo">Objetivos principales de la evaluación</h3>
+    <ul class="puntos">
+      <li><strong>Mejorar el rendimiento</strong> del equipo.</li>
+      <li><strong>Alinear al equipo</strong> con los objetivos de la organización.</li>
+      <li><strong>Detectar necesidades de capacitación</strong>.</li>
+      <li><strong>Apoyar decisiones de desarrollo profesional</strong>.</li>
+    </ul>
+
+    <h3 class="subtitulo">Beneficios por rol</h3>
+    <div class="tabla-wrap">
+      <table>
+        <thead><tr><th>Para quién</th><th>Beneficios</th></tr></thead>
+        <tbody>
+          <tr><td>La organización</td><td>Mejora productividad · Permite tomar decisiones de promoción · Identifica talento.</td></tr>
+          <tr><td>El líder</td><td>Clarifica expectativas · Mejora la gestión del equipo.</td></tr>
+          <tr><td>El empleado</td><td>Entiende qué se espera · Recibe orientación para mejorar · Tiene oportunidades de desarrollo.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subtitulo">Feedback</h3>
+    <p class="parrafo">
+      Es la <strong>información que ayuda a mejorar el desempeño</strong>. Debe ser <strong>específico, oportuno, basado en hechos, orientado a mejorar y respetuoso</strong>. <strong>No es una crítica: es una herramienta de desarrollo.</strong> Conclusiones de la clase: evaluar desempeño ayuda a mejorar resultados, el feedback es clave para desarrollar personas y <strong>las organizaciones exitosas promueven feedback continuo</strong>.
+    </p>
+  </section>
+
+  <!-- 13. SI PARA DECISIONES -->
+  <section id="decisiones">
+    <h2>Sistemas de información para la toma de decisiones</h2>
+    <p class="parrafo">
+      Son <strong>herramientas y circuitos que recopilan, procesan y presentan información relevante</strong> para apoyar la toma de decisiones de los líderes y gerentes. Ayudan a tener una <strong>visión más clara y actualizada</strong> de la situación de la empresa y a tomar <strong>decisiones informadas</strong>. Pueden incluir:
+    </p>
+    <ul class="puntos">
+      <li><strong>Sistemas de información gerencial (MIS):</strong> obtienen sus datos de los <strong>TPS</strong> (sistemas de procesamiento de transacciones — pedidos, producción, contabilidad) y los consolidan en <strong>informes, pantallas y tableros de control en línea</strong> para los gerentes.</li>
+      <li><strong>Business Intelligence (BI):</strong> infraestructura (bases de datos, almacenes y mercados de datos, plataformas analíticas) + herramientas de análisis (<strong>modelos, minería de datos, OLAP, informes, análisis de Big Data</strong>) al servicio de la estrategia, la administración del desempeño, el cuadro de mando integral y los pronósticos, sobre plataformas <strong>MIS, DSS y ESS</strong>.</li>
+      <li><strong>Data Warehouse:</strong> almacén centralizado de datos para el análisis.</li>
+      <li><strong>Sistemas de información de mercado y ventas</strong>, <strong>de información financiera</strong> y <strong>de recursos humanos</strong>.</li>
+    </ul>
+  </section>
+
+  <!-- 14. ANALOGÍA -->
+  <section id="analogia">
+    <h2>Analogía de la vida real</h2>
+    <div class="analogia">
+      <h3>La Gerencia de Sistemas de un banco</h3>
+      <p>
+        Pensá en la Gerencia de Sistemas de un banco mediano. El <strong>CIO</strong> es como el director técnico del equipo: no patea los penales (eso lo hace el <strong>CTO</strong> con la operación diaria y el <strong>CISO</strong> cuidando el arco de la seguridad), pero decide la <strong>estrategia</strong>, arma el <strong>plan de sistemas</strong>, defiende el <strong>presupuesto</strong> ante el directorio — separando qué es <strong>CapEx</strong> (comprar servidores para el data center) y qué es <strong>OpEx</strong> (las licencias mensuales y la suscripción a la nube) — y evalúa el <strong>desempeño</strong> de su plantel con objetivos SMART.
+      </p>
+      <p>
+        Cuando le falta gente especializada para un pico de trabajo (la preocupación número uno según Gartner: <strong>disponibilidad de perfiles, 43%</strong>), evalúa el <strong>outsourcing</strong>: contratar una consultora le resuelve el proyecto rápido, pero sabe que no debe <strong>entregar a un tercero algo que no entiende ni puede medir</strong>. Y cada decisión la toma mirando las <strong>fuerzas de Porter</strong>: si una fintech nueva (nuevo participante) o una billetera virtual (sustituto) amenaza el negocio, la TI tiene que responder con alguna de las <strong>cuatro estrategias</strong> — bajar costos, diferenciarse, enfocarse en un nicho o estrechar la relación con sus clientes.
+      </p>
+    </div>
+  </section>
+
+  <!-- 15. TEST -->
+  <section id="quiz">
+    <h2>Test de autoevaluación</h2>
+
+    <div class="pregunta">
+      <span class="num">Pregunta 1 / 8</span>
+      <h3>¿Cuál es el objetivo principal del gobierno de TI?</h3>
+      <div class="opciones">
+        <button data-correcta="false" data-exp="Reducir costos puede ser una consecuencia, pero el objetivo definido en la clase es más amplio: el uso eficaz y eficiente de las TI para cumplir los objetivos organizacionales.">Reducir los costos del departamento de sistemas</button>
+        <button data-correcta="true" data-exp="Correcto: asegurar que las TI se utilicen de manera eficaz y eficiente para cumplir los objetivos de la organización, mediante prácticas, procesos y estructuras para planificar, diseñar, implementar, operar y controlar.">Asegurar que las TI se utilicen de manera eficaz y eficiente para cumplir los objetivos de la organización</button>
+        <button data-correcta="false" data-exp="La compra de tecnología es solo una parte operativa; el gobierno de TI abarca planificar, diseñar, implementar, operar y controlar.">Centralizar la compra de hardware y software</button>
+        <button data-correcta="false" data-exp="El cumplimiento regulatorio (privacidad, seguridad) es una responsabilidad adicional del gobierno de TI, pero no su objetivo principal.">Cumplir únicamente con las regulaciones de privacidad</button>
+      </div>
+      <div class="feedback" role="status"></div>
+    </div>
+
+    <div class="pregunta">
+      <span class="num">Pregunta 2 / 8</span>
+      <h3>¿Cuál es la diferencia entre el CIO y el CTO según la clase?</h3>
+      <div class="opciones">
+        <button data-correcta="true" data-exp="Correcto: el CIO es responsable de toda la tecnología de la información de la organización, mientras que el CTO es responsable de la gestión diaria de las TI.">El CIO es responsable de toda la TI de la organización; el CTO, de la gestión diaria de las TI</button>
+        <button data-correcta="false" data-exp="Al revés: el CIO tiene la responsabilidad global y el CTO la gestión diaria.">El CTO es responsable de toda la TI; el CIO solo de la gestión diaria</button>
+        <button data-correcta="false" data-exp="La seguridad de la información es cometido del CISO, y la seguridad física y tecnológica del CSO.">El CIO se encarga de la seguridad y el CTO del marketing</button>
+        <button data-correcta="false" data-exp="No son sinónimos: la clase les asigna responsabilidades distintas (global vs. gestión diaria).">Son cargos equivalentes con nombres distintos</button>
+      </div>
+      <div class="feedback" role="status"></div>
+    </div>
+
+    <div class="pregunta">
+      <span class="num">Pregunta 3 / 8</span>
+      <h3>Según Gartner, ¿cuál es la principal preocupación de los gerentes de TI?</h3>
+      <div class="opciones">
+        <button data-correcta="false" data-exp="Las tecnologías emergentes son la última preocupación del ranking, con 21%.">Tecnologías emergentes (21%)</button>
+        <button data-correcta="false" data-exp="Los desarrollos Web están en tercer lugar, con 31%.">Desarrollos Web (31%)</button>
+        <button data-correcta="true" data-exp="Correcto: la disponibilidad de recursos (perfiles) encabeza el ranking con 43%, seguida muy de cerca por el entrenamiento (42%).">Disponibilidad de recursos / perfiles (43%)</button>
+        <button data-correcta="false" data-exp="Los estándares tecnológicos están en cuarto lugar, con 25%.">Estándares tecnológicos (25%)</button>
+      </div>
+      <div class="feedback" role="status"></div>
+    </div>
+
+    <div class="pregunta">
+      <span class="num">Pregunta 4 / 8</span>
+      <h3>¿Cuál de las siguientes es una DESVENTAJA del outsourcing según la clase?</h3>
+      <div class="opciones">
+        <button data-correcta="false" data-exp="Eso es una ventaja: el outsourcing permite integrar personal especializado.">Ayuda a integrar personal especializado</button>
+        <button data-correcta="true" data-exp="Correcto: como el trabajador no pertenece estrictamente a la empresa, se provoca una alta rotación de personal. Otras desventajas: asumir la responsabilidad legal si el proveedor incumple, y nulas oportunidades de promoción para los empleados.">El trabajador no pertenece a la empresa, lo que provoca alta rotación de personal</button>
+        <button data-correcta="false" data-exp="Eso es una ventaja: la contratación tercerizada tiene procesos estandarizados que aceleran la búsqueda de perfiles.">Encuentra perfiles afines en menor tiempo</button>
+        <button data-correcta="false" data-exp="Eso es una ventaja: permite tener la mejor tecnología sin invertir en capacitación del personal propio.">Permite tener la mejor tecnología sin invertir en capacitación</button>
+      </div>
+      <div class="feedback" role="status"></div>
+    </div>
+
+    <div class="pregunta">
+      <span class="num">Pregunta 5 / 8</span>
+      <h3>Según la investigación sobre alineación TI–negocio, ¿cuántas empresas logran alinear la TI con los negocios?</h3>
+      <div class="opciones">
+        <button data-correcta="false" data-exp="No: la alineación es poco frecuente. Solo una cuarta parte lo logra.">Prácticamente todas las empresas</button>
+        <button data-correcta="true" data-exp="Correcto: solo una cuarta parte de las empresas logra la alineación — y sin embargo casi la mitad de las ganancias de una empresa se pueden explicar por esa alineación. Cuanto mayor la alineación, mayor la rentabilidad.">Solo una cuarta parte de las empresas</button>
+        <button data-correcta="false" data-exp="La cifra de la clase es una cuarta parte; la mitad corresponde a la porción de las ganancias explicadas por la alineación.">La mitad de las empresas</button>
+        <button data-correcta="false" data-exp="La clase da un dato concreto: una cuarta parte de las empresas.">No existe ninguna medición al respecto</button>
+      </div>
+      <div class="feedback" role="status"></div>
+    </div>
+
+    <div class="pregunta">
+      <span class="num">Pregunta 6 / 8</span>
+      <h3>En el modelo de Porter, ¿qué efecto tienen los productos y servicios sustitutos (ej.: Uber, Spotify)?</h3>
+      <div class="opciones">
+        <button data-correcta="false" data-exp="Al contrario: los sustitutos reducen el poder de fijación de precios de la empresa.">Aumentan el control de la empresa sobre sus precios</button>
+        <button data-correcta="true" data-exp="Correcto: cuantos más productos y servicios suplentes existan en la industria, menor será el control sobre los precios y menores serán los márgenes de ganancia.">Cuantos más sustitutos existan, menor control sobre los precios y menores márgenes de ganancia</button>
+        <button data-correcta="false" data-exp="Eso corresponde a los nuevos participantes en el mercado, que dependen de financiamiento externo.">Obligan a la empresa a buscar financiamiento externo</button>
+        <button data-correcta="false" data-exp="Eso corresponde a la fuerza de los proveedores: más proveedores diferentes dan mayor control sobre precio, calidad y entrega.">Dan mayor control sobre los itinerarios de entrega</button>
+      </div>
+      <div class="feedback" role="status"></div>
+    </div>
+
+    <div class="pregunta">
+      <span class="num">Pregunta 7 / 8</span>
+      <h3>La suscripción mensual a un software en la nube (SaaS) y la compra de servidores para el data center son, respectivamente:</h3>
+      <div class="opciones">
+        <button data-correcta="false" data-exp="Al revés: la suscripción es un costo recurrente del funcionamiento diario (OpEx) y los servidores son bienes físicos de larga duración (CapEx).">CapEx y OpEx</button>
+        <button data-correcta="true" data-exp="Correcto: las licencias y suscripciones son gastos operativos recurrentes que se deducen en el año (OpEx), mientras que los equipos son activos tangibles de larga duración (CapEx).">OpEx y CapEx</button>
+        <button data-correcta="false" data-exp="No: son categorías distintas. La suscripción no genera un activo tangible; el servidor sí.">Ambos son CapEx</button>
+        <button data-correcta="false" data-exp="No: el servidor es un bien físico de larga duración que beneficia a la empresa en el tiempo — CapEx por definición.">Ambos son OpEx</button>
+      </div>
+      <div class="feedback" role="status"></div>
+    </div>
+
+    <div class="pregunta">
+      <span class="num">Pregunta 8 / 8</span>
+      <h3>"Realizar reuniones quincenales con las áreas usuarias para revisar avances durante el próximo semestre." ¿Por qué este objetivo es SMART?</h3>
+      <div class="opciones">
+        <button data-correcta="false" data-exp="La R de SMART es Relevant (relevante), no 'rápido'. Y la T es Time-bound (con plazo).">Porque es Rápido y Transferible</button>
+        <button data-correcta="true" data-exp="Correcto: es Específico (reuniones con áreas usuarias), Medible (quincenales), Alcanzable, Relevante (revisar avances y necesidades) y con plazo definido (el próximo semestre).">Porque es Específico, Medible, Alcanzable, Relevante y con plazo (Time-bound)</button>
+        <button data-correcta="false" data-exp="Las competencias (saber, saber hacer, querer hacer) son otro concepto de la evaluación de desempeño; SMART califica a los objetivos.">Porque combina conocimientos, habilidades y actitudes</button>
+        <button data-correcta="false" data-exp="El feedback es la información que ayuda a mejorar el desempeño; SMART es el criterio para formular objetivos.">Porque es un tipo de feedback continuo</button>
+      </div>
+      <div class="feedback" role="status"></div>
+    </div>
+
+    <div class="puntaje" id="puntaje">
+      <p>Tu resultado</p>
+      <p class="nota" id="nota">0 / 8</p>
+      <p id="mensaje"></p>
+      <button id="reiniciar">Reintentar el test</button>
+    </div>
+  </section>
+
+  <footer>
+    Basado en la Clase 2 — Gestión de Sistemas de Información · Unidad 1 · UNICABA
+  </footer>
+</div>
+
+<script>
+(function(){
+  var preguntas = Array.prototype.slice.call(document.querySelectorAll('.pregunta'));
+  var respondidas = 0, correctas = 0;
+  var panel = document.getElementById('puntaje');
+  var nota = document.getElementById('nota');
+  var mensaje = document.getElementById('mensaje');
+
+  function responder(pregunta, boton){
+    var esCorrecta = boton.getAttribute('data-correcta') === 'true';
+    var feedback = pregunta.querySelector('.feedback');
+    var botones = pregunta.querySelectorAll('.opciones button');
+
+    botones.forEach(function(b){
+      b.disabled = true;
+      if(b.getAttribute('data-correcta') === 'true'){ b.classList.add('correcta'); }
+    });
+
+    if(esCorrecta){
+      correctas++;
+      feedback.className = 'feedback ok';
+      feedback.innerHTML = '<strong>✅ Correcta</strong>' + boton.getAttribute('data-exp');
+    } else {
+      boton.classList.add('incorrecta');
+      feedback.className = 'feedback mal';
+      feedback.innerHTML = '<strong>❌ Incorrecta</strong>' + boton.getAttribute('data-exp');
+    }
+
+    respondidas++;
+    if(respondidas === preguntas.length){ mostrarResultado(); }
+  }
+
+  function mostrarResultado(){
+    nota.textContent = correctas + ' / ' + preguntas.length;
+    if(correctas === preguntas.length){
+      mensaje.textContent = '¡Excelente! Dominás el gobierno de las TI y la estrategia.';
+    } else if(correctas >= 5){
+      mensaje.textContent = 'Muy bien. Repasá las preguntas marcadas en rojo antes del parcial.';
+    } else {
+      mensaje.textContent = 'Te conviene releer las secciones del resumen y volver a intentar.';
+    }
+    panel.classList.add('visible');
+    panel.scrollIntoView({behavior:'smooth', block:'center'});
+  }
+
+  preguntas.forEach(function(p){
+    p.querySelectorAll('.opciones button').forEach(function(b){
+      b.addEventListener('click', function(){ responder(p, b); });
+    });
+  });
+
+  document.getElementById('reiniciar').addEventListener('click', function(){
+    respondidas = 0; correctas = 0;
+    panel.classList.remove('visible');
+    preguntas.forEach(function(p){
+      p.querySelector('.feedback').className = 'feedback';
+      p.querySelector('.feedback').innerHTML = '';
+      p.querySelectorAll('.opciones button').forEach(function(b){
+        b.disabled = false;
+        b.classList.remove('correcta','incorrecta');
+      });
+    });
+    document.getElementById('quiz').scrollIntoView({behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+</html>

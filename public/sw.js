@@ -1,7 +1,8 @@
-const CACHE_NAME = 'parseit-v11';
+const CACHE_NAME = 'parseit-v12';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
+  '/clase2.html',
   '/manifest.webmanifest',
   '/favicon.svg',
   '/vendor/choices.min.js',
@@ -80,7 +81,7 @@ self.addEventListener('fetch', (event) => {
   }
 
   // 4. Guías de estudio y Index.html (Network-First)
-  if (url.pathname === '/' || url.pathname === '/index.html' || url.pathname.startsWith('/docu/')) {
+  if (url.pathname === '/' || url.pathname === '/index.html' || url.pathname === '/clase2.html' || url.pathname.startsWith('/docu/')) {
     event.respondWith(
       fetch(request)
         .then((response) => {

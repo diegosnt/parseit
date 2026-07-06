@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GSI · Clase 1 — Sistemas de Información</title>
+<script>
+(function(){
+  var t = localStorage.getItem('gsi-theme');
+  if(!t){ t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+  if(t === 'dark'){ document.documentElement.setAttribute('data-theme','dark'); }
+})();
+</script>
 <style>
   :root{
     --tinta:#14213d;
@@ -20,6 +27,21 @@
     --incorrecto-bg:#fef2f2;
     --borde:#e3e6ec;
     --radio:14px;
+  }
+  :root[data-theme="dark"]{
+    --tinta:#e8ecf5;
+    --tinta-suave:#a8b3c8;
+    --fondo:#0d121e;
+    --papel:#161d2e;
+    --acento:#38bdd8;
+    --acento-claro:#163542;
+    --dato:#f0b06a;
+    --dato-claro:#3a2a12;
+    --correcto:#4ade80;
+    --correcto-bg:#0f2818;
+    --incorrecto:#f87171;
+    --incorrecto-bg:#2c1414;
+    --borde:#2a3348;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -52,6 +74,31 @@
     padding:6px 14px;transition:all .15s;
   }
   nav.indice a:hover{color:var(--acento);border-color:var(--acento);background:var(--acento-claro)}
+
+  /* Cabecera del sitio: navegación entre clases + modo oscuro */
+  .site-nav{position:sticky;top:0;z-index:20;background:var(--papel);border-bottom:1px solid var(--borde)}
+  .site-nav-inner{
+    max-width:900px;margin:0 auto;padding:12px 20px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  }
+  .site-brand{font-weight:800;font-size:.92rem;color:var(--tinta)}
+  .site-nav-links{display:flex;gap:8px}
+  .site-nav-link{
+    font-size:.82rem;font-weight:700;text-decoration:none;color:var(--tinta-suave);
+    border:1px solid var(--borde);border-radius:999px;padding:6px 14px;transition:all .15s;
+  }
+  .site-nav-link:hover{color:var(--acento);border-color:var(--acento);background:var(--acento-claro)}
+  .site-nav-link.active{background:var(--acento);border-color:var(--acento);color:#fff}
+  .theme-toggle{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:34px;height:34px;border-radius:50%;border:1px solid var(--borde);
+    background:var(--fondo);color:var(--tinta);cursor:pointer;transition:all .15s;
+  }
+  .theme-toggle:hover{border-color:var(--acento);color:var(--acento)}
+  .theme-toggle svg{width:16px;height:16px}
+  .theme-toggle .icon-sun{display:none}
+  :root[data-theme="dark"] .theme-toggle .icon-moon{display:none}
+  :root[data-theme="dark"] .theme-toggle .icon-sun{display:block}
 
   /* Idea central */
   .idea-central{
@@ -194,6 +241,30 @@
 </style>
 </head>
 <body>
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <span class="site-brand">GSI · Material de Estudio</span>
+    <div class="site-nav-links">
+      <a href="/" class="site-nav-link active" aria-current="page">Clase 1</a>
+      <a href="/clase2.html" class="site-nav-link">Clase 2</a>
+    </div>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Cambiar tema" title="Cambiar tema">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+    </button>
+  </div>
+</nav>
+<script>
+(function(){
+  var btn = document.getElementById('theme-toggle');
+  var root = document.documentElement;
+  btn.addEventListener('click', function(){
+    var isDark = root.getAttribute('data-theme') === 'dark';
+    if(isDark){ root.removeAttribute('data-theme'); localStorage.setItem('gsi-theme','light'); }
+    else{ root.setAttribute('data-theme','dark'); localStorage.setItem('gsi-theme','dark'); }
+  });
+})();
+</script>
 <div class="contenedor">
 
   <header>

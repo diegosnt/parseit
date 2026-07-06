@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import { resolve } from 'path';
 
 export default defineConfig({
   // La raíz es el directorio actual
@@ -10,6 +11,12 @@ export default defineConfig({
     outDir: 'dist',
     // Limpiar antes de buildear
     emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        clase2: resolve(__dirname, 'clase2.html'),
+      },
+    },
   },
   server: {
     // Puerto por defecto de Vite
