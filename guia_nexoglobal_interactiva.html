@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexoGlobal S.A. — Guía de Estudio Interactiva</title>
+<style>
+  :root{
+    --ink:#12222e;          /* azul tinta profundo */
+    --panel:#1b3242;        /* panel navegación */
+    --paper:#f6f4ee;        /* papel manifiesto */
+    --card:#ffffff;
+    --cargo:#e8720c;        /* naranja contenedor */
+    --ok:#1e7d4f;
+    --ok-bg:#e4f3ea;
+    --bad:#b5382f;
+    --bad-bg:#fbe9e7;
+    --line:#d8d3c6;
+    --muted:#6b7a86;
+    --radius:10px;
+    --sans:"Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+    --mono:"Cascadia Code", "Consolas", "SF Mono", Menlo, monospace;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{transition:none !important; animation:none !important;} }
+  body{
+    font-family:var(--sans);
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.55;
+  }
+
+  /* ---------- Cabecera ---------- */
+  header{
+    background:var(--ink);
+    color:#f2efe7;
+    padding:34px 20px 26px;
+    border-bottom:5px solid var(--cargo);
+  }
+  .header-inner{max-width:960px; margin:0 auto;}
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--cargo);
+    margin-bottom:8px;
+  }
+  header h1{
+    font-size:clamp(24px, 4vw, 38px);
+    font-weight:800;
+    letter-spacing:-.01em;
+  }
+  header p.sub{
+    margin-top:6px;
+    color:#b8c4cd;
+    font-size:15px;
+  }
+
+  /* ---------- Panel de progreso (fijo) ---------- */
+  .tracker{
+    position:sticky; top:0; z-index:50;
+    background:var(--panel);
+    color:#e9eef2;
+    border-bottom:1px solid rgba(255,255,255,.12);
+    padding:10px 20px;
+  }
+  .tracker-inner{
+    max-width:960px; margin:0 auto;
+    display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+  }
+  .score-chip{
+    font-family:var(--mono);
+    font-size:14px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:6px;
+    padding:5px 12px;
+    white-space:nowrap;
+  }
+  .score-chip b{color:var(--cargo);}
+  .slots{
+    display:flex; gap:4px; flex-wrap:wrap; flex:1; min-width:220px;
+  }
+  .slot{
+    width:17px; height:17px;
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:3px;
+    background:transparent;
+    cursor:pointer;
+    padding:0;
+    transition:transform .12s ease;
+  }
+  .slot:hover{transform:scale(1.2);}
+  .slot:focus-visible{outline:2px solid var(--cargo); outline-offset:2px;}
+  .slot.ok{background:var(--ok); border-color:var(--ok);}
+  .slot.bad{background:var(--bad); border-color:var(--bad);}
+  .btn-reset{
+    font-family:var(--mono);
+    font-size:13px;
+    background:transparent;
+    color:#e9eef2;
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:6px;
+    padding:6px 14px;
+    cursor:pointer;
+  }
+  .btn-reset:hover{border-color:var(--cargo); color:var(--cargo);}
+  .btn-reset:focus-visible{outline:2px solid var(--cargo); outline-offset:2px;}
+
+  main{max-width:960px; margin:0 auto; padding:28px 20px 80px;}
+
+  /* ---------- Caso de estudio ---------- */
+  .case{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-left:6px solid var(--cargo);
+    border-radius:var(--radius);
+    margin-bottom:34px;
+    overflow:hidden;
+  }
+  .case summary{
+    cursor:pointer;
+    list-style:none;
+    padding:16px 20px;
+    font-weight:700;
+    font-size:15px;
+    display:flex; align-items:center; gap:10px;
+    user-select:none;
+  }
+  .case summary::-webkit-details-marker{display:none;}
+  .case summary .tag{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    background:var(--ink);
+    color:#f2efe7;
+    padding:3px 8px;
+    border-radius:4px;
+  }
+  .case summary .chev{margin-left:auto; transition:transform .2s ease; color:var(--muted);}
+  .case[open] summary .chev{transform:rotate(90deg);}
+  .case-body{
+    padding:0 20px 20px;
+    font-size:15px;
+    color:#33424d;
+    text-align:justify;
+  }
+
+  /* ---------- Preguntas ---------- */
+  .q{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px 22px 18px;
+    margin-bottom:22px;
+    position:relative;
+    scroll-margin-top:70px;
+  }
+  .q-head{
+    display:flex; align-items:baseline; gap:12px;
+    margin-bottom:12px;
+  }
+  .q-num{
+    font-family:var(--mono);
+    font-size:13px;
+    font-weight:700;
+    color:var(--cargo);
+    white-space:nowrap;
+    letter-spacing:.05em;
+  }
+  .q-text{font-weight:600; font-size:16px;}
+  .opts{display:grid; gap:9px; margin-top:6px;}
+  .opt{
+    display:flex; align-items:flex-start; gap:10px;
+    text-align:left;
+    width:100%;
+    background:#fafaf7;
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:11px 14px;
+    font:inherit;
+    font-size:15px;
+    color:var(--ink);
+    cursor:pointer;
+    transition:border-color .12s ease, background .12s ease;
+  }
+  .opt:hover:not(:disabled){border-color:var(--cargo); background:#fff;}
+  .opt:focus-visible{outline:2px solid var(--cargo); outline-offset:2px;}
+  .opt:disabled{cursor:default; opacity:.92;}
+  .opt .letter{
+    font-family:var(--mono);
+    font-size:12px;
+    font-weight:700;
+    color:var(--muted);
+    border:1px solid var(--line);
+    border-radius:4px;
+    min-width:22px; height:22px;
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+    margin-top:1px;
+  }
+  .opt.sel-ok{background:var(--ok-bg); border-color:var(--ok);}
+  .opt.sel-ok .letter{background:var(--ok); border-color:var(--ok); color:#fff;}
+  .opt.sel-bad{background:var(--bad-bg); border-color:var(--bad);}
+  .opt.sel-bad .letter{background:var(--bad); border-color:var(--bad); color:#fff;}
+  .opt.reveal-ok{border-color:var(--ok); border-style:dashed;}
+
+  /* sello de resultado */
+  .stamp{
+    position:absolute; top:14px; right:16px;
+    font-family:var(--mono);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    border:2px solid;
+    border-radius:4px;
+    padding:3px 9px;
+    transform:rotate(-4deg);
+    animation:stampIn .18s ease-out;
+  }
+  @keyframes stampIn{ from{transform:rotate(-4deg) scale(1.6); opacity:0;} to{transform:rotate(-4deg) scale(1); opacity:1;} }
+  .stamp.ok{color:var(--ok); border-color:var(--ok); background:var(--ok-bg);}
+  .stamp.bad{color:var(--bad); border-color:var(--bad); background:var(--bad-bg);}
+
+  .note{
+    margin-top:12px;
+    font-size:13.5px;
+    color:#5a4a12;
+    background:#fdf6dd;
+    border:1px solid #ecd98a;
+    border-radius:6px;
+    padding:9px 12px;
+  }
+  .note b{font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase;}
+
+  /* ---------- Resultado final ---------- */
+  .result{
+    display:none;
+    background:var(--ink);
+    color:#f2efe7;
+    border-radius:var(--radius);
+    padding:30px 26px;
+    text-align:center;
+    margin-top:36px;
+  }
+  .result.show{display:block;}
+  .result h2{font-size:22px; margin-bottom:6px;}
+  .result .big{
+    font-family:var(--mono);
+    font-size:46px;
+    font-weight:800;
+    color:var(--cargo);
+    margin:8px 0 4px;
+  }
+  .result p{color:#b8c4cd; font-size:15px;}
+  .result button{
+    margin-top:18px;
+    font:inherit;
+    font-weight:700;
+    background:var(--cargo);
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    padding:11px 26px;
+    cursor:pointer;
+  }
+  .result button:hover{filter:brightness(1.08);}
+  .result button:focus-visible{outline:2px solid #fff; outline-offset:2px;}
+
+  footer{
+    text-align:center;
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--muted);
+    padding:26px 0 40px;
+  }
+  @media (max-width:560px){
+    .q{padding:18px 14px 14px;}
+    .stamp{position:static; display:inline-block; margin-bottom:10px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="eyebrow">Guía de estudio · Moodle · Sistemas de Información &amp; Metodologías Ágiles</div>
+    <h1>NexoGlobal S.A. — La frontera de la eficiencia digital</h1>
+    <p class="sub">Autoevaluación interactiva · 35 preguntas · Las opciones se mezclan en cada intento</p>
+  </div>
+</header>
+
+<div class="tracker" aria-label="Progreso">
+  <div class="tracker-inner">
+    <span class="score-chip" id="scoreChip">Respondidas <b id="answered">0</b>/35 · Correctas <b id="correct">0</b></span>
+    <div class="slots" id="slots" aria-label="Navegación por preguntas"></div>
+    <button class="btn-reset" id="resetBtn" type="button">↺ Reiniciar</button>
+  </div>
+</div>
+
+<main>
+  <details class="case" open>
+    <summary>
+      <span class="tag">Caso de estudio</span>
+      NexoGlobal S.A. — leé el caso antes de responder
+      <span class="chev">▶</span>
+    </summary>
+    <div class="case-body">
+      <p>NexoGlobal S.A. es una operadora logística que ha iniciado un proceso de Transformación Digital bajo el liderazgo de su nuevo CIO. Han migrado su infraestructura a una Nube Híbrida para equilibrar la seguridad de datos gubernamentales en servidores locales y el análisis de Big Data en nubes públicas. La empresa está reemplazando el modelo de Cascada por metodologías Ágiles (Scrum y XP). Han implementado un ERP integrado, un CRM para personalización de campañas y un SCM con módulos de PLM y EAM potenciados por IoT para mantenimiento predictivo. Tras un incidente donde se alteró el contenido de un registro de carga, la empresa busca reforzar los pilares de Integridad y Confidencialidad mediante controles detectivos y cifrado. Finalmente, enfrentan dilemas éticos sobre la Calidad de Vida de sus operarios ante la monitorización algorítmica y evalúan su posición competitiva mediante los reportes del Cuadrante Mágico y Hype Cycle de Gartner.</p>
+    </div>
+  </details>
+
+  <div id="quiz"></div>
+
+  <section class="result" id="result" aria-live="polite">
+    <h2>Manifiesto de resultados</h2>
+    <div class="big" id="finalPct">0%</div>
+    <p id="finalDetail"></p>
+    <p id="finalMsg" style="margin-top:8px;"></p>
+    <button type="button" id="retryBtn">Reintentar (opciones mezcladas)</button>
+  </section>
+</main>
+
+<footer>NexoGlobal S.A. · Guía de estudio generada a partir del PDF del curso</footer>
+
+<script>
+const QUESTIONS = [
+  {n:1, t:"NexoGlobal define su infraestructura como un conjunto de componentes interrelacionados para procesar y distribuir información. ¿Cuál es el objetivo primordial de un SI (Sistema de Información) desde la perspectiva de negocios?",
+   opts:["Ofrecer un valor económico real y una solución organizacional a retos del entorno.","Maximizar únicamente la capacidad de almacenamiento de hardware.","Eliminar la necesidad de personal administrativo.","Sustituir la cultura organizacional por procesos automáticos."], c:0},
+  {n:3, t:"¿A qué nivel de la organización NexoGlobal corresponde la responsabilidad de formular planes de acción y asignar recursos financieros para responder a retos del entorno?",
+   opts:["Gerencia de nivel superior.","Gerencia operacional.","Científicos de datos.","Trabajadores de producción."], c:0},
+  {n:4, t:"El sistema que NexoGlobal utiliza para atraer, desarrollar y mantener su fuerza laboral pertenece a la función de:",
+   opts:["Recursos humanos.","Finanzas y contabilidad.","Ventas y marketing.","Gobierno de TI."], c:0},
+  {n:5, t:"NexoGlobal está adoptando tecnologías de la \"Quinta Generación\" (2000-actualidad). ¿Qué tecnologías son icónicas de este periodo según la fuente?",
+   opts:["Inteligencia Artificial (IA) e Internet de las Cosas (IoT).","Sistemas centralizados de procesamiento de datos.","Mainframes para gestión de inventarios exclusivamente.","Arquitecturas cliente-servidor de primera etapa."], c:0},
+  {n:6, t:"Un atacante alteró el contenido de un registro de flete en tránsito. ¿Qué pilar de seguridad permite asegurar que el contenido permanezca inalterado salvo por personal autorizado?",
+   opts:["Integridad.","Disponibilidad.","Confidencialidad.","Autenticidad."], c:0},
+  {n:7, t:"NexoGlobal implementó el bloqueo de direcciones IP tras detectar una brecha. ¿Cómo se clasifica este control que ayuda a mitigar los efectos de un evento?",
+   opts:["Control Correctivo.","Control Preventivo.","Control Detectivo.","Control Administrativo."], c:0},
+  {n:8, t:"¿Qué controles de aplicación aseguran específicamente la precisión de los datos durante el cálculo automático de impuestos dentro del ERP?",
+   opts:["Controles de procesamiento.","Controles de entrada.","Controles de salida.","Controles de hardware."], c:0},
+  {n:9, t:"El dilema sobre si la monitorización algorítmica constante afecta la autonomía personal y el bienestar de los empleados de NexoGlobal pertenece a la dimensión moral de:",
+   opts:["Calidad de vida.","Propiedad.","Acceso.","Control."], c:0},
+  {n:10, t:"Para establecer un Sistema de Gestión de Seguridad de la Información (SGSI) que abarque seguridad física y lógica, NexoGlobal debe certificarse en:",
+   opts:["ISO/IEC 27001.","ISO 9001.","ISO/IEC 12207.","ISO/IEC 25000."], c:0},
+  {n:11, t:"Al presentar el plan de sistemas ante los directores, ¿cuál es la recomendación clave para el CIO según el material?",
+   opts:["Ser conciso, ir al grano y dejar la mayor parte del tiempo para la charla y preguntas.","Explicar detalladamente la arquitectura técnica de los servidores.","Usar al menos 50 diapositivas para demostrar el trabajo realizado.","No aceptar preguntas para evitar desvíos del tema central."], c:0},
+  {n:12, t:"Según las fuentes, ¿qué porcentaje de las ganancias de una empresa se pueden explicar por la alineación exitosa de la TI con los objetivos de negocio?",
+   opts:["Casi la mitad (50%).","Aproximadamente el 25%.","Alrededor del 75%.","Solo el 10%."], c:0},
+  {n:13, t:"NexoGlobal decide contratar a un tercero para el mantenimiento de sistemas BAU (Business As Usual). Si transfiere completamente esta función, el contrato es de tipo:",
+   opts:["Global o Estratégico.","Parcial o Táctico.","Body Shopping.","Llave en mano."], c:1,
+   note:"El mantenimiento de sistemas BAU es una transferencia de tipo Parcial o Táctico."},
+  {n:14, t:"La inversión en la compra de nuevos edificios y maquinaria para el puerto logístico de NexoGlobal se clasifica contablemente como:",
+   opts:["CapEx (Gastos de Capital).","OpEx (Gastos Operativos).","SLA (Nivel de Servicio).","ROI Digital."], c:0},
+  {n:15, t:"Un objetivo de NexoGlobal es \"Reducir errores de carga un 15% en el próximo semestre\". ¿A qué característica SMART corresponde el componente \"15%\"?",
+   opts:["Measurable (Medible).","Specific (Específico).","Achievable (Alcanzable).","Time-bound (Con plazo)."], c:0},
+  {n:16, t:"¿Qué metodología tradicional asume que los requisitos del sistema son estáticos y definibles totalmente al principio del proyecto?",
+   opts:["Cascada (Waterfall).","Scrum.","Prototipado iterativo.","Extreme Programming (XP)."], c:0},
+  {n:17, t:"En el equipo Scrum de NexoGlobal, la persona responsable de saber traducir los objetivos de la empresa en \"Historias de Usuario\" es:",
+   opts:["Product Owner.","Scrum Master.","Development Team.","CIO."], c:0},
+  {n:18, t:"Si los programadores de NexoGlobal trabajan \"a dos manos\" frente al mismo ordenador para asegurar un código universal y organizado, están aplicando:",
+   opts:["Pair Programming (Programación en parejas).","Integración Continua.","Diseño Simple.","Test Driven Development (TDD)."], c:0},
+  {n:19, t:"¿Qué documento debe emitir NexoGlobal cuando ya conoce las soluciones necesarias y solo busca detallar los costes para cumplir los requisitos?",
+   opts:["RFQ (Solicitud de Presupuesto).","RFI (Solicitud de Información).","RFP (Solicitud de Propuesta).","SLA (Acuerdo de Nivel de Servicio)."], c:0},
+  {n:20, t:"El contrato de NexoGlobal con su proveedor de nube estipula sanciones si la disponibilidad cae por debajo del 99.9%. Esto es parte del:",
+   opts:["SLA (Service Level Agreement).","RFP técnico.","Plan de Mantenimiento Correctivo.","Costo por conversión."], c:0},
+  {n:21, t:"NexoGlobal vende sus servicios de despacho directamente a otras empresas minoristas. Este modelo se clasifica como:",
+   opts:["B2B (Business to Business).","B2C (Business to Consumer).","C2C (Consumer to Consumer).","B2E (Business to Employee)."], c:0},
+  {n:22, t:"Si NexoGlobal ofrece una plataforma gratuita para seguimiento básico pero cobra por la optimización de rutas avanzada, usa un modelo:",
+   opts:["Freemium.","Enterprise.","Transaccional.","Bait and Hook."], c:0},
+  {n:23, t:"NexoGlobal maneja datos masivos de sensores de GPS que superan la capacidad de un DBMS relacional común. El término para esto es:",
+   opts:["Big Data.","Data Warehouse estructurado.","Archivo Maestro de Producción.","Inteligencia de Negocios (BI) clásica."], c:0},
+  {n:24, t:"El sistema de NexoGlobal recomienda desviar camiones a una ruta alterna para optimizar el consumo basándose en predicciones de tráfico. Esto es un análisis:",
+   opts:["Prescriptivo.","Descriptivo.","Predictivo.","Estadístico histórico."], c:0},
+  {n:25, t:"Un algoritmo de NexoGlobal aprende a clasificar facturas fraudulentas basándose en un \"histórico\" de datos ya etiquetados. Este es un tipo de aprendizaje:",
+   opts:["Supervisado.","No supervisado.","Por refuerzo.","Basado en reglas (Sistemas Expertos)."], c:0},
+  {n:26, t:"¿Qué aplicación empresarial es descrita como el \"sistema nervioso central\", brindando una única fuente de verdad integrada para finanzas y RR.HH.?",
+   opts:["ERP.","CRM.","SCM.","BPM."], c:0},
+  {n:27, t:"El proceso de NexoGlobal que gestiona un activo físico (como un camión) mediante sensores para mantenimiento preventivo se llama:",
+   opts:["Gestión de activos empresariales (EAM).","Gestión del ciclo de vida del producto (PLM).","Procurement avanzado.","Logística de Last-Mile."], c:0},
+  {n:28, t:"Según el Cuadrante Mágico de Gartner, las empresas con gran habilidad de ejecución hoy pero poca comprensión del futuro son:",
+   opts:["Retadores o aspirantes.","Líderes.","Visionarios.","Jugadores de nicho."], c:0},
+  {n:29, t:"¿En qué fase del Hype Cycle el interés se desvanece porque los experimentos e implementaciones de la tecnología no cumplen las expectativas?",
+   opts:["Abismo de desilusión.","Lanzamiento.","Pico de expectativas sobredimensionadas.","Rampa de consolidación."], c:0},
+  {n:30, t:"NexoGlobal desea rediseñar de forma radical sus procesos para lograr mejoras dramáticas (cientos de porcentaje). ¿Qué disciplina aplica?",
+   opts:["BPR (Reingeniería de Procesos).","BPM (Gestión de Procesos).","TQM (Gestión de la Calidad Total).","Six Sigma."], c:0},
+  {n:31, t:"¿Qué modelo de nube permite a NexoGlobal alquilar un terreno (servidores y almacenamiento) para construir lo que deseen con sus propios materiales?",
+   opts:["IaaS (Infraestructura como Servicio).","PaaS (Plataforma como Servicio).","SaaS (Software como Servicio).","FaaS (Función como Servicio)."], c:0},
+  {n:32, t:"NexoGlobal combina una nube privada para datos críticos con una pública para Big Data. Esta implementación se denomina:",
+   opts:["Nube Híbrida.","Nube Pública Compartida.","Multinube.","Servicio Local Heredado."], c:0},
+  {n:33, t:"¿Qué subconjunto del Machine Learning está inspirado en el cerebro humano y se usa para modelar relaciones complejas en capas de nodos?",
+   opts:["Redes Neuronales.","Sistemas Expertos.","IA Generativa.","Algoritmos de Regresión Lineal."], c:0},
+  {n:34, t:"Los dispositivos IoT de NexoGlobal que solo envían instrucciones a objetos físicos se clasifican como:",
+   opts:["Interruptores.","Sensores.","Nodos de consenso.","Agentes de BI."], c:0},
+  {n:35, t:"Una tecnología de NexoGlobal superpone datos virtuales sobre la vista real de los técnicos en el puerto. Esto es:",
+   opts:["Realidad Aumentada.","Realidad Virtual.","Gemelo Digital Inmersivo.","VRML Estándar."], c:0},
+  {n:36, t:"Un \"bot\" de NexoGlobal carga facturas automáticamente al ERP en un servicio remoto sin participación humana. Esto es:",
+   opts:["RPA no asistida.","RPA asistida.","Inteligencia Artificial Generativa.","Mecanismo Detectivo Manual."], c:0}
+];
+
+const LETTERS = ["a","b","c","d"];
+let state = [];   // {answered:false, correct:false}
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i=a.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i],a[j]] = [a[j],a[i]];
+  }
+  return a;
+}
+
+function build(){
+  state = QUESTIONS.map(()=>({answered:false, correct:false}));
+  const quiz = document.getElementById('quiz');
+  const slots = document.getElementById('slots');
+  quiz.innerHTML = '';
+  slots.innerHTML = '';
+  document.getElementById('result').classList.remove('show');
+
+  QUESTIONS.forEach((q, qi)=>{
+    // mezclar opciones conservando cuál es la correcta
+    const order = shuffle(q.opts.map((_,i)=>i));
+
+    const card = document.createElement('article');
+    card.className = 'q';
+    card.id = 'q'+q.n;
+
+    const head = document.createElement('div');
+    head.className = 'q-head';
+    head.innerHTML = '<span class="q-num">P' + String(q.n).padStart(2,'0') + '</span>' +
+                     '<span class="q-text"></span>';
+    head.querySelector('.q-text').textContent = q.t;
+    card.appendChild(head);
+
+    const opts = document.createElement('div');
+    opts.className = 'opts';
+    order.forEach((origIdx, pos)=>{
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'opt';
+      b.dataset.correct = (origIdx === q.c) ? '1' : '0';
+      b.innerHTML = '<span class="letter">' + LETTERS[pos] + '</span><span></span>';
+      b.querySelector('span:last-child').textContent = q.opts[origIdx];
+      b.addEventListener('click', ()=>answer(qi, card, b));
+      opts.appendChild(b);
+    });
+    card.appendChild(opts);
+
+    if(q.note){
+      const n = document.createElement('div');
+      n.className = 'note';
+      n.style.display = 'none';
+      n.innerHTML = '<b>Nota</b> · ';
+      n.appendChild(document.createTextNode(q.note));
+      card.appendChild(n);
+    }
+    quiz.appendChild(card);
+
+    const s = document.createElement('button');
+    s.type = 'button';
+    s.className = 'slot';
+    s.title = 'Pregunta ' + q.n;
+    s.setAttribute('aria-label','Ir a la pregunta ' + q.n);
+    s.addEventListener('click', ()=>document.getElementById('q'+q.n).scrollIntoView());
+    slots.appendChild(s);
+  });
+  updateTracker();
+}
+
+function answer(qi, card, chosen){
+  if(state[qi].answered) return;
+  const isOk = chosen.dataset.correct === '1';
+  state[qi].answered = true;
+  state[qi].correct = isOk;
+
+  card.querySelectorAll('.opt').forEach(o=>{
+    o.disabled = true;
+    if(o === chosen) o.classList.add(isOk ? 'sel-ok' : 'sel-bad');
+    if(!isOk && o.dataset.correct === '1') o.classList.add('reveal-ok');
+  });
+
+  const stamp = document.createElement('span');
+  stamp.className = 'stamp ' + (isOk ? 'ok' : 'bad');
+  stamp.textContent = isOk ? 'Correcto' : 'Incorrecto';
+  card.insertBefore(stamp, card.firstChild);
+
+  const note = card.querySelector('.note');
+  if(note) note.style.display = 'block';
+
+  const slot = document.querySelectorAll('.slot')[qi];
+  slot.classList.add(isOk ? 'ok' : 'bad');
+
+  updateTracker();
+}
+
+function updateTracker(){
+  const answered = state.filter(s=>s.answered).length;
+  const correct = state.filter(s=>s.correct).length;
+  document.getElementById('answered').textContent = answered;
+  document.getElementById('correct').textContent = correct;
+
+  if(answered === QUESTIONS.length){
+    const pct = Math.round(correct / QUESTIONS.length * 100);
+    document.getElementById('finalPct').textContent = pct + '%';
+    document.getElementById('finalDetail').textContent =
+      correct + ' correctas de ' + QUESTIONS.length + ' preguntas.';
+    let msg;
+    if(pct === 100) msg = 'Carga completa sin observaciones. Manifiesto aprobado. 🏆';
+    else if(pct >= 80) msg = 'Excelente nivel: listo para el examen. Repasá solo las marcadas en rojo.';
+    else if(pct >= 60) msg = 'Buen avance, pero conviene otra vuelta por los temas fallados.';
+    else msg = 'Todavía hay contenedores sueltos: releé el material y volvé a intentar.';
+    document.getElementById('finalMsg').textContent = msg;
+    document.getElementById('result').classList.add('show');
+    document.getElementById('result').scrollIntoView({behavior:'smooth'});
+  }
+}
+
+document.getElementById('resetBtn').addEventListener('click', build);
+document.getElementById('retryBtn').addEventListener('click', ()=>{
+  build();
+  window.scrollTo({top:0, behavior:'smooth'});
+});
+
+build();
+</script>
+</body>
+</html>
