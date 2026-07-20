@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parcial GSI · Caso SoftGestion</title>
+<style>
+  :root{
+    --bg: #0f1720;
+    --panel: #16212c;
+    --panel-2: #1c2b38;
+    --ink: #e8eef2;
+    --muted: #8ba0ad;
+    --accent: #3ea6ff;
+    --accent-dim: #245a80;
+    --ok: #4fd1a5;
+    --ok-bg: rgba(79,209,165,0.12);
+    --bad: #ff6b6b;
+    --bad-bg: rgba(255,107,107,0.12);
+    --rule: #263845;
+    --mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, rgba(62,166,255,0.10), transparent 60%),
+      var(--bg);
+    color:var(--ink);
+    font-family: 'Georgia', 'Iowan Old Style', serif;
+    line-height:1.5;
+    padding-bottom:120px;
+  }
+  header{
+    padding:48px 24px 28px;
+    max-width:900px;
+    margin:0 auto;
+    border-bottom:1px solid var(--rule);
+  }
+  .eyebrow{
+    font-family: var(--mono);
+    font-size:12px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:10px;
+  }
+  h1{
+    font-size:34px;
+    margin:0 0 8px;
+    font-weight:600;
+    letter-spacing:-0.01em;
+  }
+  .case{
+    color:var(--muted);
+    font-size:15.5px;
+    max-width:680px;
+  }
+  .case strong{ color: var(--ink); }
+  .case-toggle{
+    font-family: var(--mono);
+    font-size:12.5px;
+    color:var(--accent);
+    cursor:pointer;
+    display:inline-block;
+    margin-top:10px;
+    border-bottom:1px dotted var(--accent-dim);
+  }
+  #case-full{
+    display:none;
+    margin-top:14px;
+    padding:16px 18px;
+    background:var(--panel);
+    border:1px solid var(--rule);
+    border-radius:8px;
+    color:#c3d2da;
+    font-size:14.5px;
+  }
+  main{
+    max-width:900px;
+    margin:0 auto;
+    padding:32px 24px;
+  }
+  .q{
+    background:var(--panel);
+    border:1px solid var(--rule);
+    border-radius:10px;
+    padding:22px 24px;
+    margin-bottom:16px;
+    position:relative;
+  }
+  .q-num{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--accent);
+    letter-spacing:0.1em;
+    margin-bottom:8px;
+  }
+  .q-text{
+    font-size:17px;
+    margin:0 0 16px;
+    color:var(--ink);
+  }
+  .opt{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    padding:10px 12px;
+    border-radius:7px;
+    margin-bottom:6px;
+    cursor:pointer;
+    border:1px solid transparent;
+    transition: background 0.15s, border-color 0.15s;
+    font-size:15px;
+  }
+  .opt:hover{ background:var(--panel-2); }
+  .opt input{ margin-top:3px; accent-color: var(--accent); flex-shrink:0; }
+  .opt.correct{ background:var(--ok-bg); border-color: rgba(79,209,165,0.4); }
+  .opt.incorrect{ background:var(--bad-bg); border-color: rgba(255,107,107,0.4); }
+  .opt.disabled{ cursor:default; }
+  .mark{
+    font-family:var(--mono);
+    font-size:12px;
+    margin-left:auto;
+    padding-left:8px;
+    white-space:nowrap;
+  }
+  .mark.ok{ color:var(--ok); }
+  .mark.bad{ color:var(--bad); }
+  .explain{
+    display:none;
+    margin-top:10px;
+    padding-top:10px;
+    border-top:1px dashed var(--rule);
+    font-family: var(--mono);
+    font-size:12.5px;
+    color:var(--muted);
+    line-height:1.6;
+  }
+  .q.answered .explain{ display:block; }
+  .q.unanswered-flag{
+    border-color: var(--bad);
+  }
+
+  footer.bar{
+    position:fixed;
+    bottom:0; left:0; right:0;
+    background:rgba(15,23,32,0.92);
+    backdrop-filter: blur(10px);
+    border-top:1px solid var(--rule);
+    padding:16px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    z-index:10;
+  }
+  .btn{
+    font-family:var(--mono);
+    font-size:13.5px;
+    letter-spacing:0.03em;
+    padding:12px 26px;
+    border-radius:7px;
+    border:1px solid var(--accent-dim);
+    background:var(--accent);
+    color:#08131c;
+    font-weight:700;
+    cursor:pointer;
+  }
+  .btn:hover{ opacity:0.92; }
+  .btn.secondary{
+    background:transparent;
+    color:var(--ink);
+    border:1px solid var(--rule);
+    font-weight:400;
+  }
+  .score-display{
+    font-family:var(--mono);
+    font-size:14px;
+    color:var(--muted);
+  }
+  .score-display strong{
+    color:var(--ink);
+    font-size:20px;
+  }
+  #result-panel{
+    display:none;
+    max-width:900px;
+    margin:0 auto 24px;
+    padding:20px 24px;
+    background:var(--panel-2);
+    border:1px solid var(--accent-dim);
+    border-radius:10px;
+  }
+  #result-panel h2{
+    margin:0 0 6px;
+    font-size:22px;
+  }
+  #result-panel p{ color:var(--muted); margin:0; font-size:14.5px;}
+  .progress-track{
+    max-width:900px;
+    margin:0 auto;
+    padding:0 24px 24px;
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--muted);
+  }
+  .progress-bar-bg{
+    width:100%;
+    height:4px;
+    background:var(--rule);
+    border-radius:2px;
+    margin-top:6px;
+    overflow:hidden;
+  }
+  .progress-bar-fill{
+    height:100%;
+    background:var(--accent);
+    width:0%;
+    transition:width 0.2s;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Gestión de Sistemas de Información · 1° Parcial</div>
+  <h1>Caso SoftGestion</h1>
+  <div class="case">
+    Empresa de desarrollo de software (25 empleados) que evalúa modernizar su plataforma hacia
+    <strong>cloud</strong>, mejorar la integración con <strong>e-commerce</strong> y adoptar
+    <strong>metodologías ágiles</strong>. 40 preguntas — FODA, Porter, roles directivos, CAPEX/OPEX,
+    conversión de sistemas, pruebas de software y evaluación de desempeño.
+  </div>
+  <div class="case-toggle" onclick="document.getElementById('case-full').style.display = document.getElementById('case-full').style.display === 'block' ? 'none' : 'block'">
+    ▸ leer el caso completo
+  </div>
+  <div id="case-full">
+    La empresa SoftGestion es una pequeña empresa de desarrollo de software que ofrece sistemas de
+    gestión para pequeñas y medianas empresas. Tiene 25 empleados y se especializa en soluciones
+    personalizadas para comercios y estudios contables. En los últimos años logró buena reputación
+    entre sus clientes debido a la calidad del soporte técnico y la flexibilidad de sus desarrollos.
+    Sin embargo, muchos de sus sistemas están basados en tecnologías antiguas y el proceso de
+    desarrollo depende fuertemente de algunos programadores clave.<br><br>
+    El mercado se volvió más competitivo por la aparición de nuevas plataformas cloud de bajo costo,
+    y algunos clientes evalúan soluciones internacionales con mayor integración digital. El
+    crecimiento del comercio electrónico genera nuevas necesidades de integración entre sistemas
+    de gestión, plataformas de venta online y medios de pago.<br><br>
+    SoftGestion inició un proceso de modernización tecnológica: desarrollar una plataforma cloud,
+    mejorar la integración con e-commerce, implementar evaluación de desempeño anual, usar
+    metodologías ágiles, realizar pruebas por etapas y prototipar la interfaz. Finalmente debe
+    decidir cómo convertir el sistema en las empresas clientes.
+  </div>
+</header>
+
+<main id="quiz-root"></main>
+
+<div class="progress-track">
+  <span id="progress-label">0 / 40 respondidas</span>
+  <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-fill"></div></div>
+</div>
+
+<div id="result-panel">
+  <h2 id="result-score"></h2>
+  <p id="result-detail"></p>
+</div>
+
+<footer class="bar">
+  <button class="btn" id="correct-btn" onclick="corregir()">Corregir pendientes</button>
+  <button class="btn secondary" onclick="reiniciar()">Reiniciar</button>
+  <span class="score-display" id="live-score"></span>
+</footer>
+
+<script>
+const preguntas = [
+{q:"En el desarrollo de sistemas de información, ¿qué se entiende por conversión?", opts:["El proceso de programar los módulos del sistema","El proceso de diseñar la arquitectura del sistema","El proceso de cambiar del sistema anterior al sistema nuevo","El proceso de realizar pruebas de software"], correct:2, exp:"Conversión = pasaje operativo del sistema viejo al nuevo (directa, paralela, piloto o por fases)."},
+{q:"Según el análisis FODA, ¿cuál es una fortaleza de la empresa?", opts:["Dependencia de algunos programadores clave","Uso de tecnologías antiguas","Aparición de plataformas cloud económicas","Calidad del soporte técnico brindado a los clientes"], correct:3, exp:"Fortaleza = factor interno positivo. Las otras dos primeras son debilidades internas; la tercera es una amenaza externa."},
+{q:"Si el nuevo sistema se implementa primero en un solo departamento o grupo reducido de usuarios para evaluar su funcionamiento, ¿qué estrategia se está utilizando?", opts:["Conversión directa","Conversión piloto","Conversión paralela","Conversión en fases"], correct:1, exp:"Piloto = prueba acotada en un grupo reducido antes de escalar."},
+{q:"Según el análisis FODA, ¿cuál es una debilidad de la empresa?", opts:["Crecimiento del comercio electrónico","La reputación entre clientes","Nuevas integraciones digitales en el mercado","Dependencia de algunos programadores clave"], correct:3, exp:"Debilidad = factor interno negativo. El resto son factores externos (oportunidades)."},
+{q:"En el modelo de Porter, las soluciones internacionales que los clientes evalúan pueden considerarse principalmente:", opts:["Proveedores estratégicos","Productos sustitutos","Recursos internos","Regulaciones del mercado"], correct:1, exp:"Alternativas externas que el cliente podría elegir en lugar del producto propio = productos sustitutos."},
+{q:"¿Cuál de las siguientes opciones representa un ejemplo de información para la toma de decisiones?", opts:["La empresa tiene 25 empleados","El análisis indica que los clientes están migrando hacia soluciones cloud","El sistema registró 120 tickets de soporte","Tres clientes cancelaron su contrato este mes"], correct:1, exp:"Información = dato procesado/interpretado que agrega valor para decidir; el resto son datos crudos."},
+{q:"En el proceso de evaluación de desempeño que implementará SoftGestion, ¿qué se entiende por competencias?", opts:["Los resultados financieros de los proyectos","El conjunto de conocimientos, habilidades y actitudes que permiten desempeñar un trabajo","Los recursos tecnológicos disponibles","La cantidad de horas trabajadas por cada empleado"], correct:1, exp:"Competencias = conocimientos + habilidades + actitudes para el puesto."},
+{q:"¿Cuál es el objetivo principal del proceso de pruebas en el desarrollo de un sistema de información?", opts:["Reducir la cantidad de desarrolladores en el proyecto","Reducir el tiempo total de desarrollo del proyecto","Eliminar la necesidad de documentación del sistema","Determinar si el sistema produce los resultados correctos bajo condiciones conocidas"], correct:3, exp:"Testing verifica que el sistema produzca resultados correctos en condiciones conocidas."},
+{q:"¿Cuál de las siguientes situaciones representa principalmente un gasto OPEX?", opts:["Adquisición de nuevos equipos para el área de sistemas","Pago mensual por uso de infraestructura cloud","Construcción de un centro de datos propio","Compra de licencias perpetuas de software"], correct:1, exp:"OPEX = gasto operativo recurrente, como una suscripción mensual cloud."},
+{q:"Cuando los clientes comienzan a evaluar soluciones internacionales, esto refleja principalmente:", opts:["Disminución de la oferta del mercado","Mayor dependencia de proveedores","Reducción de la rivalidad competitiva","Aumento del poder de negociación de los clientes"], correct:3, exp:"Más alternativas para el cliente = más poder de negociación de clientes (Porter)."},
+{q:"¿Cuál es el objetivo principal del uso de un tablero Kanban en un equipo de desarrollo?", opts:["Visualizar el flujo de trabajo y el estado de las tareas","Reducir el número de desarrolladores","Reemplazar completamente las metodologías ágiles","Eliminar la necesidad de planificación del proyecto"], correct:0, exp:"Kanban visualiza el flujo de trabajo y limita el trabajo en curso."},
+{q:"¿Cuál es el modelo que es conocido como Informática sin servidor?", opts:["SaaS","PaaS","IaaS","FaaS"], correct:3, exp:"FaaS (Function as a Service) = serverless computing."},
+{q:"¿Cuál de las siguientes áreas del sistema se suele desarrollar con mayor frecuencia mediante prototipos?", opts:["La infraestructura de red","La interfaz del usuario final del sistema","El sistema operativo","Los servidores físicos del sistema"], correct:1, exp:"El prototipado se usa típicamente para la interfaz de usuario, por su alta interacción con el usuario final."},
+{q:"El crecimiento del comercio electrónico podría representar:", opts:["Una oportunidad","Una debilidad","Una reducción de la competencia","Un aumento del poder de los proveedores"], correct:0, exp:"Factor externo positivo = oportunidad."},
+{q:"En el caso de SoftGestion, la empresa evalúa desarrollar una nueva plataforma cloud. ¿Cuál de las siguientes tecnologías permitiría conectar los sistemas de gestión con plataformas de comercio electrónico externas?", opts:["Hardware","Tecnología de administración de datos","Software de aplicación","Tecnología de redes y telecomunicaciones"], correct:3, exp:"Conectar sistemas entre sí requiere tecnología de redes y telecomunicaciones."},
+{q:"¿Cuál es una característica principal de las metodologías ágiles de desarrollo de software?", opts:["Realizar una única entrega del sistema al final del proyecto","Definir todos los requerimientos del sistema al inicio y no modificarlos","Dividir el desarrollo en ciclos cortos con entregas frecuentes de funcionalidad","Evitar la participación de los usuarios durante el desarrollo"], correct:2, exp:"Ágil = iteraciones/sprints cortos con entregas frecuentes, en contraste con el modelo en cascada."},
+{q:"Cuando el equipo de tecnología evalúa el funcionamiento del sistema completo y la interacción entre sus componentes, ¿qué tipo de prueba se está realizando?", opts:["Prueba de unidad","Prueba de seguridad","Prueba de sistema","Prueba de aceptación"], correct:2, exp:"Prueba de sistema = evalúa el sistema completo y la interacción entre componentes."},
+{q:"Si el sistema nuevo se implementa progresivamente activando módulos o funcionalidades en distintas etapas, ¿qué estrategia de conversión se está aplicando?", opts:["Conversión paralela","Conversión piloto","Conversión directa","Conversión en fases"], correct:3, exp:"En fases = se activan módulos/funcionalidades progresivamente."},
+{q:"¿Cuál es uno de los principales objetivos del uso del prototipado en el desarrollo de sistemas de información?", opts:["Sustituir completamente el proceso de desarrollo de sistemas","Permitir que los usuarios participen en el diseño del sistema y definan mejor los requerimientos","Reducir la necesidad de participación de los usuarios","Eliminar la necesidad de realizar pruebas del sistema"], correct:1, exp:"El prototipado facilita la participación del usuario y clarifica requerimientos."},
+{q:"¿Qué directivo es responsable de definir y gestionar la estrategia de tecnología de la información en la empresa?", opts:["CMO","CIO","CFO","COO"], correct:1, exp:"CIO (Chief Information Officer) = estrategia de TI."},
+{q:"En metodologías ágiles, ¿cuál es uno de los principales beneficios de trabajar en ciclos cortos de desarrollo?", opts:["Evita realizar pruebas del sistema","Facilita detectar errores y realizar cambios durante el proyecto","Permite eliminar la necesidad de documentación","Reduce completamente los costos del proyecto"], correct:1, exp:"Ciclos cortos = feedback e inspección/adaptación frecuentes, detectando errores antes."},
+{q:"La dependencia de programadores clave representa principalmente:", opts:["Una Fortaleza competitiva","Una oportunidad tecnológica","Una Debilidad","Una amenaza"], correct:2, exp:"Es un factor interno negativo = debilidad (riesgo de continuidad si esas personas se van)."},
+{q:"¿Cuál es el principal objetivo del feedback dentro de una evaluación de desempeño?", opts:["Proporcionar información que ayude a mejorar el desempeño","Criticar los errores del trabajador","Controlar el horario de trabajo","Determinar el salario del empleado"], correct:0, exp:"El feedback busca mejorar el desempeño futuro, no solo señalar errores."},
+{q:"Si el CIO define como objetivo “mejorar la calidad del software”, ¿qué característica debería agregarse para convertirlo en un objetivo SMART?", opts:["Definir un indicador medible y un plazo para alcanzarlo","Reducir la cantidad de reuniones del equipo","Eliminar la evaluación de desempeño","Asignar el objetivo solo a los gerentes"], correct:0, exp:"SMART requiere que el objetivo sea Medible y con un Tiempo definido, entre otros."},
+{q:"¿Cuál de las siguientes situaciones representa principalmente un gasto CAPEX?", opts:["Compra de servidores para instalar en el centro de datos de la empresa","Pago del servicio de internet de la empresa","Pago mensual de una suscripción a una plataforma cloud","Pago de mantenimiento mensual del sistema"], correct:0, exp:"CAPEX = inversión de capital en activos propios, como comprar servidores."},
+{q:"¿Cuál es uno de los principales riesgos del uso excesivo del prototipado?", opts:["Que el sistema no pueda ser presentado a los usuarios","Que el sistema final tenga demasiada documentación","Que los usuarios no participen en el desarrollo","Que se omitan etapas importantes como pruebas, rediseño o documentación"], correct:3, exp:"El exceso de prototipado puede llevar a saltear pruebas, rediseño o documentación formal."},
+{q:"¿Cuál de las siguientes situaciones representa una amenaza para la empresa?", opts:["Dependencia de algunos programadores clave","Buena relación con clientes actuales","Crecimiento de ventas online","Aparición de plataformas cloud de bajo costo"], correct:3, exp:"Amenaza = factor externo negativo, como la entrada de competidores cloud de bajo costo. (La dependencia de programadores es una debilidad interna, no una amenaza)."},
+{q:"En el contexto del caso, ¿cuál de los siguientes ejemplos corresponde a la evaluación de resultados?", opts:["Trabajo en equipo del desarrollador","Capacidad de comunicación con clientes","Cumplimiento de plazos de entrega de los proyectos","Habilidad de liderazgo del jefe de equipo"], correct:2, exp:"Resultados = métricas objetivas de output, como cumplir plazos; las demás son competencias/comportamientos."},
+{q:"La aparición de nuevas plataformas cloud que compiten directamente con los productos de SoftGestion representa principalmente:", opts:["Rivalidad entre competidores","Poder de negociación de clientes","Poder de negociación de proveedores","Barreras tecnológicas"], correct:0, exp:"Nuevos competidores directos en el mercado = rivalidad entre competidores (Porter)."},
+{q:"¿En qué situación suele ser más útil el prototipado?", opts:["Cuando el sistema no tendrá interacción con usuarios","Cuando el sistema ya está completamente desarrollado","Cuando existe incertidumbre sobre los requerimientos o el diseño del sistema","Cuando todos los requerimientos del sistema están claramente definidos"], correct:2, exp:"El prototipado ayuda justamente cuando hay incertidumbre sobre requerimientos o diseño."},
+{q:"En metodologías ágiles como Scrum, los ciclos cortos de trabajo donde se desarrolla y entrega funcionalidad se denominan:", opts:["Pruebas de aceptación","Conversiones","Fases de implementación","Iteraciones o sprints"], correct:3, exp:"En Scrum, esos ciclos cortos se llaman sprints (o iteraciones)."},
+{q:"Según el análisis FODA, ¿cuál es una oportunidad identificable en el caso?", opts:["Tecnologías antiguas en los sistemas actuales","Crecimiento del comercio electrónico","Aparición de competidores internacionales","Dependencia de programadores clave"], correct:1, exp:"Factor externo positivo = oportunidad. Las otras son debilidades o amenazas."},
+{q:"En el caso presentado, ¿qué directivo es responsable de definir la estrategia general del negocio?", opts:["CIO","CISO","CEO","CTO"], correct:2, exp:"El CEO define la estrategia general del negocio (no solo de tecnología)."},
+{q:"Cuando los usuarios participan para validar que el sistema cumple con los requisitos del negocio antes de su implementación, ¿qué tipo de prueba se está realizando?", opts:["Prueba de unidad","Prueba de aceptación","Prueba de sistema","Prueba de rendimiento"], correct:1, exp:"Prueba de aceptación = usuarios validan que el sistema cumple los requisitos del negocio."},
+{q:"En el caso de la empresa SoftGestion, migrar a una plataforma cloud con pago mensual probablemente implicaría:", opts:["Transformar todos los costos en inversión de capital","Eliminar completamente los costos operativos","Reducir la inversión inicial y aumentar el OPEX","Aumentar los gastos CAPEX de la empresa"], correct:2, exp:"Pago mensual = menos inversión inicial (CAPEX) y más gasto operativo recurrente (OPEX)."},
+{q:"¿Qué directivo es responsable de garantizar la seguridad de la información y la protección de los datos?", opts:["CIO","CTO","CISO","CEO"], correct:2, exp:"CISO (Chief Information Security Officer) = seguridad de la información."},
+{q:"Cuando los desarrolladores prueban cada programa o módulo de forma individual, ¿qué tipo de prueba están realizando?", opts:["Prueba de sistema","Prueba de integración","Prueba de aceptación","Prueba de unidad"], correct:3, exp:"Prueba de unidad = testea cada módulo/programa de forma aislada."},
+{q:"La decisión de invertir en una plataforma cloud busca principalmente:", opts:["Reducir el poder de los proveedores","Eliminar la competencia internacional","Disminuir la cantidad de clientes","Adaptarse a cambios tecnológicos del mercado"], correct:3, exp:"La modernización tecnológica responde a adaptarse a los cambios del mercado (cloud, e-commerce, competencia)."},
+{q:"Si el sistema nuevo y el sistema anterior se operan simultáneamente durante un período de tiempo para verificar su funcionamiento, ¿qué estrategia de conversión se está utilizando?", opts:["Conversión piloto","Conversión directa","Conversión paralela","Conversión en fases"], correct:2, exp:"Paralela = ambos sistemas funcionan al mismo tiempo durante un período."},
+{q:"En el contexto de los sistemas de información, ¿cuál de las siguientes opciones representa mejor un dato?", opts:["Un registro que indica que la empresa tiene 25 empleados","El análisis que indica que la empresa tiene buena reputación entre sus clientes","La evaluación de que las plataformas cloud representan una amenaza","La conclusión de que el mercado de software es cada vez más competitivo"], correct:0, exp:"Dato = hecho crudo sin procesar/interpretar, como un registro numérico."}
+];
+
+const root = document.getElementById('quiz-root');
+const respuestas = new Array(preguntas.length).fill(null);
+
+function render(){
+  root.innerHTML = '';
+  preguntas.forEach((p, qi) => {
+    const div = document.createElement('div');
+    div.className = 'q';
+    div.id = 'q'+qi;
+    let optsHtml = '';
+    p.opts.forEach((o, oi) => {
+      optsHtml += `
+        <label class="opt" id="q${qi}o${oi}">
+          <input type="radio" name="q${qi}" value="${oi}" onchange="seleccionar(${qi},${oi})">
+          <span>${o}</span>
+          <span class="mark" id="q${qi}o${oi}mark"></span>
+        </label>`;
+    });
+    div.innerHTML = `
+      <div class="q-num">Pregunta ${qi+1} / ${preguntas.length}</div>
+      <p class="q-text">${p.q}</p>
+      ${optsHtml}
+      <div class="explain" id="q${qi}exp"><strong>Explicación:</strong> ${p.exp}</div>
+    `;
+    root.appendChild(div);
+  });
+}
+
+function seleccionar(qi, oi){
+  if(respuestas[qi] !== null) return; // ya corregida, no se puede cambiar
+  respuestas[qi] = oi;
+  corregirPregunta(qi);
+  actualizarProgreso();
+  actualizarScoreVivo();
+}
+
+function corregirPregunta(qi){
+  const p = preguntas[qi];
+  const sel = respuestas[qi];
+  p.opts.forEach((o, oi) => {
+    const label = document.getElementById(`q${qi}o${oi}`);
+    const mark = document.getElementById(`q${qi}o${oi}mark`);
+    const input = label.querySelector('input');
+    input.disabled = true;
+    label.classList.add('disabled');
+    label.classList.remove('correct','incorrect');
+    mark.textContent = '';
+
+    if(oi === p.correct){
+      label.classList.add('correct');
+      mark.textContent = '✓ correcta';
+      mark.className = 'mark ok';
+    } else if(oi === sel && sel !== p.correct){
+      label.classList.add('incorrect');
+      mark.textContent = '✗ tu respuesta';
+      mark.className = 'mark bad';
+    }
+  });
+  document.getElementById('q'+qi).classList.add('answered');
+}
+
+function actualizarProgreso(){
+  const respondidas = respuestas.filter(r => r !== null).length;
+  document.getElementById('progress-label').textContent = respondidas + ' / ' + preguntas.length + ' respondidas';
+  document.getElementById('progress-fill').style.width = (respondidas/preguntas.length*100) + '%';
+}
+
+function actualizarScoreVivo(){
+  const respondidas = respuestas.filter(r => r !== null).length;
+  const correctas = preguntas.filter((p, qi) => respuestas[qi] === p.correct).length;
+  document.getElementById('live-score').textContent = respondidas > 0
+    ? `${correctas}/${respondidas} correctas hasta ahora`
+    : '';
+
+  if(respondidas === preguntas.length){
+    mostrarResumenFinal();
+  }
+}
+
+function mostrarResumenFinal(){
+  const total = preguntas.length;
+  const correctas = preguntas.filter((p, qi) => respuestas[qi] === p.correct).length;
+  const pct = Math.round((correctas/total)*100);
+
+  const panel = document.getElementById('result-panel');
+  panel.style.display = 'block';
+  document.getElementById('result-score').textContent =
+    `Calificación: ${correctas.toFixed(2).replace('.', ',')} de ${total},00 (${pct}%)`;
+  document.getElementById('result-detail').textContent =
+    `${correctas} correctas, ${total - correctas} incorrectas.`;
+  panel.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function corregir(){
+  // corrige de una vez todas las preguntas pendientes (no altera las ya respondidas)
+  preguntas.forEach((p, qi) => {
+    if(respuestas[qi] === null){
+      corregirPregunta(qi);
+    }
+  });
+  actualizarProgreso();
+  actualizarScoreVivo();
+  mostrarResumenFinal();
+}
+
+function reiniciar(){
+  respuestas.fill(null);
+  document.getElementById('result-panel').style.display = 'none';
+  document.getElementById('live-score').textContent = '';
+  render();
+  actualizarProgreso();
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+render();
+</script>
+
+</body>
+</html>
