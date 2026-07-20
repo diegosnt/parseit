@@ -219,9 +219,41 @@
     width:0%;
     transition:width 0.2s;
   }
+
+  /* Navegación entre secciones */
+  .site-nav{
+    position:sticky;top:0;z-index:20;
+    background:var(--panel);border-bottom:1px solid var(--rule);
+  }
+  .site-nav-inner{
+    max-width:900px;margin:0 auto;padding:12px 24px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  }
+  .site-brand{font-family:var(--mono);font-weight:600;font-size:.85rem;color:var(--ink)}
+  .site-nav-links{display:flex;gap:8px;flex-wrap:wrap}
+  .site-nav-link{
+    font-family:var(--mono);font-size:.78rem;font-weight:600;text-decoration:none;
+    color:var(--muted);border:1px solid var(--rule);border-radius:999px;
+    padding:6px 14px;transition:all .15s;
+  }
+  .site-nav-link:hover{color:var(--accent);border-color:var(--accent)}
+  .site-nav-link.active{background:var(--accent);border-color:var(--accent);color:#0f1720}
 </style>
 </head>
 <body>
+
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <span class="site-brand">GSI · Material de Estudio</span>
+    <div class="site-nav-links">
+      <a href="/" class="site-nav-link">Clase 1</a>
+      <a href="/clase2.html" class="site-nav-link">Clase 2</a>
+      <a href="/guia_nexoglobal_interactiva.html" class="site-nav-link">Guía NexoGlobal</a>
+      <a href="/parcial_1.html" class="site-nav-link active" aria-current="page">Parcial 1</a>
+      <a href="/parcial_2.html" class="site-nav-link">Parcial 2</a>
+    </div>
+  </div>
+</nav>
 
 <header>
   <div class="eyebrow">Gestión de Sistemas de Información · 1° Parcial</div>

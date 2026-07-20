@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2° Parcial GSI · Caso TechLogistics</title>
+<style>
+  :root{
+    --bg: #0f1720;
+    --panel: #16212c;
+    --panel-2: #1c2b38;
+    --ink: #e8eef2;
+    --muted: #8ba0ad;
+    --accent: #3ea6ff;
+    --accent-dim: #245a80;
+    --ok: #4fd1a5;
+    --ok-bg: rgba(79,209,165,0.12);
+    --bad: #ff6b6b;
+    --bad-bg: rgba(255,107,107,0.12);
+    --rule: #263845;
+    --mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, rgba(62,166,255,0.10), transparent 60%),
+      var(--bg);
+    color:var(--ink);
+    font-family: 'Georgia', 'Iowan Old Style', serif;
+    line-height:1.5;
+    padding-bottom:120px;
+  }
+  header{
+    padding:48px 24px 28px;
+    max-width:900px;
+    margin:0 auto;
+    border-bottom:1px solid var(--rule);
+  }
+  .eyebrow{
+    font-family: var(--mono);
+    font-size:12px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:10px;
+  }
+  h1{
+    font-size:34px;
+    margin:0 0 8px;
+    font-weight:600;
+    letter-spacing:-0.01em;
+  }
+  .case{
+    color:var(--muted);
+    font-size:15.5px;
+    max-width:680px;
+  }
+  .case strong{ color: var(--ink); }
+  .case-toggle{
+    font-family: var(--mono);
+    font-size:12.5px;
+    color:var(--accent);
+    cursor:pointer;
+    display:inline-block;
+    margin-top:10px;
+    border-bottom:1px dotted var(--accent-dim);
+  }
+  #case-full{
+    display:none;
+    margin-top:14px;
+    padding:16px 18px;
+    background:var(--panel);
+    border:1px solid var(--rule);
+    border-radius:8px;
+    color:#c3d2da;
+    font-size:14.5px;
+  }
+  #case-full ol{ margin:8px 0 0; padding-left:20px; }
+  #case-full li{ margin-bottom:4px; }
+  main{
+    max-width:900px;
+    margin:0 auto;
+    padding:32px 24px;
+  }
+  .q{
+    background:var(--panel);
+    border:1px solid var(--rule);
+    border-radius:10px;
+    padding:22px 24px;
+    margin-bottom:16px;
+    position:relative;
+  }
+  .q-num{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--accent);
+    letter-spacing:0.1em;
+    margin-bottom:8px;
+  }
+  .q-text{
+    font-size:17px;
+    margin:0 0 16px;
+    color:var(--ink);
+  }
+  .opt{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    padding:10px 12px;
+    border-radius:7px;
+    margin-bottom:6px;
+    cursor:pointer;
+    border:1px solid transparent;
+    transition: background 0.15s, border-color 0.15s;
+    font-size:15px;
+  }
+  .opt:hover{ background:var(--panel-2); }
+  .opt input{ margin-top:3px; accent-color: var(--accent); flex-shrink:0; }
+  .opt.correct{ background:var(--ok-bg); border-color: rgba(79,209,165,0.4); }
+  .opt.incorrect{ background:var(--bad-bg); border-color: rgba(255,107,107,0.4); }
+  .opt.disabled{ cursor:default; }
+  .mark{
+    font-family:var(--mono);
+    font-size:12px;
+    margin-left:auto;
+    padding-left:8px;
+    white-space:nowrap;
+  }
+  .mark.ok{ color:var(--ok); }
+  .mark.bad{ color:var(--bad); }
+  .explain{
+    display:none;
+    margin-top:10px;
+    padding-top:10px;
+    border-top:1px dashed var(--rule);
+    font-family: var(--mono);
+    font-size:12.5px;
+    color:var(--muted);
+    line-height:1.6;
+  }
+  .q.answered .explain{ display:block; }
+
+  footer.bar{
+    position:fixed;
+    bottom:0; left:0; right:0;
+    background:rgba(15,23,32,0.92);
+    backdrop-filter: blur(10px);
+    border-top:1px solid var(--rule);
+    padding:16px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    z-index:10;
+  }
+  .btn{
+    font-family:var(--mono);
+    font-size:13.5px;
+    letter-spacing:0.03em;
+    padding:12px 26px;
+    border-radius:7px;
+    border:1px solid var(--accent-dim);
+    background:var(--accent);
+    color:#08131c;
+    font-weight:700;
+    cursor:pointer;
+  }
+  .btn:hover{ opacity:0.92; }
+  .btn.secondary{
+    background:transparent;
+    color:var(--ink);
+    border:1px solid var(--rule);
+    font-weight:400;
+  }
+  .score-display{
+    font-family:var(--mono);
+    font-size:14px;
+    color:var(--muted);
+  }
+  #result-panel{
+    display:none;
+    max-width:900px;
+    margin:0 auto 24px;
+    padding:20px 24px;
+    background:var(--panel-2);
+    border:1px solid var(--accent-dim);
+    border-radius:10px;
+  }
+  #result-panel h2{
+    margin:0 0 6px;
+    font-size:22px;
+  }
+  #result-panel p{ color:var(--muted); margin:0; font-size:14.5px;}
+  .progress-track{
+    max-width:900px;
+    margin:0 auto;
+    padding:0 24px 24px;
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--muted);
+  }
+  .progress-bar-bg{
+    width:100%;
+    height:4px;
+    background:var(--rule);
+    border-radius:2px;
+    margin-top:6px;
+    overflow:hidden;
+  }
+  .progress-bar-fill{
+    height:100%;
+    background:var(--accent);
+    width:0%;
+    transition:width 0.2s;
+  }
+
+  /* Navegación entre secciones */
+  .site-nav{
+    position:sticky;top:0;z-index:20;
+    background:var(--panel);border-bottom:1px solid var(--rule);
+  }
+  .site-nav-inner{
+    max-width:900px;margin:0 auto;padding:12px 24px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  }
+  .site-brand{font-family:var(--mono);font-weight:600;font-size:.85rem;color:var(--ink)}
+  .site-nav-links{display:flex;gap:8px;flex-wrap:wrap}
+  .site-nav-link{
+    font-family:var(--mono);font-size:.78rem;font-weight:600;text-decoration:none;
+    color:var(--muted);border:1px solid var(--rule);border-radius:999px;
+    padding:6px 14px;transition:all .15s;
+  }
+  .site-nav-link:hover{color:var(--accent);border-color:var(--accent)}
+  .site-nav-link.active{background:var(--accent);border-color:var(--accent);color:#0f1720}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <span class="site-brand">GSI · Material de Estudio</span>
+    <div class="site-nav-links">
+      <a href="/" class="site-nav-link">Clase 1</a>
+      <a href="/clase2.html" class="site-nav-link">Clase 2</a>
+      <a href="/guia_nexoglobal_interactiva.html" class="site-nav-link">Guía NexoGlobal</a>
+      <a href="/parcial_1.html" class="site-nav-link">Parcial 1</a>
+      <a href="/parcial_2.html" class="site-nav-link active" aria-current="page">Parcial 2</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="eyebrow">Gestión de Sistemas de Información · 2° Parcial</div>
+  <h1>Caso TechLogistics S.A.</h1>
+  <div class="case">
+    Operadora logística global en plena <strong>Transformación Digital</strong>: migra su despacho a
+    arquitectura <strong>Serverless (FaaS)</strong>, arma un <strong>Gemelo Digital</strong> de su almacén con
+    IoT y Realidad Virtual, comparte datos con proveedores y aduanas vía <strong>Blockchain de Consorcio</strong>,
+    y discute internamente BPR vs. BPM para su facturación. 40 preguntas — IA y aprendizaje automático,
+    seguridad informática, cloud, marketing digital, sistemas empresariales (ERP/SCM/CRM/EAM/PLM) y ética.
+  </div>
+  <div class="case-toggle" onclick="document.getElementById('case-full').style.display = document.getElementById('case-full').style.display === 'block' ? 'none' : 'block'">
+    ▸ leer el caso completo
+  </div>
+  <div id="case-full">
+    TechLogistics es una operadora logística global en plena Transformación Digital. Tras investigar
+    las tecnologías del sector (Fase de Identificación), han decidido:
+    <ol>
+      <li>Migrar su sistema de despacho a una arquitectura Serverless (FaaS) para responder a picos de demanda.</li>
+      <li>Implementar un Gemelo Digital de su almacén principal mediante IoT y Realidad Virtual.</li>
+      <li>Utilizar Blockchain de Consorcio para compartir datos de seguimiento con proveedores y aduanas sin intermediarios.</li>
+      <li>Lanzar un programa de Inbound Marketing enfocado en grandes empresas (B2B) y pymes (B2C).</li>
+    </ol>
+    A nivel interno, enfrentan un conflicto: el área de finanzas pide una reingeniería (BPR) total del
+    proceso de facturación, mientras que operaciones prefiere una gestión de procesos (BPM) para mejoras
+    paulatinas. Además, la dirección evalúa si el uso de IA Generativa para crear manuales técnicos es
+    éticamente viable frente al riesgo de desinformación.<br><br>
+    La empresa alquila servicios virtuales de AWS para su base de datos y de Google Cloud para su motor
+    de IA, evitando la dependencia de un solo proveedor.
+  </div>
+</header>
+
+<main id="quiz-root"></main>
+
+<div class="progress-track">
+  <span id="progress-label">0 / 40 respondidas</span>
+  <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-fill"></div></div>
+</div>
+
+<div id="result-panel">
+  <h2 id="result-score"></h2>
+  <p id="result-detail"></p>
+</div>
+
+<footer class="bar">
+  <button class="btn" id="correct-btn" onclick="corregir()">Corregir pendientes</button>
+  <button class="btn secondary" onclick="reiniciar()">Reiniciar</button>
+  <span class="score-display" id="live-score"></span>
+</footer>
+
+<script>
+const preguntas = [
+{q:'La empresa planea implementar controles que "emitan alertas sobre intentos de uso de funcionalidades del sistema que no competen al usuario". Según la clasificación de mecanismos, este es un:', opts:["Mecanismo disuasivo","Control de Operaciones","Mecanismo Detectivo","Mecanismo Correctivo de flujo","Control Preventivo de acceso"], correct:2, exp:"Detectivo = identifica y alerta sobre un intento anómalo mientras ocurre (a diferencia del preventivo, que lo bloquea antes)."},
+{q:'La empresa entrena un algoritmo para detectar facturas falsas usando un histórico de facturas ya marcadas como "válidas" o "fraudulentas". Esto es:', opts:["Aprendizaje supervisado","Sistema basado en reglas","IA Generativa","Aprendizaje por refuerzo","Aprendizaje no supervisado"], correct:0, exp:"Supervisado = se entrena con datos ya etiquetados (válida/fraudulenta)."},
+{q:"Al analizar la efectividad de los enlaces incluidos en las publicaciones de redes sociales, TechLogistics debe calcular la proporción de clics obtenidos respecto al total de impresiones. ¿Qué indicador están midiendo?", opts:["Engagement","Alcance Total","Tasa de Conversión","CPC","CTR"], correct:4, exp:"CTR (Click Through Rate) = clics / impresiones."},
+{q:"La empresa ha detectado que una tecnología emergente tiene mucha publicidad, pero los proyectos piloto muestran resultados inconsistentes. Según Gartner, están en el:", opts:["Abismo de desilusión","Meseta de productividad","Lanzamiento","Pico de expectativas"], correct:0, exp:"El Hype Cycle de Gartner ubica los resultados inconsistentes tras la exageración inicial en el 'abismo de desilusión'."},
+{q:'TechLogistics decide mantener sus "servidores heredados en un entorno local" pero utiliza simultáneamente una nube pública para balancear el tráfico. Esta implementación se define como:', opts:["Nube Privada","Nube Pública","Nube Híbrida","Multinube"], correct:2, exp:"Híbrida = combina infraestructura local (on-premise) con nube pública."},
+{q:"Un bot de la empresa ayuda a un operador humano a completar una tarea compleja, activándose solo cuando el humano lo pide. Esto es:", opts:["IA Generativa","RPA asistida","Robótica","Machine Learning","RPA no asistida"], correct:1, exp:"RPA asistida = se activa a pedido de un humano, como complemento de su tarea."},
+{q:"Tras un incidente, el sistema de TechLogistics bloquea automáticamente las acciones sospechosas para mitigar el daño. Este es un control:", opts:["De entrada","Correctivo","De diseño","Preventivo"], correct:1, exp:"Correctivo = actúa después del incidente para mitigar o reparar el daño."},
+{q:'TechLogistics implementa un "Gemelo Digital" que aprende por "ensayo y error" a optimizar el movimiento de robots en el almacén. Esto es:', opts:["IA Generativa","Sistema basado en reglas","Aprendizaje supervisado","Aprendizaje por refuerzo","Aprendizaje no supervisado"], correct:3, exp:"Por refuerzo = aprende mediante prueba y error, recibiendo recompensas/penalizaciones."},
+{q:'NexoLog detectó que su software tiene una vulnerabilidad de "desbordamiento de buffer". Según las fuentes, esto es un error de:', opts:["Diseño","Código abierto","Hardware","Implementación"], correct:3, exp:"El desbordamiento de buffer es un error clásico de implementación (codificación)."},
+{q:"La empresa desea conocer el beneficio total que un cliente le dejará durante años para decidir si vale la pena invertir en él. Esta métrica es:", opts:["CAC","Lifetime Value (LTV)","Tasa de conversión","ROI"], correct:1, exp:"LTV = valor total que un cliente genera durante toda su relación con la empresa."},
+{q:'La empresa quiere certificar el "ciclo de vida" completo de su nuevo software de gestión portuaria. ¿Qué norma es la indicada para procesos de desarrollo, operación y mantenimiento?', opts:["ISO/IEC 12207","ISO/IEC 27001","ISO/IEC 20000","ISO/IEC 25000"], correct:0, exp:"ISO/IEC 12207 regula los procesos del ciclo de vida del software."},
+{q:'Para mejorar la capacitación de sus técnicos, la empresa utiliza una tecnología que "fusiona imágenes virtuales con la vista real" para proporcionar información adicional sobre las piezas de un motor. Esto es:', opts:["VRML","Realidad Aumentada","Realidad Virtual","IA Integrada"], correct:1, exp:"Realidad Aumentada = superpone elementos virtuales sobre el mundo real (a diferencia de la Realidad Virtual, que es un entorno totalmente simulado)."},
+{q:"La empresa utiliza un modelo donde el software de gestión se alquila y se accede vía web sin instalar nada localmente. Este modelo se denomina:", opts:["On-premise","IaaS","PaaS","SaaS"], correct:3, exp:"SaaS = software como servicio, se accede vía web sin instalación local."},
+{q:"Si la empresa ya está midiendo y evaluando qué tecnologías son más beneficiosas tras haber implementado el cambio, dentro de la transformación digital está en la fase de:", opts:["Análisis","Transición","Ejecución","Optimización"], correct:2, exp:"La fase de Ejecución incluye implementar el cambio y medir sus resultados."},
+{q:"Un cambio no autorizado en la lógica de cálculo del sistema de fletes ha provocado que los valores de las facturas no coincidan con los registros originales. ¿Qué característica específica de la información se ha perdido al verse alterado su contenido?", opts:["Integridad","Sensitividad","No repudio","Disponibilidad","Control de acceso"], correct:0, exp:"Integridad = que el contenido de la información no sea alterado indebidamente."},
+{q:'La dirección de la empresa está evaluando "qué pasos se darán y quiénes serán los responsables de liderar el proceso de cambio", además de analizar si las tecnologías son una amenaza o una oportunidad. ¿En qué fase de la Transformación Digital se encuentran?', opts:["Transición cultural","Identificación del mercado","Análisis de viabilidad","Ejecución y Medición"], correct:2, exp:"Definir pasos, responsables y evaluar amenazas/oportunidades corresponde al Análisis de viabilidad."},
+{q:'TechLogistics quiere que su sistema defina automáticamente los "atributos y resultados" esperados basándose estrictamente en "correlaciones de datos históricos" para prever la demanda. ¿Qué paso crítico del análisis predictivo se está ejecutando aquí?', opts:["Definición del objetivo","Evaluación descriptiva","Determinación de la información base y creación del modelo","Optimización prescriptiva"], correct:2, exp:"Usar datos históricos para definir atributos/resultados y construir el modelo predictivo es la etapa de determinación de la información base y creación del modelo."},
+{q:'TechLogistics busca implementar "Gestión de Privilegios" y "Cifrado de Información". ¿Bajo qué pilar de la seguridad informática se agrupan estas medidas?', opts:["Trazabilidad","Disponibilidad","Integridad","Autenticidad","Confidencialidad"], correct:4, exp:"Privilegios y cifrado buscan que solo quien esté autorizado acceda a la información = Confidencialidad."},
+{q:"TechLogistics desea capturar datos de vibración y temperatura de sus camiones en tiempo real. Para ello usa:", opts:["SCM","CRM","RPA","IoT","Sistemas expertos"], correct:3, exp:"IoT = sensores conectados que capturan datos físicos en tiempo real."},
+{q:'Si un bloque en la cadena de TechLogistics es modificado, su "firma digital" cambia inmediatamente, invalidando el resto. Esta firma se llama:', opts:["Llave privada","Qbit","Hash","Token"], correct:2, exp:"El hash es la huella digital de cada bloque en una blockchain; cambia si el contenido se altera."},
+{q:"Para medir la calidad de sus anuncios en Google basándose en el CTR, TechLogistics revisa el:", opts:["QS (Quality Score)","ROI orgánico","Posición media","CPC"], correct:0, exp:"El Quality Score de Google Ads se basa, entre otras cosas, en el CTR esperado."},
+{q:'TechLogistics busca un cambio "radical" y "dramático" en su facturación para mejorar el desempeño en cientos de puntos porcentuales. ¿Qué enfoque están siguiendo?', opts:["TQM","Six Sigma","BPR","BPM"], correct:2, exp:"BPR (reingeniería de procesos) implica un rediseño radical, a diferencia de BPM que es incremental."},
+{q:"El módulo que permite a las máquinas de la flota avisar que necesitan mantenimiento antes de romperse (mantenimiento predictivo) es:", opts:["SCM-Procurement","EAM","CRM","ERP-Finanzas"], correct:1, exp:"EAM (Enterprise Asset Management) gestiona activos físicos, incluyendo mantenimiento predictivo."},
+{q:"Para segmentar a sus clientes en grupos con comportamientos similares sin tener categorías previas, TechLogistics debe usar:", opts:["Aprendizaje no supervisado (Clustering)","Sistemas expertos","Aprendizaje supervisado","Regresión lineal"], correct:0, exp:"Sin categorías previas = no supervisado; el clustering agrupa por similitud."},
+{q:'Al integrar su contabilidad, flota de camiones y nómina en una sola plataforma para tener una "única fuente de verdad", TechLogistics usa un:', opts:["BI","SCM","ERP","CRM"], correct:2, exp:"ERP integra distintas áreas (contabilidad, RRHH, operaciones) en una plataforma única."},
+{q:'Si el área de operaciones prefiere analizar los procesos de forma total e individual para identificar "cuellos de botella" y mejorar la eficiencia gradualmente, optan por:', opts:["Outsourcing","BPM","BPR","TQM"], correct:1, exp:"BPM = mejora continua y gradual de procesos existentes, a diferencia del rediseño radical de BPR."},
+{q:"Si el sistema de IA recomienda a la empresa desviar camiones a una ruta alterna para evitar un retraso ya previsto, está realizando un análisis:", opts:["Descriptivo","Diagnóstico","Prescriptivo","Estadístico","Predictivo"], correct:2, exp:"Prescriptivo = recomienda una acción concreta a tomar, no solo predice o describe."},
+{q:'TechLogistics consulta el Cuadrante Mágico y encuentra un proveedor con gran "habilidad de ejecución" pero sin visión clara de futuro. Es un:', opts:["Retador","Líder","Visionario","Jugador de nicho"], correct:0, exp:"Retador (Challenger) = buena ejecución actual, pero visión de futuro limitada."},
+{q:'TechLogistics nota que muchos clientes potenciales llegan a su web pero se van sin realizar ninguna acción. El indicador de este "rechazo" inicial es:', opts:["Indexación","Tasa de conversión","Tasa de abandono del carrito","Tasa de rebote"], correct:3, exp:"Tasa de rebote = visitantes que abandonan sin interactuar con el sitio."},
+{q:"TechLogistics usa un software para automatizar el ingreso manual de datos de Excel al sistema contable, imitando el clic humano. Esto es:", opts:["RPA","Inteligencia Artificial","Blockchain","Big Data","Robótica"], correct:0, exp:"RPA (Robotic Process Automation) imita acciones humanas repetitivas sobre interfaces, como el ingreso de datos."},
+{q:"Si la gerencia establece que ningún empleado puede autorizar un pago y a la vez registrarlo en el sistema, aplica un control administrativo de:", opts:["Segregación de funciones","Control de software","Supervisión","Políticas por escrito"], correct:0, exp:"Segregación de funciones = separar tareas incompatibles (autorizar vs. registrar) para evitar fraude."},
+{q:"El dilema de TechLogistics sobre si la IA Generativa podría desplazar trabajadores o crear noticias falsas se enmarca en la dimensión moral de:", opts:["Acceso","Calidad de vida","Propiedad","Control"], correct:1, exp:"El impacto en el empleo y la desinformación afecta la calidad de vida de la sociedad, una de las dimensiones éticas de la tecnología."},
+{q:'Si la empresa utiliza una IA para "traducir" un flujo masivo de datos de sensores en una imagen visual del estado de la flota, está aplicando:', opts:["Sistemas expertos","Redes Neuronales","RPA","IA Generativa"], correct:1, exp:"Procesar grandes volúmenes de datos de sensores para generar una representación es típico de redes neuronales."},
+{q:'Al elegir una arquitectura "Serverless" para el despacho, donde solo pagan por el código que se ejecuta en respuesta a un pedido, usan:', opts:["Multinube","IaaS","PaaS","FaaS"], correct:3, exp:"FaaS (Function as a Service) = modelo serverless, se paga solo por la ejecución del código."},
+{q:"Si TechLogistics gasta mucho dinero en publicidad para captar un cliente pero este solo hace una compra pequeña y no vuelve, tiene un problema de:", opts:["Tasa de rebote de email","Falta de indexación","ROI invertido","CAC muy alto frente al LTV","SEO bajo"], correct:3, exp:"Cuando el costo de adquisición (CAC) supera lo que el cliente aporta a lo largo del tiempo (LTV), la relación no es rentable."},
+{q:"Si TechLogistics desea unificar la información de un nuevo contenedor desde su diseño hasta que es reciclado tras 10 años de uso, necesita:", opts:["PLM","EAM","Gestión de proyectos","Procurement","Logística inversa"], correct:0, exp:"PLM (Product Lifecycle Management) gestiona la información de un producto durante todo su ciclo de vida."},
+{q:'El departamento de logística busca optimizar el "flujo de bienes, datos y finanzas" desde que se adquiere la madera hasta que el mueble llega al cliente. ¿Qué aplicación empresarial abarca este flujo integral?', opts:["CRM","SCM","ERP","BPM"], correct:1, exp:"SCM (Supply Chain Management) integra el flujo completo de bienes, datos y finanzas a lo largo de la cadena de suministro."},
+{q:'Un sistema que rechaza automáticamente una solicitud de crédito de un cliente porque "SI tiene deudas Y SI es cliente nuevo, ENTONCES rechazar" es un:', opts:["Sistema Experto","Análisis descriptivo","Machine Learning","Red Neural"], correct:0, exp:"Reglas explícitas del tipo SI-ENTONCES son característica de un Sistema Experto basado en reglas."},
+{q:"La empresa alquila servicios virtuales de AWS para su base de datos y de Google Cloud para su motor de IA, evitando la dependencia de un solo proveedor. Esta estrategia se clasifica como:", opts:["Multinube","FaaS","Nube Híbrida","IaaS"], correct:0, exp:"Multinube = usar varios proveedores cloud distintos para evitar depender de uno solo."},
+{q:"TechLogistics quiere que un grupo preseleccionado de empresas socias controle el proceso de validación en su red de Blockchain. Este tipo de red es:", opts:["Semiprivada","Pública","Privada","Consorcio"], correct:3, exp:"Consorcio = la validación está a cargo de un grupo preseleccionado de organizaciones, no de una sola entidad ni de cualquiera."}
+];
+
+const root = document.getElementById('quiz-root');
+const respuestas = new Array(preguntas.length).fill(null);
+
+function render(){
+  root.innerHTML = '';
+  preguntas.forEach((p, qi) => {
+    const div = document.createElement('div');
+    div.className = 'q';
+    div.id = 'q'+qi;
+    let optsHtml = '';
+    p.opts.forEach((o, oi) => {
+      optsHtml += `
+        <label class="opt" id="q${qi}o${oi}">
+          <input type="radio" name="q${qi}" value="${oi}" onchange="seleccionar(${qi},${oi})">
+          <span>${o}</span>
+          <span class="mark" id="q${qi}o${oi}mark"></span>
+        </label>`;
+    });
+    div.innerHTML = `
+      <div class="q-num">Pregunta ${qi+1} / ${preguntas.length}</div>
+      <p class="q-text">${p.q}</p>
+      ${optsHtml}
+      <div class="explain" id="q${qi}exp"><strong>Explicación:</strong> ${p.exp}</div>
+    `;
+    root.appendChild(div);
+  });
+}
+
+function seleccionar(qi, oi){
+  if(respuestas[qi] !== null) return; // ya corregida, no se puede cambiar
+  respuestas[qi] = oi;
+  corregirPregunta(qi);
+  actualizarProgreso();
+  actualizarScoreVivo();
+}
+
+function corregirPregunta(qi){
+  const p = preguntas[qi];
+  const sel = respuestas[qi];
+  p.opts.forEach((o, oi) => {
+    const label = document.getElementById(`q${qi}o${oi}`);
+    const mark = document.getElementById(`q${qi}o${oi}mark`);
+    const input = label.querySelector('input');
+    input.disabled = true;
+    label.classList.add('disabled');
+    label.classList.remove('correct','incorrect');
+    mark.textContent = '';
+
+    if(oi === p.correct){
+      label.classList.add('correct');
+      mark.textContent = '✓ correcta';
+      mark.className = 'mark ok';
+    } else if(oi === sel && sel !== p.correct){
+      label.classList.add('incorrect');
+      mark.textContent = '✗ tu respuesta';
+      mark.className = 'mark bad';
+    }
+  });
+  document.getElementById('q'+qi).classList.add('answered');
+}
+
+function actualizarProgreso(){
+  const respondidas = respuestas.filter(r => r !== null).length;
+  document.getElementById('progress-label').textContent = respondidas + ' / ' + preguntas.length + ' respondidas';
+  document.getElementById('progress-fill').style.width = (respondidas/preguntas.length*100) + '%';
+}
+
+function actualizarScoreVivo(){
+  const respondidas = respuestas.filter(r => r !== null).length;
+  const correctas = preguntas.filter((p, qi) => respuestas[qi] === p.correct).length;
+  document.getElementById('live-score').textContent = respondidas > 0
+    ? `${correctas}/${respondidas} correctas hasta ahora`
+    : '';
+
+  if(respondidas === preguntas.length){
+    mostrarResumenFinal();
+  }
+}
+
+function mostrarResumenFinal(){
+  const total = preguntas.length;
+  const correctas = preguntas.filter((p, qi) => respuestas[qi] === p.correct).length;
+  const pct = Math.round((correctas/total)*100);
+
+  const panel = document.getElementById('result-panel');
+  panel.style.display = 'block';
+  document.getElementById('result-score').textContent =
+    `Calificación: ${correctas.toFixed(2).replace('.', ',')} de ${total},00 (${pct}%)`;
+  document.getElementById('result-detail').textContent =
+    `${correctas} correctas, ${total - correctas} incorrectas.`;
+  panel.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function corregir(){
+  preguntas.forEach((p, qi) => {
+    if(respuestas[qi] === null){
+      corregirPregunta(qi);
+    }
+  });
+  actualizarProgreso();
+  actualizarScoreVivo();
+  mostrarResumenFinal();
+}
+
+function reiniciar(){
+  respuestas.fill(null);
+  document.getElementById('result-panel').style.display = 'none';
+  document.getElementById('live-score').textContent = '';
+  render();
+  actualizarProgreso();
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+render();
+</script>
+
+</body>
+</html>
